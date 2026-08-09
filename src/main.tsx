@@ -1,10 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { LandingPage } from "@/components/landing/landing-page";
+import { LanguageProvider } from "@/i18n";
 import "./styles.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <LandingPage />
+    <LanguageProvider>
+      <LandingPage />
+    </LanguageProvider>
   </StrictMode>,
 );
