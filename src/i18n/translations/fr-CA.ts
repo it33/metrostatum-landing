@@ -57,6 +57,7 @@ export const frCA: TranslationDict = {
     eyebrow: "Collaboration assurée entre partenaires de mission",
     title: "Voyez comment les équipes opèrent sous pression",
     watchOnMattermost: "Regarder la vidéo complète sur Mattermost",
+    open: "Ouvrir la vidéo",
   },
   deploy: {
     eyebrow: "Déployez n'importe où",
