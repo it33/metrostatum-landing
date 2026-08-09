@@ -7,6 +7,8 @@ import { ProductCarousel } from "./product-carousel";
 import { MissionVideo } from "./mission-video";
 import { IMEExplorer } from "./ime-explorer";
 import { PositioningCarousel } from "./positioning-carousel";
+import { NetworkTypesExplorer } from "./network-types-explorer";
+import { CapabilitiesCarousel } from "./capabilities-carousel";
 import { useT } from "@/i18n";
 
 const CONTACT = "https://mattermost.com/contact-sales/";
@@ -73,16 +75,12 @@ export function LandingPage() {
         </div>
       </div>
 
-      <MissionVideo />
-
-
       <ProductCarousel />
-
-      <div id="ime-wrap">
-        <IMEExplorer />
-      </div>
-
+      <IMEExplorer />
+      <NetworkTypesExplorer />
       <PositioningCarousel />
+      <CapabilitiesCarousel />
+      <MissionVideo />
 
       <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
         <div className="container-page">
