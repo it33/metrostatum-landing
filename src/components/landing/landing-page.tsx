@@ -101,7 +101,11 @@ export function LandingPage() {
       </section>
 
       <ProductCarousel />
-      <IMEExplorer />
+
+      <div id="ime">
+        <IMEExplorer />
+      </div>
+
       <PositioningCarousel />
 
       <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
