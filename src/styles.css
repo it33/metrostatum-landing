@@ -1,115 +1,243 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+
+/*
+  Mattermost Brand Guidelines
+  Primary: Denim #1E325C, Marigold #FFBC1F, White #FFFFFF, Black #1B1D22
+*/
 
 @theme {
-  --color-bg: #07090f;
-  --color-bg-elevated: #0d111a;
-  --color-bg-subtle: #141a26;
-  --color-surface: #121826;
-  --color-surface-2: #1a2233;
-  --color-fg: #eef2f8;
-  --color-fg-muted: #9aa6b8;
-  --color-fg-subtle: #6b788c;
-  --color-border: #243044;
-  --color-border-strong: #33425c;
-  --color-primary: #2b7cff;
-  --color-primary-hover: #4a91ff;
+  --color-denim: #1e325c;
+  --color-denim-deep: #152442;
+  --color-denim-mid: #2a4578;
+  --color-marigold: #ffbc1f;
+  --color-marigold-hover: #ffc94a;
+  --color-black: #1b1d22;
+  --color-white: #ffffff;
+  --color-sky: #c5d2ec;
+
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f5f7fb;
+  --color-bg-subtle: #eef1f6;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0f3f8;
+  --color-fg: #1b1d22;
+  --color-fg-muted: #4a5568;
+  --color-fg-subtle: #6b7690;
+  --color-border: color-mix(in oklab, #1e325c 12%, transparent);
+  --color-border-strong: color-mix(in oklab, #1e325c 22%, transparent);
+  --color-primary: #1e325c;
+  --color-primary-hover: #2a4578;
   --color-primary-fg: #ffffff;
-  --color-accent: #3dd6c6;
-  --color-accent-dim: #1f6f68;
-  --color-success: #34c759;
-  --color-warning: #f5a524;
+  --color-accent: #ffbc1f;
+  --color-accent-fg: #1b1d22;
 
-  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-display: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-sans: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --radius-xs: 4px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-2xl: 32px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
 
-  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 50px rgba(0, 0, 0, 0.35);
-  --shadow-glow: 0 0 0 1px rgba(43, 124, 255, 0.25), 0 20px 60px rgba(43, 124, 255, 0.12);
+  --shadow-card: 0 1px 2px rgba(30, 50, 92, 0.06), 0 12px 32px rgba(30, 50, 92, 0.08);
 }
 
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
-
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     min-height: 100vh;
     background: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans);
-    font-size: 1rem;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
-
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
-
-  ::selection {
-    background: color-mix(in oklab, var(--color-primary) 40%, transparent);
-    color: var(--color-fg);
-  }
+  button:not(:disabled), [role="button"]:not(:disabled) { cursor: pointer; }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
   .container-page {
     width: 100%;
     max-width: 72rem;
     margin-inline: auto;
     padding-inline: 1.25rem;
   }
-
   @media (min-width: 768px) {
-    .container-page {
-      padding-inline: 2rem;
-    }
+    .container-page { padding-inline: 2rem; }
   }
 
-  .grid-noise {
-    background-image:
-      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 20%, transparent 75%);
+  .hero-top {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: linear-gradient(135deg, #152442 0%, #1e325c 40%, #2a4578 100%);
+  }
+  .hero-top__photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 40%;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .hero-top__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      105deg,
+      rgba(21, 36, 66, 0.88) 0%,
+      rgba(30, 50, 92, 0.55) 42%,
+      rgba(30, 50, 92, 0.2) 68%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
+  }
+  .hero-top__content { position: relative; z-index: 2; }
+
+  .logo-marquee {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    border-block: 1px solid color-mix(in oklab, #1e325c 12%, transparent);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  .logo-marquee__viewport {
+    display: flex;
+    width: max-content;
+    height: 50px;
+    align-items: center;
+    animation: logo-marquee-scroll 90s linear infinite;
+  }
+  .logo-marquee:hover .logo-marquee__viewport { animation-play-state: paused; }
+  .logo-marquee__track {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    gap: 3rem;
+    margin: 0;
+    padding: 0 2rem;
+    list-style: none;
+  }
+  .logo-marquee__item {
+    display: flex;
+    height: 50px;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .logo-marquee__img {
+    display: block;
+    height: 28px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    opacity: 0.75;
+    filter: grayscale(1) brightness(0) opacity(0.7);
+  }
+  @keyframes logo-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 
-  .hero-wash {
-    background:
-      radial-gradient(ellipse 90% 55% at 50% -10%, rgba(43, 124, 255, 0.22), transparent 60%),
-      radial-gradient(ellipse 50% 40% at 85% 20%, rgba(61, 214, 198, 0.08), transparent 55%),
-      var(--color-bg);
+  .product-marquee { overflow: hidden; width: 100%; }
+  .product-marquee__track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    padding-inline: 1rem;
+    animation: product-marquee-scroll 72s linear infinite;
+  }
+  .product-marquee__track--paused { animation-play-state: paused; }
+  @keyframes product-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .product-marquee__card {
+    width: min(86vw, 400px);
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border-strong);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+  }
+  @media (min-width: 768px) {
+    .product-marquee__card { width: 460px; }
+  }
+  .product-marquee__hit {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: inherit;
+  }
+  .product-marquee__frame {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--color-bg-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-marquee__caption {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.85rem;
+    padding: 1rem 1.1rem 1.15rem;
+    border-top: 1px solid var(--color-border);
+    min-height: 7.5rem;
+  }
+  .product-marquee__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-fg);
+  }
+  .product-marquee__desc {
+    margin: 0.4rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--color-fg-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .product-marquee__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-denim);
+    white-space: nowrap;
+  }
+
+  .ime-pan {
+    transition: transform 3.45s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+  .ime-mask {
+    transition: opacity 3.45s cubic-bezier(0.22, 1, 0.36, 1),
+      clip-path 3.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee__viewport,
+    .product-marquee__track { animation: none !important; }
+    .ime-pan, .ime-mask { transition: none; }
   }
 }
