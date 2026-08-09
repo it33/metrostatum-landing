@@ -57,6 +57,7 @@ export const enUS: TranslationDict = {
     eyebrow: "Assured mission partner collaboration",
     title: "See how teams operate under pressure",
     watchOnMattermost: "Watch the full video on Mattermost",
+    open: "Open video",
   },
   deploy: {
     eyebrow: "Deploy anywhere",
