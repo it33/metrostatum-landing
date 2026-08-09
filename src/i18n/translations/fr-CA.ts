@@ -8,7 +8,7 @@ export const frCA: TranslationDict = {
   meta: {
     title: "Mattermost | Souveraineté opérationnelle pour le travail de mission critique",
     description:
-      "Collaboration, automatisation et IA pour les environnements isolés, sur site et en nuage privé. Approuvé par les gouvernements, les entreprises et les forces militaires alliées.",
+      "Collaboration Zero Trust, automatisation et IA pour les environnements en nuage privé, isolés (air-gapped) et sur site. Approuvé par les gouvernements, les entreprises et les forces militaires alliées.",
   },
   promo: {
     text: "Présentation de Mattermost Enterprise Advanced : L'avenir des opérations sécurisées multidomaines — En savoir plus",
@@ -45,7 +45,7 @@ export const frCA: TranslationDict = {
   hero: {
     title: "Souveraineté opérationnelle pour la sécurité nationale et les infrastructures critiques",
     subtitle:
-      "Collaboration, automatisation et IA pour les environnements isolés (air-gapped), sur site et en nuage privé. Approuvé par les gouvernements, les entreprises et les forces militaires alliées.",
+      "Collaboration Zero Trust, automatisation et IA pour les environnements en nuage privé, isolés (air-gapped) et sur site. Approuvé par les gouvernements, les entreprises et les forces militaires alliées.",
     tagline: "Déployez n'importe où. Contrôlez tout.",
     talkToExpert: "Parler à un expert",
     explorePlatform: "Explorer la plateforme",
