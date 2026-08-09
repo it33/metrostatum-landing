@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "version": "0.2.0",
-  "description": "Mattermost-inspired landing page \u2014 operational sovereignty for mission-critical collaboration",
+  "description": "Mattermost-inspired landing page — operational sovereignty for mission-critical collaboration",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 8080",
     "build": "tsc --noEmit && vite build",

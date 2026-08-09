@@ -1,3 +1,7 @@
+# Deploy Vite site to GitHub Pages (preview / soft-launch)
+# URL after enable: https://it33.github.io/metrostatum-landing/
+# robots.txt + meta noindex keep crawlers and AI scrapers out until public launch.
+
 name: Deploy to GitHub Pages
 
 on:
@@ -34,13 +38,16 @@ jobs:
           GITHUB_PAGES: "true"
         run: npm run build
 
-      - name: Add .nojekyll
+      - name: Add .nojekyll (disable Jekyll processing)
         run: touch dist/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
   deploy:
     needs: build
