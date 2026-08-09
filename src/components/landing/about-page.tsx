@@ -380,21 +380,21 @@ function LeaderAvatar({ leader }: { leader: Leader }) {
 
 function LeaderCard({ leader }: { leader: Leader }) {
   return (
-    <article className="flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5">
-      <div className="flex items-start gap-4">
+    <article className="flex min-w-0 flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-4 md:p-5">
+      <div className="flex items-start gap-3">
         <LeaderAvatar leader={leader} />
         <div className="min-w-0">
-          <h3 className="text-base font-semibold text-[var(--color-fg)]">{leader.name}</h3>
-          <p className="mt-0.5 text-sm font-medium text-[var(--color-denim)]">{leader.title}</p>
+          <h3 className="text-sm font-semibold leading-snug text-[var(--color-fg)] md:text-base">{leader.name}</h3>
+          <p className="mt-0.5 text-xs font-medium leading-snug text-[var(--color-denim)] md:text-sm">{leader.title}</p>
         </div>
       </div>
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--color-fg-muted)]">{leader.bio}</p>
+      <p className="mt-3 flex-1 text-xs leading-relaxed text-[var(--color-fg-muted)] md:text-sm">{leader.bio}</p>
       {leader.vanity ? (
         <a
           href={linkedInUrl(leader.vanity)}
           target="_blank"
           rel="noreferrer"
-          className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-denim)] transition-colors hover:text-[var(--color-marigold)]"
+          className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[var(--color-denim)] transition-colors hover:text-[var(--color-marigold)] md:text-sm"
         >
           LinkedIn
           <ArrowRight className="size-3.5" />
@@ -404,11 +404,26 @@ function LeaderCard({ leader }: { leader: Leader }) {
   );
 }
 
+/** One row per section: N leaders → N equal columns on desktop */
 function LeaderGroup({ title, leaders }: { title: string; leaders: Leader[] }) {
+  const n = leaders.length;
+  const colsClass =
+    n <= 1
+      ? "grid-cols-1"
+      : n === 2
+        ? "md:grid-cols-2"
+        : n === 3
+          ? "md:grid-cols-3"
+          : n === 4
+            ? "md:grid-cols-4"
+            : n === 5
+              ? "md:grid-cols-5"
+              : "md:grid-cols-6";
+
   return (
     <div className="mt-12">
       <h3 className="text-lg font-semibold tracking-tight text-[var(--color-fg)]">{title}</h3>
-      <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className={`mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 ${colsClass}`}>
         {leaders.map((l) => (
           <LeaderCard key={l.name} leader={l} />
         ))}
@@ -501,7 +516,7 @@ export function AboutPage() {
       </section>
 
       <section className="border-t border-[var(--color-border)] py-16 md:py-24">
-        <div className="container-page">
+        <div className="mx-auto w-[min(100%-2rem,1280px)]">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Mattermost Leadership Team</h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--color-fg-muted)]">
             <strong className="font-semibold text-[var(--color-fg)]">One team. One mission.</strong>{" "}
