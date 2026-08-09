@@ -57,6 +57,7 @@ export const ja: TranslationDict = {
     eyebrow: "保証されたミッションパートナーコラボレーション",
     title: "プレッシャー下でチームがどう動くかを見る",
     watchOnMattermost: "Mattermost で完全版動画を視聴",
+    open: "動画を開く",
   },
   deploy: {
     eyebrow: "どこでも展開",
