@@ -1,76 +1,211 @@
-import { useState, useEffect } from "react";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
-import { RESOURCE_CARD_IMAGES } from "./resource-card-images";
+import {
+  EXECUTIVE,
+  PRODUCT_ENG,
+  GTM,
+  OPS,
+  OFFICES,
+  RESOURCE_CARDS,
+  BADGES,
+} from "./leadership-data";
+import {
+  PrinciplesMarquee,
+  LeaderGroup,
+} from "./leadership-ui";
 
 const CONTACT = "https://mattermost.com/contact-sales/";
-const base = import.meta.env.BASE_URL;
 
-type Leader = {
-  name: string;
-  title: string;
-  bio: string;
-  vanity?: string;
-  photo?: string;
-  initials: string;
-};
+export function AboutPage() {
+  return (
+    <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
+      <SiteHeader />
 
-function linkedInUrl(vanity: string) {
-  return `https://www.linkedin.com/in/${vanity}`;
+      <section className="relative overflow-hidden bg-[var(--color-denim)] text-white">
+        <img
+          src="https://mattermost.com/wp-content/uploads/2025/02/r2024-denim-bg-pattern.webp"
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+        />
+        <div className="container-page relative py-16 md:py-24">
+          <h1 className="max-w-3xl text-balance font-display text-4xl font-bold tracking-[-0.02em] sm:text-5xl md:text-[3.25rem] md:leading-[1.1]">
+            Empower the people the world relies on
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
+            Too often the people asked to do the most are given the worst tools, due to intense
+            security requirements. We bring cutting edge collaboration, automation and AI to mission
+            critical operators, across sovereign cloud, air-gapped, and DDIL environments. Because
+            the teams protecting our world deserve technology built for the future, not stuck in the
+            past.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-b border-[var(--color-border)] bg-white py-8">
+        <div className="container-page">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            {BADGES.map((b) => (
+              <img key={b.src} src={b.src} alt={b.alt} className="h-16 w-auto object-contain sm:h-20" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="container-page">
+          <h2 className="max-w-3xl text-balance text-2xl font-bold tracking-tight md:text-3xl">
+            Mattermost is the leading sovereign collaboration and AI automation platform for
+            national security and critical infrastructure enterprises.
+          </h2>
+          <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed text-[var(--color-fg-muted)]">
+            <p>
+              Trusted by governments, enterprises and allied militaries around the world, our
+              platform runs on-premises and in private clouds, delivering secure messaging, file
+              sharing, workflow automation, audio/screenshare, and project management—all with
+              complete data and operational control. Mattermost powers high-stakes workflows across
+              mission planning, real-time operations, DevSecOps, incident response, and cyber
+              security.
+            </p>
+            <p>
+              We enable zero-trust collaboration from tactical edge and DDIL environments to
+              enterprise HQ, with advanced information controls including ABAC, data classification
+              banners, data spillage mitigation and interoperable, federated communications. Teams
+              operate across web, desktop, and mobile, with embedded interoperability for Microsoft
+              Teams, Outlook, and Microsoft 365.
+            </p>
+            <p>
+              For AI-enabled organizations, Mattermost offers the Intelligent Mission Environment
+              (IME)—a self-hosted, multi-user, multi-agent framework for AI-accelerated workflows
+              with sovereign and global models. Built on an in-house, hardened open source platform
+              with complete auditability and supply chain security verification, Mattermost is
+              co-developed with leading security experts to meet the world&apos;s most demanding
+              operational needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
+        <div className="container-page">
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Leadership Principles</h2>
+          <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
+            These principles guide our behaviors and decision-making processes from everyday projects
+            to company strategy.
+          </p>
+        </div>
+        <div className="mt-10">
+          <PrinciplesMarquee />
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--color-border)] py-16 md:py-24">
+        <div className="mx-auto w-[min(100%-2rem,1280px)]">
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Mattermost Leadership Team</h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--color-fg-muted)]">
+            <strong className="font-semibold text-[var(--color-fg)]">One team. One mission.</strong>{" "}
+            The Mattermost leadership team is dedicated to the success of operators in national
+            security, cybersecurity, and critical infrastructure. Our leaders bring deep domain
+            expertise across military, intelligence, and mission-critical operations — with decades
+            of combined experience at organizations like Microsoft, Cisco, Oracle, Ripjar, Check
+            Point, and the U.S. Department of War.
+          </p>
+          <p className="mt-3 text-sm text-[var(--color-fg-muted)]">
+            Photos load from LinkedIn (direct headshot or official profile badge) so they stay current
+            when leaders update their profile photo. Click a photo or LinkedIn link to open their profile.
+          </p>
+
+          <LeaderGroup title="Executive Leadership" leaders={EXECUTIVE} />
+          <LeaderGroup title="Product, Engineering & Security Leadership" leaders={PRODUCT_ENG} />
+          <LeaderGroup title="Go-to-Market Leadership" leaders={GTM} />
+          <LeaderGroup title="Global Operations Leadership" leaders={OPS} />
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
+        <div className="container-page">
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Global Footprint</h2>
+          <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
+            In-region presence matters for sovereign operations. Mattermost maintains local entities,
+            cleared personnel, and partner networks in key jurisdictions to meet data residency,
+            security clearance, and regulatory requirements where our customers operate.
+          </p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {OFFICES.map((o) => (
+              <article
+                key={o.region}
+                className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
+              >
+                <div className="flex items-center gap-2">
+                  <MapPin className="size-4 text-[var(--color-marigold)]" strokeWidth={1.75} />
+                  <h3 className="text-sm font-semibold">{o.region}</h3>
+                </div>
+                <div className="mt-3 space-y-0.5 text-sm text-[var(--color-fg-muted)]">
+                  {o.lines.map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--color-border)] py-16 md:py-24">
+        <div className="container-page">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {RESOURCE_CARDS.map((c) => (
+              <a
+                key={c.title}
+                href={c.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] transition-shadow hover:shadow-md"
+              >
+                <div className="aspect-[680/354] overflow-hidden bg-[var(--color-bg-elevated)]">
+                  <img
+                    src={c.image}
+                    alt=""
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-semibold text-[var(--color-fg)] group-hover:text-[var(--color-denim)]">
+                    {c.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm text-[var(--color-fg-muted)]">{c.body}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--color-border)] py-16 md:py-20">
+        <div className="container-page">
+          <div className="relative overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] px-6 py-12 text-center md:px-12 md:py-16">
+            <h2 className="text-balance text-2xl font-bold tracking-tight md:text-3xl">
+              Ready to put the mission in motion?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-[var(--color-fg-muted)]">
+              Talk with our team about zero-trust collaboration, automation, and AI for private
+              cloud, air-gapped, and on-prem environments.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button size="lg" asChild>
+                <a href={CONTACT} target="_blank" rel="noreferrer">
+                  Talk to an expert
+                  <ArrowRight className="size-4" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </div>
+  );
 }
-
-let linkedInScriptPromise: Promise<void> | null = null;
-function ensureLinkedInBadgeScript() {
-  if (typeof window === "undefined") return Promise.resolve();
-  const w = window as unknown as { LIRenderAll?: () => void };
-  if (w.LIRenderAll) return Promise.resolve();
-  if (!linkedInScriptPromise) {
-    linkedInScriptPromise = new Promise((resolve) => {
-      const existing = document.querySelector("script[data-linkedin-badge]");
-      if (existing) {
-        existing.addEventListener("load", () => resolve());
-        if (w.LIRenderAll) resolve();
-        return;
-      }
-      const s = document.createElement("script");
-      s.src = "https://platform.linkedin.com/badges/js/profile.js";
-      s.async = true;
-      s.defer = true;
-      s.dataset.linkedinBadge = "1";
-      s.onload = () => resolve();
-      s.onerror = () => resolve();
-      document.body.appendChild(s);
-    });
-  }
-  return linkedInScriptPromise;
-}
-
-const PRINCIPLES = [
-  {
-    title: "Customer obsession",
-    body: "We exist to make customers successful. In everything we do, we start with the customer's perspective and work backwards.",
-    variant: "denim" as const,
-  },
-  {
-    title: "Ownership",
-    body: "We own the outcomes of our activities. When we see a vacuum on something important, we jump in.",
-    variant: "marigold" as const,
-  },
-  {
-    title: "Self awareness",
-    body: "We seek to understand our strengths and growth opportunities. We are open to feedback and share our ideas constructively and respectfully.",
-    variant: "surface" as const,
-  },
-  {
-    title: "High impact",
-    body: "We align our work to our shared vision and stay focused on top priorities.",
-    variant: "outline" as const,
-  },
-  {
-    title: "Earn trust",
-    body: "We make to maximize the trust of others in our judgments. We are open, self-critical, and factual.",
-    variant: "slate" as const,
-  },
-] as const;
