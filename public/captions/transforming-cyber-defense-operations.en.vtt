@@ -1,0 +1,269 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:09.440
+Mattermost is a secure
+collaboration hub trusted by
+
+00:00:09.440 --> 00:00:12.875
+cyber defense and critical
+infrastructure organizations.
+
+00:00:12.875 --> 00:00:16.075
+It offers on premise and
+private cloud deployment for
+
+00:00:16.075 --> 00:00:17.915
+strict data control.
+
+00:00:17.915 --> 00:00:20.715
+Unlike other cloud based
+collaboration tools,
+
+00:00:20.715 --> 00:00:23.435
+which may go down
+during a cyber attack,
+
+00:00:23.435 --> 00:00:25.675
+Mattermost can run out of band,
+
+00:00:25.675 --> 00:00:28.830
+ensuring defenders stay
+operational and isolated from
+
+00:00:28.830 --> 00:00:30.570
+compromised infrastructure.
+
+00:00:30.670 --> 00:00:34.750
+It integrates with the Microsoft
+stack including Azure and EntraID,
+
+00:00:34.750 --> 00:00:36.830
+as well as upcoming
+integrations with critical
+
+00:00:36.830 --> 00:00:40.045
+security tools like Sentinel,
+Defender, and Intune.
+
+00:00:40.045 --> 00:00:42.445
+Whether you're replacing
+siloed chat apps,
+
+00:00:42.445 --> 00:00:45.485
+inefficient email chains,
+or other legacy tools,
+
+00:00:45.485 --> 00:00:49.065
+Mattermost is the command
+center for secure operations.
+
+00:00:53.005 --> 00:00:56.080
+From mitigating cybersecurity
+incidents to streamlining
+
+00:00:56.080 --> 00:00:57.740
+operational coordination,
+
+00:00:57.840 --> 00:01:00.240
+Mattermost increases the
+effectiveness of mission
+
+00:01:00.240 --> 00:01:01.740
+critical workflows.
+
+00:01:03.680 --> 00:01:05.040
+In this example scenario,
+
+00:01:05.040 --> 00:01:08.365
+a security operations center
+uses Mattermost to accelerate
+
+00:01:08.365 --> 00:01:12.205
+incident response out of band.
+
+00:01:12.205 --> 00:01:15.245
+They use a shared channel with
+their managed security services
+
+00:01:15.245 --> 00:01:17.005
+provider for monitoring alerts.
+
+00:01:17.005 --> 00:01:19.790
+By securely connecting
+two Mattermost instances,
+
+00:01:19.790 --> 00:01:22.990
+both organizations can
+collaborate in real time.
+
+00:01:22.990 --> 00:01:26.730
+A new alert from the SIM system
+posts to the monitoring channel.
+
+00:01:29.390 --> 00:01:32.350
+The team lead sends an urgent
+message notifying impacted
+
+00:01:32.350 --> 00:01:35.530
+personnel who then acknowledge
+they've read the message.
+
+00:01:42.165 --> 00:01:45.445
+A Mattermost Playbook is
+then initiated to execute incident
+
+00:01:45.445 --> 00:01:47.025
+response procedures.
+
+00:01:49.290 --> 00:01:51.770
+The playbook creates a
+dedicated channel with a
+
+00:01:51.770 --> 00:01:55.210
+standardized checklist, auto invites
+key stakeholders, and guides each
+
+00:01:55.210 --> 00:01:57.470
+step of the incident response.
+
+00:01:58.050 --> 00:02:00.890
+Throughout the incident,
+team members mark task progress,
+
+00:02:00.890 --> 00:02:04.450
+post status updates, and share
+intel in real time.
+
+00:02:04.450 --> 00:02:07.490
+Playbooks can be templated and
+customized to fit any workflow.
+
+00:02:10.135 --> 00:02:13.735
+Slash Commands and Webhooks
+trigger actions such as initiating
+
+00:02:13.735 --> 00:02:16.775
+a multi party briefing call
+directly from the operational channel.
+
+00:02:16.775 --> 00:02:19.975
+This pulls the team into a
+real time collaboration space.
+
+00:02:20.855 --> 00:02:23.515
+Live transcription ensures
+team members remain informed.
+
+00:02:26.790 --> 00:02:30.230
+After the call concludes,
+chat logs, call transcripts,
+
+00:02:30.230 --> 00:02:33.190
+and audio recordings are
+preserved in the call thread,
+
+00:02:33.190 --> 00:02:37.030
+providing critical mission documentation
+for an after action review.
+
+00:02:37.030 --> 00:02:39.845
+Mattermost Copilot,
+your AI assistant,
+
+00:02:39.845 --> 00:02:42.885
+extracts key takeaways with
+automated call summaries,
+
+00:02:42.885 --> 00:02:46.485
+delivering concise insights
+when every moment counts.
+
+00:02:46.485 --> 00:02:49.525
+Users can refine summaries with
+their preferred model and share
+
+00:02:49.525 --> 00:02:51.200
+them in the call thread.
+
+00:02:51.200 --> 00:02:55.040
+With full control over AI
+model selection, data access,
+
+00:02:55.040 --> 00:02:56.560
+and user permissions,
+
+00:02:56.560 --> 00:03:00.400
+Mattermost ensures access to
+AI support in compliance with
+
+00:03:00.400 --> 00:03:02.060
+security standards.
+
+00:03:04.640 --> 00:03:07.735
+From coordinating remediation
+to tracking incident response
+
+00:03:07.735 --> 00:03:11.715
+status, Mattermost Boards
+provides end to end visibility.
+
+00:03:12.295 --> 00:03:15.415
+Staff can drag and drop
+task cards between columns,
+
+00:03:15.415 --> 00:03:18.055
+update statuses,
+and configure views,
+
+00:03:18.055 --> 00:03:20.695
+whether in a Kanban
+board or table view,
+
+00:03:20.695 --> 00:03:22.675
+to accommodate the workflow.
+
+00:03:26.740 --> 00:03:30.400
+With the threat contained,
+the playbook run is closed.
+
+00:03:32.100 --> 00:03:36.035
+Built in reporting provides a timeline
+and analysis for retrospective
+
+00:03:43.355 --> 00:03:46.475
+Mattermost aligns with
+modern Zero Trust strategies.
+
+00:03:46.475 --> 00:03:49.750
+It enforces strict controls
+with granular permissions and
+
+00:03:49.750 --> 00:03:51.350
+supports SAML, LDAP,
+
+00:03:51.350 --> 00:03:55.330
+and multi factor authentication
+for identity and access management.
+
+00:03:55.350 --> 00:03:58.550
+Segmentation is achieved with
+teams and private channels.
+
+00:03:58.550 --> 00:04:02.575
+And data is protected with TLS
+encryption and the ability to
+
+00:04:02.575 --> 00:04:05.995
+enforce data retention
+policies tailored for SecOps.
+
+00:04:06.655 --> 00:04:09.935
+Mattermost is the future of
+cyber defense collaboration.
+
+00:04:09.935 --> 00:04:12.655
+Connect with us to explore how
+Mattermost can transform your
+
+00:04:12.655 --> 00:04:14.795
+security workflows today.
