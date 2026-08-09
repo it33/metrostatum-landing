@@ -9,6 +9,7 @@ import { PositioningCarousel } from "./positioning-carousel";
 import { useT } from "@/i18n";
 
 const CONTACT = "https://mattermost.com/contact-sales/";
+const base = import.meta.env.BASE_URL;
 
 export function LandingPage() {
   const t = useT();
@@ -25,13 +26,12 @@ export function LandingPage() {
       <SiteHeader />
 
       <div className="hero-top">
-        <div
+        <img
           className="hero-top__photo"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 75% 40%, rgba(197,210,236,0.35), transparent 55%), radial-gradient(ellipse 50% 40% at 90% 70%, rgba(255,188,31,0.12), transparent 50%)",
-          }}
+          src={`${base}images/hero-bg.webp`}
+          alt=""
           aria-hidden
+          fetchPriority="high"
         />
         <div className="hero-top__overlay" aria-hidden />
 
@@ -102,7 +102,7 @@ export function LandingPage() {
 
       <ProductCarousel />
 
-      <div id="ime">
+      <div id="ime-wrap">
         <IMEExplorer />
       </div>
 
