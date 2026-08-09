@@ -8,7 +8,7 @@ export const enUS: TranslationDict = {
   meta: {
     title: "Mattermost | Operational Sovereignty for Mission-Critical Work",
     description:
-      "Collaboration, automation and AI for air-gapped, on-prem and private cloud environments. Trusted by governments, enterprises and allied militaries.",
+      "Zero-Trust collaboration, automation and AI for private cloud, air-gapped and on-prem environments. Trusted by governments, enterprises and allied militaries.",
   },
   promo: {
     text: "Introducing Mattermost Enterprise Advanced: The Future of Multi-Domain Secure Operations",
@@ -45,7 +45,7 @@ export const enUS: TranslationDict = {
   hero: {
     title: "Operational Sovereignty for National Security and Critical Infrastructure",
     subtitle:
-      "Collaboration, automation and AI for air-gapped, on-prem and private cloud environments. Trusted by governments, enterprises and allied militaries.",
+      "Zero-Trust collaboration, automation and AI for private cloud, air-gapped and on-prem environments. Trusted by governments, enterprises and allied militaries.",
     tagline: "Deploy anywhere. Control everything.",
     talkToExpert: "Talk to an expert",
     explorePlatform: "Explore the platform",
