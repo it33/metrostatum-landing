@@ -75,7 +75,7 @@ const FOCUSES: Focus[] = [
     originX: 8,
     originY: 24,
     scale: 1.95,
-    box: { left: 3.5, top: 17.5, width: 93, height: 13 },
+    box: { left: 3.5, top: 17.0, width: 93, height: 13.5 },
   },
   {
     id: "application",
@@ -94,7 +94,7 @@ const FOCUSES: Focus[] = [
     originX: 8,
     originY: 44,
     scale: 1.7,
-    box: { left: 3.5, top: 31.5, width: 93, height: 26 },
+    box: { left: 3.5, top: 31.5, width: 93, height: 26.5 },
   },
   {
     id: "integration",
@@ -112,7 +112,7 @@ const FOCUSES: Focus[] = [
     originX: 8,
     originY: 68,
     scale: 1.8,
-    box: { left: 3.5, top: 60.5, width: 93, height: 16.5 },
+    box: { left: 3.5, top: 60.0, width: 93, height: 17.0 },
   },
   {
     id: "deployment",
@@ -130,7 +130,7 @@ const FOCUSES: Focus[] = [
     originX: 8,
     originY: 88,
     scale: 1.85,
-    box: { left: 3.5, top: 81, width: 93, height: 15 },
+    box: { left: 3.5, top: 81.0, width: 93, height: 14.5 },
   },
   {
     id: "security",
@@ -149,7 +149,7 @@ const FOCUSES: Focus[] = [
     originX: 56,
     originY: 88.5,
     scale: 2.15,
-    box: { left: 54, top: 81, width: 42.5, height: 15 },
+    box: { left: 54, top: 81.0, width: 42.5, height: 14.5 },
   },
 ];
 
@@ -263,7 +263,7 @@ export function IMEExplorer() {
 
                 {!isOverview && (
                   <div
-                    className="pointer-events-none absolute z-[2] rounded-[3px] border-[2.5px] border-[var(--color-marigold)] shadow-[0_0_0_1px_rgba(255,188,31,0.35),0_0_28px_rgba(255,188,31,0.22)]"
+                    className="pointer-events-none absolute z-[2] box-border rounded-[3px] border-[2.5px] border-[var(--color-marigold)] shadow-[0_0_0_1px_rgba(255,188,31,0.35),0_0_28px_rgba(255,188,31,0.22)]"
                     style={{
                       left: `${left}%`,
                       top: `${top}%`,
