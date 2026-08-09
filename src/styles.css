@@ -277,3 +277,13 @@
     .ime-pan, .ime-mask { transition: none; }
   }
 }
+
+
+/* Mission video closed captions */
+.mission-video video::cue {
+  background: rgba(0, 0, 0, 0.72);
+  color: #ffffff;
+  font-family: system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
