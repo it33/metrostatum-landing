@@ -132,7 +132,7 @@ export function CaseStudiesCarousel() {
             id="case-studies-heading"
             className="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl"
           >
-            Trusted by the world&apos;s most demanding operators
+            Trusted by the world's most demanding operators
           </h2>
           <p className="mt-4 text-[var(--color-fg-muted)]">
             From allied air mobility and national power grids to global research and payments\u2014teams
@@ -164,9 +164,7 @@ export function CaseStudiesCarousel() {
 
       <div className="container-page mt-8 text-center">
         <a
-          href="https://mattermost.com/customers/"
-          target="_blank"
-          rel="noreferrer"
+          href="#/customers"
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] transition-colors hover:text-[var(--color-marigold)]"
         >
           View all customer stories
