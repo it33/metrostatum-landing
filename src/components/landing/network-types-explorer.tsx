@@ -48,7 +48,7 @@ const REGIONS: Region[] = [
       "Use cases from SOC to tactical edge on one architecture",
     ],
     icon: Layers,
-    box: { left: 1, top: 9, width: 98, height: 89 },
+    box: { left: 1, top: 9, width: 98, height: 88 },
   },
   {
     id: "public",
@@ -67,7 +67,7 @@ const REGIONS: Region[] = [
       "Embedded collaboration for everyday operator surfaces",
     ],
     icon: Globe,
-    box: { left: 1, top: 10.5, width: 98, height: 28.5 },
+    box: { left: 1, top: 13.1, width: 98, height: 25.4 },
   },
   {
     id: "restricted",
@@ -86,7 +86,7 @@ const REGIONS: Region[] = [
       "No dependency on public internet reachability",
     ],
     icon: Shield,
-    box: { left: 1, top: 39.5, width: 98, height: 27.5 },
+    box: { left: 1, top: 39.2, width: 98, height: 27.3 },
   },
   {
     id: "ddil",
@@ -105,7 +105,7 @@ const REGIONS: Region[] = [
       "Tactical edge nodes under constrained links",
     ],
     icon: Radio,
-    box: { left: 1, top: 67.5, width: 98, height: 30.5 },
+    box: { left: 1, top: 67.2, width: 98, height: 29.5 },
   },
 ];
 
@@ -225,7 +225,7 @@ export function NetworkTypesExplorer() {
             />
 
             <div
-              className="pointer-events-none absolute z-[2] rounded-sm border-[3px] border-[var(--color-marigold)] shadow-[0_0_0_1px_rgba(255,188,31,0.4),0_0_32px_rgba(255,188,31,0.3)] transition-all duration-700 ease-out"
+              className="pointer-events-none absolute z-[2] box-border rounded-sm border-[3px] border-[var(--color-marigold)] shadow-[0_0_0_1px_rgba(255,188,31,0.4),0_0_32px_rgba(255,188,31,0.3)] transition-all duration-700 ease-out"
               style={{
                 left: `${left}%`,
                 top: `${top}%`,
