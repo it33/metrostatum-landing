@@ -6,6 +6,7 @@ import { LogoMarquee } from "./logo-marquee";
 import { ProductCarousel } from "./product-carousel";
 import { MissionVideo } from "./mission-video";
 import { CyberDefenseVideo } from "./cyber-defense-video";
+import { CaseStudiesCarousel } from "./case-studies-carousel";
 import { IMEExplorer } from "./ime-explorer";
 import { PositioningCarousel } from "./positioning-carousel";
 import { NetworkTypesExplorer } from "./network-types-explorer";
@@ -78,6 +79,7 @@ export function LandingPage() {
 
       <MissionVideo />
       <CyberDefenseVideo />
+      <CaseStudiesCarousel />
       <ProductCarousel />
       <IMEExplorer />
       <NetworkTypesExplorer />
