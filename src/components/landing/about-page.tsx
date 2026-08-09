@@ -46,12 +46,84 @@ function ensureLinkedInBadgeScript() {
 }
 
 const PRINCIPLES = [
-  { title: "Customer obsession", body: "We exist to make customers successful. In everything we do, we start with the customer's perspective and work backwards." },
-  { title: "Ownership", body: "We own the outcomes of our activities. When we see a vacuum on something important, we jump in." },
-  { title: "Self awareness", body: "We seek to understand our strengths and growth opportunities. We are open to feedback and share our ideas constructively and respectfully." },
-  { title: "High impact", body: "We align our work to our shared vision and stay focused on top priorities." },
-  { title: "Earn trust", body: "We make to maximize the trust of others in our judgments. We are open, self-critical, and factual." },
+  {
+    title: "Customer obsession",
+    body: "We exist to make customers successful. In everything we do, we start with the customer's perspective and work backwards.",
+    variant: "denim" as const,
+  },
+  {
+    title: "Ownership",
+    body: "We own the outcomes of our activities. When we see a vacuum on something important, we jump in.",
+    variant: "marigold" as const,
+  },
+  {
+    title: "Self awareness",
+    body: "We seek to understand our strengths and growth opportunities. We are open to feedback and share our ideas constructively and respectfully.",
+    variant: "surface" as const,
+  },
+  {
+    title: "High impact",
+    body: "We align our work to our shared vision and stay focused on top priorities.",
+    variant: "outline" as const,
+  },
+  {
+    title: "Earn trust",
+    body: "We make to maximize the trust of others in our judgments. We are open, self-critical, and factual.",
+    variant: "slate" as const,
+  },
 ] as const;
+
+function PrincipleCard({
+  title,
+  body,
+  variant,
+  ariaHidden,
+}: {
+  title: string;
+  body: string;
+  variant: (typeof PRINCIPLES)[number]["variant"];
+  ariaHidden?: boolean;
+}) {
+  return (
+    <article
+      className={`principles-marquee__card principles-marquee__card--${variant}`}
+      aria-hidden={ariaHidden || undefined}
+    >
+      <span className="principles-marquee__index" aria-hidden>
+        {String(PRINCIPLES.findIndex((p) => p.title === title) + 1).padStart(2, "0")}
+      </span>
+      <h3 className="principles-marquee__title">{title}</h3>
+      <p className="principles-marquee__body">{body}</p>
+    </article>
+  );
+}
+
+function PrinciplesMarquee() {
+  return (
+    <div className="principles-marquee" role="region" aria-label="Leadership principles">
+      <div className="principles-marquee__fade principles-marquee__fade--left" aria-hidden />
+      <div className="principles-marquee__fade principles-marquee__fade--right" aria-hidden />
+      <div className="principles-marquee__viewport">
+        <div className="principles-marquee__track">
+          {PRINCIPLES.map((p) => (
+            <PrincipleCard key={`a-${p.title}`} title={p.title} body={p.body} variant={p.variant} />
+          ))}
+        </div>
+        <div className="principles-marquee__track" aria-hidden>
+          {PRINCIPLES.map((p) => (
+            <PrincipleCard
+              key={`b-${p.title}`}
+              title={p.title}
+              body={p.body}
+              variant={p.variant}
+              ariaHidden
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const EXECUTIVE: Leader[] = [
   {
@@ -422,17 +494,9 @@ export function AboutPage() {
             These principles guide our behaviors and decision-making processes from everyday projects
             to company strategy.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {PRINCIPLES.map((p) => (
-              <article
-                key={p.title}
-                className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
-              >
-                <h3 className="text-base font-semibold text-[var(--color-denim)]">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--color-fg-muted)]">{p.body}</p>
-              </article>
-            ))}
-          </div>
+        </div>
+        <div className="mt-10">
+          <PrinciplesMarquee />
         </div>
       </section>
 
