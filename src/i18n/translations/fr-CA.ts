@@ -1,0 +1,124 @@
+import type { TranslationDict } from "../types";
+
+/**
+ * Canadian French (fr-CA)
+ * Uses Quebec / Canadian terminology preferences (e.g. "blogue", "nuage", "sur site").
+ */
+export const frCA: TranslationDict = {
+  meta: {
+    title: "Mattermost | Souveraineté opérationnelle pour le travail de mission critique",
+    description:
+      "Collaboration, automatisation et IA pour les environnements isolés, sur site et en nuage privé. Approuvé par les gouvernements, les entreprises et les forces militaires alliées.",
+  },
+  promo: {
+    text: "Présentation de Mattermost Enterprise Advanced : L'avenir des opérations sécurisées multidomaines — En savoir plus",
+    learnMore: "En savoir plus",
+  },
+  nav: {
+    platform: "Plateforme",
+    solutions: "Solutions",
+    pricing: "Tarification",
+    partners: "Partenaires",
+    resources: "Ressources",
+    overview: "Aperçu",
+    channels: "Canaux",
+    playbooks: "Playbooks",
+    integrations: "Intégrations",
+    ai: "IA",
+    security: "Sécurité",
+    integratedSecurityOps: "Opérations de sécurité intégrées",
+    selfSovereign: "Collaboration souveraine",
+    missionCriticalChatOps: "ChatOps de mission critique",
+    defense: "Défense",
+    criticalInfra: "Infrastructures critiques",
+    partnerProgram: "Programme partenaires",
+    resourceLibrary: "Bibliothèque de ressources",
+    blog: "Blogue",
+    customers: "Clients",
+    documentation: "Documentation",
+    login: "Connexion",
+    tryMattermost: "Essayer Mattermost",
+    contactSales: "Contacter les ventes",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
+  },
+  hero: {
+    title: "Souveraineté opérationnelle pour la sécurité nationale et les infrastructures critiques",
+    subtitle:
+      "Collaboration, automatisation et IA pour les environnements isolés (air-gapped), sur site et en nuage privé. Approuvé par les gouvernements, les entreprises et les forces militaires alliées.",
+    tagline: "Déployez n'importe où. Contrôlez tout.",
+    talkToExpert: "Parler à un expert",
+    explorePlatform: "Explorer la plateforme",
+  },
+  logos: {
+    aria: "Clients ayant des études de cas publiées",
+  },
+  video: {
+    eyebrow: "Collaboration assurée entre partenaires de mission",
+    title: "Voyez comment les équipes opèrent sous pression",
+    watchOnMattermost: "Regarder la vidéo complète sur Mattermost",
+  },
+  deploy: {
+    eyebrow: "Déployez n'importe où",
+    title: "Contrôlez tout",
+    subtitle: "Du nuage public souverain aux réseaux classifiés entièrement déconnectés.",
+    sovereignCloud: "Nuage souverain",
+    sovereignCloudBody: "Azure, Oracle, Google, AWS — dans les régions et locataires que vous contrôlez.",
+    onPrem: "Sur site / nuage privé",
+    onPremBody: "Déployez sur l'infrastructure en laquelle vos opérateurs ont déjà confiance.",
+    airGapped: "Isolé (air-gapped) / classifié",
+    airGappedBody: "Environnements entièrement déconnectés, sans dépendance à un tiers.",
+    hybrid: "Hybride / multi-régions",
+    hybridBody: "Reliez sites et classifications sans perdre le plan de contrôle unique.",
+  },
+  product: {
+    messagingTitle: "Messagerie et canaux sécurisés",
+    messagingDesc: "Communication d'équipe persistante et chiffrée avec bannières de classification et pistes d'audit complètes.",
+    playbooksTitle: "Automatisation des playbooks",
+    playbooksDesc: "Codifiez les procédures opérationnelles en flux de travail automatisés et répétables.",
+    callsTitle: "Audio et partage d'écran",
+    callsDesc: "Appels en temps réel souverains avec transcription et résumé IA — sans dépendance SaaS externe.",
+    boardsTitle: "Tableaux de projet",
+    boardsDesc: "Coordination Kanban et interfonctionnelle pour la planification de mission et le suivi de conformité.",
+    agentsTitle: "Collaboration humain-machine",
+    agentsDesc: "Agents IA souverains qui enrichissent, trient et résument — intégrés aux canaux que vous faites déjà confiance.",
+    integrationsTitle: "Intégrations et contrôles",
+    integrationsDesc: "Connectez les outils que vous utilisez déjà tout en gardant la résidence des données sous votre contrôle.",
+    learnMore: "En savoir plus",
+    close: "Fermer",
+  },
+  ime: {
+    eyebrow: "Environnement de mission intelligent",
+    title: "Visibilité couche par couche de vos opérations",
+    overview: "Vue d'ensemble",
+    backToOverview: "Retour à la vue d'ensemble",
+  },
+  positioning: {
+    eyebrow: "Pourquoi conçu pour la mission",
+    title: "Mattermost conçu pour la mission vs. les alternatives",
+    criteria: "Cinq critères essentiels pour la collaboration de mission critique",
+    customTitle: "Propriétaire personnalisé",
+    saasTitle: "SaaS commercial",
+    nicheTitle: "Niche et héritage",
+    problem: "Problème",
+    solution: "Solution",
+  },
+  footer: {
+    product: "Produit",
+    company: "Entreprise",
+    legal: "Mentions légales",
+    privacy: "Confidentialité",
+    terms: "Conditions",
+    contact: "Contact",
+    tagline:
+      "Mattermost est la plateforme de collaboration de premier plan pour le travail de mission critique.",
+    copyright: "Tous droits réservés. Page d'accueil conceptuelle.",
+  },
+  cta: {
+    talkToExpert: "Parler à un expert",
+    explorePlatform: "Explorer la plateforme",
+  },
+  lang: {
+    label: "Langue",
+  },
+};
