@@ -4,6 +4,7 @@ import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { LogoMarquee } from "./logo-marquee";
 import { ProductCarousel } from "./product-carousel";
+import { MissionVideo } from "./mission-video";
 import { IMEExplorer } from "./ime-explorer";
 import { PositioningCarousel } from "./positioning-carousel";
 import { useT } from "@/i18n";
@@ -72,33 +73,8 @@ export function LandingPage() {
         </div>
       </div>
 
-      <section className="border-t border-[var(--color-border)] bg-[var(--color-bg)] py-16 md:py-20">
-        <div className="container-page">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
-              {t("video.eyebrow")}
-            </p>
-            <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              {t("video.title")}
-            </h2>
-          </div>
-          <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-denim)] shadow-[var(--shadow-card)]">
-            <div className="relative aspect-video">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[var(--color-denim)] p-6 text-center">
-                <p className="text-sm font-medium text-white/90">{t("video.watchOnMattermost")}</p>
-                <a
-                  href="https://mattermost.com/video/assured-mission-partner-collaboration/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-10 items-center rounded-md bg-[var(--color-marigold)] px-4 text-sm font-semibold text-[var(--color-black)]"
-                >
-                  {t("video.open")}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MissionVideo />
+
 
       <ProductCarousel />
 
