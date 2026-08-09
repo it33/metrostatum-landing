@@ -9,6 +9,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
     title: "Company",
     links: [
       { label: "About Us", href: "#/about" },
+      { label: "Customers", href: "#/customers" },
       { label: "Newsroom", href: "https://mattermost.com/newsroom/" },
       { label: "Partners", href: "https://mattermost.com/partners/" },
       { label: "Careers", href: "https://mattermost.com/careers/" },
@@ -22,7 +23,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "Channels", href: "https://mattermost.com/channels/" },
       { label: "Playbooks", href: "https://mattermost.com/playbooks/" },
       { label: "Security", href: "https://mattermost.com/security/" },
-      { label: "Customers", href: "https://mattermost.com/customers/" },
+      { label: "Customer stories", href: "#/customers" },
     ],
   },
   {
@@ -58,7 +59,7 @@ export function SiteFooter() {
                 {col.links.map((link) => {
                   const isInternal = link.href.startsWith("#");
                   return (
-                    <li key={link.href}>
+                    <li key={`${col.title}-${link.label}`}>
                       <a
                         href={link.href}
                         {...(isInternal
