@@ -75,12 +75,12 @@ export function LandingPage() {
         </div>
       </div>
 
+      <MissionVideo />
       <ProductCarousel />
       <IMEExplorer />
       <NetworkTypesExplorer />
       <PositioningCarousel />
       <CapabilitiesCarousel />
-      <MissionVideo />
 
       <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
         <div className="container-page">
