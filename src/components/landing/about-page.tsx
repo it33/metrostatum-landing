@@ -3,8 +3,10 @@ import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
+import { RESOURCE_CARD_IMAGES } from "./resource-card-images";
 
 const CONTACT = "https://mattermost.com/contact-sales/";
+const base = import.meta.env.BASE_URL;
 
 type Leader = {
   name: string;
@@ -265,12 +267,42 @@ const OFFICES = [
 ] as const;
 
 const RESOURCE_CARDS = [
-  { title: "Press", body: "Read the latest stories about Mattermost in the news.", href: "https://mattermost.com/newsroom/", image: "https://mattermost.com/wp-content/uploads/2025/02/r2024-about-us-card-press.webp" },
-  { title: "Blog", body: "Check out articles, podcasts, and more from our team.", href: "https://mattermost.com/blog/", image: "https://mattermost.com/wp-content/uploads/2025/02/r2024-about-us-card-blog.webp" },
-  { title: "Community", body: "Learn about events, hackathons, and other community projects.", href: "https://mattermost.com/community/", image: "https://mattermost.com/wp-content/uploads/2025/02/r2024-about-us-card-community.webp" },
-  { title: "Careers", body: "View our open positions and learn more about our culture and values.", href: "https://mattermost.com/careers/", image: "https://mattermost.com/wp-content/uploads/2025/02/r2024-about-us-card-careers.webp" },
-  { title: "Partners", body: "Find an existing partner or learn how to apply to our global partner program.", href: "https://mattermost.com/partners/", image: "https://mattermost.com/wp-content/uploads/2025/02/r2024-about-us-card-partners.webp" },
-  { title: "Sales", body: "Get in touch with a Mattermost expert and we'll help you get started with our platform.", href: CONTACT, image: "https://mattermost.com/wp-content/uploads/2025/02/r2024-about-us-card-sales.webp" },
+  {
+    title: "Press",
+    body: "Read the latest stories about Mattermost in the news.",
+    href: "https://mattermost.com/newsroom/",
+    image: RESOURCE_CARD_IMAGES.press,
+  },
+  {
+    title: "Blog",
+    body: "Check out articles, podcasts, and more from our team.",
+    href: "https://mattermost.com/blog/",
+    image: RESOURCE_CARD_IMAGES.blog,
+  },
+  {
+    title: "Community",
+    body: "Learn about events, hackathons, and other community projects.",
+    href: "https://mattermost.com/community/",
+    image: RESOURCE_CARD_IMAGES.community,
+  },
+  {
+    title: "Careers",
+    body: "View our open positions and learn more about our culture and values.",
+    href: "https://mattermost.com/careers/",
+    image: RESOURCE_CARD_IMAGES.careers,
+  },
+  {
+    title: "Partners",
+    body: "Find an existing partner or learn how to apply to our global partner program.",
+    href: "https://mattermost.com/partners/",
+    image: RESOURCE_CARD_IMAGES.partners,
+  },
+  {
+    title: "Sales",
+    body: "Get in touch with a Mattermost expert and we'll help you get started with our platform.",
+    href: CONTACT,
+    image: RESOURCE_CARD_IMAGES.sales,
+  },
 ] as const;
 
 const BADGES = [
