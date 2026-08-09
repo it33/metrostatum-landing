@@ -5,6 +5,7 @@ import { SiteFooter } from "./site-footer";
 import { LogoMarquee } from "./logo-marquee";
 import { ProductCarousel } from "./product-carousel";
 import { MissionVideo } from "./mission-video";
+import { CyberDefenseVideo } from "./cyber-defense-video";
 import { IMEExplorer } from "./ime-explorer";
 import { PositioningCarousel } from "./positioning-carousel";
 import { NetworkTypesExplorer } from "./network-types-explorer";
@@ -76,6 +77,7 @@ export function LandingPage() {
       </div>
 
       <MissionVideo />
+      <CyberDefenseVideo />
       <ProductCarousel />
       <IMEExplorer />
       <NetworkTypesExplorer />
