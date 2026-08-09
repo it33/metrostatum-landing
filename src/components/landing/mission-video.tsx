@@ -1,6 +1,17 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
-import { Expand, Minimize2, Pause, Play, Volume2, VolumeX } from "lucide-react";
+import {
+  Captions,
+  CaptionsOff,
+  Expand,
+  Minimize2,
+  Pause,
+  Play,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const base = import.meta.env.BASE_URL;
 
 /**
  * Assured Mission Partner Collaboration
@@ -15,6 +26,10 @@ const POSTER_SRC =
   "https://embed-ssl.wistia.com/deliveries/657a70e2f23953d2eb50f9ffdf8cda2c.bin";
 const SOURCE_PAGE =
   "https://mattermost.com/video/assured-mission-partner-collaboration/";
+/** English closed captions (Wistia + local mirror) */
+const CAPTIONS_SRC = `${base}captions/assured-mission-partner-collaboration.en.vtt`;
+const CAPTIONS_SRC_REMOTE =
+  "https://fast.wistia.net/embed/captions/l5j68nlim8.vtt";
 
 export function MissionVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -24,6 +39,24 @@ export function MissionVideo() {
   const [expanded, setExpanded] = useState(false);
   const [fsActive, setFsActive] = useState(false);
   const [failed, setFailed] = useState(false);
+  /** Closed captions on by default */
+  const [captionsOn, setCaptionsOn] = useState(true);
+
+  const applyCaptionsMode = useCallback((on: boolean) => {
+    const v = videoRef.current;
+    if (!v) return;
+    const tracks = v.textTracks;
+    // Prefer the first English captions track only (avoid double captions)
+    let primary: TextTrack | null = null;
+    for (let i = 0; i < tracks.length; i++) {
+      const track = tracks[i]!;
+      if (track.kind === "captions" || track.kind === "subtitles") {
+        if (!primary) primary = track;
+        else track.mode = "disabled";
+      }
+    }
+    if (primary) primary.mode = on ? "showing" : "hidden";
+  }, []);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -38,9 +71,18 @@ export function MissionVideo() {
         if (!cancelled) setPlaying(false);
       }
     };
-    const onCanPlay = () => { void play(); };
+    const onCanPlay = () => {
+      void play();
+      applyCaptionsMode(captionsOn);
+    };
+    const onLoadedData = () => applyCaptionsMode(captionsOn);
     v.addEventListener("canplay", onCanPlay);
+    v.addEventListener("loadeddata", onLoadedData);
+    // Tracks can load after the element — force show when they appear
+    const onTrackAdd = () => applyCaptionsMode(captionsOn);
+    v.textTracks.addEventListener("addtrack", onTrackAdd);
     void play();
+    applyCaptionsMode(captionsOn);
     // Fail over to Wistia embed if nothing is ready after a few seconds
     const t = window.setTimeout(() => {
       if (!cancelled && v.readyState < 2) setFailed(true);
@@ -48,9 +90,16 @@ export function MissionVideo() {
     return () => {
       cancelled = true;
       v.removeEventListener("canplay", onCanPlay);
+      v.removeEventListener("loadeddata", onLoadedData);
+      v.textTracks.removeEventListener("addtrack", onTrackAdd);
       window.clearTimeout(t);
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only re-bind on mount; captions toggled separately
+  }, [applyCaptionsMode]);
+
+  useEffect(() => {
+    applyCaptionsMode(captionsOn);
+  }, [captionsOn, applyCaptionsMode]);
 
   useEffect(() => {
     const onFs = () => {
@@ -99,6 +148,10 @@ export function MissionVideo() {
     }
   }, []);
 
+  const toggleCaptions = useCallback(() => {
+    setCaptionsOn((on) => !on);
+  }, []);
+
   const toggleExpand = useCallback(async () => {
     const el = frameRef.current;
     if (!el) return;
@@ -111,7 +164,9 @@ export function MissionVideo() {
         if (el.requestFullscreen) {
           await el.requestFullscreen();
         } else {
-          const anyEl = el as HTMLElement & { webkitRequestFullscreen?: () => Promise<void> | void };
+          const anyEl = el as HTMLElement & {
+            webkitRequestFullscreen?: () => Promise<void> | void;
+          };
           await anyEl.webkitRequestFullscreen?.();
         }
         setExpanded(true);
@@ -180,7 +235,7 @@ export function MissionVideo() {
         <div
           ref={frameRef}
           className={cn(
-            "group relative mx-auto mt-10 max-w-5xl overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-black)] shadow-[var(--shadow-card)]",
+            "mission-video group relative mx-auto mt-10 max-w-5xl overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-black)] shadow-[var(--shadow-card)]",
             cssExpanded && "fixed inset-3 z-50 mt-0 max-w-none rounded-xl sm:inset-6",
             fsActive && "h-full w-full max-w-none rounded-none border-0",
           )}
@@ -212,12 +267,12 @@ export function MissionVideo() {
                 playsInline
                 preload="auto"
                 controls={false}
+                crossOrigin="anonymous"
                 onClick={onVideoClick}
                 onPlay={() => setPlaying(true)}
                 onPause={() => setPlaying(false)}
                 onError={() => setFailed(true)}
                 onStalled={() => {
-                  // If stream stalls cold, fall back to Wistia embed
                   const v = videoRef.current;
                   if (v && v.readyState < 2 && v.currentTime === 0) setFailed(true);
                 }}
@@ -225,11 +280,25 @@ export function MissionVideo() {
               >
                 <source src={VIDEO_SRC} type="video/mp4" />
                 <source src={VIDEO_SRC_HD} type="video/mp4" />
+                <track
+                  kind="captions"
+                  src={CAPTIONS_SRC}
+                  srcLang="en"
+                  label="English"
+                  default
+                />
+                {/* Remote fallback if local VTT fails to load */}
+                <track
+                  kind="captions"
+                  src={CAPTIONS_SRC_REMOTE}
+                  srcLang="en"
+                  label="English"
+                />
               </video>
             ) : (
               <iframe
                 title="Assured Mission Partner Collaboration with Mattermost"
-                src="https://fast.wistia.net/embed/iframe/l5j68nlim8?autoPlay=true&muted=true&playsinline=true&seo=false&videoFoam=true&endVideoBehavior=loop&dnt=1"
+                src="https://fast.wistia.net/embed/iframe/l5j68nlim8?autoPlay=true&muted=true&playsinline=true&seo=false&videoFoam=true&endVideoBehavior=loop&dnt=1&plugin%5Bcaptions-v1%5D%5Bon%5D=true"
                 className="absolute inset-0 h-full w-full border-0"
                 allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
                 allowFullScreen
@@ -260,6 +329,18 @@ export function MissionVideo() {
                   {muted ? "Sound off" : "Sound on"}
                 </span>
               </ControlButton>
+              {!failed && (
+                <ControlButton
+                  label={captionsOn ? "Turn off captions" : "Turn on captions"}
+                  onClick={toggleCaptions}
+                  highlight={captionsOn}
+                >
+                  {captionsOn ? <Captions className="size-4" /> : <CaptionsOff className="size-4" />}
+                  <span className="hidden text-xs font-medium sm:inline">
+                    {captionsOn ? "CC on" : "CC off"}
+                  </span>
+                </ControlButton>
+              )}
             </div>
             <div className="flex items-center gap-2">
               <a
@@ -284,7 +365,7 @@ export function MissionVideo() {
         </div>
 
         <p className="mx-auto mt-4 max-w-3xl text-center text-xs text-[var(--color-fg-subtle)]">
-          Autoplays muted. Click the video or “Click for sound” to enable audio. Use Expand for
+          Autoplays muted with closed captions on. Click for sound, toggle CC, or expand for
           fullscreen.
         </p>
       </div>
