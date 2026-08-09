@@ -1,24 +1,24 @@
-# Metrostatum
+# Mattermost-inspired Landing Page (Metrostatum)
 
-An updated Mattermost-inspired landing page for **Metrostatum** — collaboration for mission-critical work.
+Full rebuild of the operational-sovereignty marketing landing page.
 
-## Product
+## What's included
 
-Metrostatum is a concept brand for sovereign, air-gapped, and private-cloud collaboration:
-
-- Secure messaging & channels with classification controls
-- Workflow & playbook automation
-- Sovereign AI agents and audio
-- Deploy on-prem, hybrid, or fully disconnected environments
-
-This repository currently ships the **marketing landing page** only.
+- **Mattermost-style header** — promo bar, Platform / Solutions / Pricing / Partners / Resources, Login, Try Mattermost, Contact Sales
+- **Hero** — left-aligned "Operational Sovereignty…" title with lighter overlay so more of the image shows through
+- **Logo marquee** — **only** companies with published case studies on mattermost.com/customers (Fastly, Samsung, Nasdaq, etc. removed)
+- **Product carousel** — messaging, playbooks, calls, boards, agents, integrations
+- **IME explorer** — layer-by-layer pan/zoom; commentary module moves **up** when zoomed; pan biased **left** so row headings stay visible
+- **Positioning carousel** — Purpose-Built Mattermost vs. Custom Proprietary / Commercial SaaS / Niche & Legacy
+- **Deploy + Security + Footer** matching Mattermost marketing patterns
+- Light/white Mattermost brand theme (Denim `#1E325C`, Marigold `#FFBC1F`)
 
 ## Stack
 
 - React 19 + TypeScript
-- Vite 8 + TanStack Start / Router
+- Vite 6
 - Tailwind CSS v4
-- Radix / shadcn-style UI primitives
+- lucide-react
 
 ## Develop
 
@@ -31,4 +31,4 @@ npm run typecheck
 
 ## Note
 
-Landing page concept inspired by the Mattermost product category. Not affiliated with Mattermost, Inc.
+Concept landing page inspired by the Mattermost product category. Not affiliated with Mattermost, Inc.
