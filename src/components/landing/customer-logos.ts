@@ -126,10 +126,6 @@ const LOGO_BY_SLUG: Record<string, { name: string; src: string }> = {
     name: "Fairphone",
     src: local("fairphone.svg"),
   },
-  laika: {
-    name: "LAIKA",
-    src: local("laika.svg"),
-  },
   pramacom: {
     name: "Pramacom",
     src: local("pramacom.webp"),
@@ -160,7 +156,6 @@ export const LANDING_MARQUEE_LOGOS: CustomerLogo[] = [
   "rocky-linux",
   "netfoundry",
   "medincell",
-  "laika",
   "fairphone",
   "pramacom",
 ]

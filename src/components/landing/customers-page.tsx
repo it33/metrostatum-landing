@@ -269,15 +269,6 @@ const STORIES: CustomerStory[] = [
     href: "https://mattermost.com/customers/fairphone/",
   },
   {
-    slug: "laika",
-    name: "LAIKA",
-    title: "LAIKA powers creative production collaboration with Mattermost",
-    industry: "Technology",
-    image:
-      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Laika-empower-creatives-secure-assets.webp",
-    href: "https://mattermost.com/customers/laika/",
-  },
-  {
     slug: "pramacom",
     name: "Pramacom",
     title: "Pramacom modernizes secure communications with Mattermost",
