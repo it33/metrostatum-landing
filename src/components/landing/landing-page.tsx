@@ -12,6 +12,7 @@ import { IMEExplorer } from "./ime-explorer";
 import { PositioningCarousel } from "./positioning-carousel";
 import { NetworkTypesExplorer } from "./network-types-explorer";
 import { CapabilitiesCarousel } from "./capabilities-carousel";
+import { DeploymentArchitectures } from "./deployment-architectures";
 import { useT } from "@/i18n";
 
 const CONTACT = "https://mattermost.com/contact-sales/";
@@ -92,6 +93,7 @@ export function LandingPage() {
       <NetworkTypesExplorer />
       <PositioningCarousel />
       <CapabilitiesCarousel />
+      <DeploymentArchitectures />
 
       <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
         <div className="container-page">
