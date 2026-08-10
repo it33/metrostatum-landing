@@ -349,19 +349,31 @@ export function HeroUseCaseVideo() {
         </div>
 
         <div className="absolute inset-x-0 bottom-0 z-[3] flex flex-col gap-2 p-2.5 sm:p-3">
+          <div className="flex items-center gap-1.5">
+            <ControlButton label={muted ? "Unmute" : "Mute"} onClick={toggleMute} highlight={muted}>
+              {muted ? <VolumeX className="size-3.5" /> : <Volume2 className="size-3.5" />}
+            </ControlButton>
+            <ControlButton
+              label={captionsOn ? "Turn off captions" : "Turn on captions"}
+              onClick={toggleCaptions}
+              highlight={captionsOn}
+            >
+              {captionsOn ? <Captions className="size-3.5" /> : <CaptionsOff className="size-3.5" />}
+            </ControlButton>
+          </div>
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-1.5">
-              <ControlButton label={muted ? "Unmute" : "Mute"} onClick={toggleMute} highlight={muted}>
-                {muted ? <VolumeX className="size-3.5" /> : <Volume2 className="size-3.5" />}
-              </ControlButton>
-              <ControlButton
-                label={captionsOn ? "Turn off captions" : "Turn on captions"}
-                onClick={toggleCaptions}
-                highlight={captionsOn}
+            {muted ? (
+              <button
+                type="button"
+                onClick={toggleMute}
+                className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
               >
-                {captionsOn ? <Captions className="size-3.5" /> : <CaptionsOff className="size-3.5" />}
-              </ControlButton>
-            </div>
+                <VolumeX className="size-3.5" />
+                Click for sound
+              </button>
+            ) : (
+              <span />
+            )}
             <ControlButton
               label={expanded ? "Exit expand" : "Expand"}
               onClick={() => void toggleExpand()}
@@ -369,16 +381,6 @@ export function HeroUseCaseVideo() {
               {expanded ? <Minimize2 className="size-3.5" /> : <Expand className="size-3.5" />}
             </ControlButton>
           </div>
-          {muted && (
-            <button
-              type="button"
-              onClick={toggleMute}
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
-            >
-              <VolumeX className="size-3.5" />
-              Click for sound
-            </button>
-          )}
         </div>
       </div>
 
