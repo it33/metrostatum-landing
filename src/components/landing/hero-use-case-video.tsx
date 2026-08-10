@@ -343,38 +343,39 @@ export function HeroUseCaseVideo() {
             style={{ transitionDuration: `${FADE_MS}ms` }}
             aria-hidden
           />
+        </div>
 
+        <div className="absolute inset-x-0 bottom-0 z-[3] flex flex-col gap-2 p-2.5 sm:p-3">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-1.5">
+              <ControlButton label={muted ? "Unmute" : "Mute"} onClick={toggleMute} highlight={muted}>
+                {muted ? <VolumeX className="size-3.5" /> : <Volume2 className="size-3.5" />}
+              </ControlButton>
+              <ControlButton
+                label={captionsOn ? "Turn off captions" : "Turn on captions"}
+                onClick={toggleCaptions}
+                highlight={captionsOn}
+              >
+                {captionsOn ? <Captions className="size-3.5" /> : <CaptionsOff className="size-3.5" />}
+              </ControlButton>
+            </div>
+            <ControlButton
+              label={expanded ? "Exit expand" : "Expand"}
+              onClick={() => void toggleExpand()}
+            >
+              {expanded ? <Minimize2 className="size-3.5" /> : <Expand className="size-3.5" />}
+            </ControlButton>
+          </div>
           {muted && (
             <button
               type="button"
               onClick={toggleMute}
-              className="absolute left-1/2 top-1/2 z-[3] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/20 bg-black/55 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
             >
-              <VolumeX className="size-4" />
+              <VolumeX className="size-3.5" />
               Click for sound
             </button>
           )}
-        </div>
-
-        <div className="absolute inset-x-0 bottom-0 z-[3] flex items-center justify-between gap-2 p-2.5 sm:p-3">
-          <div className="flex items-center gap-1.5">
-            <ControlButton label={muted ? "Unmute" : "Mute"} onClick={toggleMute} highlight={muted}>
-              {muted ? <VolumeX className="size-3.5" /> : <Volume2 className="size-3.5" />}
-            </ControlButton>
-            <ControlButton
-              label={captionsOn ? "Turn off captions" : "Turn on captions"}
-              onClick={toggleCaptions}
-              highlight={captionsOn}
-            >
-              {captionsOn ? <Captions className="size-3.5" /> : <CaptionsOff className="size-3.5" />}
-            </ControlButton>
-          </div>
-          <ControlButton
-            label={expanded ? "Exit expand" : "Expand"}
-            onClick={() => void toggleExpand()}
-          >
-            {expanded ? <Minimize2 className="size-3.5" /> : <Expand className="size-3.5" />}
-          </ControlButton>
         </div>
       </div>
 
