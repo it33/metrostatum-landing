@@ -240,6 +240,9 @@ export function HeroUseCaseVideo() {
         role="tablist"
         aria-label="Use case"
       >
+        <span className="mr-1 text-xs font-semibold tracking-wide text-white/80">
+          Select Use Case:
+        </span>
         {USE_CASES.map((u) => {
           const selected = u.id === activeId;
           return (
