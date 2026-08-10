@@ -24,8 +24,8 @@ type CustomerStory = {
 };
 
 /**
- * Published case studies from mattermost.com/customers
- * Headlines and hero images from live Mattermost pages.
+ * Published case studies from mattermost.com/customers.
+ * Hero images matched 1:1 to the live mm-card imagery on that page.
  */
 const STORIES: CustomerStory[] = [
   {
@@ -34,7 +34,8 @@ const STORIES: CustomerStory[] = [
     title: "USAF improves mission information availability by 4x with Mattermost",
     industry: "Defense & government",
     metric: "4\u00d7 mission info availability",
-    image: "https://mattermost.com/wp-content/uploads/2020/09/Screen-Shot-2020-09-03-at-6.30.30-PM.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-us-air-force-saves-time-and-money.webp",
     href: "https://mattermost.com/customers/us-department-of-defense/",
   },
   {
@@ -43,7 +44,7 @@ const STORIES: CustomerStory[] = [
     title: "Air Mobility Command uses ChatOps to support largest-ever readiness exercise",
     industry: "Defense & government",
     metric: "15,000+ forces coordinated",
-    image: "https://mattermost.com/wp-content/uploads/2023/10/Case_Study_Air_Mobility_v2.png",
+    image: "https://mattermost.com/wp-content/uploads/2023/10/Case_Study_Air_Mobility_v2.webp",
     href: "https://mattermost.com/customers/air-mobility-command/",
   },
   {
@@ -51,7 +52,8 @@ const STORIES: CustomerStory[] = [
     name: "Operation Allies Refuge",
     title: "Mattermost enables mission success in Operation Allies Refuge",
     industry: "Defense & government",
-    image: "https://mattermost.com/wp-content/uploads/2023/10/Case_Study_Air_Mobility_v2.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2025/09/Mattermost-operation-allies-refuge-scaled.jpg",
     href: "https://mattermost.com/customers/operation-allies-refuge/",
   },
   {
@@ -59,7 +61,8 @@ const STORIES: CustomerStory[] = [
     name: "European public agency",
     title: "European public agency chooses Mattermost & Pexip for secure collaboration",
     industry: "Defense & government",
-    image: "https://mattermost.com/wp-content/uploads/2022/11/Case_Study_RTE.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2025/09/Swedish-Pension-FundHero-Horzontal.jpg",
     href: "https://mattermost.com/customers/european-public-agency/",
   },
   {
@@ -68,7 +71,7 @@ const STORIES: CustomerStory[] = [
     title: "RTE uses Mattermost to manage France's power grid and reduce outage response time",
     industry: "Critical infrastructure",
     metric: "Faster outage response",
-    image: "https://mattermost.com/wp-content/uploads/2022/11/Case_Study_RTE.png",
+    image: "https://mattermost.com/wp-content/uploads/2022/11/Case_Study_RTE.webp",
     href: "https://mattermost.com/customers/rte/",
   },
   {
@@ -77,7 +80,7 @@ const STORIES: CustomerStory[] = [
     title: "T\u00fcrk Telekom's SOC team eliminated tool fragmentation and boosted productivity by 40%",
     industry: "Critical infrastructure",
     metric: "40% productivity boost",
-    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_Fujitsu.png",
+    image: "https://mattermost.com/wp-content/uploads/2026/07/Turk_Study-Hero-Horzontal.jpg",
     href: "https://mattermost.com/customers/turk-telekom/",
   },
   {
@@ -94,7 +97,7 @@ const STORIES: CustomerStory[] = [
     title: "Fujitsu customers with Biodrug Design Accelerator use Mattermost for collaboration",
     industry: "Enterprise & finance",
     metric: "Self-hosted R&D control",
-    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_Fujitsu.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_Fujitsu.webp",
     href: "https://mattermost.com/customers/fujitsu/",
   },
   {
@@ -103,7 +106,8 @@ const STORIES: CustomerStory[] = [
     title: "NRI gives operational efficiency a boost with Mattermost",
     industry: "Enterprise & finance",
     metric: "13,000 employees \u00b7 14 countries",
-    image: "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-NRI-from-hipchat-to-partner.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-NRI-from-hipchat-to-partner.webp",
     href: "https://mattermost.com/customers/nri/",
   },
   {
@@ -112,7 +116,8 @@ const STORIES: CustomerStory[] = [
     title: "Worldline creates a collaborative culture for a global team with Mattermost",
     industry: "Enterprise & finance",
     metric: "3,000 employees \u00b7 500+ teams",
-    image: "https://mattermost.com/wp-content/uploads/2020/03/case-study-worldline.jpg",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Worldline-global-team-knowlege-sharing-developer-productivity.webp",
     href: "https://mattermost.com/customers/worldline/",
   },
   {
@@ -121,7 +126,7 @@ const STORIES: CustomerStory[] = [
     title: "Elevating retail resilience: Tulip slashed incident response times by 50\u201360%",
     industry: "Enterprise & finance",
     metric: "50\u201360% faster IR",
-    image: "https://mattermost.com/wp-content/uploads/2020/03/case-study-worldline.jpg",
+    image: "https://mattermost.com/wp-content/uploads/2024/05/Case_Study_Tulip.webp",
     href: "https://mattermost.com/customers/tulip/",
   },
   {
@@ -130,7 +135,7 @@ const STORIES: CustomerStory[] = [
     title: "Classact speeds up IT service delivery, accelerating incident response by over 50%",
     industry: "Enterprise & finance",
     metric: "50%+ faster IR",
-    image: "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-NRI-from-hipchat-to-partner.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/07/Case_Study_Classact.webp",
     href: "https://mattermost.com/customers/classact/",
   },
   {
@@ -139,7 +144,8 @@ const STORIES: CustomerStory[] = [
     title: "CERN integrates 100+ tools into Mattermost for more effective global collaboration",
     industry: "Research & open source",
     metric: "22,000 users \u00b7 100+ tools",
-    image: "https://mattermost.com/wp-content/uploads/2020/10/CERN-case-study.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Cern-secure-self-hosted-messaging-collaboration.webp",
     href: "https://mattermost.com/customers/cern/",
   },
   {
@@ -148,7 +154,7 @@ const STORIES: CustomerStory[] = [
     title: "AlmaLinux builds a global digital community with Mattermost",
     industry: "Research & open source",
     metric: "2,000+ members \u00b7 100k posts",
-    image: "https://mattermost.com/wp-content/uploads/2023/05/Case_Study_AlmaLinux.png",
+    image: "https://mattermost.com/wp-content/uploads/2023/05/Case_Study_AlmaLinux.webp",
     href: "https://mattermost.com/customers/almalinux/",
   },
   {
@@ -156,7 +162,7 @@ const STORIES: CustomerStory[] = [
     name: "Rocky Linux",
     title: "Rocky Linux builds community collaboration with Mattermost",
     industry: "Research & open source",
-    image: "https://mattermost.com/wp-content/uploads/2023/05/Case_Study_AlmaLinux.png",
+    image: "https://mattermost.com/wp-content/uploads/2021/10/Rocky-Linux-Cover.webp",
     href: "https://mattermost.com/customers/rocky-linux/",
   },
   {
@@ -164,7 +170,7 @@ const STORIES: CustomerStory[] = [
     name: "OSIRIS-REx",
     title: "Connecting OSIRIS-REx's global team for innovative research while maintaining data sovereignty",
     industry: "Research & open source",
-    image: "https://mattermost.com/wp-content/uploads/2020/10/CERN-case-study.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_University_AZ.webp",
     href: "https://mattermost.com/customers/osiris-rex/",
   },
   {
@@ -172,7 +178,8 @@ const STORIES: CustomerStory[] = [
     name: "Heidelberg University",
     title: "Heidelberg University accelerates research collaboration with Mattermost",
     industry: "Research & open source",
-    image: "https://mattermost.com/wp-content/uploads/2020/10/CERN-case-study.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2022/03/Case_Study_University_of_Heidelberg.webp",
     href: "https://mattermost.com/customers/heidelberg-university/",
   },
   {
@@ -180,7 +187,7 @@ const STORIES: CustomerStory[] = [
     name: "Max Planck Digital Library",
     title: "Max Planck Digital Library chooses Mattermost for secure research collaboration",
     industry: "Research & open source",
-    image: "https://mattermost.com/wp-content/uploads/2020/10/CERN-case-study.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/02/Case_Study_MaxPlanck.webp",
     href: "https://mattermost.com/customers/max-planck-digital-library/",
   },
   {
@@ -197,7 +204,8 @@ const STORIES: CustomerStory[] = [
     title: "German Informatics uses Mattermost to accelerate research timelines 6x & ensure GDPR compliance",
     industry: "Research & open source",
     metric: "6\u00d7 faster research timelines",
-    image: "https://mattermost.com/wp-content/uploads/2020/10/CERN-case-study.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2025/05/Case_Study_German_Informatics_Society.webp",
     href: "https://mattermost.com/customers/german-informatics-society/",
   },
   {
@@ -205,7 +213,7 @@ const STORIES: CustomerStory[] = [
     name: "CyberPeace Institute",
     title: "CyberPeace moves to self-hosted Mattermost for data security & user-friendly design",
     industry: "Security & cyber",
-    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_Fujitsu.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/12/Case_Study_CyberPeace_Institute.webp",
     href: "https://mattermost.com/customers/cyberpeace-institute/",
   },
   {
@@ -213,7 +221,7 @@ const STORIES: CustomerStory[] = [
     name: "Spamhaus",
     title: "Spamhaus uses Mattermost to accelerate communication and strengthen online trust & safety",
     industry: "Security & cyber",
-    image: "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-NRI-from-hipchat-to-partner.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/10/Case_Study_Spamhaus.webp",
     href: "https://mattermost.com/customers/spamhaus/",
   },
   {
@@ -221,7 +229,7 @@ const STORIES: CustomerStory[] = [
     name: "Nonprofit CERT",
     title: "Empowering cyber resilience: How a nonprofit CERT safeguards mission-critical infrastructure",
     industry: "Security & cyber",
-    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_Fujitsu.png",
+    image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_SektorCERT.webp",
     href: "https://mattermost.com/customers/nonprofit-cert/",
   },
   {
@@ -229,7 +237,7 @@ const STORIES: CustomerStory[] = [
     name: "Access Now",
     title: "Access Now increases focus & security with self-hosted Mattermost",
     industry: "Security & cyber",
-    image: "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-NRI-from-hipchat-to-partner.png",
+    image: "https://mattermost.com/wp-content/uploads/2026/01/Access-Now-hero-horz.jpg",
     href: "https://mattermost.com/customers/access-now/",
   },
   {
@@ -237,7 +245,7 @@ const STORIES: CustomerStory[] = [
     name: "NetFoundry",
     title: "NetFoundry builds zero-trust collaboration workflows with Mattermost",
     industry: "Technology",
-    image: "https://mattermost.com/wp-content/uploads/2020/03/case-study-worldline.jpg",
+    image: "https://mattermost.com/wp-content/uploads/2024/01/Case_Study_NetFoundry@2x.webp",
     href: "https://mattermost.com/customers/netfoundry/",
   },
   {
@@ -245,7 +253,8 @@ const STORIES: CustomerStory[] = [
     name: "MedinCell",
     title: "MedinCell enables secure collaborative drug development with Mattermost",
     industry: "Technology",
-    image: "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-MedinCell-secure-collaborative-drug-development.webp",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-MedinCell-secure-collaborative-drug-development.webp",
     href: "https://mattermost.com/customers/medincell/",
   },
   {
@@ -253,7 +262,7 @@ const STORIES: CustomerStory[] = [
     name: "Fairphone",
     title: "Fairphone eliminates \u201creply all\u201d threads with Mattermost",
     industry: "Technology",
-    image: "https://mattermost.com/wp-content/uploads/2021/09/Fairphone-768x402.webp",
+    image: "https://mattermost.com/wp-content/uploads/2021/09/Fairphone.webp",
     href: "https://mattermost.com/customers/fairphone/",
   },
   {
@@ -261,7 +270,8 @@ const STORIES: CustomerStory[] = [
     name: "LAIKA",
     title: "LAIKA powers creative production collaboration with Mattermost",
     industry: "Technology",
-    image: "https://mattermost.com/wp-content/uploads/2020/03/case-study-worldline.jpg",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Laika-empower-creatives-secure-assets.webp",
     href: "https://mattermost.com/customers/laika/",
   },
   {
@@ -269,7 +279,7 @@ const STORIES: CustomerStory[] = [
     name: "Pramacom",
     title: "Pramacom modernizes secure communications with Mattermost",
     industry: "Technology",
-    image: "https://mattermost.com/wp-content/uploads/2022/11/Case_Study_RTE.png",
+    image: "https://mattermost.com/wp-content/uploads/2023/07/Case_Study_Pramacom.webp",
     href: "https://mattermost.com/customers/pramacom/",
   },
   {
@@ -277,7 +287,8 @@ const STORIES: CustomerStory[] = [
     name: "Galois",
     title: "Galois chooses Mattermost for high-assurance engineering collaboration",
     industry: "Technology",
-    image: "https://mattermost.com/wp-content/uploads/2020/10/CERN-case-study.png",
+    image:
+      "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Galois-collaborate-worldwide-retaining-data-control-security.webp",
     href: "https://mattermost.com/customers/galois/",
   },
 ];
