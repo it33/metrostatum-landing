@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 const base = import.meta.env.BASE_URL;
 
 /** Start playback this many seconds into each video */
-const START_OFFSET_SEC = 10;
+const START_OFFSET_SEC = 15;
 /** Auto-rotate dwell window (ms) — random between min and max */
 const ROTATE_MIN_MS = 20_000;
 const ROTATE_MAX_MS = 30_000;
@@ -383,7 +383,7 @@ export function HeroUseCaseVideo() {
       </div>
 
       <p className="mt-2 text-[11px] text-white/55">
-        Starts muted at 0:10 with captions. Auto-switches use cases every 20–30s.
+        Starts muted at 0:15 with captions. Auto-switches use cases every 20–30s.
       </p>
     </div>
   );
