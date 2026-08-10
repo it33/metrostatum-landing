@@ -138,7 +138,7 @@ export function CaseStudiesCarousel() {
             Trusted by the world's most demanding operators
           </h2>
           <p className="mt-4 text-[var(--color-fg-muted)]">
-            From allied air mobility and national power grids to global research and payments\u2014teams
+            From allied air mobility and national power grids to global research and payments—teams
             choose Mattermost when operational control, data sovereignty, and speed matter.
           </p>
         </div>

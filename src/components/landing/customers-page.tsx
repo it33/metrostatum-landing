@@ -338,7 +338,7 @@ export function CustomersPage() {
             Powering digital operations around the world
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
-            From allied defense and national power grids to global research and payments\u2014see how
+            From allied defense and national power grids to global research and payments—see how
             organizations run mission-critical collaboration on Mattermost with full operational
             control.
           </p>
