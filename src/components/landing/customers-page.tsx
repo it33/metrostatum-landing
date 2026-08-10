@@ -36,7 +36,7 @@ const STORIES: CustomerStory[] = [
     name: "U.S. Air Force",
     title: "USAF improves mission information availability by 4x with Mattermost",
     industry: "Defense & government",
-    metric: "4\u00d7 mission info availability",
+    metric: "4× mission info availability",
     image:
       "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-us-air-force-saves-time-and-money.webp",
     href: "https://mattermost.com/customers/us-department-of-defense/",
@@ -79,8 +79,8 @@ const STORIES: CustomerStory[] = [
   },
   {
     slug: "turk-telekom",
-    name: "T\u00fcrk Telekom",
-    title: "T\u00fcrk Telekom's SOC team eliminated tool fragmentation and boosted productivity by 40%",
+    name: "Türk Telekom",
+    title: "Türk Telekom's SOC team eliminated tool fragmentation and boosted productivity by 40%",
     industry: "Critical infrastructure",
     metric: "40% productivity boost",
     image: "https://mattermost.com/wp-content/uploads/2026/07/Turk_Study-Hero-Horzontal.jpg",
@@ -108,7 +108,7 @@ const STORIES: CustomerStory[] = [
     name: "NRI",
     title: "NRI gives operational efficiency a boost with Mattermost",
     industry: "Enterprise & finance",
-    metric: "13,000 employees \u00b7 14 countries",
+    metric: "13,000 employees · 14 countries",
     image:
       "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-NRI-from-hipchat-to-partner.webp",
     href: "https://mattermost.com/customers/nri/",
@@ -118,7 +118,7 @@ const STORIES: CustomerStory[] = [
     name: "Worldline",
     title: "Worldline creates a collaborative culture for a global team with Mattermost",
     industry: "Enterprise & finance",
-    metric: "3,000 employees \u00b7 500+ teams",
+    metric: "3,000 employees · 500+ teams",
     image:
       "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Worldline-global-team-knowlege-sharing-developer-productivity.webp",
     href: "https://mattermost.com/customers/worldline/",
@@ -126,9 +126,9 @@ const STORIES: CustomerStory[] = [
   {
     slug: "tulip",
     name: "Tulip",
-    title: "Elevating retail resilience: Tulip slashed incident response times by 50\u201360%",
+    title: "Elevating retail resilience: Tulip slashed incident response times by 50–60%",
     industry: "Enterprise & finance",
-    metric: "50\u201360% faster IR",
+    metric: "50–60% faster IR",
     image: "https://mattermost.com/wp-content/uploads/2024/05/Case_Study_Tulip.webp",
     href: "https://mattermost.com/customers/tulip/",
   },
@@ -146,7 +146,7 @@ const STORIES: CustomerStory[] = [
     name: "CERN",
     title: "CERN integrates 100+ tools into Mattermost for more effective global collaboration",
     industry: "Research & open source",
-    metric: "22,000 users \u00b7 100+ tools",
+    metric: "22,000 users · 100+ tools",
     image:
       "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Cern-secure-self-hosted-messaging-collaboration.webp",
     href: "https://mattermost.com/customers/cern/",
@@ -156,7 +156,7 @@ const STORIES: CustomerStory[] = [
     name: "AlmaLinux",
     title: "AlmaLinux builds a global digital community with Mattermost",
     industry: "Research & open source",
-    metric: "2,000+ members \u00b7 100k posts",
+    metric: "2,000+ members · 100k posts",
     image: "https://mattermost.com/wp-content/uploads/2023/05/Case_Study_AlmaLinux.webp",
     href: "https://mattermost.com/customers/almalinux/",
   },
@@ -206,7 +206,7 @@ const STORIES: CustomerStory[] = [
     name: "German Informatics Society",
     title: "German Informatics uses Mattermost to accelerate research timelines 6x & ensure GDPR compliance",
     industry: "Research & open source",
-    metric: "6\u00d7 faster research timelines",
+    metric: "6× faster research timelines",
     image:
       "https://mattermost.com/wp-content/uploads/2025/05/Case_Study_German_Informatics_Society.webp",
     href: "https://mattermost.com/customers/german-informatics-society/",
@@ -263,7 +263,7 @@ const STORIES: CustomerStory[] = [
   {
     slug: "fairphone",
     name: "Fairphone",
-    title: "Fairphone eliminates \u201creply all\u201d threads with Mattermost",
+    title: "Fairphone eliminates “reply all” threads with Mattermost",
     industry: "Technology",
     image: "https://mattermost.com/wp-content/uploads/2021/09/Fairphone.webp",
     href: "https://mattermost.com/customers/fairphone/",
@@ -385,7 +385,7 @@ export function CustomersPage() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search customers\u2026"
+                placeholder="Search customers…"
                 className="w-full rounded-full border border-[var(--color-border)] bg-white py-2 pl-10 pr-4 text-sm outline-none ring-[var(--color-denim)]/20 placeholder:text-[var(--color-fg-subtle)] focus:ring-2"
               />
             </label>

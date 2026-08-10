@@ -22,7 +22,7 @@ const CASE_STUDIES: CaseStudy[] = [
     slug: "us-department-of-defense",
     name: "U.S. Air Force",
     industry: "Defense",
-    metric: "4\u00d7 mission info availability",
+    metric: "4× mission info availability",
     benefit:
       "Rolled out to 48,000 DoD personnel in one week. Secure CUI collaboration replaced ad-hoc chat tools and sped pre-flight readiness.",
     href: "https://mattermost.com/customers/us-department-of-defense/",
@@ -31,7 +31,7 @@ const CASE_STUDIES: CaseStudy[] = [
     slug: "cern",
     name: "CERN",
     industry: "Scientific research",
-    metric: "22,000 users \u00b7 100+ tools",
+    metric: "22,000 users · 100+ tools",
     benefit:
       "Centralized collaboration across 3,000 teams and integrated 100+ research tools into one on-prem platform for global science operations.",
     href: "https://mattermost.com/customers/cern/",
@@ -49,7 +49,7 @@ const CASE_STUDIES: CaseStudy[] = [
     slug: "nri",
     name: "NRI",
     industry: "Consulting & financial IT",
-    metric: "13,000 employees \u00b7 14 countries",
+    metric: "13,000 employees · 14 countries",
     benefit:
       "Replaced HipChat at scale for J-SOX-compliant collaboration, cutting meetings and connecting DevOps workflows across APAC.",
     href: "https://mattermost.com/customers/nri/",
@@ -58,7 +58,7 @@ const CASE_STUDIES: CaseStudy[] = [
     slug: "worldline",
     name: "Worldline",
     industry: "Payments & transactions",
-    metric: "3,000 employees \u00b7 500+ teams",
+    metric: "3,000 employees · 500+ teams",
     benefit:
       "Unified a global engineering culture with GitLab-integrated channels so distributed teams ship faster without context switching.",
     href: "https://mattermost.com/customers/worldline/",
@@ -69,16 +69,16 @@ const CASE_STUDIES: CaseStudy[] = [
     industry: "Critical infrastructure",
     metric: "Faster grid outage response",
     benefit:
-      "France\u2019s electricity transmission operator uses Mattermost for real-time crisis coordination across maintenance, communications, and sales.",
+      "France’s electricity transmission operator uses Mattermost for real-time crisis coordination across maintenance, communications, and sales.",
     href: "https://mattermost.com/customers/rte/",
   },
   {
     slug: "almalinux",
     name: "AlmaLinux",
     industry: "Open source foundation",
-    metric: "2,000+ members \u00b7 100k posts",
+    metric: "2,000+ members · 100k posts",
     benefit:
-      "Built a global contributor community on Mattermost\u2014organized by project, integrated with Grafana, and aligned with open-source values.",
+      "Built a global contributor community on Mattermost—organized by project, integrated with Grafana, and aligned with open-source values.",
     href: "https://mattermost.com/customers/almalinux/",
   },
 ];
