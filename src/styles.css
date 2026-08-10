@@ -112,6 +112,9 @@
     align-items: center;
     animation: logo-marquee-scroll 90s linear infinite;
   }
+  .logo-marquee--customers .logo-marquee__viewport {
+    animation-duration: 140s;
+  }
   .logo-marquee:hover .logo-marquee__viewport { animation-play-state: paused; }
   .logo-marquee__track {
     display: flex;
@@ -156,6 +159,22 @@
   @keyframes logo-marquee-scroll {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
+  }
+
+  .customer-card__logo {
+    display: flex;
+    height: 2rem;
+    max-width: 8.5rem;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .customer-card__logo-img {
+    display: block;
+    height: 1.75rem;
+    width: auto;
+    max-width: 8.5rem;
+    object-fit: contain;
+    object-position: left center;
   }
 
   .product-marquee { overflow: hidden; width: 100%; }

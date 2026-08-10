@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { ArrowRight, Search } from "lucide-react";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
+import { LogoMarquee } from "./logo-marquee";
+import { getCustomerLogoSrc, logosForStories } from "./customer-logos";
 import { cn } from "@/lib/utils";
 
 type Industry =
@@ -26,6 +28,7 @@ type CustomerStory = {
 /**
  * Published case studies from mattermost.com/customers.
  * Hero images matched 1:1 to the live mm-card imagery on that page.
+ * Logos come from the shared customer-logos registry.
  */
 const STORIES: CustomerStory[] = [
   {
@@ -303,6 +306,8 @@ const FILTERS: Industry[] = [
   "Technology",
 ];
 
+const STORY_LOGOS = logosForStories(STORIES.map((s) => s.slug));
+
 export function CustomersPage() {
   const [filter, setFilter] = useState<Industry>("All");
   const [query, setQuery] = useState("");
@@ -352,6 +357,12 @@ export function CustomersPage() {
         </div>
       </section>
 
+      <LogoMarquee
+        logos={STORY_LOGOS}
+        ariaLabel="Logos of organizations with published case studies"
+        className="logo-marquee--customers"
+      />
+
       <section className="border-b border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-6">
         <div className="container-page">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -399,47 +410,71 @@ export function CustomersPage() {
             </p>
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((s) => (
-                <a
-                  key={s.slug}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-[var(--color-denim)]/30 hover:shadow-lg"
-                >
-                  <div className="aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-                    <img
-                      src={s.image}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                      onError={(e) => {
-                        const el = e.currentTarget;
-                        el.style.display = "none";
-                      }}
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col gap-2 p-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-sm font-semibold text-[var(--color-denim)]">{s.name}</span>
-                      <span className="rounded-full bg-[var(--color-denim)]/8 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-denim)]">
-                        {s.industry}
+              {filtered.map((s) => {
+                const logoSrc = getCustomerLogoSrc(s.slug);
+                return (
+                  <a
+                    key={s.slug}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-[var(--color-denim)]/30 hover:shadow-lg"
+                  >
+                    <div className="aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+                      <img
+                        src={s.image}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                        }}
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col gap-2 p-5">
+                      <div className="flex items-start justify-between gap-3">
+                        {logoSrc ? (
+                          <div className="customer-card__logo">
+                            <img
+                              src={logoSrc}
+                              alt={s.name}
+                              loading="lazy"
+                              decoding="async"
+                              className="customer-card__logo-img"
+                              onError={(e) => {
+                                e.currentTarget.style.visibility = "hidden";
+                              }}
+                            />
+                          </div>
+                        ) : (
+                          <span className="text-sm font-semibold text-[var(--color-denim)]">
+                            {s.name}
+                          </span>
+                        )}
+                        <span className="shrink-0 rounded-full bg-[var(--color-denim)]/8 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-denim)]">
+                          {s.industry}
+                        </span>
+                      </div>
+                      {logoSrc && (
+                        <span className="text-sm font-semibold text-[var(--color-denim)]">
+                          {s.name}
+                        </span>
+                      )}
+                      {s.metric && (
+                        <p className="text-sm font-bold tracking-tight text-[var(--color-fg)]">
+                          {s.metric}
+                        </p>
+                      )}
+                      <p className="text-sm leading-relaxed text-[var(--color-fg-muted)]">{s.title}</p>
+                      <span className="mt-auto inline-flex items-center gap-1.5 pt-2 text-xs font-semibold text-[var(--color-denim)] transition-colors group-hover:text-[var(--color-marigold)]">
+                        Read case study
+                        <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
                       </span>
                     </div>
-                    {s.metric && (
-                      <p className="text-sm font-bold tracking-tight text-[var(--color-fg)]">
-                        {s.metric}
-                      </p>
-                    )}
-                    <p className="text-sm leading-relaxed text-[var(--color-fg-muted)]">{s.title}</p>
-                    <span className="mt-auto inline-flex items-center gap-1.5 pt-2 text-xs font-semibold text-[var(--color-denim)] transition-colors group-hover:text-[var(--color-marigold)]">
-                      Read case study
-                      <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-                    </span>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                );
+              })}
             </div>
           )}
 

@@ -1,89 +1,90 @@
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const base = import.meta.env.BASE_URL;
+import { getCustomerLogoSrc } from "./customer-logos";
 
 type CaseStudy = {
+  slug: string;
   name: string;
   industry: string;
   metric: string;
   benefit: string;
   href: string;
-  logo: string;
   logoClassName?: string;
 };
 
 /**
  * Top enterprise / well-known published case studies from mattermost.com/customers
  * Selected for brand recognition + clear operational outcomes.
+ * Logos resolved from the shared customer-logos registry.
  */
 const CASE_STUDIES: CaseStudy[] = [
   {
+    slug: "us-department-of-defense",
     name: "U.S. Air Force",
     industry: "Defense",
     metric: "4\u00d7 mission info availability",
     benefit:
       "Rolled out to 48,000 DoD personnel in one week. Secure CUI collaboration replaced ad-hoc chat tools and sped pre-flight readiness.",
     href: "https://mattermost.com/customers/us-department-of-defense/",
-    logo: `${base}images/logos/usaf.svg`,
   },
   {
+    slug: "cern",
     name: "CERN",
     industry: "Scientific research",
     metric: "22,000 users \u00b7 100+ tools",
     benefit:
       "Centralized collaboration across 3,000 teams and integrated 100+ research tools into one on-prem platform for global science operations.",
     href: "https://mattermost.com/customers/cern/",
-    logo: `${base}images/logos/cern.webp`,
   },
   {
+    slug: "fujitsu",
     name: "Fujitsu",
     industry: "Enterprise IT & R&D",
     metric: "Self-hosted R&D control",
     benefit:
       "Powers the Biodrug Design Accelerator so specialized teams share sensitive discovery data in real time under full data ownership.",
     href: "https://mattermost.com/customers/fujitsu/",
-    logo: `${base}images/logos/fujitsu.webp`,
   },
   {
+    slug: "nri",
     name: "NRI",
     industry: "Consulting & financial IT",
     metric: "13,000 employees \u00b7 14 countries",
     benefit:
       "Replaced HipChat at scale for J-SOX-compliant collaboration, cutting meetings and connecting DevOps workflows across APAC.",
     href: "https://mattermost.com/customers/nri/",
-    logo: `${base}images/logos/nri.webp`,
   },
   {
+    slug: "worldline",
     name: "Worldline",
     industry: "Payments & transactions",
     metric: "3,000 employees \u00b7 500+ teams",
     benefit:
       "Unified a global engineering culture with GitLab-integrated channels so distributed teams ship faster without context switching.",
     href: "https://mattermost.com/customers/worldline/",
-    logo: `${base}images/logos/worldline.webp`,
   },
   {
+    slug: "rte",
     name: "RTE",
     industry: "Critical infrastructure",
     metric: "Faster grid outage response",
     benefit:
       "France\u2019s electricity transmission operator uses Mattermost for real-time crisis coordination across maintenance, communications, and sales.",
     href: "https://mattermost.com/customers/rte/",
-    logo: `${base}images/logos/rte.webp`,
   },
   {
+    slug: "almalinux",
     name: "AlmaLinux",
     industry: "Open source foundation",
     metric: "2,000+ members \u00b7 100k posts",
     benefit:
       "Built a global contributor community on Mattermost\u2014organized by project, integrated with Grafana, and aligned with open-source values.",
     href: "https://mattermost.com/customers/almalinux/",
-    logo: `${base}images/logos/almalinux.webp`,
   },
 ];
 
 function CaseCard({ study, ariaHidden }: { study: CaseStudy; ariaHidden?: boolean }) {
+  const logo = getCustomerLogoSrc(study.slug);
   return (
     <a
       href={study.href}
@@ -95,13 +96,15 @@ function CaseCard({ study, ariaHidden }: { study: CaseStudy; ariaHidden?: boolea
     >
       <div className="flex items-center gap-3">
         <div className="flex h-10 w-[7.5rem] shrink-0 items-center justify-start">
-          <img
-            src={study.logo}
-            alt={ariaHidden ? "" : study.name}
-            className={cn("case-studies-marquee__logo", study.logoClassName)}
-            loading="lazy"
-            decoding="async"
-          />
+          {logo && (
+            <img
+              src={logo}
+              alt={ariaHidden ? "" : study.name}
+              className={cn("case-studies-marquee__logo", study.logoClassName)}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
         </div>
         <span className="rounded-full bg-[var(--color-denim)]/8 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-denim)]">
           {study.industry}
@@ -151,12 +154,12 @@ export function CaseStudiesCarousel() {
         <div className="case-studies-marquee__viewport">
           <div className="case-studies-marquee__track">
             {CASE_STUDIES.map((s) => (
-              <CaseCard key={`a-${s.name}`} study={s} />
+              <CaseCard key={`a-${s.slug}`} study={s} />
             ))}
           </div>
           <div className="case-studies-marquee__track" aria-hidden>
             {CASE_STUDIES.map((s) => (
-              <CaseCard key={`b-${s.name}`} study={s} ariaHidden />
+              <CaseCard key={`b-${s.slug}`} study={s} ariaHidden />
             ))}
           </div>
         </div>
