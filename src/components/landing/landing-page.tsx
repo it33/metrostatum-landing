@@ -44,8 +44,8 @@ export function LandingPage() {
         <div className="hero-top__content flex min-h-[min(78vh,700px)] flex-col">
           <section className="relative flex flex-1 flex-col justify-center">
             <div className="container-page pb-14 pt-12 md:pb-16 md:pt-16">
-              <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-12">
-                <div className="max-w-xl text-left md:max-w-2xl">
+              <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16 xl:gap-20">
+                <div className="max-w-xl text-left md:max-w-2xl lg:pr-4">
                   <h1 className="text-balance font-display text-4xl font-bold tracking-[-0.02em] text-white sm:text-5xl md:text-[3.25rem] md:leading-[1.1]">
                     {t("hero.title")}
                   </h1>
