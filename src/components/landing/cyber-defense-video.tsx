@@ -10,6 +10,7 @@ import {
   VolumeX,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useCaptionCues, VideoCaptionBar } from "./use-caption-cues";
 
 const base = import.meta.env.BASE_URL;
 
@@ -42,6 +43,7 @@ export function CyberDefenseVideo() {
   const [failed, setFailed] = useState(false);
   /** Closed captions on by default */
   const [captionsOn, setCaptionsOn] = useState(true);
+  const cueText = useCaptionCues(videoRef, captionsOn);
 
   const applyCaptionsMode = useCallback((on: boolean) => {
     const v = videoRef.current;
@@ -56,7 +58,7 @@ export function CyberDefenseVideo() {
         else track.mode = "disabled";
       }
     }
-    if (primary) primary.mode = on ? "showing" : "hidden";
+    if (primary) primary.mode = on ? "hidden" : "disabled";
   }, []);
 
   useEffect(() => {
@@ -233,7 +235,7 @@ export function CyberDefenseVideo() {
         <div
           ref={frameRef}
           className={cn(
-            "mission-video group relative mx-auto mt-10 max-w-5xl overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-black)] shadow-[var(--shadow-card)]",
+            "mission-video group relative mx-auto mt-10 flex max-w-5xl flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-black)] shadow-[var(--shadow-card)]",
             cssExpanded && "fixed inset-3 z-50 mt-0 max-w-none rounded-xl sm:inset-6",
             fsActive && "h-full w-full max-w-none rounded-none border-0",
           )}
@@ -244,14 +246,9 @@ export function CyberDefenseVideo() {
             aria-hidden
           />
           <div
-            className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-gradient-to-t from-black/70 to-transparent"
-            aria-hidden
-          />
-
-          <div
             className={cn(
               "relative w-full bg-black",
-              fsActive || cssExpanded ? "h-full min-h-[50vh]" : "aspect-video",
+              fsActive || cssExpanded ? "min-h-0 flex-1" : "aspect-video",
             )}
           >
             {!failed ? (
@@ -307,13 +304,12 @@ export function CyberDefenseVideo() {
               <button
                 type="button"
                 onClick={toggleMute}
-                className="absolute left-1/2 top-1/2 z-[3] flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/20 bg-black/55 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
+                className="absolute left-1/2 top-1/2 z-[3] flex min-h-11 -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/20 bg-black/55 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
               >
                 <VolumeX className="size-4" />
                 Click for sound
               </button>
             )}
-          </div>
 
           <div className="absolute inset-x-0 bottom-0 z-[3] flex items-center justify-between gap-3 p-3 sm:p-4">
             <div className="flex items-center gap-2">
@@ -359,6 +355,8 @@ export function CyberDefenseVideo() {
               </ControlButton>
             </div>
           </div>
+          </div>
+          <VideoCaptionBar text={cueText} visible={captionsOn} />
         </div>
 
         <p className="mx-auto mt-4 max-w-3xl text-center text-xs text-[var(--color-fg-subtle)]">
@@ -387,7 +385,7 @@ function ControlButton({
       aria-label={label}
       onClick={onClick}
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border px-3 py-2 text-white backdrop-blur-sm transition",
+        "inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full border px-3 text-white backdrop-blur-sm transition",
         highlight
           ? "border-[var(--color-marigold)]/50 bg-[color-mix(in_oklab,var(--color-marigold)_18%,black)] hover:bg-[color-mix(in_oklab,var(--color-marigold)_28%,black)]"
           : "border-white/15 bg-black/45 hover:bg-black/65",
