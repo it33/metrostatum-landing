@@ -1,5 +1,6 @@
 # Deploy Vite site to GitHub Pages (preview / soft-launch)
 # URL after enable: https://it33.github.io/metrostatum-landing/
+# SITE_INDEXABLE is intentionally unset on this workflow so Pages stays noindex.
 # robots.txt + meta noindex keep crawlers and AI scrapers out until public launch.
 
 name: Deploy to GitHub Pages
@@ -36,6 +37,7 @@ jobs:
       - name: Build for GitHub Pages
         env:
           GITHUB_PAGES: "true"
+          # SITE_INDEXABLE must not be set to true here — Pages stays noindex.
         run: npm run build
 
       - name: Add .nojekyll (disable Jekyll processing)

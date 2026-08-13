@@ -1,6 +1,7 @@
 # Preview / staging site — do not index
 # This site is intentionally blocked from crawlers and AI training scrapers
 # until it is ready for public launch on a custom domain.
+# Driven by SITE_INDEXABLE (unset/false).
 
 User-agent: *
 Disallow: /

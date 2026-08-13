@@ -45,19 +45,21 @@ Local / Grok Build continue to use `base: "/"`. The Actions workflow sets `GITHU
 
 ### Crawler / AI blocking (staging)
 
-Until you map a custom domain and intentionally go public, the site requests that crawlers stay away:
+Until you map a custom domain and intentionally go public, the site requests that crawlers stay away. This is driven by `SITE_INDEXABLE` being unset or false (the default):
 
-- `public/robots.txt` — `Disallow: /` for all user-agents, plus explicit blocks for GPTBot, Google-Extended, ClaudeBot, CCBot, Bytespider, etc.
-- `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">` (and googlebot/bingbot equivalents)
-- `referrer: no-referrer`
+- Staging (default): `npm run build` or the GitHub Pages workflow. `SITE_INDEXABLE` is unset/false.
+- `robots.txt` — `Disallow: /` for all user-agents, plus explicit blocks for GPTBot, Google-Extended, ClaudeBot, CCBot, Bytespider, etc.
+- HTML meta — `noindex, nofollow` (and googlebot/bingbot equivalents) plus `referrer: no-referrer`
 
 **Important:** robots.txt and meta robots are *requests*, not hard blocks. GitHub Pages sites are publicly reachable. Do not treat this as private hosting.
 
 ### Going fully public later
 
-1. Relax or remove `robots.txt` Disallow rules.
-2. Change the meta robots tag to `index, follow` (or remove it).
-3. Optionally set `base: "/"` in `vite.config.ts` and attach a custom domain under Settings → Pages.
+Indexing is a build-time flag — do not edit `robots.txt` or `index.html` by hand.
+
+1. Go-live: `SITE_INDEXABLE=true npm run build` or `npm run build:live`. That flips robots to `Allow: /` and meta to `index, follow`.
+2. Do **not** flip `SITE_INDEXABLE=true` on the github.io URL. Point a real domain and set Vite `base` to `/` in `vite.config.ts` when you do (attach the custom domain under Settings → Pages).
+3. Leave the Pages workflow with `SITE_INDEXABLE` unset so the github.io preview stays noindex.
 
 ## Note
 
