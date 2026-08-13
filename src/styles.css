@@ -53,6 +53,7 @@
     background: var(--color-bg);
     color: var(--color-fg);
     -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
   }
   .container-page {
     width: min(100% - 2rem, 1120px);
@@ -201,62 +202,35 @@
       clip-path 3.45s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  /* Leadership principles slow carousel */
-  .principles-marquee {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  .principles-marquee__viewport {
+  /* Snap carousels (case studies, leadership principles) */
+  .snap-carousel { width: 100%; min-width: 0; }
+  .snap-carousel__scroller {
     display: flex;
-    width: max-content;
-    animation: principles-marquee-scroll 55s linear infinite;
+    gap: 1rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1rem;
+    -webkit-overflow-scrolling: touch;
+    padding-inline: 1rem;
+    padding-block: 0.25rem 0.5rem;
   }
-  .principles-marquee:hover .principles-marquee__viewport {
-    animation-play-state: paused;
-  }
-  .principles-marquee__track {
-    display: flex;
-    gap: 1.25rem;
-    padding-inline: 0.75rem;
-  }
-  .principles-marquee__fade {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    width: min(5rem, 12vw);
-    pointer-events: none;
-  }
-  .principles-marquee__fade--left {
-    left: 0;
-    background: linear-gradient(
-      90deg,
-      color-mix(in oklab, var(--color-bg-elevated) 98%, transparent),
-      transparent
-    );
-  }
-  .principles-marquee__fade--right {
-    right: 0;
-    background: linear-gradient(
-      270deg,
-      color-mix(in oklab, var(--color-bg-elevated) 98%, transparent),
-      transparent
-    );
+  .snap-carousel__slide {
+    flex: 0 0 min(340px, calc(100% - 2.75rem));
+    min-width: 0;
+    scroll-snap-align: start;
   }
   .principles-marquee__card {
     position: relative;
-    width: min(78vw, 320px);
-    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
     border-radius: var(--radius-xl);
     padding: 1.5rem 1.5rem 1.75rem;
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
     min-height: 11.5rem;
-  }
-  @media (min-width: 640px) {
-    .principles-marquee__card { width: 340px; }
   }
   .principles-marquee__index {
     font-size: 0.75rem;
@@ -275,6 +249,7 @@
     font-size: 0.95rem;
     font-weight: 500;
     line-height: 1.55;
+    overflow-wrap: break-word;
   }
   .principles-marquee__card--denim {
     background: var(--color-denim);
@@ -317,50 +292,11 @@
   .principles-marquee__card--slate .principles-marquee__title { color: var(--color-denim); }
   .principles-marquee__card--slate .principles-marquee__body { color: var(--color-fg-muted); font-weight: 500; }
 
-  @keyframes principles-marquee-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  /* Customer case studies slow carousel */
-  .case-studies-marquee {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  .case-studies-marquee__viewport {
-    display: flex;
-    width: max-content;
-    animation: case-studies-marquee-scroll 75s linear infinite;
-  }
-  .case-studies-marquee:hover .case-studies-marquee__viewport {
-    animation-play-state: paused;
-  }
-  .case-studies-marquee__track {
-    display: flex;
-    gap: 1rem;
-    padding-inline: 0.5rem;
-  }
-  .case-studies-marquee__fade {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    width: min(5rem, 12vw);
-    pointer-events: none;
-  }
-  .case-studies-marquee__fade--left {
-    left: 0;
-    background: linear-gradient(90deg, var(--color-bg), transparent);
-  }
-  .case-studies-marquee__fade--right {
-    right: 0;
-    background: linear-gradient(270deg, var(--color-bg), transparent);
-  }
   .case-studies-marquee__card {
     display: flex;
-    width: min(340px, 78vw);
-    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
     flex-direction: column;
     gap: 0.75rem;
     border-radius: var(--radius-xl);
@@ -371,6 +307,7 @@
     color: inherit;
     box-shadow: var(--shadow-card);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    overflow-wrap: break-word;
   }
   .case-studies-marquee__card:hover {
     border-color: color-mix(in oklab, var(--color-denim) 35%, var(--color-border));
@@ -401,25 +338,19 @@
     line-height: 1.45;
     color: var(--color-fg-muted);
   }
-  @keyframes case-studies-marquee-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .logo-marquee__viewport,
-    .product-marquee__track,
-    .principles-marquee__viewport,
-    .case-studies-marquee__viewport { animation: none !important; }
+    .product-marquee__track { animation: none !important; }
     .ime-pan, .ime-mask { transition: none; }
   }
 }
 
-/* Mission video closed captions */
+/* Hide native cue overlay — captions render in a dedicated bar below the video */
 .mission-video video::cue {
-  background: rgba(0, 0, 0, 0.72);
-  color: #ffffff;
-  font-family: system-ui, sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.35;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+.mission-video video::-webkit-media-text-track-display {
+  display: none !important;
 }

@@ -4,7 +4,13 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import type { Locale } from "@/i18n/types";
 
-export function LanguageSwitcher({ className }: { className?: string }) {
+export function LanguageSwitcher({
+  className,
+  variant = "menu",
+}: {
+  className?: string;
+  variant?: "menu" | "panel";
+}) {
   const { locale, setLocale, locales, t } = useLanguage();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -19,19 +25,49 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
   const current = locales.find((l) => l.code === locale) ?? locales[0];
 
+  if (variant === "panel") {
+    return (
+      <div className={cn("w-full", className)} role="listbox" aria-label={t("lang.label", "Language")}>
+        <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-fg-subtle)]">
+          {t("lang.label", "Language")}
+        </p>
+        <div className="grid gap-1">
+          {locales.map((l) => (
+            <button
+              key={l.code}
+              type="button"
+              role="option"
+              aria-selected={l.code === locale}
+              onClick={() => setLocale(l.code as Locale)}
+              className={cn(
+                "flex min-h-11 w-full items-center justify-between rounded-md px-3 text-left text-[14px] font-medium transition-colors",
+                l.code === locale
+                  ? "bg-[var(--color-bg-elevated)] text-[var(--color-denim)]"
+                  : "text-[var(--color-black)]/90 hover:bg-[var(--color-bg-subtle)]",
+              )}
+            >
+              <span>{l.label}</span>
+              <span className="whitespace-nowrap text-[11px] opacity-60">{l.short}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div ref={ref} className={cn("relative", className)}>
+    <div ref={ref} className={cn("relative shrink-0", className)}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-9 items-center gap-1.5 rounded-md px-2.5 text-[13px] font-medium text-[var(--color-black)]/80 hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
+        className="inline-flex h-9 max-w-full shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 text-[13px] font-medium text-[var(--color-black)]/80 hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
         aria-label={t("lang.label", "Language")}
         aria-expanded={open}
         aria-haspopup="listbox"
       >
-        <Globe className="size-3.5 opacity-70" />
-        <span className="hidden sm:inline">{current.short}</span>
-        <ChevronDown className={cn("size-3.5 opacity-60 transition-transform", open && "rotate-180")} />
+        <Globe className="size-3.5 shrink-0 opacity-70" />
+        <span className="whitespace-nowrap">{current.short}</span>
+        <ChevronDown className={cn("size-3.5 shrink-0 opacity-60 transition-transform", open && "rotate-180")} />
       </button>
 
       {open && (
@@ -50,14 +86,14 @@ export function LanguageSwitcher({ className }: { className?: string }) {
                 setOpen(false);
               }}
               className={cn(
-                "flex w-full items-center justify-between px-3 py-2 text-left text-[13px] font-medium transition-colors",
+                "flex min-h-11 w-full items-center justify-between px-3 text-left text-[13px] font-medium transition-colors",
                 l.code === locale
                   ? "bg-[var(--color-bg-elevated)] text-[var(--color-denim)]"
                   : "text-[var(--color-black)]/90 hover:bg-[var(--color-bg-subtle)]",
               )}
             >
               <span>{l.label}</span>
-              <span className="text-[11px] opacity-60">{l.short}</span>
+              <span className="whitespace-nowrap text-[11px] opacity-60">{l.short}</span>
             </button>
           ))}
         </div>

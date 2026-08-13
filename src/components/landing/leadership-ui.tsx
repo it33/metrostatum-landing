@@ -1,24 +1,19 @@
-import { ArrowRight } from "lucide-react";
 import type { Leader } from "./leadership-types";
 import { PRINCIPLES } from "./leadership-data";
 import { LeaderCard } from "./leader-card";
+import { SnapCarousel } from "./snap-carousel";
 
 function PrincipleCard({
   title,
   body,
   variant,
-  ariaHidden,
 }: {
   title: string;
   body: string;
   variant: (typeof PRINCIPLES)[number]["variant"];
-  ariaHidden?: boolean;
 }) {
   return (
-    <article
-      className={`principles-marquee__card principles-marquee__card--${variant}`}
-      aria-hidden={ariaHidden || undefined}
-    >
+    <article className={`principles-marquee__card principles-marquee__card--${variant}`}>
       <span className="principles-marquee__index" aria-hidden>
         {String(PRINCIPLES.findIndex((p) => p.title === title) + 1).padStart(2, "0")}
       </span>
@@ -30,28 +25,13 @@ function PrincipleCard({
 
 export function PrinciplesMarquee() {
   return (
-    <div className="principles-marquee" role="region" aria-label="Leadership principles">
-      <div className="principles-marquee__fade principles-marquee__fade--left" aria-hidden />
-      <div className="principles-marquee__fade principles-marquee__fade--right" aria-hidden />
-      <div className="principles-marquee__viewport">
-        <div className="principles-marquee__track">
-          {PRINCIPLES.map((p) => (
-            <PrincipleCard key={`a-${p.title}`} title={p.title} body={p.body} variant={p.variant} />
-          ))}
-        </div>
-        <div className="principles-marquee__track" aria-hidden>
-          {PRINCIPLES.map((p) => (
-            <PrincipleCard
-              key={`b-${p.title}`}
-              title={p.title}
-              body={p.body}
-              variant={p.variant}
-              ariaHidden
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+    <SnapCarousel
+      label="Leadership principles"
+      autoMs={8000}
+      items={PRINCIPLES.map((p) => (
+        <PrincipleCard key={p.title} title={p.title} body={p.body} variant={p.variant} />
+      ))}
+    />
   );
 }
 
