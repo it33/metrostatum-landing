@@ -16,18 +16,36 @@ export function SnapCarousel({
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const indexRef = useRef(0);
   const count = items.length;
+
+  const scrollToIndex = useCallback((i: number) => {
+    const el = scrollerRef.current;
+    if (!el || count === 0) return;
+    const card = el.children[i] as HTMLElement | undefined;
+    if (!card) return;
+    // Scroll the scroller itself — scrollIntoView often scrolls the page instead
+    // and breaks prev/next + autoplay on mobile.
+    const style = getComputedStyle(el);
+    const padLeft = parseFloat(style.paddingLeft) || 0;
+    const left = card.offsetLeft - padLeft;
+    el.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+  }, [count]);
 
   const go = useCallback(
     (next: number) => {
+      if (count === 0) return;
       const i = ((next % count) + count) % count;
+      indexRef.current = i;
       setIndex(i);
-      const el = scrollerRef.current;
-      const card = el?.children[i] as HTMLElement | undefined;
-      card?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      scrollToIndex(i);
     },
-    [count],
+    [count, scrollToIndex],
   );
+
+  useEffect(() => {
+    indexRef.current = index;
+  }, [index]);
 
   useEffect(() => {
     const el = scrollerRef.current;
@@ -37,6 +55,7 @@ export function SnapCarousel({
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         const cards = Array.from(el.children) as HTMLElement[];
+        if (cards.length === 0) return;
         const origin = el.scrollLeft + el.clientWidth * 0.35;
         let best = 0;
         let bestDist = Infinity;
@@ -47,7 +66,10 @@ export function SnapCarousel({
             best = i;
           }
         });
-        setIndex(best);
+        if (best !== indexRef.current) {
+          indexRef.current = best;
+          setIndex(best);
+        }
       });
     };
     el.addEventListener("scroll", onScroll, { passive: true });
@@ -63,9 +85,11 @@ export function SnapCarousel({
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
-    const id = window.setInterval(() => go(index + 1), autoMs);
+    const id = window.setInterval(() => {
+      go(indexRef.current + 1);
+    }, autoMs);
     return () => window.clearInterval(id);
-  }, [autoMs, paused, count, index, go]);
+  }, [autoMs, paused, count, go]);
 
   return (
     <div
@@ -77,6 +101,11 @@ export function SnapCarousel({
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setPaused(false);
+      }}
+      onTouchStart={() => setPaused(true)}
+      onTouchEnd={() => {
+        // brief pause after swipe so user can finish reading
+        window.setTimeout(() => setPaused(false), 2500);
       }}
     >
       <div ref={scrollerRef} className="snap-carousel__scroller">
@@ -90,9 +119,13 @@ export function SnapCarousel({
       <div className="mt-4 flex items-center justify-center gap-1 px-4">
         <button
           type="button"
-          className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-denim)] hover:bg-[var(--color-bg-elevated)]"
+          className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-denim)] hover:bg-[var(--color-bg-elevated)] active:scale-95"
           aria-label="Previous"
-          onClick={() => go(index - 1)}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            go(index - 1);
+          }}
         >
           <ChevronLeft className="size-5" />
         </button>
@@ -105,7 +138,11 @@ export function SnapCarousel({
               aria-label={`Show item ${i + 1}`}
               aria-selected={i === index}
               className="inline-flex size-11 items-center justify-center"
-              onClick={() => go(i)}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                go(i);
+              }}
             >
               <span
                 className={cn(
@@ -120,9 +157,13 @@ export function SnapCarousel({
         </div>
         <button
           type="button"
-          className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-denim)] hover:bg-[var(--color-bg-elevated)]"
+          className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-denim)] hover:bg-[var(--color-bg-elevated)] active:scale-95"
           aria-label="Next"
-          onClick={() => go(index + 1)}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            go(index + 1);
+          }}
         >
           <ChevronRight className="size-5" />
         </button>
