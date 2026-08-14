@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getCustomerLogoSrc } from "./customer-logos";
+import { SnapCarousel } from "./snap-carousel";
 
 type CaseStudy = {
   slug: string;
@@ -83,7 +84,7 @@ const CASE_STUDIES: CaseStudy[] = [
   },
 ];
 
-function CaseCard({ study, ariaHidden }: { study: CaseStudy; ariaHidden?: boolean }) {
+function CaseCard({ study }: { study: CaseStudy }) {
   const logo = getCustomerLogoSrc(study.slug);
   return (
     <a
@@ -91,15 +92,13 @@ function CaseCard({ study, ariaHidden }: { study: CaseStudy; ariaHidden?: boolea
       target="_blank"
       rel="noreferrer"
       className="case-studies-marquee__card group"
-      aria-hidden={ariaHidden || undefined}
-      tabIndex={ariaHidden ? -1 : undefined}
     >
       <div className="flex items-center gap-3">
         <div className="flex h-10 w-[7.5rem] shrink-0 items-center justify-start">
           {logo && (
             <img
               src={logo}
-              alt={ariaHidden ? "" : study.name}
+              alt={study.name}
               className={cn("case-studies-marquee__logo", study.logoClassName)}
               loading="lazy"
               decoding="async"
@@ -144,31 +143,20 @@ export function CaseStudiesCarousel() {
         </div>
       </div>
 
-      <div
-        className="case-studies-marquee mt-10"
-        role="region"
-        aria-label="Customer case studies carousel"
-      >
-        <div className="case-studies-marquee__fade case-studies-marquee__fade--left" aria-hidden />
-        <div className="case-studies-marquee__fade case-studies-marquee__fade--right" aria-hidden />
-        <div className="case-studies-marquee__viewport">
-          <div className="case-studies-marquee__track">
-            {CASE_STUDIES.map((s) => (
-              <CaseCard key={`a-${s.slug}`} study={s} />
-            ))}
-          </div>
-          <div className="case-studies-marquee__track" aria-hidden>
-            {CASE_STUDIES.map((s) => (
-              <CaseCard key={`b-${s.slug}`} study={s} ariaHidden />
-            ))}
-          </div>
-        </div>
+      <div className="mt-10">
+        <SnapCarousel
+          label="Customer case studies"
+          autoMs={7000}
+          items={CASE_STUDIES.map((s) => (
+            <CaseCard key={s.slug} study={s} />
+          ))}
+        />
       </div>
 
       <div className="container-page mt-8 text-center">
         <a
           href="#/customers"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] transition-colors hover:text-[var(--color-marigold)]"
+          className="inline-flex min-h-11 items-center gap-1.5 px-2 text-sm font-semibold text-[var(--color-denim)] transition-colors hover:text-[var(--color-marigold)]"
         >
           View all customer stories
           <ArrowRight className="size-4" />

@@ -55,7 +55,7 @@ export function SiteFooter() {
           {COLUMNS.map((col) => (
             <div key={col.title}>
               <p className="text-sm font-semibold text-white">{col.title}</p>
-              <ul className="mt-3 space-y-2">
+              <ul className="mt-3">
                 {col.links.map((link) => {
                   const isInternal = link.href.startsWith("#");
                   return (
@@ -65,7 +65,7 @@ export function SiteFooter() {
                         {...(isInternal
                           ? {}
                           : { target: "_blank", rel: "noreferrer" })}
-                        className="text-sm text-white/70 transition-colors hover:text-white"
+                        className="inline-flex min-h-11 w-full items-center text-sm text-white/70 transition-colors hover:text-white"
                       >
                         {link.label}
                       </a>

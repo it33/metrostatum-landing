@@ -190,7 +190,7 @@ function CellBadge({ value, note }: { value: Cell; note?: string }) {
           Partial
         </span>
         {note && (
-          <span className="max-w-[12rem] text-[10px] leading-snug text-[var(--color-fg-subtle)]">
+          <span className="max-w-full break-words text-[10px] leading-snug text-[var(--color-fg-subtle)]">
             {note}
           </span>
         )}
@@ -276,7 +276,7 @@ export function PositioningCarousel() {
           ))}
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]">
+        <div className="mt-8 min-w-0 overflow-hidden rounded-[var(--radius-2xl)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]">
           <div className="flex flex-col gap-4 border-b border-[var(--color-border)] bg-[var(--color-denim)] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <div className="flex items-start gap-3">
               <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-[var(--radius-md)] bg-white/10 text-[var(--color-sky)]">
@@ -322,17 +322,59 @@ export function PositioningCarousel() {
               sovereign, mission-critical operations.
             </p>
 
-            <div className="mt-5 overflow-x-auto">
-              <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+            <div className="mt-5 space-y-3 md:hidden">
+              {slide.capabilities.map((c) => {
+                const meta = CRITERIA.find((x) => x.id === c.id)!;
+                return (
+                  <div
+                    key={c.id}
+                    className="rounded-[var(--radius-lg)] border border-[var(--color-border)] p-4"
+                  >
+                    <p className="font-bold text-[var(--color-fg)]">{meta.name}</p>
+                    <p className="mt-1 text-[13px] leading-relaxed break-words text-[var(--color-fg-muted)]">
+                      {meta.description}
+                    </p>
+                    <div className="mt-3 grid grid-cols-2 gap-2">
+                      <div className="min-w-0 rounded-md bg-emerald-50 px-2.5 py-2">
+                        <p className="text-[10px] font-semibold uppercase tracking-wide text-emerald-700">
+                          Purpose-built
+                        </p>
+                        <div className="mt-1">
+                          <CellBadge value={c.purposeBuilt} />
+                        </div>
+                      </div>
+                      <div
+                        className={cn(
+                          "min-w-0 rounded-md px-2.5 py-2",
+                          c.alternative === "partial" && "bg-amber-50",
+                          c.alternative === "no" && "bg-[var(--color-bg-subtle)]",
+                          c.alternative === "yes" && "bg-emerald-50",
+                        )}
+                      >
+                        <p className="text-[10px] font-semibold uppercase tracking-wide text-[var(--color-fg-subtle)]">
+                          {slide.category}
+                        </p>
+                        <div className="mt-1">
+                          <CellBadge value={c.alternative} note={c.note} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-5 hidden overflow-x-auto md:block">
+              <table className="w-full table-fixed border-collapse text-left text-sm">
                 <thead>
                   <tr className="border-b border-[var(--color-border)]">
-                    <th className="py-2.5 pr-4 font-semibold text-[var(--color-fg-muted)]">
+                    <th className="w-[46%] py-2.5 pr-4 font-semibold text-[var(--color-fg-muted)]">
                       Criteria
                     </th>
-                    <th className="w-[7.5rem] px-3 py-2.5 font-semibold text-emerald-700">
+                    <th className="w-[22%] px-3 py-2.5 font-semibold text-emerald-700">
                       Purpose-built
                     </th>
-                    <th className="w-[9rem] px-3 py-2.5 font-semibold text-[var(--color-fg-muted)]">
+                    <th className="w-[32%] px-3 py-2.5 font-semibold text-[var(--color-fg-muted)]">
                       {slide.category}
                     </th>
                   </tr>
@@ -347,7 +389,7 @@ export function PositioningCarousel() {
                       >
                         <td className="py-4 pr-4">
                           <p className="font-bold text-[var(--color-fg)]">{meta.name}</p>
-                          <p className="mt-1 max-w-md text-[13px] leading-relaxed text-[var(--color-fg-muted)]">
+                          <p className="mt-1 text-[13px] leading-relaxed break-words text-[var(--color-fg-muted)]">
                             {meta.description}
                           </p>
                         </td>
@@ -383,9 +425,9 @@ export function PositioningCarousel() {
               </p>
               <ul className="mt-5 space-y-2.5">
                 {slide.problemPoints.map((p) => (
-                  <li key={p} className="flex gap-2.5 text-sm text-[var(--color-fg-muted)]">
+                  <li key={p} className="flex min-w-0 gap-2.5 text-sm text-[var(--color-fg-muted)]">
                     <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-red-500" />
-                    {p}
+                    <span className="min-w-0 break-words">{p}</span>
                   </li>
                 ))}
               </ul>
@@ -401,12 +443,12 @@ export function PositioningCarousel() {
               </p>
               <ul className="mt-5 space-y-2.5">
                 {slide.solutionPoints.map((p) => (
-                  <li key={p} className="flex gap-2.5 text-sm text-[var(--color-fg-muted)]">
+                  <li key={p} className="flex min-w-0 gap-2.5 text-sm text-[var(--color-fg-muted)]">
                     <Check
                       className="mt-0.5 size-4 shrink-0 text-[var(--color-denim)]"
                       strokeWidth={2.5}
                     />
-                    {p}
+                    <span className="min-w-0 break-words">{p}</span>
                   </li>
                 ))}
               </ul>
@@ -414,21 +456,25 @@ export function PositioningCarousel() {
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--color-border)] px-5 py-4 sm:px-8">
-            <div className="flex gap-1.5" role="tablist" aria-label="Slide dots">
+            <div className="flex" role="tablist" aria-label="Slide dots">
               {SLIDES.map((s, i) => (
                 <button
                   key={s.id}
                   type="button"
                   aria-label={`Show ${s.category}`}
                   aria-selected={i === index}
-                  className={cn(
-                    "h-2 rounded-full transition-all",
-                    i === index
-                      ? "w-8 bg-[var(--color-denim)]"
-                      : "w-2 bg-[var(--color-border-strong)] hover:bg-[var(--color-fg-subtle)]",
-                  )}
+                  className="inline-flex size-11 items-center justify-center"
                   onClick={() => go(i)}
-                />
+                >
+                  <span
+                    className={cn(
+                      "rounded-full transition-all",
+                      i === index
+                        ? "h-2 w-8 bg-[var(--color-denim)]"
+                        : "size-2 bg-[var(--color-border-strong)] hover:bg-[var(--color-fg-subtle)]",
+                    )}
+                  />
+                </button>
               ))}
             </div>
             <Button size="sm" asChild>

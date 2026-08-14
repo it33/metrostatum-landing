@@ -92,7 +92,7 @@ export function SiteHeader() {
       </div>
 
       <div className="border-b border-[color-mix(in_oklab,#1e325c_12%,transparent)]">
-        <div className="mx-auto flex h-[72px] max-w-[1200px] items-center gap-3 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-[72px] max-w-[1200px] flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2 sm:px-6 lg:px-8">
           <a href={import.meta.env.BASE_URL} className="mr-2 flex shrink-0 items-center lg:mr-4" aria-label="Mattermost home">
             <img
               src={`${import.meta.env.BASE_URL}images/brand/logo-horizontal-denim.svg`}
@@ -101,7 +101,7 @@ export function SiteHeader() {
             />
           </a>
 
-          <nav className="ml-2 hidden flex-1 items-center gap-0.5 lg:flex" aria-label="Primary">
+          <nav className="ml-2 hidden min-w-0 flex-1 items-center gap-0.5 lg:flex" aria-label="Primary">
             {NAV_STRUCTURE.map((item) => {
               const label = t(item.labelKey);
               if (!item.children) {
@@ -161,13 +161,13 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="ml-auto hidden items-center gap-2 lg:flex">
+          <div className="ml-auto hidden min-w-0 items-center justify-end gap-1.5 lg:flex">
             <LanguageSwitcher />
             <a
               href={TRY}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-9 items-center justify-center rounded-md border-2 border-[var(--color-denim)] px-4 text-[14px] font-semibold text-[var(--color-denim)] hover:bg-[var(--color-denim)] hover:text-white"
+              className="inline-flex h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-md border-2 border-[var(--color-denim)] px-3 text-[13px] font-semibold text-[var(--color-denim)] hover:bg-[var(--color-denim)] hover:text-white"
             >
               {t("nav.tryMattermost")}
             </a>
@@ -175,7 +175,7 @@ export function SiteHeader() {
               href={CONTACT}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-9 items-center justify-center rounded-md bg-[var(--color-marigold)] px-4 text-[14px] font-semibold text-[var(--color-black)] hover:bg-[var(--color-marigold-hover)]"
+              className="inline-flex h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-md bg-[var(--color-marigold)] px-3 text-[13px] font-semibold text-[var(--color-black)] hover:bg-[var(--color-marigold-hover)]"
             >
               {t("nav.contactSales")}
             </a>
@@ -194,7 +194,7 @@ export function SiteHeader() {
       </div>
 
       <div className={cn("border-b bg-white lg:hidden", open ? "block" : "hidden")}>
-        <nav className="mx-auto max-h-[min(70vh,640px)] max-w-[1200px] overflow-y-auto px-4 py-3 sm:px-6">
+        <nav className="mx-auto max-h-[min(85vh,800px)] max-w-[1200px] overflow-y-auto px-4 py-3 sm:px-6">
           {NAV_STRUCTURE.map((item) => (
             <div key={item.labelKey} className="border-b border-[var(--color-border)] last:border-0">
               {item.children ? (
@@ -230,8 +230,8 @@ export function SiteHeader() {
               )}
             </div>
           ))}
-          <div className="mt-3 flex justify-center">
-            <LanguageSwitcher />
+          <div className="mt-3">
+            <LanguageSwitcher variant="panel" />
           </div>
           <div className="mt-4 flex flex-col gap-2 pb-2">
             <a href={TRY} target="_blank" rel="noreferrer" className="inline-flex h-11 items-center justify-center rounded-md border-2 border-[var(--color-denim)] text-[15px] font-semibold text-[var(--color-denim)]">

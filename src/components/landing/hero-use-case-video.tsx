@@ -8,6 +8,7 @@ import {
   VolumeX,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useCaptionCues, VideoCaptionBar } from "./use-caption-cues";
 
 const base = import.meta.env.BASE_URL;
 
@@ -72,6 +73,7 @@ export function HeroUseCaseVideo() {
   const [userPausedRotate, setUserPausedRotate] = useState(false);
 
   const active = USE_CASES.find((u) => u.id === activeId)!;
+  const cueText = useCaptionCues(videoRef, captionsOn, active.id);
 
   const applyCaptionsMode = useCallback((on: boolean) => {
     const v = videoRef.current;
@@ -85,7 +87,7 @@ export function HeroUseCaseVideo() {
         else track.mode = "disabled";
       }
     }
-    if (primary) primary.mode = on ? "showing" : "hidden";
+    if (primary) primary.mode = on ? "hidden" : "disabled";
   }, []);
 
   const seekAndPlay = useCallback(async () => {
@@ -286,21 +288,16 @@ export function HeroUseCaseVideo() {
       <div
         ref={frameRef}
         className={cn(
-          "hero-use-case__frame mission-video group relative overflow-hidden rounded-[var(--radius-xl)] border border-white/15 bg-black shadow-[0_20px_50px_rgba(0,0,0,0.35)]",
+          "hero-use-case__frame mission-video group relative flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-white/15 bg-black shadow-[0_20px_50px_rgba(0,0,0,0.35)]",
           cssExpanded && "fixed inset-3 z-50 max-w-none rounded-xl sm:inset-6",
           fsActive && "h-full w-full max-w-none rounded-none border-0",
         )}
       >
         <div className="pointer-events-none absolute inset-0 z-[2] rounded-[inherit] ring-1 ring-inset ring-white/10" />
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-20 bg-gradient-to-t from-black/65 to-transparent"
-          aria-hidden
-        />
-
-        <div
           className={cn(
             "relative w-full bg-black",
-            fsActive || cssExpanded ? "h-full min-h-[50vh]" : "aspect-video",
+            fsActive || cssExpanded ? "min-h-0 flex-1" : "aspect-video",
           )}
         >
           <video
@@ -346,7 +343,6 @@ export function HeroUseCaseVideo() {
             style={{ transitionDuration: `${FADE_MS}ms` }}
             aria-hidden
           />
-        </div>
 
         <div className="absolute inset-x-0 bottom-0 z-[3] flex flex-col gap-2 p-2.5 sm:p-3">
           <div className="flex items-center gap-1.5">
@@ -366,7 +362,7 @@ export function HeroUseCaseVideo() {
               <button
                 type="button"
                 onClick={toggleMute}
-                className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3.5 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
+                className="inline-flex min-h-11 w-fit items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3.5 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
               >
                 <VolumeX className="size-3.5" />
                 Click for sound
@@ -382,6 +378,8 @@ export function HeroUseCaseVideo() {
             </ControlButton>
           </div>
         </div>
+        </div>
+        <VideoCaptionBar text={cueText} visible={captionsOn} />
       </div>
 
       <p className="mt-2 text-[11px] text-white/55">
@@ -408,7 +406,7 @@ function ControlButton({
       aria-label={label}
       onClick={onClick}
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1.5 text-white backdrop-blur-sm transition",
+        "inline-flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-full border px-2.5 text-white backdrop-blur-sm transition",
         highlight
           ? "border-[var(--color-marigold)]/50 bg-[color-mix(in_oklab,var(--color-marigold)_18%,black)] hover:bg-[color-mix(in_oklab,var(--color-marigold)_28%,black)]"
           : "border-white/15 bg-black/45 hover:bg-black/65",
