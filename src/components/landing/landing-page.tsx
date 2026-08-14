@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { LogoMarquee } from "./logo-marquee";
-import { ProductCarousel } from "./product-carousel";
 import { MissionVideo } from "./mission-video";
 import { CyberDefenseVideo } from "./cyber-defense-video";
 import { CaseStudiesCarousel } from "./case-studies-carousel";
@@ -88,7 +87,6 @@ export function LandingPage() {
       <MissionVideo />
       <CyberDefenseVideo />
       <CaseStudiesCarousel />
-      <ProductCarousel />
       <IMEExplorer />
       <NetworkTypesExplorer />
       <PositioningCarousel />
