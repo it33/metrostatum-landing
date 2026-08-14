@@ -13,11 +13,6 @@ type CaseStudy = {
   logoClassName?: string;
 };
 
-/**
- * Top enterprise / well-known published case studies from mattermost.com/customers
- * Selected for brand recognition + clear operational outcomes.
- * Logos resolved from the shared customer-logos registry.
- */
 const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "us-department-of-defense",
@@ -126,19 +121,19 @@ export function CaseStudiesCarousel() {
       aria-labelledby="case-studies-heading"
     >
       <div className="container-page">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-marigold)]">
             Customer outcomes
           </p>
           <h2
             id="case-studies-heading"
-            className="mt-3 text-balance text-3xl font-bold tracking-tight md:text-4xl"
+            className="mt-3 text-[1.65rem] font-bold tracking-tight text-[var(--color-fg)] sm:text-3xl md:text-4xl md:whitespace-nowrap"
           >
-            Trusted by the world's most demanding operators
+            Trusted by the world&apos;s most demanding operators
           </h2>
-          <p className="mt-4 text-[var(--color-fg-muted)]">
+          <p className="mx-auto mt-4 max-w-2xl text-[var(--color-fg-muted)]">
             From allied air mobility and national power grids to global research and payments—teams
-            choose Mattermost when operational control, data sovereignty, and speed matter.
+            choose Mattermost when operational control, data sovereignty, and speed are vital.
           </p>
         </div>
       </div>
@@ -146,7 +141,7 @@ export function CaseStudiesCarousel() {
       <div className="mt-10">
         <SnapCarousel
           label="Customer case studies"
-          autoMs={7000}
+          autoMs={5000}
           items={CASE_STUDIES.map((s) => (
             <CaseCard key={s.slug} study={s} />
           ))}
