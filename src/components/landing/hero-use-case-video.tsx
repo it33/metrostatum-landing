@@ -381,10 +381,6 @@ export function HeroUseCaseVideo() {
         </div>
         <VideoCaptionBar text={cueText} visible={captionsOn} />
       </div>
-
-      <p className="mt-2 text-[11px] text-white/55">
-        Starts muted at 0:15 with captions. Auto-switches use cases every 20–30s.
-      </p>
     </div>
   );
 }
