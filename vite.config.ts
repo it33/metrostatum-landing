@@ -6,9 +6,12 @@ import { resolve } from "node:path";
 import { fileURLToPath, URL } from "node:url";
 
 // Local / Grok Build → base '/'
-// GitHub Pages project site → '/metrostatum-landing/'
-// When you later map a custom domain, set base to '/' and re-deploy.
+// GitHub Pages project site → '/metrostatum-landing/' (or SITE_BASE for /dev, /staging)
+// Custom domain (mattermost.ai) → SITE_BASE='/'
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const siteBase =
+  process.env.SITE_BASE ||
+  (isGitHubPages ? "/metrostatum-landing/" : "/");
 
 // Go-live switch. Unset/false = staging (noindex). Only "true" enables indexing.
 const siteIndexable = process.env.SITE_INDEXABLE === "true";
@@ -87,6 +90,11 @@ const ROBOTS_LIVE = `# Public site — indexing enabled via SITE_INDEXABLE=true
 User-agent: *
 Allow: /
 
+# Environment previews — never index
+User-agent: *
+Disallow: /dev/
+Disallow: /staging/
+
 # Add a Sitemap line only after a production domain is attached.
 `;
 
@@ -130,7 +138,7 @@ function siteIndexingPlugin(): Plugin {
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), siteIndexingPlugin()],
-  base: isGitHubPages ? "/metrostatum-landing/" : "/",
+  base: siteBase,
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

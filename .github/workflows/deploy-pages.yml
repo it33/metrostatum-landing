@@ -1,14 +1,25 @@
-# Deploy Vite site to GitHub Pages (preview / soft-launch)
-# URL after enable: https://it33.github.io/metrostatum-landing/
-# SITE_INDEXABLE is intentionally unset on this workflow so Pages stays noindex.
-# robots.txt + meta noindex keep crawlers and AI scrapers out until public launch.
+# Dev / staging / production on one GitHub Pages site.
+#   /           ← main      (noindex unless SITE_INDEXABLE=true)
+#   /staging/   ← staging   (always noindex)
+#   /dev/       ← dev       (always noindex)
+# Project URL now: https://it33.github.io/metrostatum-landing/
+# After custom domain (mattermost.ai): https://mattermost.ai/ , /staging/ , /dev/
 
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "staging", "dev"]
   workflow_dispatch:
+    inputs:
+      site_root_base:
+        description: "Vite base for production (trailing slash). /metrostatum-landing/ on github.io, / on a custom domain."
+        required: false
+        default: "/metrostatum-landing/"
+      site_indexable:
+        description: "Set true only for a public production go-live"
+        required: false
+        default: "false"
 
 permissions:
   contents: read
@@ -25,6 +36,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -34,14 +47,46 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build for GitHub Pages
+      - name: Build dev, staging, and production trees
         env:
           GITHUB_PAGES: "true"
-          # SITE_INDEXABLE must not be set to true here — Pages stays noindex.
-        run: npm run build
+          SITE_ROOT_BASE: ${{ github.event.inputs.site_root_base || '/metrostatum-landing/' }}
+          SITE_INDEXABLE: ${{ github.event.inputs.site_indexable || 'false' }}
+        run: |
+          set -euo pipefail
+          ROOT="${SITE_ROOT_BASE}"
+          case "$ROOT" in
+            */) ;;
+            *) ROOT="${ROOT}/" ;;
+          esac
+          mkdir -p assembled
 
-      - name: Add .nojekyll (disable Jekyll processing)
-        run: touch dist/.nojekyll
+          build_env() {
+            local branch="$1"
+            local dest="$2"
+            local base="$3"
+            local indexable="$4"
+            if ! git rev-parse --verify "origin/${branch}" >/dev/null 2>&1; then
+              echo "Skipping ${branch}: branch not on origin"
+              return 0
+            fi
+            echo "Building ${branch} → ${dest} (base=${base} indexable=${indexable})"
+            git checkout --force "origin/${branch}"
+            rm -rf dist
+            GITHUB_PAGES=true SITE_BASE="${base}" SITE_INDEXABLE="${indexable}" npm run build
+            mkdir -p "${dest}"
+            cp -a dist/. "${dest}/"
+          }
+
+          build_env main assembled "${ROOT}" "${SITE_INDEXABLE}"
+          build_env staging assembled/staging "${ROOT}staging/" "false"
+          build_env dev assembled/dev "${ROOT}dev/" "false"
+
+          touch assembled/.nojekyll
+
+          if [ -f assembled/robots.txt ]; then
+            printf '\n# Environment previews — never index\nUser-agent: *\nDisallow: /dev/\nDisallow: /staging/\n' >> assembled/robots.txt
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -49,7 +94,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./assembled
 
   deploy:
     needs: build

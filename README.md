@@ -29,37 +29,44 @@ npm run preview
 npm run typecheck
 ```
 
-## GitHub Pages (staging preview)
+## Dev / staging / production (GitHub Pages only)
 
-This site is configured for project pages at:
+One repo, three branches, one Pages site. A push to `dev`, `staging`, or `main` rebuilds all three trees and deploys them together.
 
-**https://it33.github.io/metrostatum-landing/**
+| Env | Branch | URL today | After mattermost.ai is attached |
+| --- | --- | --- | --- |
+| Production | `main` | https://it33.github.io/metrostatum-landing/ | https://mattermost.ai/ |
+| Staging | `staging` | https://it33.github.io/metrostatum-landing/staging/ | https://mattermost.ai/staging/ |
+| Dev | `dev` | https://it33.github.io/metrostatum-landing/dev/ | https://mattermost.ai/dev/ |
+
+### Promote path
+
+1. PR into `dev` — integrates and publishes `/dev/`.
+2. PR `dev` → `staging` — release candidate at `/staging/`.
+3. PR `staging` → `main` — production at `/`.
+
+Rollback: revert the env branch to a prior SHA and push (or re-run the workflow). No tags required.
 
 ### One-time enable
 
-1. Push `main` (the workflow in `.github/workflows/deploy-pages.yml` will build & deploy).
-2. In the GitHub repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. After the first successful Actions run, the site is live at the URL above.
+1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Merge the workflow, then push (or re-run Actions) so `dev`, `staging`, and `main` all exist on origin.
+3. After the first successful run, the three URLs above are live.
 
-Local / Grok Build continue to use `base: "/"`. The Actions workflow sets `GITHUB_PAGES=true` so the production build uses `base: "/metrostatum-landing/"`.
+Vite `base` comes from `SITE_BASE` in CI (`/metrostatum-landing/`, `/metrostatum-landing/staging/`, `/metrostatum-landing/dev/`). Local / Grok Build stay on `/`.
 
-### Crawler / AI blocking (staging)
+### Crawler / AI blocking
 
-Until you map a custom domain and intentionally go public, the site requests that crawlers stay away. This is driven by `SITE_INDEXABLE` being unset or false (the default):
+`SITE_INDEXABLE` is unset/false by default. Dev and staging builds are always noindex. Even after a production go-live, `/dev/` and `/staging/` stay `Disallow` in the root `robots.txt`.
 
-- Staging (default): `npm run build` or the GitHub Pages workflow. `SITE_INDEXABLE` is unset/false.
-- `robots.txt` — `Disallow: /` for all user-agents, plus explicit blocks for GPTBot, Google-Extended, ClaudeBot, CCBot, Bytespider, etc.
-- HTML meta — `noindex, nofollow` (and googlebot/bingbot equivalents) plus `referrer: no-referrer`
+**Important:** robots.txt and meta robots are *requests*, not hard blocks. GitHub Pages is public. Do not treat previews as private hosting.
 
-**Important:** robots.txt and meta robots are *requests*, not hard blocks. GitHub Pages sites are publicly reachable. Do not treat this as private hosting.
+### Going public on mattermost.ai
 
-### Going fully public later
-
-Indexing is a build-time flag — do not edit `robots.txt` or `index.html` by hand.
-
-1. Go-live: `SITE_INDEXABLE=true npm run build` or `npm run build:live`. That flips robots to `Allow: /` and meta to `index, follow`.
-2. Do **not** flip `SITE_INDEXABLE=true` on the github.io URL. Point a real domain and set Vite `base` to `/` in `vite.config.ts` when you do (attach the custom domain under Settings → Pages).
-3. Leave the Pages workflow with `SITE_INDEXABLE` unset so the github.io preview stays noindex.
+1. At the DNS host for mattermost.ai, add GitHub Pages records (Settings → Pages shows the current A/AAAA/CNAME values).
+2. Set the custom domain to `mattermost.ai` on this repo’s Pages settings. Apex + `www` if you want both.
+3. Re-run the workflow with `site_root_base=/` so asset URLs match the custom domain (not `/metrostatum-landing/`).
+4. Go-live indexing: only then set `SITE_INDEXABLE=true` on the **production** build (`npm run build:live` locally, or the workflow `site_indexable` input). Never flip that on github.io alone.
 
 ## Note
 
