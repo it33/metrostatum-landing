@@ -72,51 +72,46 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="ml-auto hidden min-w-0 items-center justify-end gap-2 lg:flex">
+          <div className="ml-auto flex items-center gap-2">
             <LanguageSwitcher />
             <a
               href={CONTACT}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-10 shrink-0 items-center justify-center whitespace-nowrap rounded-md bg-[var(--color-marigold)] px-4 text-[13px] font-semibold text-[var(--color-black)] hover:bg-[var(--color-marigold-hover)]"
+              className="hidden rounded-md bg-[var(--color-denim)] px-4 py-2 text-[14px] font-semibold text-white hover:bg-[var(--color-denim-mid)] sm:inline-flex"
             >
-              Talk to an Expert
+              Talk to an expert
             </a>
+            <button
+              type="button"
+              className="inline-flex size-10 items-center justify-center rounded-md border border-[var(--color-border)] lg:hidden"
+              aria-label={open ? "Close menu" : "Open menu"}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
           </div>
-
-          <button
-            type="button"
-            className="ml-auto inline-flex size-11 items-center justify-center rounded-md border border-[color-mix(in_oklab,#1e325c_14%,transparent)] text-[var(--color-denim)] lg:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
         </div>
       </div>
 
-      <div className={cn("border-b bg-white lg:hidden", open ? "block" : "hidden")}>
-        <nav className="mx-auto max-h-[min(85vh,800px)] max-w-[1200px] overflow-y-auto px-4 py-3 sm:px-6">
-          {TOP_NAV.map((item) => (
-            <MobileNavItem key={item.label} item={item} onNavigate={() => setOpen(false)} />
-          ))}
-          <div className="mt-3">
-            <LanguageSwitcher variant="panel" />
-          </div>
-          <div className="mt-4 pb-2">
+      {open && (
+        <div className="border-b border-[var(--color-border)] bg-white lg:hidden">
+          <div className="mx-auto max-w-[1200px] px-4 py-2 sm:px-6">
+            {TOP_NAV.map((item) => (
+              <MobileNavItem key={item.label} item={item} onNavigate={() => setOpen(false)} />
+            ))}
             <a
               href={CONTACT}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-11 w-full items-center justify-center rounded-md bg-[var(--color-marigold)] text-[15px] font-semibold text-[var(--color-black)]"
+              className="mt-2 mb-3 inline-flex w-full items-center justify-center rounded-md bg-[var(--color-denim)] px-4 py-3 text-[15px] font-semibold text-white"
               onClick={() => setOpen(false)}
             >
-              Talk to an Expert
+              Talk to an expert
             </a>
           </div>
-        </nav>
-      </div>
+        </div>
+      )}
     </header>
   );
 }
@@ -132,13 +127,13 @@ function DesktopNavItem({
   activeMenu: string | null;
   openMenu: (label: string) => void;
   scheduleClose: () => void;
-  setActiveMenu: (v: string | null) => void;
+  setActiveMenu: (label: string | null) => void;
 }) {
   if (item.kind === "link") {
     return (
       <a
         href={item.href}
-        className="rounded-md px-3 py-2 text-[15px] font-medium text-[var(--color-black)]/90 hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
+        className="inline-flex items-center rounded-md px-3 py-2 text-[15px] font-medium text-[var(--color-black)]/90 hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
       >
         {item.label}
       </a>
@@ -146,6 +141,7 @@ function DesktopNavItem({
   }
 
   const isOpen = activeMenu === item.label;
+
   return (
     <div
       className="relative"
@@ -167,7 +163,13 @@ function DesktopNavItem({
         <ChevronDown className={cn("size-4 opacity-70 transition-transform", isOpen && "rotate-180")} />
       </button>
       {isOpen && (
-        <div className="absolute left-0 top-full z-50 pt-2">
+        <div
+          className={
+            item.kind === "groups" || item.kind === "mega"
+              ? "absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2"
+              : "absolute left-0 top-full z-50 pt-2"
+          }
+        >
           {item.kind === "dropdown" && <SimpleDropdown links={item.children} />}
           {item.kind === "mega" && <MegaMenu columns={item.columns} />}
           {item.kind === "groups" && <GroupsMenu groups={item.groups} />}
@@ -196,10 +198,10 @@ function SimpleDropdown({ links }: { links: NavLink[] }) {
 
 function MegaMenu({ columns }: { columns: NavGroup[] }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
-      <div className="grid grid-cols-3 gap-6">
+    <div className="w-max min-w-[32rem] max-w-[min(48rem,calc(100vw-2rem))] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
+      <div className="grid grid-cols-3 gap-8">
         {columns.map((col) => (
-          <div key={col.title} className="min-w-[160px]">
+          <div key={col.title} className="min-w-[10rem]">
             <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--color-denim)]">
               {col.title}
             </p>
@@ -224,11 +226,11 @@ function MegaMenu({ columns }: { columns: NavGroup[] }) {
 
 function GroupsMenu({ groups }: { groups: NavGroup[] }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
-      <div className="grid grid-cols-2 gap-x-8 gap-y-5 xl:grid-cols-4">
+    <div className="w-max min-w-[36rem] max-w-[min(52rem,calc(100vw-2rem))] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
+      <div className="grid grid-cols-2 gap-x-10 gap-y-6 md:grid-cols-4">
         {groups.map((g) => (
-          <div key={g.title} className="min-w-[140px]">
-            <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--color-denim)]">
+          <div key={g.title} className="min-w-[9.5rem]">
+            <p className="mb-2 text-[11px] font-bold uppercase leading-snug tracking-[0.12em] text-[var(--color-denim)]">
               {g.title}
             </p>
             <ul className="space-y-0.5">
@@ -236,7 +238,7 @@ function GroupsMenu({ groups }: { groups: NavGroup[] }) {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="block rounded-md px-2 py-1.5 text-[14px] font-medium text-[var(--color-black)]/90 hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-denim)]"
+                    className="block whitespace-nowrap rounded-md px-2 py-1.5 text-[14px] font-medium text-[var(--color-black)]/90 hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-denim)]"
                   >
                     {link.label}
                   </a>
