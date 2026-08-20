@@ -1,7 +1,6 @@
-import { ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { getCustomerLogoSrc } from "./customer-logos";
-import { SnapCarousel } from "./snap-carousel";
 
 type CaseStudy = {
   slug: string;
@@ -10,7 +9,6 @@ type CaseStudy = {
   metric: string;
   benefit: string;
   href: string;
-  logoClassName?: string;
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -86,35 +84,117 @@ function CaseCard({ study }: { study: CaseStudy }) {
       href={study.href}
       target="_blank"
       rel="noreferrer"
-      className="case-studies-marquee__card group"
+      className="flex h-full min-h-[220px] flex-col gap-3 rounded-2xl border border-[var(--color-border)] bg-white p-5 shadow-[var(--shadow-card)] transition-shadow hover:border-[var(--color-border-strong)] hover:shadow-md"
     >
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-[7.5rem] shrink-0 items-center justify-start">
-          {logo && (
+        <div className="flex h-9 w-[7.5rem] shrink-0 items-center justify-start overflow-hidden">
+          {logo ? (
             <img
               src={logo}
               alt={study.name}
-              className={cn("case-studies-marquee__logo", study.logoClassName)}
+              className="block h-7 max-h-9 w-auto max-w-[7rem] object-contain object-left"
               loading="lazy"
               decoding="async"
             />
+          ) : (
+            <span className="text-sm font-bold text-[var(--color-denim)]">{study.name}</span>
           )}
         </div>
         <span className="rounded-full bg-[var(--color-denim)]/8 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-denim)]">
           {study.industry}
         </span>
       </div>
-      <p className="case-studies-marquee__metric">{study.metric}</p>
-      <p className="case-studies-marquee__benefit">{study.benefit}</p>
-      <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-denim)] transition-colors group-hover:text-[var(--color-marigold)]">
+      <p className="text-[1.05rem] font-bold leading-snug tracking-tight text-[var(--color-denim)]">
+        {study.metric}
+      </p>
+      <p className="flex-1 text-sm leading-relaxed text-[var(--color-fg-muted)]">{study.benefit}</p>
+      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-denim)]">
         Read case study
-        <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+        <ArrowRight className="size-3.5" />
       </span>
     </a>
   );
 }
 
+/**
+ * Self-contained horizontal case-study carousel.
+ * Side arrows only — no scrollbar, no dots.
+ */
 export function CaseStudiesCarousel() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const indexRef = useRef(0);
+  const count = CASE_STUDIES.length;
+
+  const scrollToIndex = useCallback(
+    (i: number) => {
+      const el = scrollerRef.current;
+      if (!el || count === 0) return;
+      const card = el.children[i] as HTMLElement | undefined;
+      if (!card) return;
+      const padLeft = parseFloat(getComputedStyle(el).paddingLeft) || 0;
+      el.scrollTo({ left: Math.max(0, card.offsetLeft - padLeft), behavior: "smooth" });
+    },
+    [count],
+  );
+
+  const go = useCallback(
+    (next: number) => {
+      if (count === 0) return;
+      const i = ((next % count) + count) % count;
+      indexRef.current = i;
+      setIndex(i);
+      scrollToIndex(i);
+    },
+    [count, scrollToIndex],
+  );
+
+  useEffect(() => {
+    indexRef.current = index;
+  }, [index]);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    let frame = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const cards = Array.from(el.children) as HTMLElement[];
+        if (!cards.length) return;
+        const origin = el.scrollLeft + el.clientWidth * 0.35;
+        let best = 0;
+        let bestDist = Infinity;
+        cards.forEach((c, i) => {
+          const d = Math.abs(c.offsetLeft - origin);
+          if (d < bestDist) {
+            bestDist = d;
+            best = i;
+          }
+        });
+        if (best !== indexRef.current) {
+          indexRef.current = best;
+          setIndex(best);
+        }
+      });
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      el.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (paused || count < 2) return;
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+    const id = window.setInterval(() => go(indexRef.current + 1), 5000);
+    return () => window.clearInterval(id);
+  }, [paused, count, go]);
+
   return (
     <section
       className="scroll-mt-24 border-t border-[var(--color-border)] bg-[var(--color-bg)] py-16 md:py-24"
@@ -129,7 +209,7 @@ export function CaseStudiesCarousel() {
             id="case-studies-heading"
             className="mt-3 text-[1.65rem] font-bold tracking-tight text-[var(--color-fg)] sm:text-3xl md:text-4xl md:whitespace-nowrap"
           >
-            Trusted by the world&apos;s most demanding operators
+            Trusted by the world's most demanding operators
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[var(--color-fg-muted)]">
             From allied air mobility and national power grids to global research and payments—teams
@@ -138,14 +218,46 @@ export function CaseStudiesCarousel() {
         </div>
       </div>
 
-      <div className="mt-10">
-        <SnapCarousel
-          label="Customer case studies"
-          autoMs={5000}
-          items={CASE_STUDIES.map((s) => (
-            <CaseCard key={s.slug} study={s} />
+      <div
+        className="relative mt-10"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <button
+          type="button"
+          aria-label="Previous case study"
+          onClick={() => go(index - 1)}
+          className="absolute left-2 top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-md hover:bg-[var(--color-bg-elevated)] md:left-4"
+        >
+          <ChevronLeft className="size-5" />
+        </button>
+
+        <div
+          ref={scrollerRef}
+          className="flex gap-4 overflow-x-auto scroll-smooth px-4 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:px-12"
+          style={{ scrollSnapType: "x mandatory" }}
+          role="region"
+          aria-label="Customer case studies"
+        >
+          {CASE_STUDIES.map((s) => (
+            <div
+              key={s.slug}
+              className="w-[min(320px,82vw)] shrink-0"
+              style={{ scrollSnapAlign: "start" }}
+            >
+              <CaseCard study={s} />
+            </div>
           ))}
-        />
+        </div>
+
+        <button
+          type="button"
+          aria-label="Next case study"
+          onClick={() => go(index + 1)}
+          className="absolute right-2 top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-md hover:bg-[var(--color-bg-elevated)] md:right-4"
+        >
+          <ChevronRight className="size-5" />
+        </button>
       </div>
 
       <div className="container-page mt-8 text-center">
