@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCaptionCues, VideoCaptionBar } from "./use-caption-cues";
+import { AiModelLogos } from "./ai-model-logos";
 
 const base = import.meta.env.BASE_URL;
 
@@ -275,6 +276,8 @@ export function HeroUseCaseVideo() {
           </button>
         )}
       </div>
+
+      <AiModelLogos />
 
       {cssExpanded && (
         <button
