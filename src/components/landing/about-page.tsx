@@ -58,31 +58,19 @@ export function AboutPage() {
         <div className="container-page">
           <h2 className="max-w-3xl text-balance text-2xl font-bold tracking-tight md:text-3xl">
             Mattermost is the leading sovereign collaboration and AI automation platform for
-            national security and critical infrastructure enterprises.
+            national security and critical infrastructure environments
           </h2>
           <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed text-[var(--color-fg-muted)]">
             <p>
-              Trusted by governments, enterprises and allied militaries around the world, our
-              platform runs on-premises and in private clouds, delivering secure messaging, file
-              sharing, workflow automation, audio/screenshare, and project management—all with
-              complete data and operational control. Mattermost powers high-stakes workflows across
-              mission planning, real-time operations, DevSecOps, incident response, and cyber
-              security.
+              Mattermost is purpose-built for organizations that cannot compromise on security,
+              compliance, or operational continuity. From air-gapped defense networks to regulated
+              critical infrastructure, Mattermost delivers secure collaboration, workflow automation,
+              and AI that stays under your control.
             </p>
             <p>
-              We enable zero-trust collaboration from tactical edge and DDIL environments to
-              enterprise HQ, with advanced information controls including ABAC, data classification
-              banners, data spillage mitigation and interoperable, federated communications. Teams
-              operate across web, desktop, and mobile, with embedded interoperability for Microsoft
-              Teams, Outlook, and Microsoft 365.
-            </p>
-            <p>
-              For AI-enabled organizations, Mattermost offers the Intelligent Mission Environment
-              (IME)—a self-hosted, multi-user, multi-agent framework for AI-accelerated workflows
-              with sovereign and global models. Built on an in-house, hardened open source platform
-              with complete auditability and supply chain security verification, Mattermost is
-              co-developed with leading security experts to meet the world&apos;s most demanding
-              operational needs.
+              Our platform runs where you need it—sovereign cloud, private cloud, on-premises, and
+              disconnected edge—so mission teams can operate with confidence regardless of network
+              conditions or classification requirements.
             </p>
           </div>
         </div>
@@ -90,13 +78,10 @@ export function AboutPage() {
 
       <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
         <div className="container-page">
-          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Leadership Principles</h2>
+          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Leadership Principles</h2>
           <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
-            These principles guide our behaviors and decision-making processes from everyday projects
-            to company strategy.
+            How we lead, decide, and deliver for the operators who depend on us.
           </p>
-        </div>
-        <div className="mt-10">
           <PrinciplesMarquee />
         </div>
       </section>
@@ -112,10 +97,6 @@ export function AboutPage() {
             of combined experience at organizations like Microsoft, Cisco, Oracle, Ripjar, Check
             Point, and the U.S. Department of War.
           </p>
-          <p className="mt-3 text-sm text-[var(--color-fg-muted)]">
-            Photos load from LinkedIn (direct headshot or official profile badge) so they stay current
-            when leaders update their profile photo. Click a photo or LinkedIn link to open their profile.
-          </p>
 
           <LeaderGroup title="Executive Leadership" leaders={EXECUTIVE} />
           <LeaderGroup title="Product, Engineering & Security Leadership" leaders={PRODUCT_ENG} />
@@ -128,26 +109,23 @@ export function AboutPage() {
         <div className="container-page">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Global Footprint</h2>
           <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
-            In-region presence matters for sovereign operations. Mattermost maintains local entities,
-            cleared personnel, and partner networks in key jurisdictions to meet data residency,
-            security clearance, and regulatory requirements where our customers operate.
+            Mattermost serves mission-critical customers worldwide with offices and presence across
+            key markets.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {OFFICES.map((o) => (
-              <article
-                key={o.region}
+              <div
+                key={o.city}
                 className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
               >
-                <div className="flex items-center gap-2">
-                  <MapPin className="size-4 text-[var(--color-marigold)]" strokeWidth={1.75} />
-                  <h3 className="text-sm font-semibold">{o.region}</h3>
+                <div className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 size-4 shrink-0 text-[var(--color-marigold)]" />
+                  <div>
+                    <h3 className="text-sm font-semibold text-[var(--color-fg)]">{o.city}</h3>
+                    <p className="mt-1 text-sm text-[var(--color-fg-muted)]">{o.detail}</p>
+                  </div>
                 </div>
-                <div className="mt-3 space-y-0.5 text-sm text-[var(--color-fg-muted)]">
-                  {o.lines.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
-                </div>
-              </article>
+              </div>
             ))}
           </div>
         </div>
