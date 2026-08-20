@@ -1,43 +1,8 @@
-import { useT } from "@/i18n";
+import { CONTACT, FOOTER_COLUMNS } from "@/nav-config";
 
 const base = import.meta.env.BASE_URL;
 
-type FooterLink = { label: string; href: string };
-
-const COLUMNS: { title: string; links: FooterLink[] }[] = [
-  {
-    title: "Company",
-    links: [
-      { label: "About Us", href: "#/about" },
-      { label: "Customers", href: "#/customers" },
-      { label: "Newsroom", href: "https://mattermost.com/newsroom/" },
-      { label: "Partners", href: "https://mattermost.com/partners/" },
-      { label: "Careers", href: "https://mattermost.com/careers/" },
-      { label: "Brand Guidelines", href: "https://mattermost.com/brand-guidelines/" },
-    ],
-  },
-  {
-    title: "Platform",
-    links: [
-      { label: "Platform Overview", href: "https://mattermost.com/platform-overview/" },
-      { label: "Channels", href: "https://mattermost.com/channels/" },
-      { label: "Playbooks", href: "https://mattermost.com/playbooks/" },
-      { label: "Security", href: "https://mattermost.com/security/" },
-      { label: "Customer stories", href: "#/customers" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "Help Center", href: "https://support.mattermost.com/" },
-      { label: "Community", href: "https://community.mattermost.com/" },
-      { label: "Contact Us", href: "https://mattermost.com/contact-sales/" },
-    ],
-  },
-];
-
 export function SiteFooter() {
-  const t = useT();
   return (
     <footer className="border-t border-white/10 bg-[var(--color-denim)] text-[var(--color-sky)]">
       <div className="container-page py-14 md:py-16">
@@ -49,10 +14,11 @@ export function SiteFooter() {
               className="h-7 w-auto"
             />
           </a>
-          <p className="max-w-md text-sm text-white/70">{t("footer.tagline")}</p>
+          <p className="max-w-md text-sm text-white/70">Deploy anywhere. Control everything.</p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-3">
-          {COLUMNS.map((col) => (
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          {FOOTER_COLUMNS.map((col) => (
             <div key={col.title}>
               <p className="text-sm font-semibold text-white">{col.title}</p>
               <ul className="mt-3">
@@ -62,10 +28,8 @@ export function SiteFooter() {
                     <li key={`${col.title}-${link.label}`}>
                       <a
                         href={link.href}
-                        {...(isInternal
-                          ? {}
-                          : { target: "_blank", rel: "noreferrer" })}
-                        className="inline-flex min-h-11 w-full items-center text-sm text-white/70 transition-colors hover:text-white"
+                        {...(isInternal ? {} : { target: "_blank", rel: "noreferrer" })}
+                        className="inline-flex min-h-10 w-full items-center text-sm text-white/70 transition-colors hover:text-white"
                       >
                         {link.label}
                       </a>
@@ -76,8 +40,17 @@ export function SiteFooter() {
             </div>
           ))}
         </div>
-        <div className="mt-12 border-t border-white/10 pt-6 text-xs text-white/50">
-          © {new Date().getFullYear()} {t("footer.copyright")}
+
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Mattermost, Inc. All rights reserved.</p>
+          <a
+            href={CONTACT}
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold text-white/70 hover:text-white"
+          >
+            Talk to an Expert
+          </a>
         </div>
       </div>
     </footer>
