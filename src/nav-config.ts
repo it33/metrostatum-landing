@@ -29,7 +29,7 @@ export const PLATFORM_LINKS: NavLink[] = [
 /** Ecosystem dropdown — four groups */
 export const ECOSYSTEM_GROUPS: NavGroup[] = [
   {
-    title: "Sovereign & Gov Cloud",
+    title: "Sovereign Cloud",
     links: [
       { label: "Microsoft", href: "#/ecosystem/cloud/microsoft" },
       { label: "Oracle", href: "#/ecosystem/cloud/oracle" },
@@ -55,7 +55,7 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
     ],
   },
   {
-    title: "Video Calling",
+    title: "Video",
     links: [
       { label: "MS Teams", href: "#/ecosystem/video/teams" },
       { label: "Pexip", href: "#/ecosystem/video/pexip" },
@@ -73,7 +73,7 @@ export const SOLUTIONS_COLUMNS: NavGroup[] = [
       { label: "Overview", href: "#/solutions/national-security" },
       { label: "Intelligence", href: "#/solutions/national-security/intelligence" },
       { label: "Mission operations", href: "#/solutions/national-security/mission-operations" },
-      { label: "Cyber and comms", href: "#/solutions/national-security/cyber-comms" },
+      { label: "Cyber communications", href: "#/solutions/national-security/cyber-comms" },
     ],
   },
   {
@@ -148,12 +148,8 @@ export const FOOTER_COLUMNS: NavGroup[] = [
     title: "Company",
     links: [
       { label: "About Us", href: "#/about" },
-      { label: "Success Stories", href: "#/success-stories" },
-      { label: "Newsroom", href: "https://mattermost.com/newsroom/" },
-      { label: "Careers", href: "https://mattermost.com/careers/" },
-      { label: "Contact", href: CONTACT },
-      { label: "Privacy", href: "https://mattermost.com/privacy-policy/" },
-      { label: "Terms", href: "https://mattermost.com/terms-of-use/" },
+      { label: "Customers", href: "#/customers" },
+      { label: "Contact Sales", href: CONTACT },
     ],
   },
 ];
