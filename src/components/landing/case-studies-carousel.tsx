@@ -117,8 +117,8 @@ function CaseCard({ study }: { study: CaseStudy }) {
 }
 
 /**
- * Self-contained horizontal case-study carousel.
- * Side arrows only — no scrollbar, no dots.
+ * Horizontal case-study carousel.
+ * Arrows sit in side gutters OUTSIDE the card track so they never cover text.
  */
 export function CaseStudiesCarousel() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -133,8 +133,7 @@ export function CaseStudiesCarousel() {
       if (!el || count === 0) return;
       const card = el.children[i] as HTMLElement | undefined;
       if (!card) return;
-      const padLeft = parseFloat(getComputedStyle(el).paddingLeft) || 0;
-      el.scrollTo({ left: Math.max(0, card.offsetLeft - padLeft), behavior: "smooth" });
+      el.scrollTo({ left: card.offsetLeft, behavior: "smooth" });
     },
     [count],
   );
@@ -163,7 +162,7 @@ export function CaseStudiesCarousel() {
       frame = requestAnimationFrame(() => {
         const cards = Array.from(el.children) as HTMLElement[];
         if (!cards.length) return;
-        const origin = el.scrollLeft + el.clientWidth * 0.35;
+        const origin = el.scrollLeft + 16;
         let best = 0;
         let bestDist = Infinity;
         cards.forEach((c, i) => {
@@ -219,7 +218,7 @@ export function CaseStudiesCarousel() {
       </div>
 
       <div
-        className="relative mt-10"
+        className="relative mx-auto mt-10 max-w-[1200px] px-12 sm:px-14"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
@@ -227,14 +226,14 @@ export function CaseStudiesCarousel() {
           type="button"
           aria-label="Previous case study"
           onClick={() => go(index - 1)}
-          className="absolute left-2 top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-md hover:bg-[var(--color-bg-elevated)] md:left-4"
+          className="absolute left-1 top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-md hover:bg-[var(--color-bg-elevated)] sm:left-2 sm:size-11"
         >
           <ChevronLeft className="size-5" />
         </button>
 
         <div
           ref={scrollerRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth px-4 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:px-12"
+          className="flex gap-4 overflow-x-auto scroll-smooth py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           style={{ scrollSnapType: "x mandatory" }}
           role="region"
           aria-label="Customer case studies"
@@ -242,7 +241,7 @@ export function CaseStudiesCarousel() {
           {CASE_STUDIES.map((s) => (
             <div
               key={s.slug}
-              className="w-[min(320px,82vw)] shrink-0"
+              className="w-[min(300px,calc(100vw-7rem))] shrink-0"
               style={{ scrollSnapAlign: "start" }}
             >
               <CaseCard study={s} />
@@ -254,7 +253,7 @@ export function CaseStudiesCarousel() {
           type="button"
           aria-label="Next case study"
           onClick={() => go(index + 1)}
-          className="absolute right-2 top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-md hover:bg-[var(--color-bg-elevated)] md:right-4"
+          className="absolute right-1 top-1/2 z-20 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-md hover:bg-[var(--color-bg-elevated)] sm:right-2 sm:size-11"
         >
           <ChevronRight className="size-5" />
         </button>
