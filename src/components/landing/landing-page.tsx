@@ -84,8 +84,6 @@ export function LandingPage() {
         </div>
       </div>
 
-      <MissionVideo />
-      <CyberDefenseVideo />
       <CaseStudiesCarousel />
       <IMEExplorer />
       <NetworkTypesExplorer />
@@ -140,6 +138,9 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+
+      <MissionVideo />
+      <CyberDefenseVideo />
 
       <SiteFooter />
     </div>
