@@ -1,39 +1,54 @@
 const base = import.meta.env.BASE_URL;
 
-/** Official wordmarks only — not implied partnerships. Exact order required. */
+/** Official wordmarks only — not implied partnerships. */
 const MODELS: { name: string; src: string }[] = [
-  { name: "Mistral", src: `${base}images/ai-models/mistral.svg` },
-  { name: "Cohere", src: `${base}images/ai-models/cohere.svg` },
   { name: "OpenAI", src: `${base}images/ai-models/openai.svg` },
   { name: "Anthropic", src: `${base}images/ai-models/anthropic.svg` },
+  { name: "Cohere", src: `${base}images/ai-models/cohere.svg` },
+  { name: "Mistral", src: `${base}images/ai-models/mistral.svg` },
+  { name: "Llama", src: `${base}images/ai-models/meta-ai.svg` },
   { name: "Grok", src: `${base}images/ai-models/grok.svg` },
-  { name: "Meta Muse Glimmer", src: `${base}images/ai-models/meta-ai.svg` },
 ];
 
-/** Compact model-agnostic strip under Select Use Case */
+function ModelTrack({ ariaHidden = false }: { ariaHidden?: boolean }) {
+  return (
+    <ul className="byom-marquee__track" aria-hidden={ariaHidden || undefined}>
+      {MODELS.map((m) => (
+        <li key={`${ariaHidden ? "b" : "a"}-${m.name}`} className="byom-marquee__item">
+          <img
+            src={m.src}
+            alt=""
+            className="byom-marquee__icon"
+            width={18}
+            height={18}
+          />
+          <span className="byom-marquee__name">{m.name}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * Animated BYOM logo strip — placed under the Select Use Case video.
+ * Infinite left-scrolling loop of supported model wordmarks.
+ */
 export function AiModelLogos({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`mb-3 flex flex-col gap-1.5 ${className}`}
-      aria-label="Bring your own models"
+      className={`byom-marquee ${className}`.trim()}
+      role="region"
+      aria-label="Bring Your Own Model — supported models"
     >
-      <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/55">
-        Bring your own models. Inference stays in your perimeter.
-      </p>
-      <ul className="flex flex-wrap items-center gap-x-3 gap-y-1.5 sm:gap-x-4">
-        {MODELS.map((m) => (
-          <li key={m.name} className="flex items-center gap-1.5">
-            <img
-              src={m.src}
-              alt=""
-              className="h-4 w-4 shrink-0 object-contain opacity-90 brightness-0 invert"
-              width={16}
-              height={16}
-            />
-            <span className="text-[11px] font-semibold tracking-wide text-white/80">{m.name}</span>
-          </li>
-        ))}
-      </ul>
+      <p className="byom-marquee__label">Bring Your Own Model (BYOM)</p>
+      <div className="byom-marquee__shell">
+        <div className="byom-marquee__fade byom-marquee__fade--left" aria-hidden />
+        <div className="byom-marquee__fade byom-marquee__fade--right" aria-hidden />
+        <div className="byom-marquee__viewport">
+          <ModelTrack />
+          <ModelTrack ariaHidden />
+        </div>
+      </div>
     </div>
   );
 }
