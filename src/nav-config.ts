@@ -40,9 +40,9 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
   {
     title: "Sovereign Cloud",
     links: [
-      { label: "Microsoft", href: "#/ecosystem/partners/microsoft" },
-      { label: "Oracle", href: "#/ecosystem/partners/oracle" },
-      { label: "Google", href: "#/ecosystem/cloud/google" },
+      { label: "Microsoft Azure", href: "#/ecosystem/cloud/microsoft" },
+      { label: "Oracle Cloud", href: "#/ecosystem/cloud/oracle" },
+      { label: "Google Cloud", href: "#/ecosystem/cloud/google" },
       { label: "AWS", href: "#/ecosystem/cloud/aws" },
     ],
   },

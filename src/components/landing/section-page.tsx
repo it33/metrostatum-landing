@@ -3,6 +3,7 @@ import { ArrowRight, Expand, X } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { useHashScroll } from "./use-hash-scroll";
+import { useSectionScroll } from "./use-section-scroll";
 import { CONTACT_SALES } from "@/nav-config";
 import { cn } from "@/lib/utils";
 
@@ -38,6 +39,8 @@ export type PageSection = {
 };
 
 export type SectionPageContent = {
+  /** Hash-route prefix, e.g. "ecosystem" so in-page links stay on #/ecosystem/… */
+  route?: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -45,10 +48,16 @@ export type SectionPageContent = {
   jumpLinks?: { id: string; label: string }[];
 };
 
+function hashHref(route: string | undefined, id: string) {
+  return route ? `#/${route}/${id}` : `#${id}`;
+}
+
 function SectionNav({
   items,
+  route,
 }: {
   items: { id: string; label: string }[];
+  route?: string;
 }) {
   return (
     <nav
@@ -60,7 +69,7 @@ function SectionNav({
           {items.map((s) => (
             <li key={s.id} className="shrink-0">
               <a
-                href={`#${s.id}`}
+                href={hashHref(route, s.id)}
                 className="inline-flex rounded-full px-3 py-1.5 text-[var(--color-fg-muted)] transition-colors hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
               >
                 {s.label}
@@ -260,7 +269,8 @@ function gridClass(sec: PageSection) {
   return "md:grid-cols-2 lg:grid-cols-3";
 }
 
-export function SectionPage({ content }: { content: SectionPageContent }) {
+export function SectionPage({ content, rest }: { content: SectionPageContent; rest?: string }) {
+  useSectionScroll(rest);
   useHashScroll();
   const [openCard, setOpenCard] = useState<SectionCard | null>(null);
   const jump =
@@ -304,7 +314,7 @@ export function SectionPage({ content }: { content: SectionPageContent }) {
               </a>
               {content.sections[0] ? (
                 <a
-                  href={`#${content.sections[0].id}`}
+                  href={hashHref(content.route, content.sections[0].id)}
                   className="inline-flex h-11 items-center rounded-md border border-white/30 px-5 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   Explore {content.eyebrow.toLowerCase()}
@@ -315,7 +325,7 @@ export function SectionPage({ content }: { content: SectionPageContent }) {
         </div>
       </section>
 
-      <SectionNav items={jump} />
+      <SectionNav items={jump} route={content.route} />
 
       {content.sections.map((sec, idx) => (
         <section

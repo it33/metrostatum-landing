@@ -1,6 +1,7 @@
 import { SectionPage, type SectionPageContent } from "./section-page";
 
 const CONTENT: SectionPageContent = {
+  route: "ecosystem",
   eyebrow: "Ecosystem",
   title: "Interoperate with the stack you already run",
   subtitle:
@@ -358,6 +359,6 @@ const CONTENT: SectionPageContent = {
   ],
 };
 
-export function EcosystemPage() {
-  return <SectionPage content={CONTENT} />;
+export function EcosystemPage({ rest }: { rest?: string }) {
+  return <SectionPage content={CONTENT} rest={rest} />;
 }
