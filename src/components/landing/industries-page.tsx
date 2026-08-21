@@ -32,8 +32,10 @@ const CONTENT: SectionPageContent = {
             "Self-hosted collaboration, playbooks, and federation",
             "Air-gapped and DDIL operating realities",
           ],
-          image: "/images/hero-camo.webp",
-          imageAlt: "Defense operations",
+          image: "/images/industries/defense.jpg",
+          imageAlt: "Night launch in navy and gold — defense and mission operations",
+          imageCaption:
+            "Defense and mission operations: classified networks, edge deployments, and DDIL collaboration under operational control.",
         },
         {
           id: "government",
@@ -44,6 +46,10 @@ const CONTENT: SectionPageContent = {
             "Enterprise identity and compliance exports",
             "Sovereign cloud and on-prem options",
           ],
+          image: "/images/industries/government.jpg",
+          imageAlt: "Government building at night in navy and gold",
+          imageCaption:
+            "Public-sector collaboration with residency, auditability, and sovereign deployment choices.",
         },
         {
           id: "law-enforcement",
@@ -53,6 +59,10 @@ const CONTENT: SectionPageContent = {
             "Channels and permissions for case and event collaboration",
             "Administrative oversight and audit trails",
           ],
+          image: "/images/industries/law-enforcement.jpg",
+          imageAlt: "Controlled-access security imagery in navy and gold",
+          imageCaption:
+            "Law-enforcement collaboration with controlled access, auditable history, and oversight.",
         },
         {
           id: "energy-utilities",
@@ -62,6 +72,10 @@ const CONTENT: SectionPageContent = {
             "Incident response and field coordination",
             "Utility security constraints and continuity requirements",
           ],
+          image: "/images/industries/energy.jpg",
+          imageAlt: "High-voltage pylons at night in navy and gold",
+          imageCaption:
+            "Energy and utilities: incident response and field coordination that can run in OT-adjacent, regulated environments.",
         },
         {
           id: "manufacturing",
@@ -71,6 +85,10 @@ const CONTENT: SectionPageContent = {
             "Self-hosted channels and industrial IT integrations",
             "Keep intellectual property off consumer collaboration clouds",
           ],
+          image: "/images/industries/manufacturing.jpg",
+          imageAlt: "Industrial manufacturing floor with gold weld light",
+          imageCaption:
+            "Manufacturing: plant, engineering, and security teams collaborating without putting IP on a consumer cloud.",
         },
         {
           id: "financial-services",
@@ -80,6 +98,10 @@ const CONTENT: SectionPageContent = {
             "Retention, eDiscovery, and audit",
             "Customer-managed hosting and identity",
           ],
+          image: "/images/industries/financial-services.jpg",
+          imageAlt: "Financial-district skyline in navy with gold window light",
+          imageCaption:
+            "Financial services: retention, eDiscovery, and customer-managed hosting for regulated collaboration.",
         },
         {
           id: "technology",
@@ -89,8 +111,10 @@ const CONTENT: SectionPageContent = {
             "DevSecOps integrations in a controlled tenant",
             "Playbooks for release and incident rituals",
           ],
-          image: "/images/product/github-integration.png",
-          imageAlt: "Technology toolchain",
+          image: "/images/industries/technology.jpg",
+          imageAlt: "Data-center corridor in navy with gold rack lights",
+          imageCaption:
+            "Technology and DevSecOps: GitHub, GitLab, Jira, and pipeline events in a workspace the enterprise controls.",
         },
       ],
     },
