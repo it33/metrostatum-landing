@@ -1,6 +1,9 @@
+import { useCallback, useRef } from "react";
 import {
   ArrowRight,
   Bot,
+  ChevronLeft,
+  ChevronRight,
   Cloud,
   FileStack,
   GitBranch,
@@ -36,6 +39,57 @@ export const PLATFORM_SECTIONS = [
   { id: "federated", label: "Federated Communications" },
   { id: "cross-domain", label: "Cross Domain Operations" },
   { id: "ddil", label: "DDIL" },
+] as const;
+
+const OVERVIEW_CARDS = [
+  {
+    id: "zero-trust-suite",
+    icon: ShieldCheck,
+    title: "Zero Trust Application Suite",
+    body: "Messaging, files, playbooks, boards, and sovereign calling — one suite for air-gapped, on-prem, and private cloud.",
+  },
+  {
+    id: "sovereign-deployment",
+    icon: Cloud,
+    title: "Sovereign Deployment",
+    body: "Private cloud, on-prem data centers, GovCloud hyperscalers, and fully air-gapped networks from core to edge.",
+  },
+  {
+    id: "integrations",
+    icon: Workflow,
+    title: "Integrations & Automations",
+    body: "Connectors, webhooks, plugins, and playbook-driven automation that keep data and control inside your boundary.",
+  },
+  {
+    id: "sovereign-ai",
+    icon: Bot,
+    title: "Sovereign AI",
+    body: "Multi-agent, multi-LLM assistance on first-party infrastructure — prompts, embeddings, and outputs stay yours.",
+  },
+  {
+    id: "information-controls",
+    icon: Lock,
+    title: "Advanced Information Controls",
+    body: "Classification banners, least-privilege access, retention, export controls, and audit for need-to-know work.",
+  },
+  {
+    id: "federated",
+    icon: Globe2,
+    title: "Federated Communications",
+    body: "Connect trusted partners and allies without collapsing security domains or sharing a consumer tenant.",
+  },
+  {
+    id: "cross-domain",
+    icon: Share2,
+    title: "Cross Domain Operations",
+    body: "Land, air, sea, cyber, and space collaboration that respects domain boundaries and transfer rules.",
+  },
+  {
+    id: "ddil",
+    icon: Radio,
+    title: "DDIL",
+    body: "Disconnected, denied, intermittent, and limited-bandwidth operations from reach-back to the tactical edge.",
+  },
 ] as const;
 
 const SUITE_CAPABILITIES = [
@@ -270,27 +324,66 @@ const DEEP_SECTIONS = [
   },
 ] as const;
 
-function SectionNav() {
+function PlatformOverviewCarousel() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  const scrollByCard = useCallback((dir: -1 | 1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector("article");
+    const step = card ? card.getBoundingClientRect().width + 16 : 300;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  }, []);
+
   return (
-    <nav
-      aria-label="Platform sections"
-      className="sticky top-[72px] z-30 hidden border-b border-[var(--color-border)] bg-white/95 backdrop-blur-md lg:block"
-    >
+    <section aria-label="Platform capabilities" className="border-b border-[var(--color-border)] bg-[var(--color-bg)] py-10 md:py-12">
       <div className="container-page">
-        <ul className="flex gap-1 overflow-x-auto py-2 text-[13px] font-medium">
-          {PLATFORM_SECTIONS.map((s) => (
-            <li key={s.id} className="shrink-0">
-              <a
-                href={`#/platform/${s.id}`}
-                className="inline-flex rounded-full px-3 py-1.5 text-[var(--color-fg-muted)] transition-colors hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
+        <div className="relative">
+          <button
+            type="button"
+            aria-label="Previous capability"
+            onClick={() => scrollByCard(-1)}
+            className="absolute left-0 top-1/2 z-10 hidden size-11 -translate-x-3 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex lg:-translate-x-5"
+          >
+            <ChevronLeft className="size-5" />
+          </button>
+          <div
+            ref={scrollerRef}
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {OVERVIEW_CARDS.map((card) => (
+              <article
+                key={card.id}
+                className="flex w-[min(18.5rem,80vw)] shrink-0 snap-start flex-col rounded-[var(--radius-xl)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-card)]"
               >
-                {s.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+                <div className="inline-flex size-10 items-center justify-center rounded-lg bg-[color-mix(in_oklab,var(--color-denim)_8%,white)] text-[var(--color-denim)]">
+                  <card.icon className="size-5" strokeWidth={1.75} />
+                </div>
+                <h3 className="mt-4 text-base font-bold tracking-tight text-[var(--color-denim)]">
+                  {card.title}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--color-fg-muted)]">{card.body}</p>
+                <a
+                  href={`#/platform/${card.id}`}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
+                >
+                  Learn more
+                  <ArrowRight className="size-4" />
+                </a>
+              </article>
+            ))}
+          </div>
+          <button
+            type="button"
+            aria-label="Next capability"
+            onClick={() => scrollByCard(1)}
+            className="absolute right-0 top-1/2 z-10 hidden size-11 translate-x-3 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex lg:translate-x-5"
+          >
+            <ChevronRight className="size-5" />
+          </button>
+        </div>
       </div>
-    </nav>
+    </section>
   );
 }
 
@@ -345,11 +438,11 @@ export function PlatformPage({ rest }: { rest?: string }) {
         </div>
       </section>
 
-      <SectionNav />
+      <PlatformOverviewCarousel />
 
       <section
         id="zero-trust-suite"
-        className="scroll-mt-28 border-b border-[var(--color-border)] py-16 md:py-24"
+        className="scroll-mt-40 border-b border-[var(--color-border)] py-16 md:py-24"
       >
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
@@ -403,7 +496,7 @@ export function PlatformPage({ rest }: { rest?: string }) {
             key={sec.id}
             id={sec.id}
             className={cn(
-              "scroll-mt-28 border-b border-[var(--color-border)] py-16 md:py-24",
+              "scroll-mt-40 border-b border-[var(--color-border)] py-16 md:py-24",
               reverse ? "bg-[var(--color-bg-elevated)]" : "bg-[var(--color-bg)]",
             )}
           >
@@ -476,12 +569,12 @@ export function PlatformPage({ rest }: { rest?: string }) {
                   Talk to an expert
                   <ArrowRight className="size-4" />
                 </a>
-                <a
-                  href="#/"
+                <Link
+                  to="/"
                   className="inline-flex h-11 items-center rounded-md border border-white/30 px-5 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   Back to home
-                </a>
+                </Link>
               </div>
             </div>
           </div>
