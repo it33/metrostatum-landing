@@ -90,6 +90,7 @@ export const GTM: Leader[] = [
     title: "VP Sales, EMEA & APAC",
     initials: "JM",
     vanity: "jamullins",
+    photo: LEADER_PHOTOS["jamullins"],
     bio: "Based in London, UK. 30+ years selling into international government, military, and intelligence organizations, as well as financial services, telecommunications, and oil & gas. Prior leadership roles at Ripjar (global threat detection), SS8, Narus (network intelligence), and Equiis Technologies — deep expertise in security and intelligence technology markets across NATO-allied and Five Eyes nations.",
   },
   {
