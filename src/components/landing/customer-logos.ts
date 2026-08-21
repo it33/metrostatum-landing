@@ -115,3 +115,12 @@ export function getCustomerLogo(slug: string): CustomerLogo | null {
 export const CUSTOMER_LOGOS: CustomerLogo[] = Object.entries(LOGO_BY_SLUG)
   .filter(([, v]) => Boolean(v.src))
   .map(([slug, v]) => ({ slug, name: v.name, src: v.src }));
+
+/** Curated landing strip — same published marks, stable order. */
+export const LANDING_MARQUEE_LOGOS: CustomerLogo[] = CUSTOMER_LOGOS;
+
+export function logosForStories(slugs: string[]): CustomerLogo[] {
+  return slugs
+    .map((slug) => getCustomerLogo(slug))
+    .filter((x): x is CustomerLogo => Boolean(x));
+}

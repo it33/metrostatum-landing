@@ -105,6 +105,7 @@ export const INDUSTRIES_LINKS: NavLink[] = [
   { label: "Energy and utilities", href: "#/industries/energy-utilities" },
   { label: "Manufacturing", href: "#/industries/manufacturing" },
   { label: "Financial services", href: "#/industries/financial-services" },
+  { label: "Technology", href: "#/industries/technology" },
 ];
 
 export const TOP_NAV: TopNavItem[] = [
@@ -112,6 +113,7 @@ export const TOP_NAV: TopNavItem[] = [
   { kind: "groups", label: "Ecosystem", groups: ECOSYSTEM_GROUPS },
   { kind: "mega", label: "Solutions", columns: SOLUTIONS_COLUMNS },
   { kind: "dropdown", label: "Industries", children: INDUSTRIES_LINKS },
+  { kind: "link", label: "About", href: "#/about" },
   { kind: "link", label: "Success Stories", href: "#/success-stories" },
 ];
 

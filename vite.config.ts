@@ -1,7 +1,7 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import { writeFileSync } from "node:fs";
+import { writeFileSync, mkdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath, URL } from "node:url";
 
@@ -128,6 +128,7 @@ function siteIndexingPlugin(): Plugin {
       );
     },
     closeBundle() {
+      mkdirSync(resolve("dist"), { recursive: true });
       writeFileSync(
         resolve("dist", "robots.txt"),
         siteIndexable ? ROBOTS_LIVE : ROBOTS_STAGING,
