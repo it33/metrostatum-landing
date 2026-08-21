@@ -51,6 +51,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "Cyber defense playbook — malware incident response in Mattermost",
           imageCaption:
             "From Mattermost’s Transforming Cyber Defense Operations walkthrough: SOC channels and playbooks for attributable cyber mission communications.",
+        },
       ],
     },
     {
@@ -127,6 +128,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "SOC malware-incident channel with playbook-driven cyber defense",
           imageCaption:
             "From Mattermost’s Transforming Cyber Defense Operations walkthrough: defensive playbooks and SOC channels so pipeline and scanner findings reach the people who must act.",
+        },
         {
           id: "agile-secure-workflows",
           title: "Agile secure workflows",
