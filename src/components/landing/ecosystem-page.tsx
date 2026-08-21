@@ -137,10 +137,15 @@ const CONTENT: SectionPageContent = {
             "MS Teams Meetings launch from channels",
             "Entra ID–centric identity alignment where configured",
           ],
-          link: {
-            label: "Teams sync documentation",
-            href: "https://docs.mattermost.com/integrations-guide/microsoft-teams-sync.html",
-          },
+          image: "/images/integrations/teams-sync.png",
+          imageAlt: "Mattermost MS Teams Sync plugin posting a Teams chat notification and file attachment into a Mattermost channel",
+          imageCaption:
+            "Official Mattermost MS Teams Sync screenshot: the msteams bot posts chat and group-chat notifications — including forwarded attachments — into Mattermost, with a link back to the Teams conversation.",
+          links: [
+            { label: "Teams sync documentation", href: "https://docs.mattermost.com/integrations-guide/microsoft-teams-sync.html" },
+            { label: "Using Teams notifications", href: "https://docs.mattermost.com/end-user-guide/collaborate/collaborate-within-connected-microsoft-teams.html" },
+            { label: "Teams Meetings plugin", href: "https://docs.mattermost.com/integrations-guide/microsoft-teams-meetings.html" },
+          ],
         },
         {
           id: "federation-matrix",
@@ -151,6 +156,14 @@ const CONTENT: SectionPageContent = {
             "Real names and avatars rather than bot placeholders",
             "Loop prevention, authentication, and namespace isolation",
           ],
+          image: "/images/integrations/federation-matrix.png",
+          imageAlt: "Architecture illustration of Mattermost federating with a Matrix homeserver across a policy boundary",
+          imageCaption:
+            "Federation pattern for the Mattermost Matrix bridge: operator workspace and partner homeserver stay distinct security domains, with signed bidirectional event sync, real-user identity, and loop prevention.",
+          links: [
+            { label: "Matrix bridge (source)", href: "https://github.com/mattermost/mattermost-plugin-matrix-bridge" },
+            { label: "Marketplace listing", href: "https://mattermost.com/marketplace/mattermost-matrix-connector/" },
+          ],
         },
         {
           id: "federation-xmpp",
@@ -159,6 +172,13 @@ const CONTENT: SectionPageContent = {
           bullets: [
             "Bridge legacy and specialized XMPP estates",
             "Keep Mattermost as the operator workspace of record",
+          ],
+          image: "/images/integrations/federation-xmpp.png",
+          imageAlt: "Architecture illustration of an XMPP gateway bridging a legacy domain into Mattermost",
+          imageCaption:
+            "XMPP gateway pattern: a policy-controlled bridge maps a legacy or tactical XMPP domain into Mattermost so operators keep a single workspace of record without a hard cutover.",
+          links: [
+            { label: "Matterbridge (XMPP and more)", href: "https://mattermost.com/marketplace/matterbridge/" },
           ],
         },
       ],
