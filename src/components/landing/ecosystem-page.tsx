@@ -125,7 +125,8 @@ const CONTENT: SectionPageContent = {
       navLabel: "Federation",
       eyebrow: "Collaborate beyond the enclave",
       title: "Federation with partner networks",
-      lead: "Connect trusted partners, allies, and mixed estates without collapsing security domains — Microsoft Teams, Matrix, and XMPP interoperability under policy and audit.",
+      layout: "2x2",
+      lead: "Connect trusted partners, allies, and mixed estates without collapsing security domains — Microsoft Teams, Matrix, XMPP, and libpurple/Pidgin interoperability under policy and audit.",
       cards: [
         {
           id: "federation-teams",
@@ -178,6 +179,24 @@ const CONTENT: SectionPageContent = {
             "XMPP gateway pattern: a policy-controlled bridge maps a legacy or tactical XMPP domain into Mattermost so operators keep a single workspace of record without a hard cutover.",
           links: [
             { label: "Matterbridge (XMPP and more)", href: "https://mattermost.com/marketplace/matterbridge/" },
+          ],
+        },
+        {
+          id: "federation-libpurple",
+          title: "Pidgin / libpurple",
+          body: "Connect libpurple clients — Pidgin, Finch, Adium, and BitlBee — to a Mattermost server so mixed IM estates can reach mission channels without standing up a second collaboration tenant.",
+          bullets: [
+            "Mattermost as a native libpurple account (email, LDAP, or GitLab auth)",
+            "Channels, DMs, edits, files, and status sync into the existing IM client",
+            "Useful where Pidgin or BitlBee is already the approved desktop messenger",
+          ],
+          image: "/images/integrations/federation-libpurple.png",
+          imageAlt: "Architecture of the purple-mattermost libpurple plugin connecting Pidgin-family clients to a Mattermost workspace",
+          imageCaption:
+            "purple-mattermost (Eion Robb): a GPL-3 libpurple protocol plugin. Pidgin, Finch, Adium, and BitlBee connect to Mattermost as an account type so operators keep their existing IM client while the workspace of record stays on Mattermost. Latest release v2.1.",
+          links: [
+            { label: "purple-mattermost (source)", href: "https://github.com/EionRobb/purple-mattermost" },
+            { label: "v2.1 release", href: "https://github.com/EionRobb/purple-mattermost/releases/tag/v2.1" },
           ],
         },
       ],

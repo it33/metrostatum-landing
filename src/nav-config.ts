@@ -50,6 +50,7 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
       { label: "MS Teams", href: "#/ecosystem/federation/teams" },
       { label: "Matrix", href: "#/ecosystem/federation/matrix" },
       { label: "XMPP", href: "#/ecosystem/federation/xmpp" },
+      { label: "Pidgin / libpurple", href: "#/ecosystem/federation/libpurple" },
     ],
   },
   {
