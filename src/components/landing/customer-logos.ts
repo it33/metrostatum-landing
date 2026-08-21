@@ -67,7 +67,7 @@ const LOGO_BY_SLUG: Record<string, { name: string; src: string }> = {
   },
   cern: {
     name: "CERN",
-    src: local("cern.webp"),
+    src: local("cern.png"),
   },
   almalinux: {
     name: "AlmaLinux",
