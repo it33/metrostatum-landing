@@ -104,6 +104,7 @@ export const GTM: Leader[] = [
     title: "General Manager, Mattermost Japan KK",
     initials: "SH",
     vanity: "shigeru-harasawa-127587",
+    photo: LEADER_PHOTOS["shigeru-harasawa-127587"],
     bio: "Based in Tokyo. 25+ years in enterprise technology with leadership roles at Oracle, DataRobot (Japan Country Manager), IBM, Netezza, and DataStax. Leads Japan market entry and JSDF engagement — key to Indo-Pacific defense modernization and assured cooperation with allied forces.",
   },
   {
