@@ -48,6 +48,7 @@ const CONTENT: SectionPageContent = {
       eyebrow: "Deploy on your cloud",
       title: "Sovereign cloud hyperscalers",
       lead: "Run Mattermost on customer-managed infrastructure in Microsoft Azure, Oracle Cloud, Google Cloud, and AWS — including government and isolated regions — so residency and authorization stay yours.",
+      layout: "2x2",
       cards: [
         {
           id: "cloud-microsoft",
@@ -60,7 +61,9 @@ const CONTENT: SectionPageContent = {
             "Out-of-band patterns for incident response and mission traffic",
           ],
           image: "/images/deploy/azure.png",
-          imageAlt: "Mattermost on Azure",
+          imageAlt: "Mattermost high-availability architecture on Microsoft Azure",
+          imageCaption:
+            "Reference architecture for Mattermost on Microsoft Azure: customer-managed Kubernetes, identity, and object storage at the sovereign boundary. Click any diagram tile on this page to inspect the full drawing.",
           link: {
             label: "Microsoft strategic partner page",
             href: "#/ecosystem/partners/microsoft",
@@ -76,7 +79,9 @@ const CONTENT: SectionPageContent = {
             "Enterprise identity via SAML, LDAP, or OpenID",
           ],
           image: "/images/deploy/oracle.png",
-          imageAlt: "Mattermost on Oracle Cloud",
+          imageAlt: "Mattermost architecture on Oracle Cloud Infrastructure",
+          imageCaption:
+            "Reference architecture for Mattermost on Oracle Cloud Infrastructure, including government and isolated-region patterns with identity and storage inside the customer tenancy.",
           link: {
             label: "Oracle strategic partner page",
             href: "#/ecosystem/partners/oracle",
@@ -92,7 +97,9 @@ const CONTENT: SectionPageContent = {
             "Restricted networking and limited egress designs",
           ],
           image: "/images/deploy/datacenter.png",
-          imageAlt: "Private cloud deployment",
+          imageAlt: "Mattermost private-cloud architecture applicable to Google Cloud",
+          imageCaption:
+            "Customer-managed Mattermost topology for Google Cloud and private cloud: clustered application tier, datastore, and object storage with restricted networking.",
         },
         {
           id: "cloud-aws",
@@ -104,7 +111,9 @@ const CONTENT: SectionPageContent = {
             "Private networking and limited egress",
           ],
           image: "/images/deploy/aws.png",
-          imageAlt: "Mattermost on AWS",
+          imageAlt: "Mattermost architecture on AWS and GovCloud",
+          imageCaption:
+            "Reference architecture for Mattermost on AWS commercial and GovCloud regions, including EKS/EC2 patterns and private networking.",
           link: {
             label: "Deployment documentation",
             href: "https://docs.mattermost.com/deployment-guide/server/deployment-overview.html",
