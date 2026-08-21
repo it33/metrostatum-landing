@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { LogoMarquee } from "./logo-marquee";
@@ -19,23 +19,14 @@ export function CustomersPage() {
   useHashScroll();
   const [industry, setIndustry] = useState<Industry>("All");
   const [geo, setGeo] = useState<string>("all");
-  const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
     return CUSTOMER_STORIES.filter((s) => {
       if (industry !== "All" && s.industry !== industry) return false;
       if (geo !== "all" && s.country.code !== geo) return false;
-      if (!q) return true;
-      return (
-        s.name.toLowerCase().includes(q) ||
-        s.title.toLowerCase().includes(q) ||
-        s.industry.toLowerCase().includes(q) ||
-        s.country.name.toLowerCase().includes(q) ||
-        (s.metric?.toLowerCase().includes(q) ?? false)
-      );
+      return true;
     });
-  }, [industry, geo, query]);
+  }, [industry, geo]);
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
@@ -76,88 +67,76 @@ export function CustomersPage() {
 
       <section className="border-b border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-6">
         <div className="container-page flex flex-col gap-4">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-            <div className="min-w-0 flex-1 space-y-3">
-              <div>
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
-                  Industry
-                </p>
-                <div className="flex flex-wrap gap-2" role="tablist" aria-label="Industry filter">
-                  {INDUSTRY_FILTERS.map((f) => {
-                    const active = f === industry;
-                    return (
-                      <button
-                        key={f}
-                        type="button"
-                        role="tab"
-                        aria-selected={active}
-                        onClick={() => setIndustry(f)}
-                        className={cn(
-                          "rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition",
-                          active
-                            ? "bg-[var(--color-denim)] text-white"
-                            : "border border-[var(--color-border)] bg-white text-[var(--color-fg-muted)] hover:border-[var(--color-denim)]/40 hover:text-[var(--color-denim)]",
-                        )}
-                      >
-                        {f}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-              <div>
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
-                  Geography
-                </p>
-                <div className="flex flex-wrap gap-2" role="tablist" aria-label="Geography filter">
-                  <button
-                    type="button"
-                    role="tab"
-                    aria-selected={geo === "all"}
-                    onClick={() => setGeo("all")}
-                    className={cn(
-                      "rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition",
-                      geo === "all"
-                        ? "bg-[var(--color-denim)] text-white"
-                        : "border border-[var(--color-border)] bg-white text-[var(--color-fg-muted)] hover:border-[var(--color-denim)]/40 hover:text-[var(--color-denim)]",
-                    )}
-                  >
-                    All
-                  </button>
-                  {GEOGRAPHY_FILTERS.map((c) => {
-                    const active = geo === c.code;
-                    return (
-                      <button
-                        key={c.code}
-                        type="button"
-                        role="tab"
-                        aria-selected={active}
-                        onClick={() => setGeo(c.code)}
-                        className={cn(
-                          "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition",
-                          active
-                            ? "bg-[var(--color-denim)] text-white"
-                            : "border border-[var(--color-border)] bg-white text-[var(--color-fg-muted)] hover:border-[var(--color-denim)]/40 hover:text-[var(--color-denim)]",
-                        )}
-                      >
-                        <CountryFlag country={c} className={active ? "ring-white/40" : undefined} />
-                        {c.name}
-                      </button>
-                    );
-                  })}
-                </div>
+          <div className="space-y-3">
+            <div>
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
+                Industry
+              </p>
+              <div className="flex flex-wrap gap-2" role="tablist" aria-label="Industry filter">
+                {INDUSTRY_FILTERS.map((f) => {
+                  const active = f === industry;
+                  return (
+                    <button
+                      key={f}
+                      type="button"
+                      role="tab"
+                      aria-selected={active}
+                      onClick={() => setIndustry(f)}
+                      className={cn(
+                        "rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition",
+                        active
+                          ? "bg-[var(--color-denim)] text-white"
+                          : "border border-[var(--color-border)] bg-white text-[var(--color-fg-muted)] hover:border-[var(--color-denim)]/40 hover:text-[var(--color-denim)]",
+                      )}
+                    >
+                      {f}
+                    </button>
+                  );
+                })}
               </div>
             </div>
-            <label className="relative mt-1 block w-full max-w-sm shrink-0 lg:mt-6">
-              <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[var(--color-fg-subtle)]" />
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search customers, countries…"
-                className="w-full rounded-full border border-[var(--color-border)] bg-white py-2 pl-10 pr-4 text-sm outline-none ring-[var(--color-denim)]/20 placeholder:text-[var(--color-fg-subtle)] focus:ring-2"
-              />
-            </label>
+            <div>
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
+                Geography
+              </p>
+              <div className="flex flex-wrap gap-2" role="tablist" aria-label="Geography filter">
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={geo === "all"}
+                  onClick={() => setGeo("all")}
+                  className={cn(
+                    "rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition",
+                    geo === "all"
+                      ? "bg-[var(--color-denim)] text-white"
+                      : "border border-[var(--color-border)] bg-white text-[var(--color-fg-muted)] hover:border-[var(--color-denim)]/40 hover:text-[var(--color-denim)]",
+                  )}
+                >
+                  All
+                </button>
+                {GEOGRAPHY_FILTERS.map((c) => {
+                  const active = geo === c.code;
+                  return (
+                    <button
+                      key={c.code}
+                      type="button"
+                      role="tab"
+                      aria-selected={active}
+                      onClick={() => setGeo(c.code)}
+                      className={cn(
+                        "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition",
+                        active
+                          ? "bg-[var(--color-denim)] text-white"
+                          : "border border-[var(--color-border)] bg-white text-[var(--color-fg-muted)] hover:border-[var(--color-denim)]/40 hover:text-[var(--color-denim)]",
+                      )}
+                    >
+                      <CountryFlag country={c} className={active ? "ring-white/40" : undefined} />
+                      {c.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
           <p className="text-xs text-[var(--color-fg-muted)]">
             Showing {filtered.length} of {CUSTOMER_STORIES.length} stories
