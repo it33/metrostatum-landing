@@ -123,7 +123,10 @@ const CONTENT: SectionPageContent = {
             "Channels subscribed to pipeline and scanner events",
             "AppSec and platform teams coordinate mitigations with developers",
           ],
-        },
+          image: "/images/product/cyber-defense.jpg",
+          imageAlt: "SOC malware-incident channel with playbook-driven cyber defense",
+          imageCaption:
+            "From Mattermost’s Transforming Cyber Defense Operations walkthrough: defensive playbooks and SOC channels so pipeline and scanner findings reach the people who must act.",
         {
           id: "agile-secure-workflows",
           title: "Agile secure workflows",
