@@ -79,6 +79,7 @@ export const PRODUCT_ENG: Leader[] = [
     title: "VP Infrastructure & Security",
     initials: "DS",
     vanity: "dschalla",
+    photo: LEADER_PHOTOS["dschalla"],
     bio: "Based in Cologne, Germany. SANS-trained security leader and international speaker. Member of the European Cyber Security Organisation (ECSO). Works with NATO on Locked Shields and other cyber defense exercises. Leads strategic CSP alliances with Microsoft, Oracle, Google, and AWS.",
   },
 ];
