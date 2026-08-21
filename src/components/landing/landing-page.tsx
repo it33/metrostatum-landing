@@ -69,7 +69,7 @@ export function LandingPage() {
                       className="border-white/30 text-white hover:bg-white/10"
                       asChild
                     >
-                      <a href="#ime">{t("hero.explorePlatform")}</a>
+                      <a href="#/platform">{t("hero.explorePlatform")}</a>
                     </Button>
                   </div>
                   <AiModelLogos className="mt-8" />
@@ -133,7 +133,7 @@ export function LandingPage() {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <a href="#ime">{t("cta.explorePlatform")}</a>
+                  <a href="#/platform">{t("cta.explorePlatform")}</a>
                 </Button>
               </div>
             </div>

@@ -15,16 +15,17 @@ export type TopNavItem =
   | { kind: "groups"; label: string; groups: NavGroup[] }
   | { kind: "link"; label: string; href: string };
 
-/** Platform dropdown */
+/** Platform dropdown — one link per in-page section */
 export const PLATFORM_LINKS: NavLink[] = [
   { label: "Overview", href: "#/platform" },
   { label: "Zero Trust Application Suite", href: "#/platform/zero-trust-suite" },
   { label: "Sovereign Deployment", href: "#/platform/sovereign-deployment" },
+  { label: "Integrations & Automations", href: "#/platform/integrations" },
   { label: "Sovereign AI", href: "#/platform/sovereign-ai" },
-  { label: "Zero Trust Information Controls", href: "#/platform/information-controls" },
-  { label: "Federation and Cross-Domain", href: "#/platform/federation-cross-domain" },
+  { label: "Advanced Information Controls", href: "#/platform/information-controls" },
+  { label: "Federated Communications", href: "#/platform/federated" },
+  { label: "Cross Domain Operations", href: "#/platform/cross-domain" },
   { label: "DDIL", href: "#/platform/ddil" },
-  { label: "Integrations", href: "#/platform/integrations" },
 ];
 
 /** Ecosystem dropdown — four groups */

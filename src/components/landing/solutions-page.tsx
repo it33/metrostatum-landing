@@ -47,7 +47,10 @@ const CONTENT: SectionPageContent = {
             "Playbook-driven response",
             "Integrations to security tooling",
           ],
-        },
+          image: "/images/product/cyber-comms.jpg",
+          imageAlt: "Cyber defense playbook — malware incident response in Mattermost",
+          imageCaption:
+            "From Mattermost’s Transforming Cyber Defense Operations walkthrough: SOC channels and playbooks for attributable cyber mission communications.",
       ],
     },
     {
