@@ -99,7 +99,6 @@ export const GTM: Leader[] = [
     initials: "MM",
     vanity: "matt-mandrgoc-20502912",
     photo: LEADER_PHOTOS["matt-mandrgoc-20502912"],
-    photo: "https://pbs.twimg.com/media/HFj11lla4AAflh3.jpg",
     bio: "20+ years in U.S. defense and national security sales. At Cisco for 16 years leading operations across Army, DISA, Defense Agencies, Special Operations Forces, Department of War/Intel collaboration, and public sector programs. Previously led U.S. federal and government sales at Zoom, Extreme Networks, and Check Point.",
   },
   {
