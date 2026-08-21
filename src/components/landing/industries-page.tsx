@@ -33,9 +33,10 @@ const CONTENT: SectionPageContent = {
             "Air-gapped and DDIL operating realities",
           ],
           image: "/images/industries/defense.jpg",
-          imageAlt: "Night launch in navy and gold — defense and mission operations",
+          imageAlt: "Air Mobility Command case study — ChatOps for the largest-ever readiness exercise",
           imageCaption:
-            "Defense and mission operations: classified networks, edge deployments, and DDIL collaboration under operational control.",
+            "From the Air Mobility Command customer story: 15,000+ forces coordinated with Mattermost ChatOps.",
+          link: { label: "Read the AMC story", href: "https://mattermost.com/customers/air-mobility-command/" },
         },
         {
           id: "government",
@@ -47,9 +48,10 @@ const CONTENT: SectionPageContent = {
             "Sovereign cloud and on-prem options",
           ],
           image: "/images/industries/government.jpg",
-          imageAlt: "Government building at night in navy and gold",
+          imageAlt: "European public agency case study — sovereign collaboration with Mattermost and Pexip",
           imageCaption:
-            "Public-sector collaboration with residency, auditability, and sovereign deployment choices.",
+            "From the European public agency customer story: agency-controlled messaging with data residency.",
+          link: { label: "Read the agency story", href: "https://mattermost.com/customers/european-public-agency/" },
         },
         {
           id: "law-enforcement",
@@ -60,9 +62,10 @@ const CONTENT: SectionPageContent = {
             "Administrative oversight and audit trails",
           ],
           image: "/images/industries/law-enforcement.jpg",
-          imageAlt: "Controlled-access security imagery in navy and gold",
+          imageAlt: "Pramacom case study — secure emergency communications",
           imageCaption:
-            "Law-enforcement collaboration with controlled access, auditable history, and oversight.",
+            "From the Pramacom customer story: modernized secure communications for public-safety operations.",
+          link: { label: "Read the Pramacom story", href: "https://mattermost.com/customers/pramacom/" },
         },
         {
           id: "energy-utilities",
@@ -73,9 +76,10 @@ const CONTENT: SectionPageContent = {
             "Utility security constraints and continuity requirements",
           ],
           image: "/images/industries/energy.jpg",
-          imageAlt: "High-voltage pylons at night in navy and gold",
+          imageAlt: "RTE case study — France’s power grid operations",
           imageCaption:
-            "Energy and utilities: incident response and field coordination that can run in OT-adjacent, regulated environments.",
+            "From the RTE customer story: Mattermost for France’s transmission grid and faster outage response.",
+          link: { label: "Read the RTE story", href: "https://mattermost.com/customers/rte/" },
         },
         {
           id: "manufacturing",
@@ -86,9 +90,10 @@ const CONTENT: SectionPageContent = {
             "Keep intellectual property off consumer collaboration clouds",
           ],
           image: "/images/industries/manufacturing.jpg",
-          imageAlt: "Industrial manufacturing floor with gold weld light",
+          imageAlt: "Fairphone case study — manufacturing collaboration",
           imageCaption:
-            "Manufacturing: plant, engineering, and security teams collaborating without putting IP on a consumer cloud.",
+            "From the Fairphone customer story: plant and engineering teams collaborating without consumer-cloud IP risk.",
+          link: { label: "Read the Fairphone story", href: "https://mattermost.com/customers/fairphone/" },
         },
         {
           id: "financial-services",
@@ -99,9 +104,10 @@ const CONTENT: SectionPageContent = {
             "Customer-managed hosting and identity",
           ],
           image: "/images/industries/financial-services.jpg",
-          imageAlt: "Financial-district skyline in navy with gold window light",
+          imageAlt: "Worldline case study — global financial-services collaboration",
           imageCaption:
-            "Financial services: retention, eDiscovery, and customer-managed hosting for regulated collaboration.",
+            "From the Worldline customer story: 3,000 employees and 500+ teams on self-hosted Mattermost.",
+          link: { label: "Read the Worldline story", href: "https://mattermost.com/customers/worldline/" },
         },
         {
           id: "technology",
@@ -112,9 +118,10 @@ const CONTENT: SectionPageContent = {
             "Playbooks for release and incident rituals",
           ],
           image: "/images/industries/technology.jpg",
-          imageAlt: "Data-center corridor in navy with gold rack lights",
+          imageAlt: "CERN case study — research collaboration at scale",
           imageCaption:
-            "Technology and DevSecOps: GitHub, GitLab, Jira, and pipeline events in a workspace the enterprise controls.",
+            "From the CERN customer story: 22,000 users and 100+ tools on self-hosted Mattermost.",
+          link: { label: "Read the CERN story", href: "https://mattermost.com/customers/cern/" },
         },
       ],
     },
