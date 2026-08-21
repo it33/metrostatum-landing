@@ -1,4 +1,5 @@
 import type { Leader } from "./leadership-types";
+import { LEADER_PHOTOS } from "./leader-photos";
 import { RESOURCE_CARD_IMAGES } from "./resource-card-images";
 
 export const PRINCIPLES = [
@@ -51,6 +52,7 @@ export const EXECUTIVE: Leader[] = [
     title: "Chief Revenue Officer",
     initials: "AE",
     vanity: "adam-e-14783b",
+    photo: LEADER_PHOTOS["adam-e-14783b"],
     bio: "Leads global revenue organization. Former Global CRO for world's leading sovereign communications business at BlackBerry (NYSE: BB; TSX: BB), headquartered in Waterloo, Canada. Led BlackBerry's transformation to global software business, with NATO-certified, BSI-approved solutions trusted by G7. Earlier career at SAP & Citrix. U.S. citizen.",
   },
 ];
