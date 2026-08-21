@@ -7,6 +7,7 @@ import { MissionVideo } from "./mission-video";
 import { CyberDefenseVideo } from "./cyber-defense-video";
 import { CaseStudiesCarousel } from "./case-studies-carousel";
 import { HeroUseCaseVideo } from "./hero-use-case-video";
+import { AiModelLogos } from "./ai-model-logos";
 import { IMEExplorer } from "./ime-explorer";
 import { PositioningCarousel } from "./positioning-carousel";
 import { NetworkTypesExplorer } from "./network-types-explorer";
@@ -71,6 +72,7 @@ export function LandingPage() {
                       <a href="#ime">{t("hero.explorePlatform")}</a>
                     </Button>
                   </div>
+                  <AiModelLogos className="mt-8" />
                 </div>
 
                 <div className="w-full lg:justify-self-end">

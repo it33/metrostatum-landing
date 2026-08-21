@@ -320,10 +320,11 @@
     color: var(--color-fg-muted);
   }
 
-  /* BYOM model carousel under Select Use Case video */
+  /* BYOM model carousel under hero CTAs */
   .byom-marquee {
-    margin-top: 0.85rem;
+    margin-top: 0;
     width: 100%;
+    max-width: 36rem;
   }
   .byom-marquee__label {
     margin: 0 0 0.45rem;
