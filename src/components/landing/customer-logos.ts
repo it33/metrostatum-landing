@@ -43,7 +43,7 @@ const LOGO_BY_SLUG: Record<string, { name: string; src: string }> = {
   },
   enelyst: {
     name: "Enelyst",
-    src: "https://mattermost.com/wp-content/uploads/2026/03/enelyst-logo.webp",
+    src: local("enelyst.png"),
   },
   fujitsu: {
     name: "Fujitsu",
