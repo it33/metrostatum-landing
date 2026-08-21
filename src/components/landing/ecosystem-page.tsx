@@ -1,7 +1,6 @@
 import { SectionPage, type SectionPageContent } from "./section-page";
 
 const CONTENT: SectionPageContent = {
-  route: "ecosystem",
   eyebrow: "Ecosystem",
   title: "Interoperate with the stack you already run",
   subtitle:
@@ -25,7 +24,7 @@ const CONTENT: SectionPageContent = {
           ],
           image: "/images/deploy/azure.png",
           imageAlt: "Mattermost on Azure",
-          link: { label: "Microsoft joint capabilities", href: "#/ecosystem/partners/microsoft" },
+          link: { label: "Microsoft joint capabilities", href: "/ecosystem/partners/microsoft" },
         },
         {
           id: "partner-oracle",
@@ -38,7 +37,7 @@ const CONTENT: SectionPageContent = {
           ],
           image: "/images/deploy/oracle.png",
           imageAlt: "Mattermost on Oracle Cloud",
-          link: { label: "Oracle joint capabilities", href: "#/ecosystem/partners/oracle" },
+          link: { label: "Oracle joint capabilities", href: "/ecosystem/partners/oracle" },
         },
       ],
     },
@@ -66,7 +65,7 @@ const CONTENT: SectionPageContent = {
             "Reference architecture for Mattermost on Microsoft Azure: customer-managed Kubernetes, identity, and object storage at the sovereign boundary. Click any diagram tile on this page to inspect the full drawing.",
           link: {
             label: "Microsoft strategic partner page",
-            href: "#/ecosystem/partners/microsoft",
+            href: "/ecosystem/partners/microsoft",
           },
         },
         {
@@ -84,7 +83,7 @@ const CONTENT: SectionPageContent = {
             "Reference architecture for Mattermost on Oracle Cloud Infrastructure, including government and isolated-region patterns with identity and storage inside the customer tenancy.",
           link: {
             label: "Oracle strategic partner page",
-            href: "#/ecosystem/partners/oracle",
+            href: "/ecosystem/partners/oracle",
           },
         },
         {
@@ -189,28 +188,58 @@ const CONTENT: SectionPageContent = {
       eyebrow: "Meet from the mission channel",
       title: "Video interoperability",
       lead: "Start and join meetings from Mattermost using the video stack your security architecture already allows — native calls, Teams, Pexip, Zoom, and Cisco.",
+      layout: "2x2",
       cards: [
         {
           id: "video-teams",
           title: "Microsoft Teams Meetings",
           body: "Start and join Microsoft Teams meetings without leaving Mattermost, so operators jump from channel context into a live session.",
-          image: "/images/product/call-window.png",
-          imageAlt: "Call window",
+          image: "/images/integrations/teams-meetings.jpg",
+          imageAlt: "Mattermost running next to Microsoft 365 with Start a Call and incident playbook context",
+          imageCaption:
+            "Mattermost in a Microsoft 365 / Teams-connected workspace: Start a Call from the channel header, ServiceNow and playbook context in the same incident view.",
+          links: [
+            { label: "Teams Meetings docs", href: "https://docs.mattermost.com/integrations-guide/microsoft-teams-meetings.html" },
+            { label: "M365 collaboration", href: "https://docs.mattermost.com/integrations-guide/mattermost-mission-collaboration-for-m365.html" },
+          ],
         },
         {
           id: "video-pexip",
           title: "Pexip",
           body: "Launch Pexip conferences from Mattermost for self-hosted voice, video, and meeting-room interoperability — including bridges to Teams, Zoom, Webex, and SIP.",
+          image: "/images/integrations/calls-window.jpg",
+          imageAlt: "Mattermost in-channel video call window with participants, captions, and screen share",
+          imageCaption:
+            "In-channel video in Mattermost — the operator experience the Pexip plugin uses to start a self-hosted conference without leaving the mission channel.",
+          links: [
+            { label: "Pexip + Mattermost docs", href: "https://docs.pexip.com/admin/mattermost.htm" },
+            { label: "Marketplace listing", href: "https://mattermost.com/marketplace/pexip-video-connect/" },
+          ],
         },
         {
           id: "video-zoom",
           title: "Zoom",
           body: "Connect Zoom meetings into Mattermost workflows so operators can jump from channel context into a live session when Zoom is the approved conferencing plane.",
+          image: "/images/integrations/zoom-meeting.jpg",
+          imageAlt: "Zoom plugin posting a Join Meeting card in a Mattermost channel with Start Zoom Meeting actions",
+          imageCaption:
+            "Official Mattermost Zoom plugin: start a meeting from the channel header, post a Join Meeting card with the PMI, and share the session with everyone in the channel.",
+          links: [
+            { label: "Zoom integration docs", href: "https://docs.mattermost.com/integrations-guide/zoom.html" },
+            { label: "Marketplace listing", href: "https://mattermost.com/marketplace/zoom-plugin/" },
+          ],
         },
         {
           id: "video-cisco",
           title: "Cisco",
           body: "Interoperate with Cisco meeting environments through gateway and partner video platforms so Webex-centric estates can still land in Mattermost channels.",
+          image: "/images/integrations/app-hero-integrations.jpg",
+          imageAlt: "Mattermost channel with a Join Meeting card, GitHub sidebar, and Jira slash commands",
+          imageCaption:
+            "Mattermost operator workspace: join a meeting from the channel, keep GitHub and Jira in the same view, and hand video off to Cisco / Webex via the approved gateway.",
+          links: [
+            { label: "Pexip gateway to Webex / Cisco", href: "https://docs.pexip.com/admin/mattermost.htm" },
+          ],
         },
       ],
     },
@@ -310,6 +339,6 @@ const CONTENT: SectionPageContent = {
   ],
 };
 
-export function EcosystemPage({ rest }: { rest?: string }) {
-  return <SectionPage content={CONTENT} rest={rest} />;
+export function EcosystemPage() {
+  return <SectionPage content={CONTENT} />;
 }

@@ -2,9 +2,17 @@ import { useEffect, useId, useState } from "react";
 import { ArrowRight, Expand, X } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
-import { useSectionScroll } from "./use-section-scroll";
-import { CONTACT } from "@/nav-config";
+import { useHashScroll } from "./use-hash-scroll";
+import { CONTACT_SALES } from "@/nav-config";
 import { cn } from "@/lib/utils";
+
+function asset(src: string) {
+  if (/^(https?:|data:|blob:)/.test(src)) return src;
+  const base = import.meta.env.BASE_URL || "/";
+  const path = src.replace(/^\//, "");
+  if (path.startsWith(base.replace(/^\//, ""))) return src.startsWith("/") ? src : `/${path}`;
+  return `${base}${path}`;
+}
 
 export type SectionCard = {
   id: string;
@@ -30,7 +38,6 @@ export type PageSection = {
 };
 
 export type SectionPageContent = {
-  route: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -38,31 +45,22 @@ export type SectionPageContent = {
   jumpLinks?: { id: string; label: string }[];
 };
 
-function imgSrc(src?: string) {
-  if (!src) return src;
-  const base = import.meta.env.BASE_URL as string;
-  if (src.startsWith("http") || src.startsWith(base)) return src;
-  return `${base}${src.replace(/^\//, "")}`;
-}
-
 function SectionNav({
-  route,
   items,
 }: {
-  route: string;
   items: { id: string; label: string }[];
 }) {
   return (
     <nav
       aria-label="On this page"
-      className="sticky top-[72px] z-30 hidden border-b border-[var(--color-border)] bg-white/95 backdrop-blur-md lg:block"
+      className="sticky top-[calc(var(--grok-banner-h,0px)+9.75rem)] z-30 hidden border-b border-[var(--color-border)] bg-white/95 backdrop-blur-md lg:block"
     >
       <div className="container-page">
         <ul className="flex gap-1 overflow-x-auto py-2 text-[13px] font-medium">
           {items.map((s) => (
             <li key={s.id} className="shrink-0">
               <a
-                href={`#/${route}/${s.id}`}
+                href={`#${s.id}`}
                 className="inline-flex rounded-full px-3 py-1.5 text-[var(--color-fg-muted)] transition-colors hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]"
               >
                 {s.label}
@@ -132,7 +130,7 @@ function DiagramLightbox({
 
         <div className="min-h-0 flex-1 overflow-auto bg-[var(--color-bg-elevated)] p-3 sm:p-5">
           <img
-            src={imgSrc(card.image)}
+            src={asset(card.image || "")}
             alt={card.imageAlt || card.title}
             className="mx-auto h-auto max-h-[min(70vh,720px)] w-full object-contain"
           />
@@ -166,7 +164,7 @@ function DiagramLightbox({
               Close
             </button>
             <a
-              href={CONTACT}
+              href={CONTACT_SALES}
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-10 items-center justify-center rounded-md bg-[var(--color-marigold)] px-4 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)]"
@@ -190,7 +188,7 @@ function Card({
   return (
     <article
       id={card.id}
-      className="scroll-mt-28 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
+      className="scroll-mt-40 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border-strong)] bg-[var(--color-surface)] shadow-[var(--shadow-card)]"
     >
       {card.image ? (
         <button
@@ -200,7 +198,7 @@ function Card({
           aria-label={`View full ${card.title} diagram`}
         >
           <img
-            src={imgSrc(card.image)}
+            src={asset(card.image)}
             alt={card.imageAlt || ""}
             className="absolute inset-0 h-full w-full object-cover object-top transition duration-200 group-hover:scale-[1.02]"
             loading="lazy"
@@ -262,8 +260,8 @@ function gridClass(sec: PageSection) {
   return "md:grid-cols-2 lg:grid-cols-3";
 }
 
-export function SectionPage({ content, rest }: { content: SectionPageContent; rest?: string }) {
-  useSectionScroll(rest);
+export function SectionPage({ content }: { content: SectionPageContent }) {
+  useHashScroll();
   const [openCard, setOpenCard] = useState<SectionCard | null>(null);
   const jump =
     content.jumpLinks ?? content.sections.map((s) => ({ id: s.id, label: s.navLabel }));
@@ -296,7 +294,7 @@ export function SectionPage({ content, rest }: { content: SectionPageContent; re
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href={CONTACT}
+                href={CONTACT_SALES}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-11 items-center gap-2 rounded-md bg-[var(--color-marigold)] px-5 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)]"
@@ -306,7 +304,7 @@ export function SectionPage({ content, rest }: { content: SectionPageContent; re
               </a>
               {content.sections[0] ? (
                 <a
-                  href={`#/${content.route}/${content.sections[0].id}`}
+                  href={`#${content.sections[0].id}`}
                   className="inline-flex h-11 items-center rounded-md border border-white/30 px-5 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   Explore {content.eyebrow.toLowerCase()}
@@ -317,14 +315,14 @@ export function SectionPage({ content, rest }: { content: SectionPageContent; re
         </div>
       </section>
 
-      <SectionNav route={content.route} items={jump} />
+      <SectionNav items={jump} />
 
       {content.sections.map((sec, idx) => (
         <section
           key={sec.id}
           id={sec.id}
           className={cn(
-            "scroll-mt-28 border-b border-[var(--color-border)] py-16 md:py-24",
+            "scroll-mt-40 border-b border-[var(--color-border)] py-16 md:py-24",
             idx % 2 === 1 ? "bg-[var(--color-bg-elevated)]" : "bg-[var(--color-bg)]",
           )}
         >
@@ -359,7 +357,7 @@ export function SectionPage({ content, rest }: { content: SectionPageContent; re
                 from national scale to the tactical edge.
               </p>
               <a
-                href={CONTACT}
+                href={CONTACT_SALES}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex h-11 items-center gap-2 rounded-md bg-[var(--color-marigold)] px-5 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)]"
