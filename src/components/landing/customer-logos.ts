@@ -116,8 +116,15 @@ export const CUSTOMER_LOGOS: CustomerLogo[] = Object.entries(LOGO_BY_SLUG)
   .filter(([, v]) => Boolean(v.src))
   .map(([slug, v]) => ({ slug, name: v.name, src: v.src }));
 
-/** Curated landing strip — same published marks, stable order. */
-export const LANDING_MARQUEE_LOGOS: CustomerLogo[] = CUSTOMER_LOGOS;
+/** Curated landing strip — unique marks only (DoD/AMC/OAR share the USAF logo). */
+export const LANDING_MARQUEE_LOGOS: CustomerLogo[] = (() => {
+  const seen = new Set<string>();
+  return CUSTOMER_LOGOS.filter((logo) => {
+    if (seen.has(logo.src)) return false;
+    seen.add(logo.src);
+    return true;
+  });
+})();
 
 export function logosForStories(slugs: string[]): CustomerLogo[] {
   return slugs
