@@ -261,10 +261,10 @@ const CONTENT: SectionPageContent = {
             "Slash commands: /github connect, subscriptions add, todo, mute, default-repo, create-issue modal",
             "GitHub Enterprise Base URL + private-repo support; lock to named organizations",
           ],
-          image: "/images/product/github-integration.png",
-          imageAlt: "GitHub plugin posting a pull-request notification into a Mattermost channel",
+          image: "/images/integrations/github-plugin.jpg",
+          imageAlt: "GitHub plugin in Mattermost showing pull-request notifications, /github slash commands, and GitHub RHS",
           imageCaption:
-            "GitHub plugin in a Mattermost channel: pull-request and issue notifications with labels, assignees, and in-channel actions. From Mattermost product documentation screenshots.",
+            "From Mattermost GitHub integration docs: pull request #1842 in channel, /github subscriptions todo and issue commands, and the GitHub right-hand sidebar.",
           links: [
             { label: "GitHub integration docs", href: "https://docs.mattermost.com/integrations-guide/github.html" },
             { label: "Marketplace listing", href: "https://mattermost.com/marketplace/github-plugin/" },
@@ -281,10 +281,10 @@ const CONTENT: SectionPageContent = {
             "Slash commands: /gitlab connect, subscriptions add, issue create, issue comment, webhook add, settings",
             "Code-permalink previews; lock to a GitLab group; private-project reconnect flow",
           ],
-          image: "/images/integrations/gitlab-chatops.webp",
-          imageAlt: "Mattermost ChatOps channel where GitLab pipeline and merge activity is reviewed",
+          image: "/images/integrations/gitlab-plugin.jpg",
+          imageAlt: "GitLab plugin posting merge request, pipeline, issue, wiki, and tag events into a Mattermost channel",
           imageCaption:
-            "Mattermost ChatOps workspace — the destination for GitLab merge, issue, and CI/CD pipeline notifications from the official plugin.",
+            "From the official Mattermost GitLab plugin docs: merge request, pipeline success, issue, wiki, and tag notifications posted into the channel.",
           links: [
             { label: "GitLab integration docs", href: "https://docs.mattermost.com/integrations-guide/gitlab.html" },
             { label: "Marketplace listing", href: "https://mattermost.com/marketplace/gitlab-plugin/" },
@@ -303,10 +303,10 @@ const CONTENT: SectionPageContent = {
             "Channel subscriptions: event type, issue type, labels, priority, epic, versions, custom fields",
             "JiraBot personal notifications for mentions and assignments; multiple Jira instances on Enterprise",
           ],
-          image: "/images/integrations/jira-demo.jpg",
-          imageAlt: "Jira plugin posting issue created, assigned, and commented events into a Mattermost channel",
+          image: "/images/integrations/jira-plugin.jpg",
+          imageAlt: "JiraBot posting issue created, assigned, and commented events into a Mattermost channel",
           imageCaption:
-            "Still from Mattermost’s official “How to be a Jira and Mattermost power user” demo: JiraBot posting issue created, assigned, and commented events with in-channel actions.",
+            "Official Mattermost Jira plugin screenshot: JiraBot posts Issue Created, Assigned, and Commented into the channel with issue keys, summaries, and in-channel actions.",
           links: [
             { label: "Jira integration docs", href: "https://docs.mattermost.com/integrations-guide/jira.html" },
             { label: "Marketplace listing", href: "https://mattermost.com/marketplace/jira-plugin/" },
@@ -324,10 +324,10 @@ const CONTENT: SectionPageContent = {
             "Slash commands: /confluence install, connect, subscribe, edit, unsubscribe, list",
             "Works with multiple Confluence servers; OAuth + webhook install from the channel",
           ],
-          image: "/images/integrations/confluence-playbooks.webp",
-          imageAlt: "Mattermost Playbooks checklist used as the operating view next to Confluence runbook notifications",
+          image: "/images/integrations/confluence-plugin.jpg",
+          imageAlt: "Confluence plugin posting a page-created notification into a Mattermost channel",
           imageCaption:
-            "Mattermost Playbooks — the operator checklist that sits next to Confluence space/page notifications when runbooks live in Confluence and execution lives in channel.",
+            "From the Confluence plugin source README: a space page-created event lands in the subscribed Mattermost channel with title, space, and author.",
           links: [
             { label: "Marketplace listing", href: "https://mattermost.com/marketplace/confluence/" },
             { label: "Plugin source & README", href: "https://github.com/mattermost/mattermost-plugin-confluence" },
