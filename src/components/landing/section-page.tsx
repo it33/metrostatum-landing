@@ -15,6 +15,7 @@ export type SectionCard = {
   imageAlt?: string;
   imageCaption?: string;
   link?: { label: string; href: string };
+  links?: { label: string; href: string }[];
 };
 
 export type PageSection = {
@@ -227,17 +228,27 @@ function Card({
             ))}
           </ul>
         ) : null}
-        {card.link ? (
-          <a
-            href={card.link.href}
-            target={card.link.href.startsWith("http") ? "_blank" : undefined}
-            rel={card.link.href.startsWith("http") ? "noreferrer" : undefined}
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
-          >
-            {card.link.label}
-            <ArrowRight className="size-4" />
-          </a>
-        ) : null}
+        {(() => {
+          const refs = card.links ?? (card.link ? [card.link] : []);
+          if (refs.length === 0) return null;
+          return (
+            <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+              {refs.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target={l.href.startsWith("http") ? "_blank" : undefined}
+                    rel={l.href.startsWith("http") ? "noreferrer" : undefined}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
+                  >
+                    {l.label}
+                    <ArrowRight className="size-4" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          );
+        })()}
       </div>
     </article>
   );
