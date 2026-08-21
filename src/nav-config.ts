@@ -4,6 +4,7 @@
  */
 
 export const CONTACT = "https://mattermost.com/contact-sales/";
+export const CONTACT_SALES = CONTACT;
 
 export type NavLink = { label: string; href: string };
 export type NavGroup = { title: string; links: NavLink[] };
