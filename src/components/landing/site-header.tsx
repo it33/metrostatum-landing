@@ -226,8 +226,8 @@ function MegaMenu({ columns }: { columns: NavGroup[] }) {
 
 function GroupsMenu({ groups }: { groups: NavGroup[] }) {
   return (
-    <div className="w-max min-w-[36rem] max-w-[min(52rem,calc(100vw-2rem))] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
-      <div className="grid grid-cols-2 gap-x-10 gap-y-6 md:grid-cols-4">
+    <div className="w-max min-w-[42rem] max-w-[min(60rem,calc(100vw-2rem))] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
+      <div className="grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-5">
         {groups.map((g) => (
           <div key={g.title} className="min-w-[9.5rem]">
             <p className="mb-2 text-[11px] font-bold uppercase leading-snug tracking-[0.12em] text-[var(--color-denim)]">

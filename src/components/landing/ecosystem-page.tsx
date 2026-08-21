@@ -8,6 +8,41 @@ const CONTENT: SectionPageContent = {
     "Mattermost deploys on sovereign cloud you control, federates with partner networks, and connects DevSecOps and video tools without sending mission data to a public collaboration tenant.",
   sections: [
     {
+      id: "strategic-partners",
+      navLabel: "Strategic Partners",
+      eyebrow: "Strategic Partners",
+      title: "Microsoft and Oracle joint capabilities",
+      lead: "Dedicated landing pages for Mattermost’s strategic cloud partners — joint products, classified and sovereign deployments, and the public announcements that document them.",
+      cards: [
+        {
+          id: "partner-microsoft",
+          title: "Microsoft",
+          body: "Mattermost for Microsoft Teams, Azure Marketplace, Azure Arc to the edge, Entra ID in IL5/IL6, Foundry Local, and AI-powered collaboration for Azure Secret and Top Secret environments.",
+          bullets: [
+            "Embed Mattermost in Teams and Outlook",
+            "Azure commercial, government, Local, and classified clouds",
+            "Out-of-band continuity when M365 is contested",
+          ],
+          image: "/images/deploy/azure.png",
+          imageAlt: "Mattermost on Azure",
+          link: { label: "Microsoft joint capabilities", href: "#/ecosystem/partners/microsoft" },
+        },
+        {
+          id: "partner-oracle",
+          title: "Oracle",
+          body: "Mattermost Collaboration Suite on Oracle Cloud Marketplace — OCI sovereign and government regions, Compute Cloud at Customer, Roving Edge, and inaugural membership in the Oracle Defense Ecosystem.",
+          bullets: [
+            "Marketplace deploy on OCI including air-gapped NSRs",
+            "OKE, OCI IAM, and DDIL to the tactical edge",
+            "Sovereign AI for intel, playbooks, and briefings",
+          ],
+          image: "/images/deploy/oracle.png",
+          imageAlt: "Mattermost on Oracle Cloud",
+          link: { label: "Oracle joint capabilities", href: "#/ecosystem/partners/oracle" },
+        },
+      ],
+    },
+    {
       id: "cloud",
       navLabel: "Sovereign Cloud",
       eyebrow: "Deploy on your cloud",
@@ -27,8 +62,8 @@ const CONTENT: SectionPageContent = {
           image: "/images/deploy/azure.png",
           imageAlt: "Mattermost on Azure",
           link: {
-            label: "Mattermost for Microsoft Teams",
-            href: "https://mattermost.com/mattermost-for-microsoft-teams/",
+            label: "Microsoft strategic partner page",
+            href: "#/ecosystem/partners/microsoft",
           },
         },
         {
@@ -42,6 +77,10 @@ const CONTENT: SectionPageContent = {
           ],
           image: "/images/deploy/oracle.png",
           imageAlt: "Mattermost on Oracle Cloud",
+          link: {
+            label: "Oracle strategic partner page",
+            href: "#/ecosystem/partners/oracle",
+          },
         },
         {
           id: "cloud-google",

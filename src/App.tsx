@@ -6,6 +6,8 @@ import { PlatformPage } from "@/components/landing/platform-page";
 import { EcosystemPage } from "@/components/landing/ecosystem-page";
 import { SolutionsPage } from "@/components/landing/solutions-page";
 import { IndustriesPage } from "@/components/landing/industries-page";
+import { PartnerMicrosoftPage } from "@/components/landing/partner-microsoft-page";
+import { PartnerOraclePage } from "@/components/landing/partner-oracle-page";
 
 /**
  * Hash-based routing for GitHub Pages.
@@ -51,6 +53,8 @@ export function App() {
   if (root === "about") return <AboutPage />;
   if (root === "customers" || root === "success-stories") return <CustomersPage />;
   if (root === "platform") return <PlatformPage rest={rest} />;
+  if (root === "ecosystem" && rest?.startsWith("partners/microsoft")) return <PartnerMicrosoftPage />;
+  if (root === "ecosystem" && rest?.startsWith("partners/oracle")) return <PartnerOraclePage />;
   if (root === "ecosystem") return <EcosystemPage rest={rest} />;
   if (root === "solutions") return <SolutionsPage rest={rest} />;
   if (root === "industries") return <IndustriesPage rest={rest} />;

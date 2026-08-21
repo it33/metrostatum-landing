@@ -29,10 +29,17 @@ export const PLATFORM_LINKS: NavLink[] = [
 /** Ecosystem dropdown — four groups */
 export const ECOSYSTEM_GROUPS: NavGroup[] = [
   {
+    title: "Strategic Partners",
+    links: [
+      { label: "Microsoft", href: "#/ecosystem/partners/microsoft" },
+      { label: "Oracle", href: "#/ecosystem/partners/oracle" },
+    ],
+  },
+  {
     title: "Sovereign Cloud",
     links: [
-      { label: "Microsoft", href: "#/ecosystem/cloud/microsoft" },
-      { label: "Oracle", href: "#/ecosystem/cloud/oracle" },
+      { label: "Microsoft", href: "#/ecosystem/partners/microsoft" },
+      { label: "Oracle", href: "#/ecosystem/partners/oracle" },
       { label: "Google", href: "#/ecosystem/cloud/google" },
       { label: "AWS", href: "#/ecosystem/cloud/aws" },
     ],
@@ -134,9 +141,9 @@ export const FOOTER_COLUMNS: NavGroup[] = [
   {
     title: "Ecosystem",
     links: [
-      { label: "Microsoft", href: "#/ecosystem/cloud/microsoft" },
+      { label: "Microsoft", href: "#/ecosystem/partners/microsoft" },
       { label: "AWS", href: "#/ecosystem/cloud/aws" },
-      { label: "Oracle", href: "#/ecosystem/cloud/oracle" },
+      { label: "Oracle", href: "#/ecosystem/partners/oracle" },
       { label: "Google", href: "#/ecosystem/cloud/google" },
       { label: "MS Teams", href: "#/ecosystem/federation/teams" },
       { label: "Pexip", href: "#/ecosystem/video/pexip" },
