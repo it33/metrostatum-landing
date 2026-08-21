@@ -346,43 +346,32 @@ export function HeroUseCaseVideo() {
             style={{ transitionDuration: `${FADE_MS}ms` }}
             aria-hidden
           />
-
-        <div className="absolute inset-x-0 bottom-0 z-[3] flex flex-col gap-2 p-2.5 sm:p-3">
-          <div className="flex items-center gap-1.5">
-            <ControlButton label={muted ? "Unmute" : "Mute"} onClick={toggleMute} highlight={muted}>
+        </div>
+        <VideoCaptionBar text={cueText} visible={captionsOn} />
+        <div className="flex flex-wrap items-center justify-center gap-2 border-t border-white/10 bg-black px-3 py-2.5 sm:justify-between">
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <ControlButton
+              label={muted ? "Click for sound" : "Sound on"}
+              onClick={toggleMute}
+              highlight={muted}
+            >
               {muted ? <VolumeX className="size-3.5" /> : <Volume2 className="size-3.5" />}
             </ControlButton>
             <ControlButton
-              label={captionsOn ? "Turn off captions" : "Turn on captions"}
+              label={captionsOn ? "Captions on" : "Captions off"}
               onClick={toggleCaptions}
               highlight={captionsOn}
             >
               {captionsOn ? <Captions className="size-3.5" /> : <CaptionsOff className="size-3.5" />}
             </ControlButton>
           </div>
-          <div className="flex items-center justify-between gap-2">
-            {muted ? (
-              <button
-                type="button"
-                onClick={toggleMute}
-                className="inline-flex min-h-11 w-fit items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3.5 text-xs font-semibold text-white backdrop-blur-sm transition hover:bg-black/70"
-              >
-                <VolumeX className="size-3.5" />
-                Click for sound
-              </button>
-            ) : (
-              <span />
-            )}
-            <ControlButton
-              label={expanded ? "Exit expand" : "Expand"}
-              onClick={() => void toggleExpand()}
-            >
-              {expanded ? <Minimize2 className="size-3.5" /> : <Expand className="size-3.5" />}
-            </ControlButton>
-          </div>
+          <ControlButton
+            label={expanded ? "Exit full screen" : "Full screen"}
+            onClick={() => void toggleExpand()}
+          >
+            {expanded ? <Minimize2 className="size-3.5" /> : <Expand className="size-3.5" />}
+          </ControlButton>
         </div>
-        </div>
-        <VideoCaptionBar text={cueText} visible={captionsOn} />
       </div>
     </div>
   );
@@ -405,13 +394,14 @@ function ControlButton({
       aria-label={label}
       onClick={onClick}
       className={cn(
-        "inline-flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-full border px-2.5 text-white backdrop-blur-sm transition",
+        "inline-flex min-h-11 items-center justify-center gap-2 rounded-full border px-3.5 text-xs font-semibold tracking-wide text-white backdrop-blur-sm transition",
         highlight
           ? "border-[var(--color-marigold)]/50 bg-[color-mix(in_oklab,var(--color-marigold)_18%,black)] hover:bg-[color-mix(in_oklab,var(--color-marigold)_28%,black)]"
           : "border-white/15 bg-black/45 hover:bg-black/65",
       )}
     >
       {children}
+      <span>{label}</span>
     </button>
   );
 }
