@@ -54,7 +54,7 @@ export function CustomersPage() {
         <div className="container-page relative py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
-              Success stories
+              Customers
             </p>
             <h1 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.12]">
               Trusted by the world's most demanding operators

@@ -121,7 +121,7 @@ export const TOP_NAV: TopNavItem[] = [
   { kind: "mega", label: "Solutions", columns: SOLUTIONS_COLUMNS },
   { kind: "dropdown", label: "Industries", children: INDUSTRIES_LINKS },
   { kind: "link", label: "About", href: "#/about" },
-  { kind: "link", label: "Success Stories", href: "#/success-stories" },
+  { kind: "link", label: "Customers", href: "#/customers" },
 ];
 
 /** Footer columns mirroring IA + company/legal */
