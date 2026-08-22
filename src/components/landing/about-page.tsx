@@ -16,7 +16,7 @@ import {
   LeaderGroup,
 } from "./leadership-ui";
 
-const CONTACT = "https://mattermost.com/contact-sales/";
+const CONTACT = "#/contact-sales";
 
 export function AboutPage() {
   return (

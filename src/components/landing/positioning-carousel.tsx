@@ -478,7 +478,7 @@ export function PositioningCarousel() {
               ))}
             </div>
             <Button size="sm" asChild>
-              <a href="https://mattermost.com/contact-sales/" target="_blank" rel="noreferrer">
+              <a href="#/contact-sales">
                 Talk to an expert
                 <ArrowRight className="size-3.5" />
               </a>

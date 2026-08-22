@@ -27,7 +27,7 @@ import { SiteHeader } from "./site-header";
 import { useSectionScroll } from "./use-section-scroll";
 import { cn } from "@/lib/utils";
 
-const CONTACT = "https://mattermost.com/contact-sales/";
+const CONTACT = "#/contact-sales";
 const base = import.meta.env.BASE_URL;
 
 export const PLATFORM_SECTIONS = [

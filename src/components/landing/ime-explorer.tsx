@@ -338,7 +338,7 @@ export function IMEExplorer() {
               </Button>
               <Button variant="outline" asChild>
                 <a
-                  href="https://mattermost.com/contact-sales/"
+                  href="#/contact-sales"
                   target="_blank"
                   rel="noreferrer"
                 >

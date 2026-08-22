@@ -4,7 +4,7 @@ import { SiteFooter } from "./site-footer";
 import { Button } from "@/components/ui/button";
 import type { ContentPageDef, ContentSection } from "@/content/page-registry";
 
-const CONTACT = "https://mattermost.com/contact-sales/";
+const CONTACT = "#/contact-sales";
 const base = import.meta.env.BASE_URL;
 
 function SectionBlock({ section }: { section: ContentSection }) {

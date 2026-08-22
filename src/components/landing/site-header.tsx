@@ -214,8 +214,6 @@ export function SiteHeader() {
             <LanguageSwitcher />
             <a
               href={CONTACT}
-              target="_blank"
-              rel="noreferrer"
               className="hidden rounded-md bg-[var(--color-denim)] px-4 py-2 text-[14px] font-semibold text-white hover:bg-[var(--color-denim-mid)] sm:inline-flex"
             >
               Talk to an expert
@@ -248,8 +246,6 @@ export function SiteHeader() {
             ))}
             <a
               href={CONTACT}
-              target="_blank"
-              rel="noreferrer"
               className="mt-2 mb-3 inline-flex w-full items-center justify-center rounded-md bg-[var(--color-denim)] px-4 py-3 text-[15px] font-semibold text-white"
               onClick={() => setOpen(false)}
             >

@@ -11,6 +11,7 @@ import { PartnerOraclePage } from "@/components/landing/partner-oracle-page";
 import { CaseStudyPage } from "@/components/landing/case-study-page";
 import { IntegrationsPage } from "@/components/landing/integrations-page";
 import { IntegrationDetailPage } from "@/components/landing/integration-detail-page";
+import { ContactSalesPage } from "@/components/landing/contact-sales-page";
 
 /**
  * Hash-based routing for GitHub Pages.
@@ -66,6 +67,7 @@ export function App() {
   if (root === "industries") return <IndustriesPage rest={rest} />;
   if (root === "integrations" && rest) return <IntegrationDetailPage slug={rest} hashRoutes />;
   if (root === "integrations") return <IntegrationsPage hashRoutes />;
+  if (root === "contact-sales" || root === "contact") return <ContactSalesPage />;
 
   return <LandingPage />;
 }

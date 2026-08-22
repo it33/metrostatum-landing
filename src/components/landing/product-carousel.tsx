@@ -347,7 +347,7 @@ export function ProductCarousel({ slides = SLIDES }: { slides?: CarouselSlide[] 
               )}
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Button asChild>
-                  <a href="https://mattermost.com/contact-sales/" target="_blank" rel="noreferrer">
+                  <a href="#/contact-sales">
                     Talk to an expert
                     <ArrowRight className="size-4" />
                   </a>

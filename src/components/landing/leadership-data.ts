@@ -212,7 +212,7 @@ export const RESOURCE_CARDS = [
   {
     title: "Sales",
     body: "Get in touch with a Mattermost expert and we'll help you get started with our platform.",
-    href: "https://mattermost.com/contact-sales/",
+    href: "#/contact-sales",
     image: RESOURCE_CARD_IMAGES.sales,
   },
 ] as const;

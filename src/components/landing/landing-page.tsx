@@ -15,7 +15,7 @@ import { CapabilitiesCarousel } from "./capabilities-carousel";
 import { DeploymentArchitectures } from "./deployment-architectures";
 import { useT } from "@/i18n";
 
-const CONTACT = "https://mattermost.com/contact-sales/";
+const CONTACT = "#/contact-sales";
 const base = import.meta.env.BASE_URL;
 
 export function LandingPage() {
