@@ -156,7 +156,7 @@ export function CaseStudyPage({
               rel="noreferrer"
               className="mt-3 inline-flex items-center gap-1 font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
             >
-              Original on mattermost.com
+              Original version
               <ArrowRight className="size-3.5" />
             </a>
           </div>
