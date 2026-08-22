@@ -7,7 +7,7 @@ export const PRINCIPLES = [
     title: "Customer obsession",
     body: "We exist to make customers successful. In everything we do, we start with the customer's perspective and work backwards.",
     variant: "denim" as const,
-    image: "images/principles/customer-obsession.jpg",
+    image: "images/principles/customer-obsession-v2.jpg",
   },
   {
     title: "Ownership",
