@@ -13,7 +13,7 @@ export const SOCIAL_LINKS = [
 ] as const;
 
 export type NavLink = { label: string; href: string };
-export type NavGroup = { title: string; links: NavLink[] };
+export type NavGroup = { title: string; links: NavLink[]; href?: string; blurb?: string };
 
 export type TopNavItem =
   | { kind: "dropdown"; label: string; children: NavLink[] }
@@ -38,6 +38,8 @@ export const PLATFORM_LINKS: NavLink[] = [
 export const ECOSYSTEM_GROUPS: NavGroup[] = [
   {
     title: "Strategic Partners",
+    href: "#/ecosystem/strategic-partners",
+    blurb: "Microsoft and Oracle joint capabilities for sovereign collaboration and classified cloud.",
     links: [
       { label: "Microsoft", href: "#/ecosystem/partners/microsoft" },
       { label: "Oracle", href: "#/ecosystem/partners/oracle" },
@@ -45,6 +47,8 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
   },
   {
     title: "Sovereign Cloud",
+    href: "#/ecosystem/cloud",
+    blurb: "Deploy on Azure, Oracle Cloud, Google Cloud, and AWS — data stays in your control.",
     links: [
       { label: "Microsoft Azure", href: "#/ecosystem/cloud/microsoft" },
       { label: "Oracle Cloud", href: "#/ecosystem/cloud/oracle" },
@@ -54,6 +58,8 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
   },
   {
     title: "Federation",
+    href: "#/ecosystem/federation",
+    blurb: "Interoperate with MS Teams, Matrix, XMPP, and Pidgin without a public collaboration tenant.",
     links: [
       { label: "MS Teams", href: "#/ecosystem/federation/teams" },
       { label: "Matrix", href: "#/ecosystem/federation/matrix" },
@@ -63,6 +69,8 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
   },
   {
     title: "DevSecOps",
+    href: "#/ecosystem/devsecops-tools",
+    blurb: "GitLab, GitHub, Jira, and Confluence in the same workflow as operations.",
     links: [
       { label: "GitLab", href: "#/ecosystem/devsecops/gitlab" },
       { label: "GitHub", href: "#/ecosystem/devsecops/github" },
@@ -72,6 +80,8 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
   },
   {
     title: "Video",
+    href: "#/ecosystem/video",
+    blurb: "Sovereign calling and meetings with MS Teams, Pexip, Zoom, and Cisco.",
     links: [
       { label: "MS Teams", href: "#/ecosystem/video/teams" },
       { label: "Pexip", href: "#/ecosystem/video/pexip" },
@@ -81,6 +91,8 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
   },
   {
     title: "Integrations",
+    href: "#/integrations",
+    blurb: "Browse first-party and community add-ins in the Mattermost Marketplace.",
     links: [{ label: "Marketplace", href: "#/integrations" }],
   },
 ];

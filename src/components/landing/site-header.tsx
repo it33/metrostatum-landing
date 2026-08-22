@@ -416,6 +416,47 @@ function MegaMenu({ columns, currentHref }: { columns: NavGroup[]; currentHref?:
 }
 
 function GroupsMenu({ groups, currentHref }: { groups: NavGroup[]; currentHref?: string }) {
+  const descriptive = groups.every((g) => g.blurb);
+  if (descriptive) {
+    return (
+      <div className="w-full max-w-[52rem] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-4 shadow-[0_12px_40px_rgba(30,50,92,0.12)] sm:p-5">
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {groups.map((g) => {
+            const href = g.href || g.links[0]?.href || "#/ecosystem";
+            const on =
+              currentHref === href ||
+              (g.href ? currentHref?.startsWith(g.href) : g.links.some((l) => l.href === currentHref));
+            return (
+              <a
+                key={g.title}
+                href={href}
+                aria-current={on ? "page" : undefined}
+                className={cn(
+                  "rounded-lg px-3 py-3 transition-colors",
+                  on
+                    ? "bg-[var(--color-denim)] text-white"
+                    : "hover:bg-[color-mix(in_oklab,var(--color-marigold)_38%,white)]",
+                )}
+              >
+                <p
+                  className={cn(
+                    "text-[12px] font-bold uppercase tracking-[0.12em]",
+                    on ? "text-[var(--color-marigold)]" : "text-[var(--color-denim)]",
+                  )}
+                >
+                  {g.title}
+                </p>
+                <p className={cn("mt-1.5 text-[13px] leading-snug", on ? "text-white/85" : "text-[var(--color-fg-muted)]")}>
+                  {g.blurb}
+                </p>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
+
   const cols = groups.length >= 6 ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6" : "grid-cols-2 md:grid-cols-3";
   return (
     <div className="w-full rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
@@ -501,23 +542,34 @@ function MobileNavItem({
           ) : null}
           {groups.map((g) => (
             <div key={g.title} className="mb-3">
-              {groups.length > 1 && (
-                <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--color-denim)]">
-                  {g.title}
-                </p>
-              )}
-              {g.links.map((c) => (
-                <a
-                  key={c.href}
-                  href={c.href}
-                  {...LinkAttrs(c.href)}
-                  aria-current={currentHref === c.href ? "page" : undefined}
-                  className={cn(itemClass(currentHref === c.href), "px-2 py-2")}
-                  onClick={onNavigate}
-                >
-                  {c.label}
+              {g.blurb && g.href ? (
+                <a href={g.href} className="block rounded-md px-2 py-2 hover:bg-[var(--color-bg-subtle)]" onClick={onNavigate}>
+                  <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-[var(--color-denim)]">
+                    {g.title}
+                  </p>
+                  <p className="mt-1 text-[13px] leading-snug text-[var(--color-fg-muted)]">{g.blurb}</p>
                 </a>
-              ))}
+              ) : (
+                <>
+                  {groups.length > 1 && (
+                    <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.1em] text-[var(--color-denim)]">
+                      {g.title}
+                    </p>
+                  )}
+                  {g.links.map((c) => (
+                    <a
+                      key={c.href}
+                      href={c.href}
+                      {...LinkAttrs(c.href)}
+                      aria-current={currentHref === c.href ? "page" : undefined}
+                      className={cn(itemClass(currentHref === c.href), "px-2 py-2")}
+                      onClick={onNavigate}
+                    >
+                      {c.label}
+                    </a>
+                  ))}
+                </>
+              )}
             </div>
           ))}
         </div>
