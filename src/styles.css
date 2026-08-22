@@ -496,12 +496,38 @@
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
+  @keyframes image-pan-y {
+    0% { object-position: center 0%; }
+    72% { object-position: center 100%; }
+    100% { object-position: center 100%; }
+  }
+  @keyframes image-pan-y-fade {
+    0%, 72% { opacity: 0; }
+    86% { opacity: 1; }
+    92% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  .image-pan-y {
+    object-position: center 0%;
+    animation: image-pan-y 18s linear infinite;
+  }
+  .image-pan-y-fade {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    animation: image-pan-y-fade 18s linear infinite;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .logo-marquee__viewport,
     .product-marquee__track,
     .byom-marquee__viewport,
     .principles-marquee__track,
-    .staging-banner__track { animation: none !important; }
+    .staging-banner__track,
+    .image-pan-y,
+    .image-pan-y-fade { animation: none !important; }
     .ime-pan, .ime-mask { transition: none; }
   }
 }

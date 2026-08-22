@@ -23,6 +23,7 @@ export type SectionCard = {
   image?: string;
   imageAlt?: string;
   imageCaption?: string;
+  imageMotion?: "pan-y";
   link?: { label: string; href: string };
   links?: { label: string; href: string }[];
 };
@@ -203,16 +204,22 @@ function Card({
         <button
           type="button"
           onClick={() => onOpenDiagram(card)}
-          className="group relative block aspect-[16/9] w-full bg-[var(--color-bg-subtle)] text-left"
+          className="group relative block aspect-[16/9] w-full overflow-hidden bg-white text-left"
           aria-label={`View full ${card.title} diagram`}
         >
           <img
             src={asset(card.image)}
             alt={card.imageAlt || ""}
-            className="absolute inset-0 h-full w-full object-cover object-top transition duration-200 group-hover:scale-[1.02]"
+            className={cn(
+              "absolute inset-0 h-full w-full object-cover",
+              card.imageMotion === "pan-y"
+                ? "image-pan-y"
+                : "object-top transition duration-200 group-hover:scale-[1.02]",
+            )}
             loading="lazy"
             decoding="async"
           />
+          {card.imageMotion === "pan-y" ? <span className="image-pan-y-fade" aria-hidden /> : null}
           <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-[var(--color-denim)]/90 px-2.5 py-1 text-[11px] font-semibold text-white opacity-90 shadow-sm group-hover:bg-[var(--color-denim)]">
             <Expand className="size-3.5" />
             Full size

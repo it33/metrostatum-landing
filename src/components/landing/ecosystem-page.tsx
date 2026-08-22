@@ -191,8 +191,9 @@ const CONTENT: SectionPageContent = {
             "Channels, DMs, edits, files, and status sync into the existing IM client",
             "Useful where Pidgin or BitlBee is already the approved desktop messenger",
           ],
-          image: "/images/integrations/federation-libpurple.png",
-          imageAlt: "Architecture of the purple-mattermost libpurple plugin connecting Pidgin-family clients to a Mattermost workspace",
+          image: "/images/integrations/pidgin-mattermost.png",
+          imageAlt: "Pidgin running the purple-mattermost plugin — channels, direct messages, and a Mattermost account in the buddy list",
+          imageMotion: "pan-y",
           imageCaption:
             "purple-mattermost (Eion Robb): a GPL-3 libpurple protocol plugin. Pidgin, Finch, Adium, and BitlBee connect to Mattermost as an account type so operators keep their existing IM client while the workspace of record stays on Mattermost. Latest release v2.1.",
           links: [
