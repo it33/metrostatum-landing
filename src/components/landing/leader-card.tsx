@@ -55,9 +55,9 @@ function LeaderAvatar({ leader }: { leader: Leader }) {
     const img = (
       <img
         src={leader.photo}
-        alt=""
+        alt={leader.name}
         className="size-14 shrink-0 rounded-full object-cover ring-2 ring-[var(--color-denim)]/15"
-        loading="lazy"
+        loading="eager"
         onError={() => setFailed(true)}
       />
     );

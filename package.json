@@ -6,7 +6,7 @@
   "description": "Mattermost-inspired landing page — operational sovereignty for mission-critical collaboration",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 8080",
-    "build": "vite build",
+    "build": "vite build && node scripts/leader-photos.mjs",
     "build:live": "SITE_INDEXABLE=true vite build",
     "preview": "vite preview --host 0.0.0.0 --port 8080",
     "typecheck": "tsc --noEmit",
