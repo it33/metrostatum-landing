@@ -11,6 +11,7 @@ import {
 } from "@/nav-config";
 import { currentRoute, matchNav, type Crumb, type NavItemLike } from "@/lib/nav-active";
 import { CUSTOMER_STORIES } from "@/data/customer-stories";
+import { getIntegration } from "@/data/marketplace";
 import { StagingBanner } from "./staging-banner";
 
 const base = import.meta.env.BASE_URL;
@@ -65,10 +66,21 @@ function useActiveNav() {
   if (slug) {
     const story = CUSTOMER_STORIES.find((s) => s.slug === slug);
     if (story && !matched.crumbs.some((c) => c.label === story.name)) {
-      matched.crumbs = [
-        ...matched.crumbs,
-        { label: story.name, href: `#/customers/${slug}` },
-      ];
+      matched.crumbs = [...matched.crumbs, { label: story.name, href: `#/customers/${slug}` }];
+    }
+  }
+  const intPath = hash.replace(/^#\/?/, "");
+  if (intPath === "integrations" || intPath.startsWith("integrations/")) {
+    matched.activeLabel = "Ecosystem";
+    matched.crumbs = [
+      { label: "Home", href: HOME },
+      { label: "Ecosystem", href: "#/ecosystem" },
+      { label: "Marketplace", href: "#/integrations" },
+    ];
+    const intSlug = intPath.match(/^integrations\/([^/?#]+)/)?.[1];
+    if (intSlug) {
+      const item = getIntegration(intSlug);
+      if (item) matched.crumbs.push({ label: item.name, href: `#/integrations/${intSlug}` });
     }
   }
   return matched;

@@ -73,6 +73,10 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
       { label: "Cisco", href: "#/ecosystem/video/cisco" },
     ],
   },
+  {
+    title: "Integrations",
+    links: [{ label: "Marketplace", href: "#/integrations" }],
+  },
 ];
 
 /** Solutions mega-menu — three columns */
@@ -149,6 +153,7 @@ export const FOOTER_COLUMNS: NavGroup[] = [
       { label: "Oracle", href: "#/ecosystem/partners/oracle" },
       { label: "Google", href: "#/ecosystem/cloud/google" },
       { label: "MS Teams", href: "#/ecosystem/federation/teams" },
+      { label: "Marketplace", href: "#/integrations" },
       { label: "Pexip", href: "#/ecosystem/video/pexip" },
     ],
   },

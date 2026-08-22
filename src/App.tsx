@@ -9,6 +9,8 @@ import { IndustriesPage } from "@/components/landing/industries-page";
 import { PartnerMicrosoftPage } from "@/components/landing/partner-microsoft-page";
 import { PartnerOraclePage } from "@/components/landing/partner-oracle-page";
 import { CaseStudyPage } from "@/components/landing/case-study-page";
+import { IntegrationsPage } from "@/components/landing/integrations-page";
+import { IntegrationDetailPage } from "@/components/landing/integration-detail-page";
 
 /**
  * Hash-based routing for GitHub Pages.
@@ -62,6 +64,8 @@ export function App() {
   if (root === "ecosystem") return <EcosystemPage rest={rest} />;
   if (root === "solutions") return <SolutionsPage rest={rest} />;
   if (root === "industries") return <IndustriesPage rest={rest} />;
+  if (root === "integrations" && rest) return <IntegrationDetailPage slug={rest} hashRoutes />;
+  if (root === "integrations") return <IntegrationsPage hashRoutes />;
 
   return <LandingPage />;
 }

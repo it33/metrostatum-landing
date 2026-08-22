@@ -1,0 +1,2907 @@
+[
+  {
+    "slug": "zabbix",
+    "name": "Zabbix",
+    "description": "Push Zabbix open-source monitoring notifications to Mattermost Channels",
+    "href": "https://mattermost.com/marketplace/zabbix/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/zabbix.webp",
+    "author": "Zabbix",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/zabbix/zabbix",
+    "lastUpdated": "2026-08-21",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "mattermost-agents",
+    "name": "Mattermost Agents",
+    "description": "Use the Mattermost Agents plugin to integrate AI capabilities directly into your Mattermost workspace, where you control your data and deployment. Run any local LLM on your infrastructure or connect to cloud providers.",
+    "href": "https://mattermost.com/marketplace/mattermost-agents/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Mattermost-AI-Assistant.webp",
+    "author": "Mattermost",
+    "categories": [
+      "AI and LLM"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-agents",
+    "lastUpdated": "2026-08-19",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.4.3"
+  },
+  {
+    "slug": "scheduled-messages-community-version",
+    "name": "Scheduled Messages (Community version)",
+    "description": "/schedule slash command that allows you to schedule text-only messages to be posted at a future time to any channel or direct message.",
+    "href": "https://mattermost.com/marketplace/scheduled-messages-community-version/",
+    "icon": "https://mattermost.com/wp-content/uploads/2025/04/profile.webp",
+    "author": "thehunmonkgroup",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/apartmentlines/mattermost-plugin-poor-mans-scheduled-messages",
+    "lastUpdated": "2026-08-19",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.3.1"
+  },
+  {
+    "slug": "haskell-library",
+    "name": "Haskell Library",
+    "description": "Client side API for communicating with a Mattermost server in Haskell",
+    "href": "https://mattermost.com/marketplace/haskell-library/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Haskell.webp",
+    "author": "Galois, Inc.",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/matterhorn-chat/mattermost-api",
+    "lastUpdated": "2026-08-18",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "python-apiv4-driver",
+    "name": "Python Driver for Mattermost API v4",
+    "description": "Python driver to interact with Mattermost API v4",
+    "href": "https://mattermost.com/marketplace/python-apiv4-driver/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Python.webp",
+    "author": "@bertie-sektorcert",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/embl-bio-it/python-mattermost-autodriver",
+    "lastUpdated": "2026-08-10",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "trello",
+    "name": "Trello",
+    "description": "Send Trello notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/trello/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/0f760275-f987-4233-ad1d-f8358b63cb4a.webp",
+    "author": "Lujeni, Numberly",
+    "categories": [
+      "Customer Feedback",
+      "Collaboration",
+      "Office Productivity",
+      "Planning"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Lujeni/matterllo",
+    "lastUpdated": "2026-08-09",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "jira-plugin",
+    "name": "Jira Plugin",
+    "description": "Create Jira tickets from messages in Mattermost, get notified of important updates in Jira",
+    "href": "https://mattermost.com/marketplace/jira-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/5ad265.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Mattermost Supported",
+      "Planning",
+      "Service Desk"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": true,
+    "github": "https://github.com/mattermost/mattermost-plugin-jira",
+    "lastUpdated": "2026-08-06",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "4.8.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-jira/releases/tag/v4.8.0"
+  },
+  {
+    "slug": "github-plugin",
+    "name": "GitHub Plugin",
+    "description": "Subscribe to repositories, stay up-to-date with reviews, assignments and more",
+    "href": "https://mattermost.com/marketplace/github-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/GitHub-2.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Source Control"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-github",
+    "lastUpdated": "2026-08-04",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "2.8.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-github/releases/tag/v2.8.0"
+  },
+  {
+    "slug": "microsoft-calendar-o365",
+    "name": "Microsoft Calendar (O365)",
+    "description": "A two-way integration between Mattermost and Microsoft Outlook Calendar",
+    "href": "https://mattermost.com/marketplace/microsoft-calendar-o365/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Microsoft-Calendar.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-mscalendar",
+    "lastUpdated": "2026-07-20",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "1.7.0",
+    "releaseNotes": "https://mattermost.com/pl/mattermost-plugin-mscalendar/releases/tag/v1.7.0"
+  },
+  {
+    "slug": "outlook-presence",
+    "name": "Outlook Presence",
+    "description": "Automatically set your Mattermost status based on your Outlook presence",
+    "href": "https://mattermost.com/marketplace/outlook-presence/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Microsoft-Outlook-Presence.webp",
+    "author": "Third-party",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-mscalendar",
+    "lastUpdated": "2026-07-20",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "1.7.0",
+    "releaseNotes": "https://mattermost.com/pl/mattermost-plugin-mscalendar/releases/tag/v1.7.0"
+  },
+  {
+    "slug": "webex-cloud",
+    "name": "Webex (Cloud)",
+    "description": "Start and join voice calls, video calls and use screen sharing with your team members via Cisco Webex Meetings",
+    "href": "https://mattermost.com/marketplace/webex-cloud/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Webex.webp",
+    "author": "Third-party",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-webex",
+    "lastUpdated": "2026-07-16",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.3.3"
+  },
+  {
+    "slug": "cron-monitoring",
+    "name": "Cron Monitoring",
+    "description": "Receive alerts from Healthchecks cron job monitoring service to Mattermost",
+    "href": "https://mattermost.com/marketplace/cron-monitoring/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Aug-23-09-59-58.webp",
+    "author": "Healthchecks",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/healthchecks/healthchecks",
+    "lastUpdated": "2026-07-14",
+    "lastUpdatedSource": "github-release",
+    "version": "v4.3"
+  },
+  {
+    "slug": "confluence",
+    "name": "Confluence",
+    "description": "Notify users in Mattermost of updates and new pages in Confluence",
+    "href": "https://mattermost.com/marketplace/confluence/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/5_z16TbH_400x400-2.webp",
+    "author": "Third-party",
+    "categories": [
+      "Collaboration",
+      "Planning"
+    ],
+    "badges": [
+      "Featured",
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-confluence",
+    "lastUpdated": "2026-07-06",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "2.0.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-confluence/releases/tag/v2.0.0"
+  },
+  {
+    "slug": "api-v4-client-for-php",
+    "name": "API v4 Client for PHP",
+    "description": "A PHP library providing a client for the RESTful API v4 of Mattermost",
+    "href": "https://mattermost.com/marketplace/api-v4-client-for-php/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/PHP-4.webp",
+    "author": "Emanuele Panzeri",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/thePanz/MattermostClient",
+    "lastUpdated": "2026-06-19",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.0.0-RC1"
+  },
+  {
+    "slug": "gitlab-plugin",
+    "name": "GitLab Plugin",
+    "description": "This plugin supports a two-way integration between Mattermost and GitLab. Subscribe to repositories, use GitLab events as Mattermost action triggers, and more",
+    "href": "https://mattermost.com/marketplace/gitlab-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/GitLab-2.webp",
+    "author": "Mattermost",
+    "categories": [
+      "CI/CD",
+      "Source Control",
+      "Mattermost Supported"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": true,
+    "github": "https://github.com/mattermost/mattermost-plugin-gitlab",
+    "lastUpdated": "2026-06-19",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "1.13.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-gitlab/releases/tag/v1.13.0"
+  },
+  {
+    "slug": "logback-appender-for-mattermost",
+    "name": "Logback Appender for Mattermost",
+    "description": "Fragment that connects logback/slf4j to Mattermost.",
+    "href": "https://mattermost.com/marketplace/logback-appender-for-mattermost/",
+    "icon": "https://mattermost.com/wp-content/themes/mattermost-2021/frontend/dist/img/default-icon.svg",
+    "author": "Marco Descher",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/elexis/elexis-server",
+    "lastUpdated": "2026-06-17",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "onlyoffice",
+    "name": "OnlyOffice",
+    "description": "Edit office documents from Mattermost using ONLYOFFICE Document Server",
+    "href": "https://mattermost.com/marketplace/onlyoffice/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/OnlyOffice.webp",
+    "author": "ONLYOFFICE",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/ONLYOFFICE/onlyoffice-mattermost",
+    "lastUpdated": "2026-06-04",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.3.0"
+  },
+  {
+    "slug": "reply-in-channel",
+    "name": "Reply In Channel",
+    "description": "Adds a /ric slash command to Mattermost that lets you reply to a thread inline in the channel \u2014 similar to Slack's \"Also send to channel\" feature.",
+    "href": "https://mattermost.com/marketplace/reply-in-channel/",
+    "icon": "https://mattermost.com/wp-content/uploads/2026/03/ChatGPT-Image-Mar-16-2026-10_15_30-AM.webp",
+    "author": "Andrew Bednarz",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/bed42/mattermost-reply-in-channel-plugin",
+    "lastUpdated": "2026-05-29",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.1"
+  },
+  {
+    "slug": "social-previews",
+    "name": "Social Previews",
+    "description": "Displays rich previews for social media URLs. Supports Mastodon, Bluesky, Twitter/X, Threads, TikTok, and Instagram.",
+    "href": "https://mattermost.com/marketplace/social-previews/",
+    "icon": "https://mattermost.com/wp-content/uploads/2026/03/ChatGPT-Image-Mar-16-2026-10_07_09-AM.webp",
+    "author": "Andrew Bednarz",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/bed42/mattermost-social-previews-plugin",
+    "lastUpdated": "2026-05-26",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.2.0"
+  },
+  {
+    "slug": "redmine",
+    "name": "Redmine",
+    "description": "Post Redmine notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/redmine/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/redmine.webp",
+    "author": "AltSol",
+    "categories": [
+      "Planning",
+      "Service Desk"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/altsol/redmine_mattermost",
+    "lastUpdated": "2026-05-22",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "dataminr-plugin",
+    "name": "Dataminr Plugin",
+    "description": "Bring real-time Dataminr notifications into Mattermost with rich, color-coded severity formatting",
+    "href": "https://mattermost.com/marketplace/dataminr-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2026/05/dataminr-1.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Incident Response",
+      "Monitoring"
+    ],
+    "badges": [
+      "New & Noteworthy"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-dataminr",
+    "lastUpdated": "2026-05-19",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "1.0.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-dataminr/releases/tag/v1.0.0"
+  },
+  {
+    "slug": "welcomebot-plugin",
+    "name": "WelcomeBot Plugin",
+    "description": "A bot that posts welcome messages to new users and invites them into channels based on their responses",
+    "href": "https://mattermost.com/marketplace/welcomebot-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-4-4.webp",
+    "author": "Third-party",
+    "categories": [
+      "Office Productivity",
+      "Social",
+      "Utilities"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-welcomebot",
+    "lastUpdated": "2026-04-24",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.4.1"
+  },
+  {
+    "slug": "mattermost-demo-plugin",
+    "name": "Mattermost Demo Plugin",
+    "description": "Demonstrates the capabilities of a Mattermost plugin.",
+    "href": "https://mattermost.com/marketplace/mattermost-demo-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Demo-Plugin.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-demo",
+    "lastUpdated": "2026-04-23",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.11.1"
+  },
+  {
+    "slug": "coffeebot",
+    "name": "Coffeebot",
+    "description": "Pair coworkers together randomly for them to meet each other in Mattermost",
+    "href": "https://mattermost.com/marketplace/coffeebot/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/python-logo-1-2.webp",
+    "author": "Patrick Liu",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/pcjl/mattermost-coffeebot",
+    "lastUpdated": "2026-04-21",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "zoom-plugin",
+    "name": "Zoom Plugin",
+    "description": "Start Zoom audio and video conferencing calls in Mattermost with a single click",
+    "href": "https://mattermost.com/marketplace/zoom-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/08/Zoom.webp",
+    "author": "Third-party",
+    "categories": [
+      "Mattermost Supported",
+      "Video"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": true,
+    "github": "https://github.com/mattermost/mattermost-plugin-zoom",
+    "lastUpdated": "2026-04-09",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "1.13.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-zoom/releases/tag/v1.13.0"
+  },
+  {
+    "slug": "giphy-plugin",
+    "name": "GIF Commands",
+    "description": "Post GIFs from Giphy or Gfycat via /gif and /gifs commands",
+    "href": "https://mattermost.com/marketplace/giphy-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Giphy.webp",
+    "author": "Cl\u00e9mence Mousset",
+    "categories": [
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/moussetc/mattermost-plugin-giphy",
+    "lastUpdated": "2026-03-24",
+    "lastUpdatedSource": "github-release",
+    "version": "v5.0.0"
+  },
+  {
+    "slug": "all-quiet",
+    "name": "All Quiet",
+    "description": "Two-way integration to send incident alerts from All Quiet to Mattermost channels and create incidents directly from Mattermost. Receive incident updates and resolution messages in real time.",
+    "href": "https://mattermost.com/marketplace/all-quiet/",
+    "icon": "https://mattermost.com/wp-content/uploads/2026/03/all-quiet.webp",
+    "author": "All Quiet",
+    "categories": [
+      "Incident Response"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2026-03-16",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "mattermost-ms-teams-plugin",
+    "name": "MS Teams Plugin",
+    "description": "The Microsoft Teams plugin enables you to break through siloes in a mixed Mattermost and Teams environment by forwarding real-time chat notifications from Teams to Mattermost. Enterprise subscription required for use.",
+    "href": "https://mattermost.com/marketplace/mattermost-ms-teams-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/MSTeams_Plugin@2x.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Bridging Services",
+      "Collaboration",
+      "Mattermost Supported"
+    ],
+    "badges": [
+      "Featured",
+      "New & Noteworthy"
+    ],
+    "supported": true,
+    "github": "https://github.com/mattermost/mattermost-plugin-msteams-sync",
+    "lastUpdated": "2026-03-09",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.3.2"
+  },
+  {
+    "slug": "google-drive-app",
+    "name": "Google Drive",
+    "description": "Share files from your Google Drive directly in Mattermost",
+    "href": "https://mattermost.com/marketplace/google-drive-app/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Google-Drive.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-google-drive",
+    "lastUpdated": "2026-03-05",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.1.0"
+  },
+  {
+    "slug": "hipmost",
+    "name": "Hipmost",
+    "description": "A tool to migrate your Hipchat history to Mattermost",
+    "href": "https://mattermost.com/marketplace/hipmost/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-6.webp",
+    "author": "Orbital Impact",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/orbitalimpact/hipmost",
+    "lastUpdated": "2026-03-02",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "webhook-proxy-server",
+    "name": "Webhook Proxy Server",
+    "description": "Lightweight incoming webhook server to run shell commands in Mattermost",
+    "href": "https://mattermost.com/marketplace/webhook-proxy-server/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-2.webp",
+    "author": "Adnan Hajdarevi\u0107",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/adnanh/webhook",
+    "lastUpdated": "2026-02-12",
+    "lastUpdatedSource": "github-release",
+    "version": "2.8.3"
+  },
+  {
+    "slug": "mail2most",
+    "name": "Mail2Most",
+    "description": "Send emails to Mattermost via IMAP inboxes",
+    "href": "https://mattermost.com/marketplace/mail2most/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_sso@2x-4.webp",
+    "author": "Carsten Seeger",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cseeger-epages/mail2most",
+    "lastUpdated": "2025-11-11",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.12.0"
+  },
+  {
+    "slug": "channel-export",
+    "name": "Channel Export",
+    "description": "Exports channel messages into a .csv file format. Enterprise subscription required for use.",
+    "href": "https://mattermost.com/marketplace/channel-export/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/06/ChannelExport.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Mattermost Supported"
+    ],
+    "badges": [],
+    "supported": true,
+    "github": "https://github.com/mattermost/mattermost-plugin-channel-export",
+    "lastUpdated": "2025-10-28",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.3.0"
+  },
+  {
+    "slug": "servicenow",
+    "name": "ServiceNow",
+    "description": "This plugin integrates ServiceNow with Mattermost by allowing users to subscribe to record changes in ServiceNow and manage them through Mattermost.",
+    "href": "https://mattermost.com/marketplace/servicenow/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/01/ServiceNow.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Incident Response",
+      "Mattermost Supported",
+      "Service Desk"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": true,
+    "github": "https://github.com/mattermost/mattermost-plugin-servicenow",
+    "lastUpdated": "2025-10-17",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "2.4.0",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-servicenow/releases/tag/v2.4.0"
+  },
+  {
+    "slug": "profanity-filter-plugin",
+    "name": "Profanity Filter Plugin",
+    "description": "Censor profanity on your Mattermost server",
+    "href": "https://mattermost.com/marketplace/profanity-filter-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-5.webp",
+    "author": "Third-party",
+    "categories": [
+      "Security",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-profanity-filter",
+    "lastUpdated": "2025-10-16",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.1.0-rc1"
+  },
+  {
+    "slug": "matterhorn",
+    "name": "Matterhorn",
+    "description": "A terminal client for Mattermost",
+    "href": "https://mattermost.com/marketplace/matterhorn/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo.webp",
+    "author": "Galois, Inc.",
+    "categories": [
+      "Deployment",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/matterhorn-chat/matterhorn",
+    "lastUpdated": "2025-10-08",
+    "lastUpdatedSource": "github-release",
+    "version": "90000.1.1"
+  },
+  {
+    "slug": "microsoft-teams-meetings",
+    "name": "Microsoft Teams Meetings Integration",
+    "description": "Leverage MS teams Meeting's Video calling within Mattermost.",
+    "href": "https://mattermost.com/marketplace/microsoft-teams-meetings/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/04/ms-teams-meetings-integration.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2025-09-25",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "pexip-video-connect",
+    "name": "Pexip",
+    "description": "Launch Pexip Secure Meetings from your Mattermost channels. Ensure mission-critical communication stays secure, flexible, and fully under your command.",
+    "href": "https://mattermost.com/marketplace/pexip-video-connect/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Pexip-Logo-Black-RGB.webp",
+    "author": "Pexip",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2025-09-23",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "chocolatey",
+    "name": "Chocolatey",
+    "description": "Chocolatey Installer to easily deploy the Windows Desktop App for Mattermost",
+    "href": "https://mattermost.com/marketplace/chocolatey/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Chocolately.webp",
+    "author": "Chocolatey",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/chocolatey/chocolatey-coreteampackages",
+    "lastUpdated": "2025-09-18",
+    "lastUpdatedSource": "github-release",
+    "version": "1password8-8.11.8"
+  },
+  {
+    "slug": "collabora-online",
+    "name": "Collabora Online",
+    "description": "View or edit Collabora Online files directly in Mattermost",
+    "href": "https://mattermost.com/marketplace/collabora-online/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Collabora.webp",
+    "author": "Collabora Online",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/CollaboraOnline/collabora-mattermost",
+    "lastUpdated": "2025-08-11",
+    "lastUpdatedSource": "github-release",
+    "version": "1.2.1"
+  },
+  {
+    "slug": "teamplify",
+    "name": "Teamplify",
+    "description": "Run async standups, track time off, and manage team availability \u2013 all inside Mattermost",
+    "href": "https://mattermost.com/marketplace/teamplify/",
+    "icon": "https://mattermost.com/wp-content/uploads/2025/07/teamplify.webp",
+    "author": "Teamplify",
+    "categories": [
+      "Planning"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2025-07-24",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "discourse-chat-integration-plugin",
+    "name": "Discourse",
+    "description": "Send notifications about new Discourse posts to Mattermost",
+    "href": "https://mattermost.com/marketplace/discourse-chat-integration-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/oIC5fRth_400x400.webp",
+    "author": "David Taylor",
+    "categories": [
+      "Customer Feedback",
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/discourse/discourse-chat-integration",
+    "lastUpdated": "2025-07-14",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "redmine-2",
+    "name": "Redmine",
+    "description": "Post Redmine notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/redmine-2/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/redmine-2.webp",
+    "author": "Alexander Meindl, AlphaNodes",
+    "categories": [
+      "Planning",
+      "QA and Testing",
+      "Service Desk"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/AlphaNodes/redmine_messenger",
+    "lastUpdated": "2025-06-22",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "spoiler-plugin",
+    "name": "Spoiler Plugin",
+    "description": "Display spoiler messages via /spoiler command in Mattermost",
+    "href": "https://mattermost.com/marketplace/spoiler-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_sso@2x.webp",
+    "author": "Cl\u00e9mence Mousset",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/moussetc/mattermost-plugin-spoiler",
+    "lastUpdated": "2025-05-05",
+    "lastUpdatedSource": "github-release",
+    "version": "v4.1.0"
+  },
+  {
+    "slug": "dice-roller-plugin",
+    "name": "Dice Roller Plugin",
+    "description": "A Mattermost plugin to add a slash command for in-chat dice rolling",
+    "href": "https://mattermost.com/marketplace/dice-roller-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Icon@2x-1-2.webp",
+    "author": "Cl\u00e9mence Mousset",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/moussetc/mattermost-plugin-dice-roller",
+    "lastUpdated": "2025-05-04",
+    "lastUpdatedSource": "github-release",
+    "version": "v3.2.0"
+  },
+  {
+    "slug": "zendesk-app",
+    "name": "Zendesk App",
+    "description": "Create Zendesk tickets and receive ticket updates within Mattermost to reduce context switching (*not compatible with server versions >10.0)",
+    "href": "https://mattermost.com/marketplace/zendesk-app/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/05/5cac60e3f8d44d025118d7fa_medium.svg",
+    "author": "Third-party",
+    "categories": [
+      "Customer Feedback",
+      "Service Desk"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2025-04-22",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "autolink-plugin",
+    "name": "Autolink Plugin",
+    "description": "Automatically rewrite text matching a regular expression into a Markdown link",
+    "href": "https://mattermost.com/marketplace/autolink-plugin/",
+    "icon": "",
+    "author": "Third-party",
+    "categories": [
+      "Office Productivity",
+      "Utilities"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-autolink",
+    "lastUpdated": "2025-04-15",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.4.1"
+  },
+  {
+    "slug": "matterpoll",
+    "name": "Matterpoll Plugin",
+    "description": "Quickly create polls via /poll slash command in Mattermost",
+    "href": "https://mattermost.com/marketplace/matterpoll/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo_dark.webp",
+    "author": "Matterpoll",
+    "categories": [
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/matterpoll/matterpoll",
+    "lastUpdated": "2025-04-14",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.8.0"
+  },
+  {
+    "slug": "broomer",
+    "name": "Broomer",
+    "description": "Quickly delete posts from a Mattermost channel with a simple /broom command",
+    "href": "https://mattermost.com/marketplace/broomer/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Broomer.webp",
+    "author": "Nathana\u00ebl Houn",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/nathanaelhoun/mattermost-plugin-broomer",
+    "lastUpdated": "2025-02-27",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.3"
+  },
+  {
+    "slug": "eclipse",
+    "name": "Eclipse",
+    "description": "Send Eclipse dev infrastructure notifications via RSS, Git, Jenkins and more",
+    "href": "https://mattermost.com/marketplace/eclipse/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/3FdGiw_R_400x400-2.webp",
+    "author": "C\u00e9dric Brun",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cbrun/jstuart",
+    "lastUpdated": "2025-01-30",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "python-chatbot",
+    "name": "Python Chatbot",
+    "description": "Python chatbot using Mattermost RESTful API",
+    "href": "https://mattermost.com/marketplace/python-chatbot/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/python-logo-1.webp",
+    "author": "Alex Tzonkov",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/attzonko/mmpy_bot",
+    "lastUpdated": "2025-01-18",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.2.1"
+  },
+  {
+    "slug": "rasa-core",
+    "name": "Rasa Core",
+    "description": "Machine learning based dialogue AI engine connector for Mattermost",
+    "href": "https://mattermost.com/marketplace/rasa-core/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/download.webp",
+    "author": "Brian Hopkins",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/RasaHQ/rasa",
+    "lastUpdated": "2025-01-14",
+    "lastUpdatedSource": "github-release",
+    "version": "3.6.21"
+  },
+  {
+    "slug": "botkube",
+    "name": "BotKube",
+    "description": "Monitor & debug your Kubernetes cluster deployment, and receive best practices",
+    "href": "https://mattermost.com/marketplace/botkube/",
+    "icon": "https://mattermost.com/wp-content/uploads/2019/04/botkube-2.webp",
+    "author": "Kubeshop",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/infracloudio/botkube",
+    "lastUpdated": "2024-11-13",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.14.0"
+  },
+  {
+    "slug": "splunk-2",
+    "name": "Splunk",
+    "description": "Enable users to get logs and alerts from your Splunk server",
+    "href": "https://mattermost.com/marketplace/splunk-2/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/03/splunklogo.webp",
+    "author": "Third-party",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-splunk",
+    "lastUpdated": "2024-10-29",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "focalboard",
+    "name": "Focalboard",
+    "description": "Focalboard is an open source alternative to tools like Asana, Trello, and Notion. Check out more at www.focalboard.com.",
+    "href": "https://mattermost.com/marketplace/focalboard/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/09/fblogo.svg",
+    "author": "Third-party",
+    "categories": [
+      "Planning"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/focalboard",
+    "lastUpdated": "2024-06-13",
+    "lastUpdatedSource": "github-release",
+    "version": "v8.0.0"
+  },
+  {
+    "slug": "teleport",
+    "name": "Teleport",
+    "description": "Get notified about new access requests in Mattermost",
+    "href": "https://mattermost.com/marketplace/teleport/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/teleport.webp",
+    "author": "Teleport",
+    "categories": [
+      "Security"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/gravitational/teleport-plugins",
+    "lastUpdated": "2024-05-08",
+    "lastUpdatedSource": "github-release",
+    "version": "v15.3.1"
+  },
+  {
+    "slug": "azure-devops",
+    "name": "Azure DevOps",
+    "description": "View AzureDevOps projects, work items, boards, pipelines and repos (*not compatible with server versions >10.0)",
+    "href": "https://mattermost.com/marketplace/azure-devops/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Azure-Devops.webp",
+    "author": "Third-party",
+    "categories": [
+      "Source Control"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-azure-devops",
+    "lastUpdated": "2024-03-15",
+    "lastUpdatedSource": "github-release",
+    "version": "v3.2.1"
+  },
+  {
+    "slug": "symfony-publication-bundle",
+    "name": "Symfony Publication Bundle",
+    "description": "Publish text from Symfony apps to your Mattermost server",
+    "href": "https://mattermost.com/marketplace/symfony-publication-bundle/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screen-Shot-2020-08-31-at-9.07.59-AM.webp",
+    "author": "Dennis de Best",
+    "categories": [
+      "CI/CD"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/codebuds33/mattermost-publication-bundle",
+    "lastUpdated": "2024-02-25",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "aws-sns-plugin",
+    "name": "Amazon AWS SNS Plugin",
+    "description": "Send SNS notifications from Alerts created by AWS CloudWatch to Mattermost",
+    "href": "https://mattermost.com/marketplace/aws-sns-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/aws.webp",
+    "author": "Carlos Panato",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cpanato/mattermost-plugin-aws-SNS",
+    "lastUpdated": "2024-02-16",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.3.0"
+  },
+  {
+    "slug": "nextcloud-app",
+    "name": "NextCloud App",
+    "description": "Share links and upload new Nextcloud files and check your Nextcloud calendar directly in Mattermost (*not compatible with server versions >10.0)",
+    "href": "https://mattermost.com/marketplace/nextcloud-app/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/NextCloud.webp",
+    "author": "Third-party",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-app-nextcloud",
+    "lastUpdated": "2024-01-24",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "github",
+    "name": "GitHub Python Listener",
+    "description": "Python script listens for incoming GitHub events and posts them to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/github/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/GitHub.webp",
+    "author": "Software Development Team",
+    "categories": [
+      "Source Control"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/softdevteam/mattermost-github-integration",
+    "lastUpdated": "2023-11-08",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "feature-lifecycle-playbook",
+    "name": "Feature Lifecycle Playbook",
+    "description": "Create transparent workflows across development teams to ensure your feature development process is seamless.",
+    "href": "https://mattermost.com/marketplace/feature-lifecycle-playbook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/06/Playbooks_Marketplace_Icon_300x300.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Playbooks"
+    ],
+    "badges": [
+      "Featured",
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-product-templates",
+    "lastUpdated": "2023-11-01",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "incident-resolution-playbook",
+    "name": "Incident Resolution Playbook",
+    "description": "Resolving incidents requires speed and accuracy. Streamline your processes for rapid response and resolution",
+    "href": "https://mattermost.com/marketplace/incident-resolution-playbook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/06/Playbooks_Marketplace_Icon_300x300.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Playbooks"
+    ],
+    "badges": [
+      "Featured",
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-product-templates",
+    "lastUpdated": "2023-11-01",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "okr-management-playbook",
+    "name": "OKR Management Playbook",
+    "description": "Achieve goals and hit milestones with transparent planning and check-ins on high-level initiatives.",
+    "href": "https://mattermost.com/marketplace/okr-management-playbook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/06/Playbooks_Marketplace_Icon_300x300.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Playbooks"
+    ],
+    "badges": [
+      "Featured",
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-product-templates",
+    "lastUpdated": "2023-11-01",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "release-management-playbook",
+    "name": "Release Management Playbook",
+    "description": "Perfect your release process from ideation to production.",
+    "href": "https://mattermost.com/marketplace/release-management-playbook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/06/Playbooks_Marketplace_Icon_300x300.webp",
+    "author": "Mattermost",
+    "categories": [
+      "Playbooks"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-product-templates",
+    "lastUpdated": "2023-11-01",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "todo",
+    "name": "ToDo",
+    "description": "Track posts as To do items as a list and get daily reminders in Mattermost",
+    "href": "https://mattermost.com/marketplace/todo/",
+    "icon": "https://mattermost.com/wp-content/uploads/2018/11/Checklist-Icon-Template-Design-Vector-Graphics-13750844-1.webp",
+    "author": "Community",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost-community/mattermost-plugin-todo",
+    "lastUpdated": "2023-10-12",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.7.1"
+  },
+  {
+    "slug": "standup-raven",
+    "name": "Standup Raven Plugin",
+    "description": "A Mattermost plugin for communicating daily standups across teams",
+    "href": "https://mattermost.com/marketplace/standup-raven/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Apr-29-09-17-10.webp",
+    "author": "Harshil Sharma and Amit Yadav",
+    "categories": [
+      "Source Control",
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/standup-raven/standup-raven",
+    "lastUpdated": "2023-08-02",
+    "lastUpdatedSource": "github-release",
+    "version": "v3.3.2"
+  },
+  {
+    "slug": "mattermost-matrix-connector",
+    "name": "Mattermost Matrix Connector",
+    "description": "Federate your secure Mattermost server with Matrix. The Mattermost Matrix Connector allows sharing of channels and chats between the two systems.",
+    "href": "https://mattermost.com/marketplace/mattermost-matrix-connector/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Matrix_Plugin@2x.webp",
+    "author": "Third-party",
+    "categories": [
+      "Bridging Services",
+      "Collaboration"
+    ],
+    "badges": [
+      "New & Noteworthy"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/matrix-as-mm",
+    "lastUpdated": "2023-07-28",
+    "lastUpdatedSource": "github-release",
+    "version": "TGZ"
+  },
+  {
+    "slug": "ms-exchange-calendar-on-prem",
+    "name": "MS Exchange Calendar (On-Prem)",
+    "description": "Two-way integration between Mattermost and a on-premise Microsoft Exchange Server 2016+",
+    "href": "https://mattermost.com/marketplace/ms-exchange-calendar-on-prem/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Microsoft-Exchange.webp",
+    "author": "Brightscout",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Brightscout/mattermost-plugin-exchange-calendar",
+    "lastUpdated": "2023-07-07",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.3.2"
+  },
+  {
+    "slug": "golang-bot-sample",
+    "name": "Golang Bot Sample",
+    "description": "Golang bot that listens to events and responds to messages in Mattermost",
+    "href": "https://mattermost.com/marketplace/golang-bot-sample/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logos-2.webp",
+    "author": "Third-party",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-bot-sample-golang",
+    "lastUpdated": "2023-06-05",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "bitbucket",
+    "name": "Bitbucket Bridge",
+    "description": "Flask application that serves as a bridge between Bitbucket and Mattermost",
+    "href": "https://mattermost.com/marketplace/bitbucket/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/bitbucket-logo-png-transparent.webp",
+    "author": "Craig Vitter",
+    "categories": [
+      "Source Control",
+      "Planning",
+      "QA and Testing"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cvitter/mattermost-bitbucket-bridge",
+    "lastUpdated": "2023-05-23",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "channel-recommender",
+    "name": "Channel Recommender",
+    "description": "Find new channels based on your memberships and the most popular channels in a team",
+    "href": "https://mattermost.com/marketplace/channel-recommender/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Channel-Recommender.webp",
+    "author": "Third-party",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-recommend",
+    "lastUpdated": "2023-05-22",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "jenkins-plugin",
+    "name": "Jenkins outbound Plugin",
+    "description": "Send notifications from Jenkins to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/jenkins-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Mar-15-12-51-10.webp",
+    "author": "Jenkins",
+    "categories": [
+      "CI/CD",
+      "Source Control",
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/jenkinsci/mattermost-plugin",
+    "lastUpdated": "2026-04-23",
+    "lastUpdatedSource": "marketplace-api",
+    "version": "v1.11.5",
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-calls/releases/tag/v1.11.5"
+  },
+  {
+    "slug": "skype4business-plugin",
+    "name": "Skype for Business Plugin",
+    "description": "Start and join voice calls, video calls and use screen sharing with your team",
+    "href": "https://mattermost.com/marketplace/skype4business-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_92.webp",
+    "author": "Third-party",
+    "categories": [
+      "Video"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-skype4business",
+    "lastUpdated": "2023-05-09",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "antivirus-plugin",
+    "name": "Antivirus Plugin",
+    "description": "ClamAV antivirus plugin for scanning files uploaded to Mattermost",
+    "href": "https://mattermost.com/marketplace/antivirus-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/New_ClamAV_Logo.webp",
+    "author": "Third-party",
+    "categories": [
+      "Collaboration",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-antivirus",
+    "lastUpdated": "2023-03-28",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "remind-plugin",
+    "name": "Remind Plugin",
+    "description": "Mattermost plugin that schedules reminders for users and channels",
+    "href": "https://mattermost.com/marketplace/remind-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-7.webp",
+    "author": "Scott Lee Davis",
+    "categories": [
+      "Office Productivity",
+      "Utilities"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/scottleedavis/mattermost-plugin-remind",
+    "lastUpdated": "2023-03-26",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "rollbar-plugin",
+    "name": "Rollbar Plugin",
+    "description": "Send webhook notifications from Rollbar to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/rollbar-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Jul-22-11-21-37.webp",
+    "author": "Affirm",
+    "categories": [
+      "Source Control",
+      "QA and Testing"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Affirm/matterbar",
+    "lastUpdated": "2023-03-20",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "badges",
+    "name": "Badges",
+    "description": "Grant badges to your colleagues to show appreciation",
+    "href": "https://mattermost.com/marketplace/badges/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Badges.webp",
+    "author": "Daniel Espino Garc\u00eda",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/larkox/mattermost-plugin-badges",
+    "lastUpdated": "2023-03-17",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.2.1"
+  },
+  {
+    "slug": "voice-messaging",
+    "name": "Voice Messaging Plugin",
+    "description": "Record and send voice messages via Mattermost",
+    "href": "https://mattermost.com/marketplace/voice-messaging/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-11.webp",
+    "author": "Claudio Costa",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/streamer45/mattermost-plugin-voice",
+    "lastUpdated": "2023-03-14",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "default-theme-plugin",
+    "name": "Default Theme Setting",
+    "description": "Set the default color theme for all your users' to make it easy to start with your organization's color swatches when they first login to Mattermost",
+    "href": "https://mattermost.com/marketplace/default-theme-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-19.webp",
+    "author": "Michael Kochell",
+    "categories": [
+      "Office Productivity",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mickmister/mattermost-plugin-default-theme",
+    "lastUpdated": "2023-03-07",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "autotranslate-plugin",
+    "name": "Autotranslation Plugin",
+    "description": "Automatically translate messages, powered by Amazon Translate",
+    "href": "https://mattermost.com/marketplace/autotranslate-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Shape@2x.webp",
+    "author": "Third-party",
+    "categories": [
+      "Bridging Services",
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-autotranslate",
+    "lastUpdated": "2023-02-03",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.4.0"
+  },
+  {
+    "slug": "matterbridge",
+    "name": "Matterbridge",
+    "description": "Bridge between Mattermost, IRC, Gitter, XMPP, Slack, Discord and other tools",
+    "href": "https://mattermost.com/marketplace/matterbridge/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Innovation@2x.webp",
+    "author": "Wim",
+    "categories": [
+      "Bridging Services"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/42wim/matterbridge",
+    "lastUpdated": "2023-01-29",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.26.0"
+  },
+  {
+    "slug": "alertmanager-plugin",
+    "name": "Prometheus AlertManager Plugin",
+    "description": "Send notifications from Prometheus AlertManager to Mattermost",
+    "href": "https://mattermost.com/marketplace/alertmanager-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Apr-05-11-12-03.webp",
+    "author": "Carlos Tadeu Panato Junior",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cpanato/mattermost-plugin-alertmanager",
+    "lastUpdated": "2023-01-02",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.4.0"
+  },
+  {
+    "slug": "servicenow-virtual-agent",
+    "name": "ServiceNow Virtual Agent",
+    "description": "This plugin integrates the ServiceNow Virtual Agent in Mattermost.",
+    "href": "https://mattermost.com/marketplace/servicenow-virtual-agent/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/01/servicenow_icon_dark@2x.webp",
+    "author": "Third-party",
+    "categories": [
+      "Incident Response",
+      "Service Desk"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-servicenow-virtual-agent",
+    "lastUpdated": "2022-12-23",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.1.2"
+  },
+  {
+    "slug": "bigbluebutton-plugin",
+    "name": "BigBlueButton Plugin",
+    "description": "Start BigBlueButton video conference calls with screenshare in Mattermost",
+    "href": "https://mattermost.com/marketplace/bigbluebutton-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/bbb_logo_web-300x245-1.webp",
+    "author": "Blindside Networks",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/blindsidenetworks/mattermost-plugin-bigbluebutton",
+    "lastUpdated": "2022-11-21",
+    "lastUpdatedSource": "github-release",
+    "version": "v4.5.0"
+  },
+  {
+    "slug": "dependencytrack",
+    "name": "DependencyTrack",
+    "description": "Get notifications from DependencyTrack tool in Mattermost channels",
+    "href": "https://mattermost.com/marketplace/dependencytrack/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Dependency-Track.webp",
+    "author": "Rohitesh Gupta",
+    "categories": [
+      "Security"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/srkgupta/mattermost-plugin-dependency-track",
+    "lastUpdated": "2022-11-18",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0"
+  },
+  {
+    "slug": "digital-ocean",
+    "name": "Digital Ocean",
+    "description": "A Mattermost plugin to interact with DigitalOcean",
+    "href": "https://mattermost.com/marketplace/digital-ocean/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Digital-Ocean.webp",
+    "author": "Phillip Ahereza",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/phillipahereza/mattermost-plugin-digitalocean",
+    "lastUpdated": "2022-11-08",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "custom-attributes-plugin",
+    "name": "Custom Attributes Plugin",
+    "description": "Plugin that allows you to add custom attributes to users in Mattermost",
+    "href": "https://mattermost.com/marketplace/custom-attributes-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-10.webp",
+    "author": "Third-party",
+    "categories": [
+      "Office Productivity",
+      "Social",
+      "Utilities"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-custom-attributes",
+    "lastUpdated": "2022-11-05",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.3.1"
+  },
+  {
+    "slug": "agenda-plugin",
+    "name": "Agenda Plugin",
+    "description": "Queue and list items in a channel's meeting agenda. The agenda is identified by a hashtag based on the meeting date.",
+    "href": "https://mattermost.com/marketplace/agenda-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/agenda.webp",
+    "author": "Third-party",
+    "categories": [
+      "Collaboration",
+      "Office Productivity",
+      "Planning"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-agenda",
+    "lastUpdated": "2022-10-31",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.2.3"
+  },
+  {
+    "slug": "api-v4-client-for-java",
+    "name": "API v4 Client for Java",
+    "description": "Mattermost API v4 client for Java",
+    "href": "https://mattermost.com/marketplace/api-v4-client-for-java/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/jW4dnFtA.webp",
+    "author": "Takayuki Maruyama",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/maruTA-bis5/mattermost4j",
+    "lastUpdated": "2022-09-21",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.25.0"
+  },
+  {
+    "slug": "gender-inclusive-language",
+    "name": "Gender Inclusive Language",
+    "description": "Actively listens (and prohibits) for language with racist, ableist, sexist, or other exclusionary histories",
+    "href": "https://mattermost.com/marketplace/gender-inclusive-language/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/plugin-gender-inclusive-language.webp",
+    "author": "Adem\u00edlson F. Tonato",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language",
+    "lastUpdated": "2022-06-24",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "chess-plugin",
+    "name": "Chess Plugin",
+    "description": "Challenge a fellow Mattermost user to a game of Chess",
+    "href": "https://mattermost.com/marketplace/chess-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-18.webp",
+    "author": "Matthew Dorner",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/MatthewDorner/mattermost-plugin-chess",
+    "lastUpdated": "2022-05-30",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.2.1"
+  },
+  {
+    "slug": "pingboard",
+    "name": "Pingboard",
+    "description": "Access the Pingboard profile from the user profile popover card",
+    "href": "https://mattermost.com/marketplace/pingboard/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/pingboard.webp",
+    "author": "IMC Trading",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/imc-trading/mattermost-plugin-pingboard",
+    "lastUpdated": "2022-05-03",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "parabol",
+    "name": "Parabol",
+    "description": "Estimation That Sets Remote Teams Up for Success - Sync issues from your backlog management tool and collaborate on estimation with a fun digital deck",
+    "href": "https://mattermost.com/marketplace/parabol/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/03/mamz9omzdgyhdtzcwgba.webp",
+    "author": "Parabol",
+    "categories": [
+      "Collaboration",
+      "Office Productivity",
+      "Planning"
+    ],
+    "badges": [
+      "New & Noteworthy"
+    ],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2022-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "sameroom",
+    "name": "Sameroom",
+    "description": "Connect channels between Mattermost, Slack, Cisco Webex Teams, Skype, IRC & more",
+    "href": "https://mattermost.com/marketplace/sameroom/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_94.webp",
+    "author": "8x8",
+    "categories": [
+      "Bridging Services"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2022-03-29",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "bitbucket-2",
+    "name": "BitBucket",
+    "description": "Bitbucket is a code repository for development teams made by Atlassian",
+    "href": "https://mattermost.com/marketplace/bitbucket-2/",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/03/bitbucket-logo.webp",
+    "author": "Third-party",
+    "categories": [
+      "CI/CD"
+    ],
+    "badges": [
+      "New & Noteworthy"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-bitbucket",
+    "lastUpdated": "2022-03-22",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.1.1"
+  },
+  {
+    "slug": "mattermost-client-for-hubot-adapter",
+    "name": "Mattermost Client for Hubot Adapter",
+    "description": "Client for Hubot adapter using Mattermost RESTful API and WebSockets",
+    "href": "https://mattermost.com/marketplace/mattermost-client-for-hubot-adapter/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/hubot-2.webp",
+    "author": "Andy Lo-A-Foe",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/loafoe/mattermost-client",
+    "lastUpdated": "2022-02-24",
+    "lastUpdatedSource": "github-release",
+    "version": "v6.5.0"
+  },
+  {
+    "slug": "jitsi",
+    "name": "Appear.in",
+    "description": "Create Appear.in meeting rooms via Mattermost slash commands",
+    "href": "https://mattermost.com/marketplace/jitsi/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/1200px-Logo_Jitsi.svg_-2.webp",
+    "author": "Third-party",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2022-01-13",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "status-page-plugin",
+    "name": "Statuspage Plugin",
+    "description": "Send Statuspage notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/status-page-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/QoqF8Db1_400x400.webp",
+    "author": "Carlos Tadeu Panato Junior",
+    "categories": [
+      "Customer Feedback",
+      "Monitoring",
+      "Service Desk"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cpanato/mattermost-plugin-statuspage",
+    "lastUpdated": "2021-11-23",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.1.0"
+  },
+  {
+    "slug": "papercups-io",
+    "name": "Papercups.io",
+    "description": "Papercups is a simple way to connect and chat with customers from your website. Chat directly with your customers from your workspace with the Mattermost integration. It's open source, self-hostable and privacy-conscious.",
+    "href": "https://mattermost.com/marketplace/papercups-io/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/papercups-v2.svg",
+    "author": "Papercups.io",
+    "categories": [
+      "Customer Feedback",
+      "Office Productivity"
+    ],
+    "badges": [
+      "New & Noteworthy"
+    ],
+    "supported": false,
+    "github": "https://github.com/papercups-io/chat-widget",
+    "lastUpdated": "2021-11-03",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "image-cropper",
+    "name": "Image Cropper",
+    "description": "Crop images and screenshots while uploading them to a Mattermost message",
+    "href": "https://mattermost.com/marketplace/image-cropper/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Image-Cropper.webp",
+    "author": "@lapaz17",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/lapaz17/mattermost-image-cropper-plugin",
+    "lastUpdated": "2021-08-10",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.1.0"
+  },
+  {
+    "slug": "pagerduty",
+    "name": "PagerDuty Notifier",
+    "description": "Send events from PagerDuty to Mattermost",
+    "href": "https://mattermost.com/marketplace/pagerduty/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/I0OxyNb-_400x400.webp",
+    "author": "David John Coleman II, PagerDuty",
+    "categories": [
+      "Incident Response",
+      "Monitoring"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-05-04",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "cloudron-installer",
+    "name": "Cloudron Installer",
+    "description": "Install Mattermost in a few minutes on your server with Cloudron",
+    "href": "https://mattermost.com/marketplace/cloudron-installer/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo-1-1.webp",
+    "author": "Cloudron",
+    "categories": [
+      "Cloud"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-29",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "hybrid-chat",
+    "name": "Hybrid Chat",
+    "description": "Chat directly from Mattermost via any website, Facebook page or SMS",
+    "href": "https://mattermost.com/marketplace/hybrid-chat/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-May-06-14-53-00.webp",
+    "author": "Hybrid Chat",
+    "categories": [
+      "Customer Feedback",
+      "Service Desk"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-29",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "opsgenie",
+    "name": "Opsgenie",
+    "description": "Two-way integration to send updates, and acknowledge, close or assign issues",
+    "href": "https://mattermost.com/marketplace/opsgenie/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/drviLrV_400x400.webp",
+    "author": "Serhat Can, Opsgenie",
+    "categories": [
+      "Incident Response"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-29",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "puppet-module",
+    "name": "Puppet Module",
+    "description": "Install and configure Mattermost seamlessly with a Puppet module",
+    "href": "https://mattermost.com/marketplace/puppet-module/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Puppet.webp",
+    "author": "Richard Grainger",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-29",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "bitbucket-amplifier",
+    "name": "Bitbucket Connector by Herzum",
+    "description": "Configurable, bidirectional app to integrate Mattermost and Bitbucket",
+    "href": "https://mattermost.com/marketplace/bitbucket-amplifier/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Apr-26-10-29-03.webp",
+    "author": "Herzum",
+    "categories": [
+      "CI/CD",
+      "Source Control"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "cloudapp",
+    "name": "CloudApp Capture",
+    "description": "Record a screen, generate a GIF or create a screenshot, and share in Mattermost",
+    "href": "https://mattermost.com/marketplace/cloudapp/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/IZ25Z0O7VP6T-180x180-1.webp",
+    "author": "Charlie Pinto, CloudApp",
+    "categories": [
+      "Customer Feedback",
+      "Collaboration",
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "confluence-slack-draft",
+    "name": "Confluence Atlassian Connector",
+    "description": "Send and configure notifications from Confluence. Compatible with Mattermost",
+    "href": "https://mattermost.com/marketplace/confluence-slack-draft/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/5_z16TbH_400x400.webp",
+    "author": "codefortynine GmbH",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "dice-roller",
+    "name": "Dice Plugin",
+    "description": "Dice rolling plugin for Mattermost",
+    "href": "https://mattermost.com/marketplace/dice-roller/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Icon@2x-1.webp",
+    "author": "Chris Herborth",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Taffer/ca.taffer.mm-rolly",
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "unsplash",
+    "name": "ImageQuote",
+    "description": "Download a random image from Unsplash, adds a quote on top and posts to a Mattermost channel",
+    "href": "https://mattermost.com/marketplace/unsplash/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Unsplash.webp",
+    "author": "Markus Busche",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "jira-amplifier",
+    "name": "Jira Amplifier for Mattermost",
+    "description": "Configurable, bidirectional app to integrate Mattermost and Jira via the Atlassian Marketplace",
+    "href": "https://mattermost.com/marketplace/jira-amplifier/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Apr-26-10-29-03-2.webp",
+    "author": "Herzum",
+    "categories": [
+      "Planning",
+      "Service Desk"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "kopano",
+    "name": "Kopano Installer",
+    "description": "Install and update Mattermost via Kopano packages",
+    "href": "https://mattermost.com/marketplace/kopano/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Kopano.webp",
+    "author": "Felix Bartels",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "kopano-web-meetings",
+    "name": "Kopano Web Meetings",
+    "description": "Start voice and video calls embedded in Mattermost, based on the WebRTC protocol",
+    "href": "https://mattermost.com/marketplace/kopano-web-meetings/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Kopano-2.webp",
+    "author": "Kopano",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "laravel-logger",
+    "name": "Laravel Logger",
+    "description": "A driver that allows you to send your logs to Mattermost",
+    "href": "https://mattermost.com/marketplace/laravel-logger/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Laravel.webp",
+    "author": "Thibaud Dauce",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "new-channel-notify-plugin",
+    "name": "New Channel Notifier Plugin",
+    "description": "A plugin for Mattermost to notify all users about newly created channels",
+    "href": "https://mattermost.com/marketplace/new-channel-notify-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-9.webp",
+    "author": "thepill",
+    "categories": [
+      "Social",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "splunk-ingestion-script",
+    "name": "Splunk Ingestion Script",
+    "description": "A guide to integrate Splunk for Mattermost to analyze machine-generated big data",
+    "href": "https://mattermost.com/marketplace/splunk-ingestion-script/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-May-01-14-30-31.webp",
+    "author": "Christian Johannsen",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "zmm-mainframe-mattermost-integration",
+    "name": "ZMM (Mainframe Mattermost integration)",
+    "description": "Configurable app to send Mainframe z/OS SYSLOG data to any Mattermost channel",
+    "href": "https://mattermost.com/marketplace/zmm-mainframe-mattermost-integration/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screen-Shot-2020-08-18-at-7.58.35-AM.webp",
+    "author": "zdevops",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [
+      "New & Noteworthy"
+    ],
+    "supported": false,
+    "github": null,
+    "lastUpdated": "2021-04-01",
+    "lastUpdatedSource": "listing",
+    "version": null
+  },
+  {
+    "slug": "ansible-playbook-installer",
+    "name": "Ansible Playbook Installer",
+    "description": "This is an Ansible Playbook that installs a standalone version of Mattermost, which is an open-source Slack alternative. This playbook installs Mattermost version 4.3.2 (Team Edition) by default.",
+    "href": "https://mattermost.com/marketplace/ansible-playbook-installer/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Ansible.webp",
+    "author": "Tyler Tomlinson",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/tjtoml/mattermost-ansible",
+    "lastUpdated": "2021-03-31",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "circleci",
+    "name": "CircleCI",
+    "description": "CircleCI is a modern continuous integration and continuous delivery (CI/CD) platform.",
+    "href": "https://mattermost.com/marketplace/circleci/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/04/circleci-logo-stacked-fb-657e221fda1646a7e652c09c9fbfb2b0feb5d710089bb4d8e8c759d37a832694.webp",
+    "author": "Third-party",
+    "categories": [
+      "CI/CD",
+      "Source Control",
+      "QA and Testing"
+    ],
+    "badges": [
+      "New & Noteworthy",
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost-community/mattermost-plugin-circleci",
+    "lastUpdated": "2021-03-27",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.2.0"
+  },
+  {
+    "slug": "hide-spoilers",
+    "name": "Hide Spoilers",
+    "description": "Hide spoilers in messages with the option to reveal it with a hover or explicit button action.",
+    "href": "https://mattermost.com/marketplace/hide-spoilers/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Spoiler.webp",
+    "author": "Sven H\u00fcster",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/svelle/mattermost-spoiler-plugin",
+    "lastUpdated": "2021-03-26",
+    "lastUpdatedSource": "github-release",
+    "version": "0.1.0"
+  },
+  {
+    "slug": "php-driver-for-incoming-webhooks",
+    "name": "PHP Driver for Incoming Webhooks",
+    "description": "PHP driver to easily send incoming webhooks to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/php-driver-for-incoming-webhooks/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/PHP.webp",
+    "author": "Thibaud Dauce",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/ThibaudDauce/mattermost-php",
+    "lastUpdated": "2020-11-26",
+    "lastUpdatedSource": "github-release",
+    "version": "1.3.0"
+  },
+  {
+    "slug": "icebreaker",
+    "name": "Icebreaker",
+    "description": "Ask random icebreaker questions in a channel to get to know your colleagues better",
+    "href": "https://mattermost.com/marketplace/icebreaker/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Ice-Breaker.webp",
+    "author": "Nils Brinkmann",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/monsdar/mattermost-icebreaker-plugin",
+    "lastUpdated": "2020-11-21",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.2.2"
+  },
+  {
+    "slug": "link-list",
+    "name": "Link List",
+    "description": "Display up to 5 URL links in the main menu of Mattermost",
+    "href": "https://mattermost.com/marketplace/link-list/",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Link-List.webp",
+    "author": "Jens Willmer",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/jwillmer/mattermost-plugin-link-list",
+    "lastUpdated": "2020-11-18",
+    "lastUpdatedSource": "github-release",
+    "version": "0.1.0"
+  },
+  {
+    "slug": "walltime-plugin",
+    "name": "Walltime Plugin",
+    "description": "Convert timestamps to the user's timezone",
+    "href": "https://mattermost.com/marketplace/walltime-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_misc_ui_circular_platform-development@2x.webp",
+    "author": "Third-party",
+    "categories": [
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-walltime",
+    "lastUpdated": "2020-11-12",
+    "lastUpdatedSource": "github-release",
+    "version": "1.0.0"
+  },
+  {
+    "slug": "jenkins-plugin-2",
+    "name": "Jenkins Plugin",
+    "description": "A Jenkins plugin to interact with jobs and builds with slash commands",
+    "href": "https://mattermost.com/marketplace/jenkins-plugin-2/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Mar-15-12-51-10-2.webp",
+    "author": "Third-party",
+    "categories": [
+      "CI/CD",
+      "QA and Testing"
+    ],
+    "badges": [
+      "Popular"
+    ],
+    "supported": false,
+    "github": "https://github.com/mattermost/mattermost-plugin-jenkins",
+    "lastUpdated": "2020-06-19",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.1.0"
+  },
+  {
+    "slug": "mattercheck",
+    "name": "Mattercheck",
+    "description": "Script to post a Check_MK/OMD message to your Mattermost channel",
+    "href": "https://mattermost.com/marketplace/mattercheck/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-16.webp",
+    "author": "Accxia GmbH",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/accxiagmbh/mattercheck",
+    "lastUpdated": "2020-05-05",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "email-reply-plugin",
+    "name": "Mailermost Plugin",
+    "description": "Reply directly to a Mattermost email notification from your inbox",
+    "href": "https://mattermost.com/marketplace/email-reply-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_sso@2x-2.webp",
+    "author": "Daniel Schalla, Martin Kraft, Miguel de la Croix",
+    "categories": [
+      "Bridging Services",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/DSchalla/mailermost-plugin",
+    "lastUpdated": "2020-04-07",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.1.0"
+  },
+  {
+    "slug": "fedora",
+    "name": "Fedora",
+    "description": "RPM package for Fedora for easy install of the Mattermost Desktop App",
+    "href": "https://mattermost.com/marketplace/fedora/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Fedora.webp",
+    "author": "Agoston Szepessy",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/AgostonSzepessy/mattermost-desktop-rpm",
+    "lastUpdated": "2020-01-20",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "facebook",
+    "name": "Facebook",
+    "description": "Send Facebook notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/facebook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/flogo_rgb_hex-brc-site-250.webp",
+    "author": "\u0141ukasz Dziedziul",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/ldziedziul/matterbook",
+    "lastUpdated": "2020-01-12",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.5"
+  },
+  {
+    "slug": "migratemost",
+    "name": "Migratemost",
+    "description": "A set of Python scripts to migrate your Hipchat data to Mattermost",
+    "href": "https://mattermost.com/marketplace/migratemost/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-2.webp",
+    "author": "Steven Fluck, Ergon",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/ergon/migratemost",
+    "lastUpdated": "2020-01-10",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "saltstack-formula",
+    "name": "Saltstack Formula",
+    "description": "Saltstack formula that installs and configures Mattermost on most Linux systems",
+    "href": "https://mattermost.com/marketplace/saltstack-formula/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_84.webp",
+    "author": "Kolin Keane",
+    "categories": [
+      "CI/CD",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/kjkeane/mattermost-formula",
+    "lastUpdated": "2020-01-04",
+    "lastUpdatedSource": "github-release",
+    "version": "5.18.0"
+  },
+  {
+    "slug": "kopano-web-meetings-plugin",
+    "name": "Kopano Web Meetings Plugin",
+    "description": "WebRTC functionality to Mattermost with the help of Kopano Web Meetings",
+    "href": "https://mattermost.com/marketplace/kopano-web-meetings-plugin/",
+    "icon": "https://mattermost.com/wp-content/themes/mattermost-2021/frontend/dist/img/default-icon.svg",
+    "author": "Kopano",
+    "categories": [
+      "Video"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Kopano-dev/mattermost-plugin-kopanowebmeetings",
+    "lastUpdated": "2019-11-27",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.3.1"
+  },
+  {
+    "slug": "cloud-foundry",
+    "name": "Cloud Foundry Installer",
+    "description": "Integrate Mattermost into Cloud Foundry",
+    "href": "https://mattermost.com/marketplace/cloud-foundry/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Cloud-Foundry.webp",
+    "author": "Cloud Foundry Community",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cloudfoundry-community/mattermost-cf-integrator",
+    "lastUpdated": "2019-10-12",
+    "lastUpdatedSource": "github-release",
+    "version": "v5.15.1"
+  },
+  {
+    "slug": "watermark-plugin",
+    "name": "Watermark Plugin",
+    "description": "A plugin that adds a hidden custom watermark to uploaded images in Mattermost",
+    "href": "https://mattermost.com/marketplace/watermark-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-3-3.webp",
+    "author": "Scott Lee Davis",
+    "categories": [
+      "Collaboration"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/scottleedavis/mattermost-plugin-watermark",
+    "lastUpdated": "2019-09-08",
+    "lastUpdatedSource": "github-release",
+    "version": "0.1.0"
+  },
+  {
+    "slug": "matterhook",
+    "name": "Matterhook (Go Library)",
+    "description": "Go client for Mattermost webhooks",
+    "href": "https://mattermost.com/marketplace/matterhook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_open-source@2x-2.webp",
+    "author": "Nafis Faysal",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/nafisfaysal/matterhook",
+    "lastUpdated": "2019-07-26",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "replace-plugin",
+    "name": "Replace Plugin",
+    "description": "Sed-style replacement command to find and replace a string in a user's last post",
+    "href": "https://mattermost.com/marketplace/replace-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-14.webp",
+    "author": "Evan do Carmo",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/carmo-evan/mattermost-plugin-replace",
+    "lastUpdated": "2019-06-01",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.2.1"
+  },
+  {
+    "slug": "bosh",
+    "name": "Cloud Foundry BOSH Package",
+    "description": "Run Mattermost on BOSH in AWS, vSphere, GCE, Azure, OpenStack and more",
+    "href": "https://mattermost.com/marketplace/bosh/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo-full.webp",
+    "author": "Cloud Foundry Community",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cloudfoundry-community/mattermost-boshrelease",
+    "lastUpdated": "2019-05-16",
+    "lastUpdatedSource": "github-release",
+    "version": "v8.0.1"
+  },
+  {
+    "slug": "onelogin-notification-plugin",
+    "name": "OneLogin Notification Plugin",
+    "description": "Plugin that receives and posts notifications via OneLogin webhook to Mattermost",
+    "href": "https://mattermost.com/marketplace/onelogin-notification-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_85.webp",
+    "author": "Carlos Tadeu Panato Junior",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cpanato/mattermost-plugin-onelogin",
+    "lastUpdated": "2019-05-10",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.0.6"
+  },
+  {
+    "slug": "gyazo",
+    "name": "Gyazo Plugin",
+    "description": "Take screenshots, screen GIFs, take full page captures, and share in Mattermost",
+    "href": "https://mattermost.com/marketplace/gyazo/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Gyazo_logo.webp",
+    "author": "Sean Sackowitz",
+    "categories": [
+      "Collaboration",
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/seansackowitz/mattermost-plugin-gyazo",
+    "lastUpdated": "2019-05-06",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.1.0"
+  },
+  {
+    "slug": "draw-plugin",
+    "name": "Draw Plugin",
+    "description": "Plugin to include drawings directly in Mattermost",
+    "href": "https://mattermost.com/marketplace/draw-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-3-1.webp",
+    "author": "Jes\u00fas Espino",
+    "categories": [
+      "Collaboration",
+      "Office Productivity",
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/jespino/mattermost-plugin-draw",
+    "lastUpdated": "2019-05-02",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.0.4"
+  },
+  {
+    "slug": "analytics-plugin",
+    "name": "Analytics Plugin",
+    "description": "A plugin that displays usage metrics and basic analytics for your Mattermost instance",
+    "href": "https://mattermost.com/marketplace/analytics-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_open-source@2x-4.webp",
+    "author": "Romain Maneschi",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/manland/mattermost-plugin-analytics",
+    "lastUpdated": "2019-04-24",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "nextbus-plugin",
+    "name": "NextBus Plugin",
+    "description": "Plugin that helps you to check when the next bus is available using nextbus API",
+    "href": "https://mattermost.com/marketplace/nextbus-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_87.webp",
+    "author": "Carlos Tadeu Panato Junior",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/cpanato/mattermost-plugin-nextbus",
+    "lastUpdated": "2019-04-04",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.0.1"
+  },
+  {
+    "slug": "hipchat-import",
+    "name": "Varna Hipchat Import Tool",
+    "description": "Migrate Hipchat history to Mattermost",
+    "href": "https://mattermost.com/marketplace/hipchat-import/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-4.webp",
+    "author": "Anton Kiryushkin",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/swood/varna",
+    "lastUpdated": "2019-03-09",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "disable-dm-plugin",
+    "name": "DM Disable Plugin",
+    "description": "A Mattermost plugin to disable 1-1 direct messages and 1-to-many group messages",
+    "href": "https://mattermost.com/marketplace/disable-dm-plugin/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-8.webp",
+    "author": "Brightscout, Inc.",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Brightscout/mattermost-plugin-disable-dm",
+    "lastUpdated": "2019-03-04",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.0"
+  },
+  {
+    "slug": "api-v4-client-for-ruby",
+    "name": "API v4 Client for Ruby",
+    "description": "Mattermost APIv4 Client for Ruby",
+    "href": "https://mattermost.com/marketplace/api-v4-client-for-ruby/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/2000px-Ruby_logo.svg_-2.webp",
+    "author": "Takayuki Maruyama",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/maruTA-bis5/mattermost-api4-ruby",
+    "lastUpdated": "2019-01-26",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "chef-cookbook-installer",
+    "name": "Chef Cookbook Installer",
+    "description": "Chef Cookbook that installs and configures Mattermost",
+    "href": "https://mattermost.com/marketplace/chef-cookbook-installer/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/2000px-Chef_logo.svg_.webp",
+    "author": "David Duarte",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/ist-dsi/mattermost-cookbook",
+    "lastUpdated": "2018-09-24",
+    "lastUpdatedSource": "github-release",
+    "version": "v4.0.0"
+  },
+  {
+    "slug": "buttoncommander",
+    "name": "ButtonCommander (Powershell)",
+    "description": "Run various powershell scripts via custom slash commands in Mattermost",
+    "href": "https://mattermost.com/marketplace/buttoncommander/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Powershell.webp",
+    "author": "Alexey Korolev",
+    "categories": [
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/iUkka/ButtonCommander",
+    "lastUpdated": "2018-08-07",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "patter",
+    "name": "Patter \u2013 Terminal Output",
+    "description": "CLI tool that allows you to pipe any terminal output directly to Mattermost",
+    "href": "https://mattermost.com/marketplace/patter/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/download-2.webp",
+    "author": "Christopher Hranj",
+    "categories": [
+      "Monitoring",
+      "Developer Tools",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/brodan/patter",
+    "lastUpdated": "2018-07-29",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.2.1"
+  },
+  {
+    "slug": "kanboard",
+    "name": "Kanboard",
+    "description": "Post Kanboard notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/kanboard/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/13722943.webp",
+    "author": "Frederic Guillot, Kanboard",
+    "categories": [
+      "Collaboration",
+      "Planning"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/kanboard/plugin-mattermost",
+    "lastUpdated": "2018-07-04",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.0.5"
+  },
+  {
+    "slug": "video-preview-thumbnail-integration-with-ruby",
+    "name": "Video Preview Thumbnail Integration with Ruby",
+    "description": "Generates preview images containing frames of a video file",
+    "href": "https://mattermost.com/marketplace/video-preview-thumbnail-integration-with-ruby/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/2000px-Ruby_logo.svg_.webp",
+    "author": "Paul Rothrock",
+    "categories": [
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/icelander/mattermost-video-preview",
+    "lastUpdated": "2018-02-15",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "redash",
+    "name": "Redash Dashboards",
+    "description": "Connect and query your data sources to visualize data and share in Mattermost",
+    "href": "https://mattermost.com/marketplace/redash/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/10746780.webp",
+    "author": "Yusuke Nemoto",
+    "categories": [
+      "Monitoring",
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/kaakaa/matter-redash",
+    "lastUpdated": "2018-02-02",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "random-on-fire",
+    "name": "RandomOnFire",
+    "description": "Randomize choices between different proposals with Firebase Realtime Database",
+    "href": "https://mattermost.com/marketplace/random-on-fire/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/touchicon-180-4.webp",
+    "author": "Matthieu Brouillard",
+    "categories": [
+      "Social"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/McFoggy/RandomOnFire",
+    "lastUpdated": "2018-01-30",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "outlook",
+    "name": "Microsoft Outlook Emails",
+    "description": "Forward emails from Microsoft Outlook to Mattermost",
+    "href": "https://mattermost.com/marketplace/outlook/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Outlook.webp",
+    "author": "Markus Mueller",
+    "categories": [
+      "Bridging Services",
+      "Collaboration",
+      "Office Productivity"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/makmu/outlook-matters",
+    "lastUpdated": "2017-12-30",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.0.0"
+  },
+  {
+    "slug": "the-bug-genie",
+    "name": "The Bug Genie",
+    "description": "Post updates from The Bug Genie issue tracker to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/the-bug-genie/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/download.webp",
+    "author": "Mario Steinitz, Shoreless",
+    "categories": [
+      "Source Control",
+      "Planning",
+      "QA and Testing",
+      "Service Desk"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/shoreless-ltd/tbg-mattermost",
+    "lastUpdated": "2017-06-22",
+    "lastUpdatedSource": "github",
+    "version": null
+  },
+  {
+    "slug": "php-driver-for-web-service-api",
+    "name": "PHP Driver for Mattermost API v4",
+    "description": "PHP driver to interact with the Mattermost Web Service API",
+    "href": "https://mattermost.com/marketplace/php-driver-for-web-service-api/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/PHP-2.webp",
+    "author": "Luca Agnello",
+    "categories": [
+      "Developer Tools"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/gnello/php-mattermost-driver",
+    "lastUpdated": "2017-04-25",
+    "lastUpdatedSource": "github-release",
+    "version": "v1.3.0"
+  },
+  {
+    "slug": "heroku",
+    "name": "Heroku Deployment",
+    "description": "Run mattermost on Heroku with an Nginx reverse proxy",
+    "href": "https://mattermost.com/marketplace/heroku/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Heroku.webp",
+    "author": "Christopher De Cairos",
+    "categories": [
+      "Cloud",
+      "Deployment",
+      "Utilities"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/mozilla/mattermost-heroku",
+    "lastUpdated": "2017-04-23",
+    "lastUpdatedSource": "github-release",
+    "version": "v2.0.1"
+  },
+  {
+    "slug": "cisco-syslog",
+    "name": "Cisco Syslog",
+    "description": "Send Cisco config changes to Mattermost channels in real-time",
+    "href": "https://mattermost.com/marketplace/cisco-syslog/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Cisco-Logo-1-1.webp",
+    "author": "Wim",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/42wim/csm",
+    "lastUpdated": "2016-08-15",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.1.0"
+  },
+  {
+    "slug": "nagios",
+    "name": "Nagios",
+    "description": "Send Nagios notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/nagios/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Nagios-Logo.webp",
+    "author": "Ndrive",
+    "categories": [
+      "Monitoring"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/NDrive/nagios-mattermost",
+    "lastUpdated": "2016-05-31",
+    "lastUpdatedSource": "github-release",
+    "version": "0.2.0"
+  },
+  {
+    "slug": "homebrew-cask",
+    "name": "Homebrew Cask",
+    "description": "A CLI workflow to administer Mattermost MacOS Desktop App",
+    "href": "https://mattermost.com/marketplace/homebrew-cask/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Homebrew-Cask.webp",
+    "author": "Homebrew",
+    "categories": [
+      "Deployment"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/Homebrew/homebrew-cask",
+    "lastUpdated": "2016-01-11",
+    "lastUpdatedSource": "github-release",
+    "version": "v0.60.1"
+  },
+  {
+    "slug": "sentry",
+    "name": "Sentry",
+    "description": "Send Sentry notifications to Mattermost channels",
+    "href": "https://mattermost.com/marketplace/sentry/",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/download-3.webp",
+    "author": "NDrive",
+    "categories": [
+      "Monitoring",
+      "Security"
+    ],
+    "badges": [],
+    "supported": false,
+    "github": "https://github.com/NDrive/sentry-mattermost",
+    "lastUpdated": "2015-12-11",
+    "lastUpdatedSource": "github-release",
+    "version": "0.0.1"
+  }
+]
