@@ -303,8 +303,8 @@ export function ContactSalesPage() {
     }
     detectCountry().then((found) => {
       if (cancelled || !found) return;
-      setCountry((prev) => prev || found);
-      setSpecialist((prev) => prev || specialistForCountry(found));
+      setCountry(found);
+      setSpecialist((prev) => (specialistLocked ? prev : specialistForCountry(found)));
       setRegionHint(`Suggested from your location (${found}). Change if this isn’t the right team.`);
     });
     return () => {
