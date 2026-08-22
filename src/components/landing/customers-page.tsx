@@ -159,9 +159,7 @@ export function CustomersPage() {
                 return (
                   <a
                     key={s.slug}
-                    href={s.href}
-                    target="_blank"
-                    rel="noreferrer"
+                    href={`#/customers/${s.slug}`}
                     className="group flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-white shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-[var(--color-denim)]/30 hover:shadow-lg"
                   >
                     <div className="aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">

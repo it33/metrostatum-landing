@@ -36,7 +36,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "Air Mobility Command case study — ChatOps for the largest-ever readiness exercise",
           imageCaption:
             "From the Air Mobility Command customer story: 15,000+ forces coordinated with Mattermost ChatOps.",
-          link: { label: "Read the AMC story", href: "https://mattermost.com/customers/air-mobility-command/" },
+          link: { label: "Read the AMC story", href: "#/customers/air-mobility-command" },
         },
         {
           id: "government",
@@ -51,7 +51,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "European public agency case study — sovereign collaboration with Mattermost and Pexip",
           imageCaption:
             "From the European public agency customer story: agency-controlled messaging with data residency.",
-          link: { label: "Read the agency story", href: "https://mattermost.com/customers/european-public-agency/" },
+          link: { label: "Read the agency story", href: "#/customers/european-public-agency" },
         },
         {
           id: "law-enforcement",
@@ -65,7 +65,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "Pramacom case study — secure emergency communications",
           imageCaption:
             "From the Pramacom customer story: modernized secure communications for public-safety operations.",
-          link: { label: "Read the Pramacom story", href: "https://mattermost.com/customers/pramacom/" },
+          link: { label: "Read the Pramacom story", href: "#/customers/pramacom" },
         },
         {
           id: "energy-utilities",
@@ -79,7 +79,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "RTE case study — France’s power grid operations",
           imageCaption:
             "From the RTE customer story: Mattermost for France’s transmission grid and faster outage response.",
-          link: { label: "Read the RTE story", href: "https://mattermost.com/customers/rte/" },
+          link: { label: "Read the RTE story", href: "#/customers/rte" },
         },
         {
           id: "manufacturing",
@@ -93,7 +93,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "Fairphone case study — manufacturing collaboration",
           imageCaption:
             "From the Fairphone customer story: plant and engineering teams collaborating without consumer-cloud IP risk.",
-          link: { label: "Read the Fairphone story", href: "https://mattermost.com/customers/fairphone/" },
+          link: { label: "Read the Fairphone story", href: "#/customers/fairphone" },
         },
         {
           id: "financial-services",
@@ -107,7 +107,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "Worldline case study — global financial-services collaboration",
           imageCaption:
             "From the Worldline customer story: 3,000 employees and 500+ teams on self-hosted Mattermost.",
-          link: { label: "Read the Worldline story", href: "https://mattermost.com/customers/worldline/" },
+          link: { label: "Read the Worldline story", href: "#/customers/worldline" },
         },
         {
           id: "technology",
@@ -121,7 +121,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "CERN case study — research collaboration at scale",
           imageCaption:
             "From the CERN customer story: 22,000 users and 100+ tools on self-hosted Mattermost.",
-          link: { label: "Read the CERN story", href: "https://mattermost.com/customers/cern/" },
+          link: { label: "Read the CERN story", href: "#/customers/cern" },
         },
       ],
     },

@@ -377,7 +377,7 @@ function PlatformOverviewCarousel() {
             type="button"
             aria-label="Next capability"
             onClick={() => scrollByCard(1)}
-            className="absolute right-0 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex""
+            className="absolute right-0 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex"
           >
             <ChevronRight className="size-5" />
           </button>

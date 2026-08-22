@@ -10,6 +10,7 @@ import {
   type TopNavItem,
 } from "@/nav-config";
 import { currentRoute, matchNav, type Crumb, type NavItemLike } from "@/lib/nav-active";
+import { CUSTOMER_STORIES } from "@/data/customer-stories";
 
 const base = import.meta.env.BASE_URL;
 const HOME = "#/";
@@ -58,7 +59,18 @@ function useActiveNav() {
   }, []);
 
   const route = currentRoute("/", hash);
-  return matchNav(TOP_NAV.map(asLike), route, HOME);
+  const matched = matchNav(TOP_NAV.map(asLike), route, HOME);
+  const slug = hash.replace(/^#\/?/, "").match(/^customers\/([^/?#]+)/)?.[1];
+  if (slug) {
+    const story = CUSTOMER_STORIES.find((s) => s.slug === slug);
+    if (story && !matched.crumbs.some((c) => c.label === story.name)) {
+      matched.crumbs = [
+        ...matched.crumbs,
+        { label: story.name, href: `#/customers/${slug}` },
+      ];
+    }
+  }
+  return matched;
 }
 
 function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
