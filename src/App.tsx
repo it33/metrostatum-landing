@@ -40,7 +40,7 @@ export function App() {
     const onHash = () => {
       const next = getRoutePath();
       setPath((prev) => {
-        if (splitRoute(prev).root !== splitRoute(next).root) {
+        if (prev !== next) {
           window.scrollTo(0, 0);
         }
         return next;

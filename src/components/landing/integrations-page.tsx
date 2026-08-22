@@ -1,8 +1,7 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
-import { useHashScroll } from "./use-hash-scroll";
 import { cn } from "@/lib/utils";
 import {
   MARKETPLACE,
@@ -13,9 +12,12 @@ import {
 } from "@/data/marketplace";
 
 export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean }) {
-  useHashScroll();
   const [category, setCategory] = useState("All");
   const hrefFor = (slug: string) => (hashRoutes ? `#/integrations/${slug}` : `/integrations/${slug}`);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
 
   const filtered = useMemo(() => {
     return MARKETPLACE.filter((i) => {

@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { useEffect } from "react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { CONTACT_SALES } from "@/nav-config";
@@ -20,6 +21,10 @@ export function IntegrationDetailPage({
   const item = getIntegration(slug);
   const listHref = hashRoutes ? "#/integrations" : "/integrations";
   const hrefFor = (s: string) => (hashRoutes ? `#/integrations/${s}` : `/integrations/${s}`);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [slug]);
 
   if (!item) {
     return (
