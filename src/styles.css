@@ -172,7 +172,7 @@
   .staging-banner__track {
     display: flex;
     width: max-content;
-    animation: staging-banner-scroll 48s linear infinite;
+    animation: staging-banner-scroll 120s linear infinite;
   }
   .staging-banner__track span {
     padding-inline: 1.5rem;
