@@ -297,36 +297,36 @@ export function SectionPage({ content, rest }: { content: SectionPageContent; re
           }}
           aria-hidden
         />
-        <div className="container-page relative py-16 md:py-24">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
-              {content.eyebrow}
-            </p>
-            <h1 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl md:leading-[1.12]">
-              {content.title}
-            </h1>
-            <div className="mx-auto mt-6 h-px w-24 bg-[var(--color-marigold)]" />
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-              {content.subtitle}
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href={CONTACT_SALES}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-11 items-center gap-2 rounded-md bg-[var(--color-marigold)] px-5 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)]"
-              >
-                Talk to an expert
-                <ArrowRight className="size-4" />
-              </a>
-              {content.sections[0] ? (
+        <div className="container-page relative py-8 md:py-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+            <div className="max-w-3xl">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--color-marigold)]">
+                {content.eyebrow}
+              </p>
+              <h1 className="mt-2 text-balance font-display text-[1.85rem] font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[2.4rem]">
+                {content.title}
+              </h1>
+              <div className="mt-3 h-[3px] w-14 rounded-full bg-[var(--color-marigold)]" />
+            </div>
+            <div className="max-w-xl shrink-0 lg:pb-1">
+              <p className="text-[15px] leading-relaxed text-white/85">{content.subtitle}</p>
+              <div className="mt-4 flex flex-wrap gap-2.5">
                 <a
-                  href={hashHref(content.route, content.sections[0].id)}
-                  className="inline-flex h-11 items-center rounded-md border border-white/30 px-5 text-sm font-semibold text-white transition hover:bg-white/10"
+                  href={CONTACT_SALES}
+                  className="inline-flex h-10 items-center gap-2 rounded-md bg-[var(--color-marigold)] px-4 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)]"
                 >
-                  Explore {content.eyebrow.toLowerCase()}
+                  Talk to an expert
+                  <ArrowRight className="size-4" />
                 </a>
-              ) : null}
+                {content.sections[0] ? (
+                  <a
+                    href={hashHref(content.route, content.sections[0].id)}
+                    className="inline-flex h-10 items-center rounded-md border border-white/30 px-4 text-sm font-semibold text-white transition hover:bg-white/10"
+                  >
+                    Explore {content.eyebrow.toLowerCase()}
+                  </a>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
