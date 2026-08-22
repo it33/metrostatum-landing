@@ -121,14 +121,15 @@ function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
   );
 }
 
-const navItemClass = (active: boolean, open: boolean) =>
+const navHover =
+  "hover:bg-[color-mix(in_oklab,var(--color-marigold)_52%,white)] hover:text-[var(--color-denim)]";
+const navLit = "bg-[color-mix(in_oklab,var(--color-marigold)_52%,white)] text-[var(--color-denim)]";
+
+const navItemClass = (active: boolean, highlighted: boolean) =>
   cn(
-    "relative inline-flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-[15px] font-medium transition-colors",
-    active
-      ? "font-semibold text-[var(--color-denim)]"
-      : open
-        ? "bg-[var(--color-bg-subtle)] text-[var(--color-denim)]"
-        : "text-[var(--color-black)]/90 hover:bg-[var(--color-bg-subtle)] hover:text-[var(--color-denim)]",
+    "relative inline-flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-[15px] font-medium transition-colors duration-150",
+    active ? "font-semibold text-[var(--color-denim)]" : "text-[var(--color-black)]/90",
+    highlighted ? navLit : navHover,
     active &&
       "after:absolute after:inset-x-3 after:bottom-0 after:h-[3px] after:rounded-full after:bg-[var(--color-marigold)]",
   );
@@ -276,7 +277,14 @@ function DesktopNavItem({
       onMouseEnter={() => openMenu(item.label)}
       onMouseLeave={scheduleClose}
     >
-      <div className="inline-flex items-center">
+      <div
+        className={cn(
+          "inline-flex items-center rounded-md transition-colors duration-150",
+          isOpen && navLit,
+          !isOpen &&
+            "hover:bg-[color-mix(in_oklab,var(--color-marigold)_52%,white)] hover:text-[var(--color-denim)]",
+        )}
+      >
         <a href={overview} aria-current={active ? "page" : undefined} className={navItemClass(active, isOpen)}>
           {item.label}
         </a>
