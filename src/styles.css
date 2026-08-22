@@ -156,6 +156,32 @@
     to { transform: translateX(-50%); }
   }
 
+  .staging-banner {
+    height: 26px;
+    overflow: hidden;
+    background: var(--color-marigold);
+    color: var(--color-denim);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 26px;
+    white-space: nowrap;
+    border-bottom: 1px solid color-mix(in oklab, var(--color-denim) 18%, transparent);
+  }
+  .staging-banner__track {
+    display: flex;
+    width: max-content;
+    animation: staging-banner-scroll 48s linear infinite;
+  }
+  .staging-banner__track span {
+    padding-inline: 1.5rem;
+  }
+  @keyframes staging-banner-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
   .customer-card__logo {
     display: flex;
     height: 2rem;
@@ -474,7 +500,8 @@
     .logo-marquee__viewport,
     .product-marquee__track,
     .byom-marquee__viewport,
-    .principles-marquee__track { animation: none !important; }
+    .principles-marquee__track,
+    .staging-banner__track { animation: none !important; }
     .ime-pan, .ime-mask { transition: none; }
   }
 }

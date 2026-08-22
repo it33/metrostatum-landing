@@ -11,6 +11,7 @@ import {
 } from "@/nav-config";
 import { currentRoute, matchNav, type Crumb, type NavItemLike } from "@/lib/nav-active";
 import { CUSTOMER_STORIES } from "@/data/customer-stories";
+import { StagingBanner } from "./staging-banner";
 
 const base = import.meta.env.BASE_URL;
 const HOME = "#/";
@@ -151,6 +152,7 @@ export function SiteHeader() {
         scrolled && "shadow-[0_1px_0_rgba(30,50,92,0.08),0_8px_24px_rgba(30,50,92,0.06)]",
       )}
     >
+      <StagingBanner />
       <div className="border-b border-[color-mix(in_oklab,#1e325c_12%,transparent)]">
         <div className="mx-auto flex min-h-[72px] max-w-[1200px] flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2 sm:px-6 lg:px-8">
           <a href="#/" className="mr-2 flex shrink-0 items-center lg:mr-4" aria-label="Mattermost home">
