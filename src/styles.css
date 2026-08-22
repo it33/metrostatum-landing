@@ -92,6 +92,74 @@
     z-index: 2;
   }
 
+  .intg-marquee {
+    position: relative;
+    width: 100%;
+    height: 72px;
+    overflow: hidden;
+    background: #ffffff;
+    border-bottom: 1px solid color-mix(in oklab, #1e325c 12%, transparent);
+  }
+  .intg-marquee__viewport {
+    display: flex;
+    width: max-content;
+    height: 72px;
+    align-items: center;
+    animation: intg-marquee-scroll var(--intg-duration, 140s) linear infinite;
+  }
+  .intg-marquee:hover .intg-marquee__viewport { animation-play-state: paused; }
+  .intg-marquee__track {
+    display: flex;
+    height: 72px;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0 1.25rem;
+    list-style: none;
+  }
+  .intg-marquee__item { flex-shrink: 0; }
+  .intg-marquee__link {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid color-mix(in oklab, #1e325c 12%, transparent);
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .intg-marquee__link:hover {
+    border-color: color-mix(in oklab, #1e325c 35%, transparent);
+    box-shadow: 0 4px 12px rgba(30, 50, 92, 0.1);
+  }
+  .intg-marquee__img {
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+  .intg-marquee__fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: min(5rem, 12vw);
+    pointer-events: none;
+  }
+  .intg-marquee__fade--left {
+    left: 0;
+    background: linear-gradient(90deg, #ffffff, transparent);
+  }
+  .intg-marquee__fade--right {
+    right: 0;
+    background: linear-gradient(270deg, #ffffff, transparent);
+  }
+  @keyframes intg-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
   .logo-marquee {
     position: relative;
     width: 100%;
@@ -527,7 +595,8 @@
     .principles-marquee__track,
     .staging-banner__track,
     .image-pan-y,
-    .image-pan-y-fade { animation: none !important; }
+    .image-pan-y-fade,
+    .intg-marquee__viewport { animation: none !important; }
     .ime-pan, .ime-mask { transition: none; }
   }
 }

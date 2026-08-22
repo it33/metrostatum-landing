@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
+import { IntegrationLogoMarquee } from "./integration-logo-marquee";
 import { cn } from "@/lib/utils";
 import {
   MARKETPLACE,
@@ -78,6 +79,8 @@ export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean 
           </div>
         </div>
       </section>
+
+      <IntegrationLogoMarquee hrefFor={hrefFor} />
 
       <section className="border-b border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-6">
         <div className="container-page">
