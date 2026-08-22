@@ -75,7 +75,9 @@ export function AboutPage() {
           <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
             How we lead, decide, and deliver for the operators who depend on us.
           </p>
-          <PrinciplesMarquee />
+          <div className="mt-12">
+            <PrinciplesMarquee />
+          </div>
         </div>
       </section>
 
