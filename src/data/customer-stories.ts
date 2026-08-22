@@ -77,7 +77,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "european-public-agency",
     name: "European public agency",
-    title: "European public agency chooses Mattermost & Pexip for secure collaboration",
+    title: "European public agency chooses Mattermost & Pexip for secure collaboration, replacing Skype for Business",
     industry: "Defense & government",
     image:
       "https://mattermost.com/wp-content/uploads/2025/09/Swedish-Pension-FundHero-Horzontal.jpg",
@@ -97,7 +97,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "turk-telekom",
     name: "Türk Telekom",
-    title: "Türk Telekom's SOC team eliminated tool fragmentation and boosted productivity by 40%",
+    title: "How Türk Telekom’s SOC Team Eliminated Tool Fragmentation and Boosted Productivity by 40% with Mattermost",
     industry: "Critical infrastructure",
     metric: "40% productivity boost",
     image: "https://mattermost.com/wp-content/uploads/2026/07/Turk_Study-Hero-Horzontal.jpg",
@@ -116,7 +116,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "fujitsu",
     name: "Fujitsu",
-    title: "Fujitsu customers with Biodrug Design Accelerator use Mattermost for collaboration",
+    title: "Fujitsu Customers with Biodrug Design Accelerator (BDA) use Mattermost to power secure collaboration",
     industry: "Enterprise & finance",
     metric: "Self-hosted R&D control",
     image: "https://mattermost.com/wp-content/uploads/2024/03/Case_Study_Fujitsu.webp",
@@ -137,7 +137,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "worldline",
     name: "Worldline",
-    title: "Worldline creates a collaborative culture for a global team with Mattermost",
+    title: "Worldline creates a collaborative culture to a global team with Mattermost",
     industry: "Enterprise & finance",
     metric: "3,000 employees · 500+ teams",
     image:
@@ -148,7 +148,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "tulip",
     name: "Tulip",
-    title: "Elevating retail resilience: Tulip slashed incident response times by 50–60%",
+    title: "Elevating retail resilience: How Tulip slashed incident response times by 50% to 60% with Mattermost",
     industry: "Enterprise & finance",
     metric: "50–60% faster IR",
     image: "https://mattermost.com/wp-content/uploads/2024/05/Case_Study_Tulip.webp",
@@ -158,7 +158,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "classact",
     name: "Classact",
-    title: "Classact speeds up IT service delivery, accelerating incident response by over 50%",
+    title: "Classact speeds up IT service delivery by consolidating comms, accelerating incident response by over 50%",
     industry: "Enterprise & finance",
     metric: "50%+ faster IR",
     image: "https://mattermost.com/wp-content/uploads/2024/07/Case_Study_Classact.webp",
@@ -189,7 +189,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "rocky-linux",
     name: "Rocky Linux",
-    title: "Rocky Linux builds community collaboration with Mattermost",
+    title: "Rocky Linux gives 5,000 open source contributors a collaboration hub with Mattermost",
     industry: "Research & open source",
     image: "https://mattermost.com/wp-content/uploads/2021/10/Rocky-Linux-Cover.webp",
     href: "https://mattermost.com/customers/rocky-linux/",
@@ -208,7 +208,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "heidelberg-university",
     name: "Heidelberg University",
-    title: "Heidelberg University accelerates research collaboration with Mattermost",
+    title: "Heidelberg University keeps research teams moving forward with Mattermost",
     industry: "Research & open source",
     image:
       "https://mattermost.com/wp-content/uploads/2022/03/Case_Study_University_of_Heidelberg.webp",
@@ -218,7 +218,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "max-planck-digital-library",
     name: "Max Planck Digital Library",
-    title: "Max Planck Digital Library chooses Mattermost for secure research collaboration",
+    title: "The Max Planck Digital Library uses Mattermost to accelerate research workflows, maintain data sovereignty & ensure compliance",
     industry: "Research & open source",
     image: "https://mattermost.com/wp-content/uploads/2024/02/Case_Study_MaxPlanck.webp",
     href: "https://mattermost.com/customers/max-planck-digital-library/",
@@ -286,7 +286,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "netfoundry",
     name: "NetFoundry",
-    title: "NetFoundry builds zero-trust collaboration workflows with Mattermost",
+    title: "NetFoundry uses Mattermost with OpenZiti for zero trust internal and external communications",
     industry: "Technology",
     image: "https://mattermost.com/wp-content/uploads/2024/01/Case_Study_NetFoundry@2x.webp",
     href: "https://mattermost.com/customers/netfoundry/",
@@ -295,7 +295,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "medincell",
     name: "MedinCell",
-    title: "MedinCell enables secure collaborative drug development with Mattermost",
+    title: "MedinCell gives pharmaceutical researchers a secure collaboration workspace with Mattermost",
     industry: "Technology",
     image:
       "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-MedinCell-secure-collaborative-drug-development.webp",
@@ -314,7 +314,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "pramacom",
     name: "Pramacom",
-    title: "Pramacom modernizes secure communications with Mattermost",
+    title: "Pramacom uses Mattermost to accelerate workflows & keep Czech citizens safe",
     industry: "Technology",
     image: "https://mattermost.com/wp-content/uploads/2023/07/Case_Study_Pramacom.webp",
     href: "https://mattermost.com/customers/pramacom/",
@@ -323,7 +323,7 @@ export const CUSTOMER_STORIES: CustomerStory[] = [
   {
     slug: "galois",
     name: "Galois",
-    title: "Galois chooses Mattermost for high-assurance engineering collaboration",
+    title: "Galois stays in control of company data without compromising on collaboration with Mattermost",
     industry: "Technology",
     image:
       "https://mattermost.com/wp-content/uploads/2021/08/mattermost-customers-Galois-collaborate-worldwide-retaining-data-control-security.webp",
