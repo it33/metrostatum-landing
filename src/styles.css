@@ -192,14 +192,75 @@
     transition: opacity 0.35s ease;
   }
 
+  .principles-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-block: 0.25rem 0.5rem;
+  }
+  .principles-marquee__track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    padding-inline: 1.25rem;
+    align-items: stretch;
+    animation: principles-marquee-scroll 55s linear infinite;
+  }
+  .principles-marquee:hover .principles-marquee__track {
+    animation-play-state: paused;
+  }
+  @keyframes principles-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .principles-marquee__fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: min(3.5rem, 8vw);
+    pointer-events: none;
+  }
+  .principles-marquee__fade--left {
+    left: 0;
+    background: linear-gradient(90deg, var(--color-bg-elevated), transparent);
+  }
+  .principles-marquee__fade--right {
+    right: 0;
+    background: linear-gradient(270deg, var(--color-bg-elevated), transparent);
+  }
   .principles-marquee__card {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
-    width: min(280px, 78vw);
+    width: min(320px, 78vw);
+    overflow: hidden;
     border-radius: var(--radius-xl);
     border: 1px solid var(--color-border);
     background: var(--color-surface);
-    padding: 1.25rem 1.35rem;
     box-shadow: var(--shadow-card);
+  }
+  .principles-marquee__card--denim { border-color: color-mix(in oklab, var(--color-denim) 28%, transparent); }
+  .principles-marquee__card--marigold { border-color: color-mix(in oklab, var(--color-marigold) 55%, var(--color-border)); }
+  .principles-marquee__card--surface { background: var(--color-bg-elevated); }
+  .principles-marquee__card--outline { border-width: 2px; }
+  .principles-marquee__card--slate { background: #f7f8fb; }
+  .principles-marquee__media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--color-denim);
+  }
+  .principles-marquee__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .principles-marquee__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.05rem 1.2rem 1.2rem;
   }
   .principles-marquee__index {
     font-size: 0.7rem;
@@ -209,12 +270,18 @@
     color: var(--color-marigold);
   }
   .principles-marquee__title {
-    margin: 0.35rem 0 0;
-    font-size: 1.05rem;
+    margin: 0;
+    font-size: 1.08rem;
     font-weight: 700;
     letter-spacing: -0.01em;
     line-height: 1.25;
     color: var(--color-denim);
+  }
+  .principles-marquee__body {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--color-fg-muted);
   }
 
   /* Snap carousel — side arrows only, no scrollbar, no dots */
@@ -406,7 +473,8 @@
   @media (prefers-reduced-motion: reduce) {
     .logo-marquee__viewport,
     .product-marquee__track,
-    .byom-marquee__viewport { animation: none !important; }
+    .byom-marquee__viewport,
+    .principles-marquee__track { animation: none !important; }
     .ime-pan, .ime-mask { transition: none; }
   }
 }

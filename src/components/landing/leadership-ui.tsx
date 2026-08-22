@@ -1,37 +1,75 @@
 import type { Leader } from "./leadership-types";
 import { PRINCIPLES } from "./leadership-data";
 import { LeaderCard } from "./leader-card";
-import { SnapCarousel } from "./snap-carousel";
+
+const base = import.meta.env.BASE_URL;
 
 function PrincipleCard({
   title,
   body,
   variant,
+  image,
+  index,
+  hidden,
 }: {
   title: string;
   body: string;
   variant: (typeof PRINCIPLES)[number]["variant"];
+  image: string;
+  index: number;
+  hidden?: boolean;
 }) {
   return (
-    <article className={`principles-marquee__card principles-marquee__card--${variant}`}>
-      <span className="principles-marquee__index" aria-hidden>
-        {String(PRINCIPLES.findIndex((p) => p.title === title) + 1).padStart(2, "0")}
-      </span>
-      <h3 className="principles-marquee__title">{title}</h3>
-      <p className="principles-marquee__body">{body}</p>
+    <article
+      className={`principles-marquee__card principles-marquee__card--${variant}`}
+      aria-hidden={hidden || undefined}
+    >
+      <div className="principles-marquee__media">
+        <img src={`${base}${image}`} alt="" />
+      </div>
+      <div className="principles-marquee__copy">
+        <span className="principles-marquee__index" aria-hidden>
+          {String(index).padStart(2, "0")}
+        </span>
+        <h3 className="principles-marquee__title">{title}</h3>
+        <p className="principles-marquee__body">{body}</p>
+      </div>
     </article>
   );
 }
 
 export function PrinciplesMarquee() {
-  return (
-    <SnapCarousel
-      label="Leadership principles"
-      autoMs={8000}
-      items={PRINCIPLES.map((p) => (
-        <PrincipleCard key={p.title} title={p.title} body={p.body} variant={p.variant} />
-      ))}
+  const cards = PRINCIPLES.map((p, i) => (
+    <PrincipleCard
+      key={p.title}
+      title={p.title}
+      body={p.body}
+      variant={p.variant}
+      image={p.image}
+      index={i + 1}
     />
+  ));
+  const clones = PRINCIPLES.map((p, i) => (
+    <PrincipleCard
+      key={`clone-${p.title}`}
+      title={p.title}
+      body={p.body}
+      variant={p.variant}
+      image={p.image}
+      index={i + 1}
+      hidden
+    />
+  ));
+
+  return (
+    <div className="principles-marquee" role="region" aria-label="Leadership principles">
+      <div className="principles-marquee__fade principles-marquee__fade--left" aria-hidden />
+      <div className="principles-marquee__fade principles-marquee__fade--right" aria-hidden />
+      <div className="principles-marquee__track">
+        {cards}
+        {clones}
+      </div>
+    </div>
   );
 }
 

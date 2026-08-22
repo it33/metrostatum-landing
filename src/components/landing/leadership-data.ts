@@ -7,26 +7,31 @@ export const PRINCIPLES = [
     title: "Customer obsession",
     body: "We exist to make customers successful. In everything we do, we start with the customer's perspective and work backwards.",
     variant: "denim" as const,
+    image: "images/principles/customer-obsession.jpg",
   },
   {
     title: "Ownership",
     body: "We own the outcomes of our activities. When we see a vacuum on something important, we jump in.",
     variant: "marigold" as const,
+    image: "images/principles/ownership.jpg",
   },
   {
     title: "Self awareness",
     body: "We seek to understand our strengths and growth opportunities. We are open to feedback and share our ideas constructively and respectfully.",
     variant: "surface" as const,
+    image: "images/principles/self-awareness.jpg",
   },
   {
     title: "High impact",
     body: "We align our work to our shared vision and stay focused on top priorities.",
     variant: "outline" as const,
+    image: "images/principles/high-impact.jpg",
   },
   {
     title: "Earn trust",
     body: "We make to maximize the trust of others in our judgments. We are open, self-critical, and factual.",
     variant: "slate" as const,
+    image: "images/principles/earn-trust.jpg",
   },
 ] as const;
 
@@ -36,7 +41,7 @@ export const EXECUTIVE: Leader[] = [
     title: "CEO & Co-Founder, Mattermost, Inc.",
     initials: "IT",
     vanity: "iantien",
-    photo: "https://unavatar.io/linkedin/iantien",
+    photo: LEADER_PHOTOS["iantien"],
     bio: "Leads Mattermost, Inc. global parent company delivering sovereign collaboration, automation and AI solutions for national security and critical infrastructure enterprises. Former product leader for Microsoft Office and OneDrive with a dozen patents in Microsoft technologies. Engineering degrees from the University of Waterloo and Cornell University; Stanford MBA. U.S.-Canada dual citizen.",
   },
   {
@@ -44,7 +49,7 @@ export const EXECUTIVE: Leader[] = [
     title: "CEO, Mattermost Federal, Inc. & Co-Founder, Mattermost, Inc.",
     initials: "CH",
     vanity: "coreyhulen",
-    photo: "https://unavatar.io/linkedin/coreyhulen",
+    photo: LEADER_PHOTOS["coreyhulen"],
     bio: "Leads the U.S. federal subsidiary with TS/SCI clearance serving Department of War and intelligence community customers. CTO Emeritus and Co-Founder of Mattermost. Founded Tempo AI (acquired by Salesforce); former Microsoft Office engineering manager and architect. Holds 30 patents in Microsoft technologies. U.S. citizen.",
   },
   {
@@ -63,7 +68,7 @@ export const PRODUCT_ENG: Leader[] = [
     title: "VP Product & NATO Alliances",
     initials: "JB",
     vanity: "jason-blais",
-    photo: "https://unavatar.io/linkedin/jason-blais",
+    photo: LEADER_PHOTOS["jason-blais"],
     bio: "Based in Helsinki, Finland. 10+ years in enterprise B2B collaboration for IT, DevOps & security teams. Leads product strategy and NATO alliance partnerships, aligning platform capabilities with defense, cybersecurity, and critical infrastructure mission requirements across allied nations.",
   },
   {
@@ -71,7 +76,7 @@ export const PRODUCT_ENG: Leader[] = [
     title: "SVP Engineering & Security",
     initials: "PZ",
     vanity: "pavel-zeman",
-    photo: "https://unavatar.io/linkedin/pavel-zeman",
+    photo: LEADER_PHOTOS["pavel-zeman"],
     bio: "Based in Atlanta, Georgia, USA. 25+ years building and scaling products and engineering organizations at Microsoft (security-focused, multiple patents), Red Canary, and MobileIron (through IPO). Owns platform engineering, security, infrastructure, DDIL/edge architecture, and sovereign AI integration.",
   },
   {
@@ -114,7 +119,7 @@ export const GTM: Leader[] = [
     title: "VP Customer Enablement & Success",
     initials: "DM",
     vanity: "moses-cyber-defender",
-    photo: "https://unavatar.io/linkedin/moses-cyber-defender",
+    photo: LEADER_PHOTOS["moses-cyber-defender"],
     bio: "25+ years in cybersecurity post-sales leadership (Claroty, Cybereason, Check Point). Leads global Technical Account Management, professional services, support & partner enablement — maximizing customer value, adoption, and retention for defense, intelligence, and critical infrastructure customers worldwide.",
   },
   {
@@ -122,7 +127,7 @@ export const GTM: Leader[] = [
     title: "Chief Marketing Officer",
     initials: "LD",
     vanity: "leighdow",
-    photo: "https://unavatar.io/linkedin/leighdow",
+    photo: LEADER_PHOTOS["leighdow"],
     bio: "25+ years driving GTM strategy across cybersecurity, physical security, and defense within national security, technology and global growth. Began on Capitol Hill in the U.S. Senate shaping policy, advancing into government affairs at Intel. Led global marketing at Honeywell Aerospace. VP Global Marketing at Identiv.",
   },
 ];
@@ -133,7 +138,7 @@ export const OPS: Leader[] = [
     title: "Chief People Officer",
     initials: "LM",
     vanity: "lanem1",
-    photo: "https://unavatar.io/linkedin/lanem1",
+    photo: LEADER_PHOTOS["lanem1"],
     bio: "15+ years scaling people operations and talent strategy in cybersecurity and enterprise technology. Previously VP People Operations at Flashpoint (threat intelligence); earlier, Director of People Operations at Risk Based Security (acquired by Flashpoint). Experienced in hiring, developing, and retaining staff with security clearances.",
   },
   {
@@ -141,7 +146,7 @@ export const OPS: Leader[] = [
     title: "Chief Financial Officer",
     initials: "KN",
     vanity: "kendraniedziejko",
-    photo: "https://unavatar.io/linkedin/kendraniedziejko",
+    photo: LEADER_PHOTOS["kendraniedziejko"],
     bio: "25+ years in finance at high-growth technology companies. Most recently Chief Accounting Officer at MNTN, Inc.; previously CFO at xMatters, Inc. Earlier career includes key roles in the IPOs of OpenTable and E-LOAN. Leads financial operations, FP&A, strategic planning, and growth objectives across Mattermost's global entities.",
   },
   {
@@ -149,7 +154,7 @@ export const OPS: Leader[] = [
     title: "VP Legal",
     initials: "NR",
     vanity: "nirosha",
-    photo: "https://unavatar.io/linkedin/nirosha",
+    photo: LEADER_PHOTOS["nirosha"],
     bio: "Two decades of leadership across legal, public sector, and business operations. Former attorney at Latham & Watkins and Cleary Gottlieb. Manages corporate legal, compliance, IP, and international subsidiary governance across Mattermost's global entities serving defense, intelligence, and critical infrastructure markets.",
   },
   {
@@ -157,7 +162,7 @@ export const OPS: Leader[] = [
     title: "VP Corporate Controller",
     initials: "LD",
     vanity: "linda-dalenberg-97620a7",
-    photo: "https://unavatar.io/linkedin/linda-dalenberg-97620a7",
+    photo: LEADER_PHOTOS["linda-dalenberg-97620a7"],
     bio: "Experienced finance operator with prior roles at MNTN, Everbridge/xMatters (supported $240M M&A), and Kovarus. Owns accounting, financial reporting, payroll, and NetSuite administration — critical to FP&A rigor and investor due diligence readiness.",
   },
 ];
