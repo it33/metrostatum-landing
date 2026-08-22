@@ -17,6 +17,7 @@ import {
 } from "./leadership-ui";
 
 const CONTACT = "#/contact-sales";
+const base = import.meta.env.BASE_URL;
 
 export function AboutPage() {
   return (
@@ -44,13 +45,26 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="border-b border-[var(--color-border)] bg-white py-8">
+      <section className="border-b border-[var(--color-border)] bg-white py-10">
         <div className="container-page">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+          <p className="text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
+            Awards and recognition
+          </p>
+          <ul className="mt-6 flex flex-wrap items-start justify-center gap-x-8 gap-y-8">
             {BADGES.map((b) => (
-              <img key={b.src} src={b.src} alt={b.alt} className="h-16 w-auto object-contain sm:h-20" />
+              <li key={b.src} className="flex w-[7.5rem] flex-col items-center text-center sm:w-32">
+                <img
+                  src={b.src.startsWith("http") ? b.src : `${base}${b.src}`}
+                  alt={b.alt}
+                  className="h-[4.5rem] w-auto object-contain sm:h-20"
+                />
+                <span className="mt-2 text-[11px] font-semibold leading-snug text-[var(--color-denim)]">
+                  {b.label}
+                </span>
+                <span className="text-[10px] text-[var(--color-fg-subtle)]">{b.year}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 

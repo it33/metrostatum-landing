@@ -218,9 +218,82 @@ export const RESOURCE_CARDS = [
 ] as const;
 
 export const BADGES = [
-  { src: "https://mattermost.com/wp-content/uploads/2025/07/Shortlist.webp", alt: "Capterra Shortlist 2025" },
-  { src: "https://mattermost.com/wp-content/uploads/2025/07/Top-Rated.webp", alt: "TrustRadius Top Rated 2025" },
-  { src: "https://mattermost.com/wp-content/uploads/2025/07/Customer-Support.webp", alt: "Software Advice Best Customer Support 2025" },
-  { src: "https://mattermost.com/wp-content/uploads/2025/07/Buyers-Choice.webp", alt: "TrustRadius Buyer's Choice 2025" },
-  { src: "https://mattermost.com/wp-content/uploads/2025/07/Best-Value.webp", alt: "Capterra Best Value 2025" },
+  {
+    src: "images/awards/capterra-shortlist-2025.webp",
+    alt: "Capterra Shortlist 2025 — Team Communication",
+    label: "Capterra Shortlist",
+    year: "2025",
+  },
+  {
+    src: "images/awards/capterra-best-value-2025.webp",
+    alt: "Capterra Best Value 2025",
+    label: "Capterra Best Value",
+    year: "2025",
+  },
+  {
+    src: "images/awards/trustradius-top-rated-2025.webp",
+    alt: "TrustRadius Top Rated 2025",
+    label: "TrustRadius Top Rated",
+    year: "2025",
+  },
+  {
+    src: "images/awards/trustradius-buyers-choice-2025.webp",
+    alt: "TrustRadius Buyer’s Choice 2025",
+    label: "TrustRadius Buyer’s Choice",
+    year: "2025",
+  },
+  {
+    src: "images/awards/software-advice-support-2025.webp",
+    alt: "Software Advice Best Customer Support 2025",
+    label: "Software Advice Best Support",
+    year: "2025",
+  },
+  {
+    src: "images/awards/tmc-cyber-2025.png",
+    alt: "2025 TMCnet Cybersecurity Excellence Award — Mattermost Enterprise Advanced",
+    label: "TMC Cybersecurity Excellence",
+    year: "2025",
+  },
+  {
+    src: "images/awards/infotech-voc-2025.png",
+    alt: "Info-Tech SoftwareReviews Voice of the Customer — Mattermost",
+    label: "Info-Tech Voice of the Customer",
+    year: "2025",
+  },
+  {
+    src: "images/awards/devies-2026.png",
+    alt: "2026 DEVIES Award — Best Innovation in Communication and Messaging",
+    label: "DEVIES Communication & Messaging",
+    year: "2026",
+  },
+  {
+    src: "images/awards/devies-2024.png",
+    alt: "2024 DEVIES Award — Best Innovation in ITOps",
+    label: "DEVIES Best Innovation in ITOps",
+    year: "2024",
+  },
+  {
+    src: "images/awards/capterra-shortlist-2024.png",
+    alt: "Capterra Shortlist 2024 — Team Communication",
+    label: "Capterra Shortlist",
+    year: "2024",
+  },
+  {
+    src: "images/awards/devies-2023.png",
+    alt: "2023 DEVIES Award — Best Innovation in Communication and Messaging",
+    label: "DEVIES Communication & Messaging",
+    year: "2023",
+  },
+  {
+    src: "images/awards/inc-power-partner-2023.png",
+    alt: "Inc. Power Partner Awards 2023",
+    label: "Inc. Power Partner",
+    year: "2023",
+  },
+  {
+    src: "images/awards/trustradius-best-of-2022.png",
+    alt: "TrustRadius Best of 2022 — Collaboration and DevOps",
+    label: "TrustRadius Best of",
+    year: "2022",
+  },
 ] as const;
