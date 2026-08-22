@@ -119,7 +119,7 @@ export const SOLUTIONS_COLUMNS: NavGroup[] = [
 /** Industries dropdown */
 export const INDUSTRIES_LINKS: NavLink[] = [
   { label: "Overview", href: "#/industries" },
-  { label: "Defense", href: "#/industries/defense" },
+  { label: "National Security", href: "#/solutions/national-security" },
   { label: "Government", href: "#/industries/government" },
   { label: "Law enforcement", href: "#/industries/law-enforcement" },
   { label: "Energy and utilities", href: "#/industries/energy-utilities" },

@@ -7,7 +7,7 @@ const CONTENT: SectionPageContent = {
   subtitle:
     "Mattermost serves organizations that cannot compromise on security, compliance, or continuity — self-hosted collaboration that adapts to industry constraints without a public SaaS backbone.",
   jumpLinks: [
-    { id: "defense", label: "Defense" },
+    { id: "defense", label: "National Security" },
     { id: "government", label: "Government" },
     { id: "law-enforcement", label: "Law enforcement" },
     { id: "energy-utilities", label: "Energy" },
@@ -21,11 +21,11 @@ const CONTENT: SectionPageContent = {
       navLabel: "Overview",
       eyebrow: "One platform",
       title: "Industry solutions for high-assurance operations",
-      lead: "Defense, government, law enforcement, energy, manufacturing, financial services, and technology teams use Mattermost where operational control and data sovereignty are non-negotiable.",
+      lead: "National security, government, law enforcement, energy, manufacturing, financial services, and technology teams use Mattermost where operational control and data sovereignty are non-negotiable.",
       cards: [
         {
           id: "defense",
-          title: "Defense",
+          title: "National Security",
           body: "Support force collaboration, cyber operations, and coalition coordination with a platform designed for sovereignty, Zero Trust patterns, and degraded connectivity.",
           bullets: [
             "Classified networks and edge deployments",
@@ -36,7 +36,7 @@ const CONTENT: SectionPageContent = {
           imageAlt: "Air Mobility Command case study — ChatOps for the largest-ever readiness exercise",
           imageCaption:
             "From the Air Mobility Command customer story: 15,000+ forces coordinated with Mattermost ChatOps.",
-          link: { label: "Read the AMC story", href: "#/customers/air-mobility-command" },
+          link: { label: "Explore National Security", href: "#/solutions/national-security" },
         },
         {
           id: "government",
