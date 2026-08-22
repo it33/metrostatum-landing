@@ -569,12 +569,12 @@ export function PlatformPage({ rest }: { rest?: string }) {
                   Talk to an expert
                   <ArrowRight className="size-4" />
                 </a>
-                <Link
-                  to="/"
+                <a
+                  href="#/"
                   className="inline-flex h-11 items-center rounded-md border border-white/30 px-5 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   Back to home
-                </Link>
+                </a>
               </div>
             </div>
           </div>
