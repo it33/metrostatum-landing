@@ -168,7 +168,7 @@ export function CustomersPage() {
                         alt=""
                         loading="lazy"
                         decoding="async"
-                        className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                        className="h-full w-full object-cover object-center"
                         onError={(e) => {
                           e.currentTarget.style.display = "none";
                         }}

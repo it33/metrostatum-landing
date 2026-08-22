@@ -76,7 +76,7 @@ export function CaseStudyPage({
       {hero ? (
         <div className="container-page -mt-2 md:-mt-4">
           <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[var(--shadow-card)]">
-            <img src={hero} alt="" className="aspect-[21/9] w-full object-cover" />
+            <img src={hero} alt="" className="aspect-[16/9] w-full object-cover object-center" />
           </figure>
         </div>
       ) : null}
