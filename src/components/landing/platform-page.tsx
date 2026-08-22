@@ -338,12 +338,12 @@ function PlatformOverviewCarousel() {
   return (
     <section aria-label="Platform capabilities" className="border-b border-[var(--color-border)] bg-[var(--color-bg)] py-10 md:py-12">
       <div className="container-page">
-        <div className="relative">
+        <div className="relative md:px-14">
           <button
             type="button"
             aria-label="Previous capability"
             onClick={() => scrollByCard(-1)}
-            className="absolute left-0 top-1/2 z-10 hidden size-11 -translate-x-3 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex lg:-translate-x-5"
+            className="absolute left-0 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex"
           >
             <ChevronLeft className="size-5" />
           </button>
@@ -377,7 +377,7 @@ function PlatformOverviewCarousel() {
             type="button"
             aria-label="Next capability"
             onClick={() => scrollByCard(1)}
-            className="absolute right-0 top-1/2 z-10 hidden size-11 translate-x-3 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex lg:translate-x-5"
+            className="absolute right-0 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] shadow-sm hover:bg-[var(--color-bg-elevated)] md:inline-flex""
           >
             <ChevronRight className="size-5" />
           </button>
