@@ -104,23 +104,26 @@ export function AboutPage() {
         <div className="container-page">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Global Footprint</h2>
           <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
-            Mattermost serves mission-critical customers worldwide with offices and presence across
-            key markets.
+            In-region presence matters for sovereign operations. Mattermost maintains local entities,
+            cleared personnel, and partner networks in key jurisdictions to meet data residency,
+            security clearance, and regulatory requirements where our customers operate.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {OFFICES.map((o) => (
-              <div
-                key={o.city}
+              <article
+                key={o.region}
                 className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
               >
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 size-4 shrink-0 text-[var(--color-marigold)]" />
-                  <div>
-                    <h3 className="text-sm font-semibold text-[var(--color-fg)]">{o.city}</h3>
-                    <p className="mt-1 text-sm text-[var(--color-fg-muted)]">{o.detail}</p>
-                  </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="size-4 text-[var(--color-marigold)]" strokeWidth={1.75} />
+                  <h3 className="text-sm font-semibold">{o.region}</h3>
                 </div>
-              </div>
+                <div className="mt-3 space-y-0.5 text-sm text-[var(--color-fg-muted)]">
+                  {o.lines.map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
         </div>

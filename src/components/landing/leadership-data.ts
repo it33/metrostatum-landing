@@ -170,12 +170,12 @@ export const OPS: Leader[] = [
 export const OFFICES = [
   { region: "Australia", lines: ["15 Moore Street, Level 4 & 5", "Canberra, 2601"] },
   { region: "Canada", lines: ["200 Bay St, North Tower Suite 1200", "Toronto, Ontario, M5J 2J2"] },
-  { region: "Japan", lines: ["Shibuya Dogenzaka Tokyu Building 2F-C", "1-10-8 Dogenzaka, Shibuya-ku, Tokyo"] },
+  { region: "Japan", lines: ["Shibuya Dogenzaka Tokyu Building 2F-C", "1-10-8 Dogenzaka", "Shibuya-ku, Tokyo"] },
   { region: "Netherlands", lines: ["Piet Heinkade 55", "Amsterdam 1019 GM"] },
   { region: "Sweden", lines: ["Olof Palmesgata 29, 4th Floor", "Stockholm 111 22"] },
-  { region: "United Kingdom", lines: ["News Building 3, London Bridge Street, 3rd Floor", "London SE1 9SG"] },
+  { region: "United Kingdom", lines: ["News Building 3", "London Bridge Street, 3rd Floor", "London SE1 9SG"] },
   { region: "United States", lines: ["2100 Geng Road, Suite 210", "Palo Alto, California 94303"] },
-  { region: "US Federal", lines: ["11921 Freedom Drive, Suite 550", "Reston, VA, 20190"] },
+  { region: "US Federal", lines: ["11921 Freedom Drive, Suite 550", "Reston, VA 20190"] },
 ] as const;
 
 export const RESOURCE_CARDS = [
