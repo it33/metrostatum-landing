@@ -168,14 +168,62 @@ export const OPS: Leader[] = [
 ];
 
 export const OFFICES = [
-  { region: "Australia", lines: ["15 Moore Street, Level 4 & 5", "Canberra, 2601"] },
-  { region: "Canada", lines: ["200 Bay St, North Tower Suite 1200", "Toronto, Ontario, M5J 2J2"] },
-  { region: "Japan", lines: ["Shibuya Dogenzaka Tokyu Building 2F-C", "1-10-8 Dogenzaka", "Shibuya-ku, Tokyo"] },
-  { region: "Netherlands", lines: ["Piet Heinkade 55", "Amsterdam 1019 GM"] },
-  { region: "Sweden", lines: ["Olof Palmesgata 29, 4th Floor", "Stockholm 111 22"] },
-  { region: "United Kingdom", lines: ["News Building 3", "London Bridge Street, 3rd Floor", "London SE1 9SG"] },
-  { region: "United States", lines: ["2100 Geng Road, Suite 210", "Palo Alto, California 94303"] },
-  { region: "US Federal", lines: ["11921 Freedom Drive, Suite 550", "Reston, VA 20190"] },
+  {
+    region: "Australia",
+    lines: ["15 Moore Street, Level 4 & 5", "Canberra, 2601"],
+    image: "images/offices/australia.jpg",
+    alt: "ANZ House at 15 Moore Street, Canberra",
+    maps: "https://www.google.com/maps/search/?api=1&query=15+Moore+Street+Canberra+ACT+2601",
+  },
+  {
+    region: "Canada",
+    lines: ["200 Bay St, North Tower Suite 1200", "Toronto, Ontario, M5J 2J2"],
+    image: "images/offices/canada.jpg",
+    alt: "Royal Bank Plaza North Tower at 200 Bay Street, Toronto",
+    maps: "https://www.google.com/maps/search/?api=1&query=200+Bay+Street+North+Tower+Toronto",
+  },
+  {
+    region: "Japan",
+    lines: ["Shibuya Dogenzaka Tokyu Building 2F-C", "1-10-8 Dogenzaka", "Shibuya-ku, Tokyo"],
+    image: "images/offices/japan.jpg",
+    alt: "Shibuya Dogenzaka Tokyu Building, 1-10-8 Dogenzaka, Tokyo",
+    maps: "https://www.google.com/maps/search/?api=1&query=Shibuya+Dogenzaka+Tokyu+Building+1-10-8+Dogenzaka",
+  },
+  {
+    region: "Netherlands",
+    lines: ["Piet Heinkade 55", "Amsterdam 1019 GM"],
+    image: "images/offices/netherlands.jpg",
+    alt: "UP Office Building at Piet Heinkade 55, Amsterdam",
+    maps: "https://www.google.com/maps/search/?api=1&query=UP+Office+Building+Piet+Heinkade+55+Amsterdam",
+  },
+  {
+    region: "Sweden",
+    lines: ["Olof Palmesgata 29, 4th Floor", "Stockholm 111 22"],
+    image: "images/offices/sweden.jpg",
+    alt: "Office building at Olof Palmes gata and Norra Bantorget, Stockholm",
+    maps: "https://www.google.com/maps/search/?api=1&query=Olof+Palmes+gata+29+Stockholm",
+  },
+  {
+    region: "United Kingdom",
+    lines: ["News Building 3", "London Bridge Street, 3rd Floor", "London SE1 9SG"],
+    image: "images/offices/united-kingdom.jpg",
+    alt: "The News Building at 3 London Bridge Street, with The Shard",
+    maps: "https://www.google.com/maps/search/?api=1&query=The+News+Building+3+London+Bridge+Street",
+  },
+  {
+    region: "United States",
+    lines: ["2100 Geng Road, Suite 210", "Palo Alto, California 94303"],
+    image: "images/offices/united-states.jpg",
+    alt: "2100 Geng Road, Embarcadero Place, Palo Alto",
+    maps: "https://www.google.com/maps/search/?api=1&query=2100+Geng+Road+Palo+Alto+CA",
+  },
+  {
+    region: "US Federal",
+    lines: ["11921 Freedom Drive, Suite 550", "Reston, VA 20190"],
+    image: "images/offices/us-federal.jpg",
+    alt: "Two Fountain Square at 11921 Freedom Drive, Reston Town Center",
+    maps: "https://www.google.com/maps/search/?api=1&query=11921+Freedom+Drive+Reston+VA",
+  },
 ] as const;
 
 export const RESOURCE_CARDS = [

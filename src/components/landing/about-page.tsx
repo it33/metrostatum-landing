@@ -112,16 +112,33 @@ export function AboutPage() {
             {OFFICES.map((o) => (
               <article
                 key={o.region}
-                className="rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
+                className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
               >
-                <div className="flex items-center gap-2">
-                  <MapPin className="size-4 text-[var(--color-marigold)]" strokeWidth={1.75} />
-                  <h3 className="text-sm font-semibold">{o.region}</h3>
-                </div>
-                <div className="mt-3 space-y-0.5 text-sm text-[var(--color-fg-muted)]">
-                  {o.lines.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
+                <a
+                  href={o.maps}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group relative block aspect-[16/10] overflow-hidden bg-[var(--color-bg-elevated)]"
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}${o.image}`}
+                    alt={o.alt}
+                    className="h-full w-full object-cover object-center"
+                  />
+                  <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3 py-2 text-[11px] font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+                    Open in Maps
+                  </span>
+                </a>
+                <div className="p-5">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="size-4 text-[var(--color-marigold)]" strokeWidth={1.75} />
+                    <h3 className="text-sm font-semibold">{o.region}</h3>
+                  </div>
+                  <div className="mt-3 space-y-0.5 text-sm text-[var(--color-fg-muted)]">
+                    {o.lines.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
