@@ -2,6 +2,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { ArrowRight, CheckCircle2, MessageSquare, Server, Shield } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
+import { intentFromPath, readInboundPath, specialistFor } from "@/lib/contact-intent";
 
 const SUPPORT = "https://mattermost.com/support/";
 const LICENSE = "https://mattermost.com/se/software-services-license-agreement/";
@@ -80,23 +81,6 @@ const CA_PROVINCES = [
   "Northwest Territories","Nova Scotia","Nunavut","Ontario","Prince Edward Island","Quebec",
   "Saskatchewan","Yukon",
 ];
-
-const NATO_EUROPE = new Set([
-  "France",
-  "Belgium",
-  "Netherlands",
-  "Italy",
-  "Spain",
-  "Portugal",
-  "Czechia",
-  "Denmark",
-  "Estonia",
-  "Finland",
-  "Norway",
-  "Poland",
-  "Sweden",
-  "Austria",
-]);
 
 const ISO_TO_COUNTRY: Record<string, string> = {
   US: "United States",
@@ -206,25 +190,6 @@ function countryFromTimezone(tz: string): string | "" {
   return "";
 }
 
-function specialistForCountry(country: string): string {
-  if (country === "United States") return "U.S. Defense & National Security";
-  if (country === "Canada") return "Canadian Government & Defence specialist";
-  if (country === "Japan") return "日本の防衛・セキュリティ専門家に相談";
-  if (country === "Germany") return "Bundeswehr & NATO";
-  if (country === "United Kingdom" || country === "Australia" || country === "New Zealand") return "Five Eyes";
-  if (NATO_EUROPE.has(country)) return "NATO & Défense européenne";
-  if (
-    country === "South Korea" ||
-    country === "Israel" ||
-    country === "Taiwan" ||
-    country === "Singapore" ||
-    country === "United Arab Emirates"
-  ) {
-    return "(Other) Allied Government specialist";
-  }
-  return "Global Enterprise & Commercial";
-}
-
 async function detectCountry(): Promise<string> {
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
@@ -248,6 +213,8 @@ async function detectCountry(): Promise<string> {
     }
   }
 }
+
+const base = import.meta.env.BASE_URL;
 
 const LOGOS = [
   { name: "U.S. Air Force", src: `${base}images/logos/usaf.svg` },
@@ -289,6 +256,9 @@ export function ContactSalesPage() {
   const [specialistLocked, setSpecialistLocked] = useState(false);
   const [regionHint, setRegionHint] = useState("");
 
+  const inbound = readInboundPath();
+  const intent = intentFromPath(inbound);
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [sent]);
@@ -296,21 +266,32 @@ export function ContactSalesPage() {
   useEffect(() => {
     let cancelled = false;
     const tzCountry = countryFromTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone || "");
-    if (tzCountry) {
-      setCountry((prev) => prev || tzCountry);
-      setSpecialist((prev) => prev || specialistForCountry(tzCountry));
-      setRegionHint(`Suggested from your time zone (${tzCountry}). Change if this isn’t the right team.`);
-    }
+    if (tzCountry) setCountry((prev) => prev || tzCountry);
     detectCountry().then((found) => {
       if (cancelled || !found) return;
       setCountry(found);
-      setSpecialist((prev) => (specialistLocked ? prev : specialistForCountry(found)));
-      setRegionHint(`Suggested from your location (${found}). Change if this isn’t the right team.`);
     });
     return () => {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (specialistLocked || !country) return;
+    const next = specialistFor(country, intent);
+    if (!next) {
+      setRegionHint("");
+      return;
+    }
+    setSpecialist(next);
+    const topic =
+      intent === "national-security"
+        ? "a national security page"
+        : intent === "enterprise"
+          ? "a commercial / critical-infrastructure page"
+          : "this site";
+    setRegionHint(`Suggested from ${country} + ${topic}. Change if this isn’t the right team.`);
+  }, [country, intent, specialistLocked]);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -396,7 +377,7 @@ export function ContactSalesPage() {
                       className={field}
                     >
                       <option value="" disabled>
-                        Detecting your region…
+                        Pick your specialist
                       </option>
                       {SPECIALISTS.map((o) => (
                         <option key={o} value={o}>
@@ -463,7 +444,10 @@ export function ContactSalesPage() {
                       onChange={(e) => {
                         const next = e.target.value;
                         setCountry(next);
-                        if (!specialistLocked && next) setSpecialist(specialistForCountry(next));
+                        if (!specialistLocked && next) {
+                          const guess = specialistFor(next, intent);
+                          if (guess) setSpecialist(guess);
+                        }
                       }}
                       className={field}
                     >

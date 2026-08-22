@@ -10,6 +10,7 @@ import {
   type TopNavItem,
 } from "@/nav-config";
 import { currentRoute, matchNav, type Crumb, type NavItemLike } from "@/lib/nav-active";
+import { attachContactFromParam, rememberSourcePage } from "@/lib/contact-intent";
 import { CUSTOMER_STORIES } from "@/data/customer-stories";
 import { getIntegration } from "@/data/marketplace";
 import { StagingBanner } from "./staging-banner";
@@ -166,6 +167,12 @@ export function SiteHeader() {
       window.removeEventListener("resize", sync);
     };
   }, [crumbs.length, open]);
+
+  useEffect(() => {
+    rememberSourcePage(currentHref);
+  }, [currentHref]);
+
+  useEffect(() => attachContactFromParam(), []);
 
   const openMenu = (label: string) => {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);

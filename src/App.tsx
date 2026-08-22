@@ -13,6 +13,7 @@ import { IntegrationsPage } from "@/components/landing/integrations-page";
 import { IntegrationDetailPage } from "@/components/landing/integration-detail-page";
 import { ContactSalesPage } from "@/components/landing/contact-sales-page";
 import { NationalSecurityPage } from "@/components/landing/national-security-page";
+import { rememberSourcePage } from "@/lib/contact-intent";
 
 /**
  * Hash-based routing for GitHub Pages.
@@ -45,10 +46,12 @@ export function App() {
         if (prev !== next) {
           window.scrollTo(0, 0);
         }
+        rememberSourcePage(next);
         return next;
       });
     };
     window.addEventListener("hashchange", onHash);
+    rememberSourcePage(getRoutePath());
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
