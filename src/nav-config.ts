@@ -6,6 +6,12 @@
 export const CONTACT = "#/contact-sales";
 export const CONTACT_SALES = CONTACT;
 
+export const SOCIAL_LINKS = [
+  { label: "YouTube", href: "https://www.youtube.com/@Mattermost" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/mattermost/" },
+  { label: "X", href: "https://x.com/Mattermost" },
+] as const;
+
 export type NavLink = { label: string; href: string };
 export type NavGroup = { title: string; links: NavLink[] };
 
