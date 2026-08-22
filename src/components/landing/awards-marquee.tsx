@@ -6,7 +6,10 @@ function Track({ ariaHidden }: { ariaHidden?: boolean }) {
   return (
     <ul className="awards-marquee__track" aria-hidden={ariaHidden || undefined}>
       {BADGES.map((b) => (
-        <li key={`${ariaHidden ? "b" : "a"}-${b.src}-${b.year}`} className="awards-marquee__item">
+        <li
+          key={`${ariaHidden ? "b" : "a"}-${b.src}-${b.year}`}
+          className={`awards-marquee__item${"wide" in b && b.wide ? " awards-marquee__item--wide" : ""}`}
+        >
           <img
             src={`${base}${b.src}`}
             alt={ariaHidden ? "" : b.alt}

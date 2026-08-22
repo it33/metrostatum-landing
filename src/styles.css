@@ -263,6 +263,14 @@
     max-width: 108px;
     object-fit: contain;
   }
+  .awards-marquee__item--wide {
+    width: 17rem;
+  }
+  .awards-marquee__item--wide .awards-marquee__img {
+    height: 92px;
+    max-width: 17rem;
+    border-radius: 8px;
+  }
   .awards-marquee__label {
     margin-top: 0.45rem;
     font-size: 11px;
