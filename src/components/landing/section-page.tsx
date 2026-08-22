@@ -62,7 +62,7 @@ function SectionNav({
   return (
     <nav
       aria-label="On this page"
-      className="sticky top-[calc(var(--grok-banner-h,0px)+9.75rem)] z-30 hidden border-b border-[var(--color-border)] bg-white/95 backdrop-blur-md lg:block"
+      className="sticky top-[var(--site-header-h,8.5rem)] z-30 hidden border-b border-[var(--color-border)] bg-white lg:block"
     >
       <div className="container-page">
         <ul className="flex gap-1 overflow-x-auto py-2 text-[13px] font-medium">

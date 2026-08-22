@@ -139,6 +139,7 @@ export function SiteHeader() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const closeTimer = useRef<number | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const { activeLabel, crumbs } = useActiveNav();
   const currentHref = crumbs[crumbs.length - 1]?.href;
 
@@ -148,6 +149,23 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const sync = () => {
+      const bottom = Math.round(el.getBoundingClientRect().bottom);
+      document.documentElement.style.setProperty("--site-header-h", `${bottom}px`);
+    };
+    sync();
+    const ro = new ResizeObserver(sync);
+    ro.observe(el);
+    window.addEventListener("resize", sync);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", sync);
+    };
+  }, [crumbs.length, open]);
 
   const openMenu = (label: string) => {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
@@ -160,6 +178,7 @@ export function SiteHeader() {
 
   return (
     <header
+      ref={headerRef}
       className={cn(
         "sticky top-0 z-50 bg-white text-[var(--color-black)]",
         scrolled && "shadow-[0_1px_0_rgba(30,50,92,0.08),0_8px_24px_rgba(30,50,92,0.06)]",
