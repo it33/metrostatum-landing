@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
@@ -285,9 +285,25 @@ function DesktopNavItem({
 
   const isOpen = activeMenu === item.label;
   const overview = SECTION_HREF[item.label];
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const [panelTop, setPanelTop] = useState(0);
+  const wide = item.kind === "groups" || item.kind === "mega";
+
+  useLayoutEffect(() => {
+    if (!isOpen || !wrapRef.current) return;
+    const sync = () => setPanelTop(Math.round(wrapRef.current!.getBoundingClientRect().bottom));
+    sync();
+    window.addEventListener("resize", sync);
+    window.addEventListener("scroll", sync, true);
+    return () => {
+      window.removeEventListener("resize", sync);
+      window.removeEventListener("scroll", sync, true);
+    };
+  }, [isOpen]);
 
   return (
     <div
+      ref={wrapRef}
       className="relative"
       onMouseEnter={() => openMenu(item.label)}
       onMouseLeave={scheduleClose}
@@ -319,10 +335,11 @@ function DesktopNavItem({
       {isOpen && (
         <div
           className={
-            item.kind === "groups" || item.kind === "mega"
-              ? "absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2"
+            wide
+              ? "fixed left-1/2 z-[60] w-[min(72rem,calc(100vw-2rem))] -translate-x-1/2 pt-2"
               : "absolute left-0 top-full z-50 pt-2"
           }
+          style={wide ? { top: panelTop } : undefined}
           onMouseEnter={() => openMenu(item.label)}
           onMouseLeave={scheduleClose}
         >
@@ -392,11 +409,12 @@ function MegaMenu({ columns, currentHref }: { columns: NavGroup[]; currentHref?:
 }
 
 function GroupsMenu({ groups, currentHref }: { groups: NavGroup[]; currentHref?: string }) {
+  const cols = groups.length >= 6 ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6" : "grid-cols-2 md:grid-cols-3";
   return (
-    <div className="w-max min-w-[42rem] max-w-[min(60rem,calc(100vw-2rem))] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
-      <div className="grid grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-5">
+    <div className="w-full rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
+      <div className={cn("grid gap-x-6 gap-y-5", cols)}>
         {groups.map((g) => (
-          <div key={g.title} className="min-w-[9.5rem]">
+          <div key={g.title} className="min-w-0">
             <p className="mb-2 text-[11px] font-bold uppercase leading-snug tracking-[0.12em] text-[var(--color-denim)]">
               {g.title}
             </p>
@@ -406,7 +424,7 @@ function GroupsMenu({ groups, currentHref }: { groups: NavGroup[]; currentHref?:
                   <a
                     href={link.href}
                     aria-current={currentHref === link.href ? "page" : undefined}
-                    className={cn(itemClass(currentHref === link.href), "whitespace-nowrap")}
+                    className={itemClass(currentHref === link.href)}
                   >
                     {link.label}
                   </a>
