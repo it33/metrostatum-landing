@@ -26,17 +26,20 @@ const CONTENT: SectionPageContent = {
         {
           id: "defense",
           title: "National Security",
-          body: "Support force collaboration, cyber operations, and coalition coordination with a platform designed for sovereignty, Zero Trust patterns, and degraded connectivity.",
+          body: "Sovereign collaboration for defense, intelligence, and allied missions — classified networks, air-gapped and DDIL operations, and coalition coordination without a public collaboration tenant.",
           bullets: [
             "Classified networks and edge deployments",
             "Self-hosted collaboration, playbooks, and federation",
             "Air-gapped and DDIL operating realities",
           ],
           image: "/images/industries/defense.jpg",
-          imageAlt: "Air Mobility Command case study — ChatOps for the largest-ever readiness exercise",
+          imageAlt: "Air Mobility Command case study — ChatOps for a large-scale readiness exercise",
           imageCaption:
             "From the Air Mobility Command customer story: 15,000+ forces coordinated with Mattermost ChatOps.",
-          link: { label: "Explore National Security", href: "#/solutions/national-security" },
+          links: [
+            { label: "National Security page", href: "#/solutions/national-security" },
+            { label: "Read the AMC story", href: "#/customers/air-mobility-command" },
+          ],
         },
         {
           id: "government",
