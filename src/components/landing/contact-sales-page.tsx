@@ -248,16 +248,88 @@ const FEATURES = [
 const field =
   "mt-1.5 h-11 w-full rounded-md border border-[var(--color-border-strong)] bg-white px-3 text-sm text-[var(--color-fg)] outline-none transition focus:border-[var(--color-denim)] focus:ring-2 focus:ring-[var(--color-denim)]/15";
 
+const CONTEXT_QUESTIONS = [
+  {
+    key: "self_host",
+    label: "Will at least some of this data need to stay self-hosted?",
+  },
+  {
+    key: "outage_impact",
+    label: "Would an outage cost more than $1M in operational impact?",
+  },
+  {
+    key: "automation",
+    label: "Is workflow automation essential for this deployment?",
+  },
+] as const;
+
+const STEPS = [
+  "country",
+  "specialist",
+  "use_case",
+  "help",
+  "context",
+  "email",
+  "company",
+  "size",
+  "phone",
+  "terms",
+] as const;
+
+type Step = (typeof STEPS)[number];
+
+function YesNo({
+  value,
+  onChange,
+}: {
+  value: "" | "yes" | "no";
+  onChange: (v: "yes" | "no") => void;
+}) {
+  return (
+    <div className="mt-3 grid grid-cols-2 gap-2">
+      {(["yes", "no"] as const).map((v) => (
+        <button
+          key={v}
+          type="button"
+          onClick={() => onChange(v)}
+          className={`h-11 rounded-md text-sm font-semibold capitalize transition ${
+            value === v
+              ? "bg-[var(--color-denim)] text-white"
+              : "border border-[var(--color-border-strong)] bg-white text-[var(--color-denim)] hover:bg-[var(--color-bg-elevated)]"
+          }`}
+        >
+          {v}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export function ContactSalesPage() {
   const [sent, setSent] = useState(false);
+  const [step, setStep] = useState<Step>("country");
   const [country, setCountry] = useState("");
+  const [region, setRegion] = useState("");
   const [size, setSize] = useState("");
   const [specialist, setSpecialist] = useState("");
   const [specialistLocked, setSpecialistLocked] = useState(false);
   const [regionHint, setRegionHint] = useState("");
+  const [useCase, setUseCase] = useState("");
+  const [help, setHelp] = useState("");
+  const [context, setContext] = useState<Record<string, "yes" | "no" | "">>({
+    self_host: "",
+    outage_impact: "",
+    automation: "",
+  });
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
 
   const inbound = readInboundPath();
   const intent = intentFromPath(inbound);
+  const stepIndex = STEPS.indexOf(step);
+  const needsRegion = country === "United States" || country === "Canada";
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -293,15 +365,39 @@ export function ContactSalesPage() {
     setRegionHint(`Suggested from ${country} + ${topic}. Change if this isn’t the right team.`);
   }, [country, intent, specialistLocked]);
 
+  function back() {
+    if (stepIndex <= 0) return;
+    setStep(STEPS[stepIndex - 1]);
+  }
+  function next() {
+    if (stepIndex >= STEPS.length - 1) return;
+    setStep(STEPS[stepIndex + 1]);
+  }
+
+  function canContinue(): boolean {
+    if (step === "country") return Boolean(country) && (!needsRegion || Boolean(region));
+    if (step === "specialist") return Boolean(specialist);
+    if (step === "use_case") return Boolean(useCase);
+    if (step === "help") return help.trim().length > 3;
+    if (step === "context") return CONTEXT_QUESTIONS.every((q) => context[q.key]);
+    if (step === "email") return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (step === "company") return company.trim().length > 1;
+    if (step === "size") return Boolean(size);
+    if (step === "phone") return true;
+    if (step === "terms") return consent;
+    return false;
+  }
+
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    if (!form.checkValidity()) {
-      form.reportValidity();
+    if (step !== "terms" || !consent) {
+      if (canContinue()) next();
       return;
     }
     setSent(true);
   }
+
+  const continueLabel = step === "terms" ? "Contact Sales" : "Continue";
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
@@ -345,7 +441,10 @@ export function ContactSalesPage() {
                 </p>
                 <button
                   type="button"
-                  onClick={() => setSent(false)}
+                  onClick={() => {
+                    setSent(false);
+                    setStep("country");
+                  }}
                   className="mt-6 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
                 >
                   Submit another request
@@ -353,205 +452,277 @@ export function ContactSalesPage() {
               </div>
             ) : (
               <>
-                <h2 className="text-2xl font-bold tracking-tight text-[var(--color-denim)]">
-                  Talk to an Expert
-                </h2>
-                <p className="mt-1 text-sm text-[var(--color-fg-muted)]">
-                  For technical issues, please{" "}
-                  <a href={SUPPORT} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)] hover:underline">
-                    contact support
-                  </a>
-                  .
-                </p>
-                <form className="mt-6 grid gap-4 sm:grid-cols-2" onSubmit={onSubmit} noValidate>
-                  <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                    Regional Specialist*
-                    <select
-                      name="regional_specialist"
-                      required
-                      value={specialist}
-                      onChange={(e) => {
-                        setSpecialistLocked(true);
-                        setSpecialist(e.target.value);
-                      }}
-                      className={field}
-                    >
-                      <option value="" disabled>
-                        Pick your specialist
-                      </option>
-                      {SPECIALISTS.map((o) => (
-                        <option key={o} value={o}>
-                          {o}
-                        </option>
-                      ))}
-                    </select>
-                    {regionHint ? (
-                      <span className="mt-1 block text-[11px] font-normal text-[var(--color-fg-subtle)]">
-                        {regionHint}
-                      </span>
-                    ) : null}
-                  </label>
-                  <label className="text-xs font-semibold text-[var(--color-denim)]">
-                    First Name*
-                    <input name="first_name" required placeholder="Your First Name" className={field} />
-                  </label>
-                  <label className="text-xs font-semibold text-[var(--color-denim)]">
-                    Last Name*
-                    <input name="last_name" required placeholder="Your Last Name" className={field} />
-                  </label>
-                  <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                    Business Email*
-                    <input name="email" type="email" required placeholder="Business Email" className={field} />
-                  </label>
-                  <label className="text-xs font-semibold text-[var(--color-denim)]">
-                    Company Name*
-                    <input name="company" required placeholder="Company Name" className={field} />
-                  </label>
-                  <label className="text-xs font-semibold text-[var(--color-denim)]">
-                    Company Size*
-                    <select
-                      name="company_size"
-                      required
-                      value={size}
-                      onChange={(e) => setSize(e.target.value)}
-                      className={field}
-                    >
-                      <option value="" disabled>
-                        Company Size
-                      </option>
-                      {COMPANY_SIZES.map((o) => (
-                        <option key={o} value={o}>
-                          {o}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  {size === "1-250" ? (
-                    <p className="sm:col-span-2 rounded-md bg-[var(--color-bg-elevated)] px-3 py-2 text-xs leading-relaxed text-[var(--color-fg-muted)]">
-                      Based on the size of your company, we encourage you to explore our{" "}
-                      <a href={OPEN_SOURCE} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)]">
-                        open source solution
-                      </a>
-                      . You will be able to find detailed instructions on how to deploy Mattermost at that link.
-                    </p>
-                  ) : null}
-                  <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                    Country/Region*
-                    <select
-                      name="country"
-                      required
-                      value={country}
-                      onChange={(e) => {
-                        const next = e.target.value;
-                        setCountry(next);
-                        if (!specialistLocked && next) {
-                          const guess = specialistFor(next, intent);
-                          if (guess) setSpecialist(guess);
-                        }
-                      }}
-                      className={field}
-                    >
-                      <option value="" disabled>
-                        Country/Region
-                      </option>
-                      {COUNTRIES.map((o) => (
-                        <option key={o} value={o}>
-                          {o}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  {country === "United States" ? (
-                    <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                      State*
-                      <select name="state" required defaultValue="" className={field}>
-                        <option value="" disabled>
-                          State
-                        </option>
-                        {US_STATES.map((o) => (
-                          <option key={o} value={o}>
-                            {o}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  ) : null}
-                  {country === "Canada" ? (
-                    <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                      Province*
-                      <select name="province" required defaultValue="" className={field}>
-                        <option value="" disabled>
-                          Province/Territory
-                        </option>
-                        {CA_PROVINCES.map((o) => (
-                          <option key={o} value={o}>
-                            {o}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  ) : null}
-                  <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                    What is your use case?*
-                    <select name="use_case" required defaultValue="" className={field}>
-                      <option value="" disabled>
-                        What is your use case?
-                      </option>
-                      {USE_CASES.map((o) => (
-                        <option key={o} value={o}>
-                          {o}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
-                  <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                    How can we help you?*
-                    <textarea
-                      name="message"
-                      required
-                      rows={4}
-                      placeholder="How can we help you?"
-                      className={`${field} h-auto py-2.5`}
+                <div className="flex items-center justify-between gap-3">
+                  <h2 className="text-2xl font-bold tracking-tight text-[var(--color-denim)]">
+                    Talk to an Expert
+                  </h2>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--color-fg-subtle)]">
+                    {stepIndex + 1} / {STEPS.length}
+                  </p>
+                </div>
+                <div className="mt-4 flex gap-1" aria-hidden>
+                  {STEPS.map((s, i) => (
+                    <span
+                      key={s}
+                      className={`h-1 flex-1 rounded-full ${i <= stepIndex ? "bg-[var(--color-marigold)]" : "bg-[var(--color-border)]"}`}
                     />
-                  </label>
-                  <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
-                    Phone (Optional)
-                    <input name="phone" type="tel" placeholder="Phone number (Optional)" className={field} />
-                  </label>
-                  <fieldset className="sm:col-span-2 space-y-2">
-                    <legend className="text-xs font-semibold text-[var(--color-denim)]">Qualifying questions</legend>
-                    {[
-                      "I need to self-host at least a portion of my data.",
-                      "The impact of a break or outage would cost more than $1M.",
-                      "Automation is vital for my needs.",
-                    ].map((q) => (
-                      <label key={q} className="flex items-start gap-2 text-sm text-[var(--color-fg-muted)]">
-                        <input type="checkbox" name="qualifying_questions" value={q} className="mt-1" />
-                        <span>{q}</span>
+                  ))}
+                </div>
+                <form className="mt-6" onSubmit={onSubmit} noValidate>
+                  {step === "country" ? (
+                    <div className="grid gap-4">
+                      <label className="text-xs font-semibold text-[var(--color-denim)]">
+                        Country / Region*
+                        <select
+                          name="country"
+                          required
+                          value={country}
+                          onChange={(e) => {
+                            setCountry(e.target.value);
+                            setRegion("");
+                            if (!specialistLocked) {
+                              const guess = specialistFor(e.target.value, intent);
+                              if (guess) setSpecialist(guess);
+                            }
+                          }}
+                          className={field}
+                        >
+                          <option value="" disabled>
+                            Select your country
+                          </option>
+                          {COUNTRIES.map((o) => (
+                            <option key={o} value={o}>
+                              {o}
+                            </option>
+                          ))}
+                        </select>
                       </label>
-                    ))}
-                  </fieldset>
-                  <label className="sm:col-span-2 flex items-start gap-2 text-sm text-[var(--color-fg-muted)]">
-                    <input type="checkbox" name="consent" required className="mt-1" />
-                    <span>
-                      I have read and agree to the{" "}
-                      <a href={LICENSE} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)]">
-                        Mattermost Software and Services License Agreement
-                      </a>{" "}
-                      and{" "}
-                      <a href={PRIVACY} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)]">
-                        Privacy Policy
-                      </a>
-                      .*
-                    </span>
-                  </label>
-                  <button
-                    type="submit"
-                    className="sm:col-span-2 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[var(--color-marigold)] px-5 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)]"
-                  >
-                    Contact Sales
-                    <ArrowRight className="size-4" />
-                  </button>
+                      {country === "United States" ? (
+                        <label className="text-xs font-semibold text-[var(--color-denim)]">
+                          State*
+                          <select name="state" required value={region} onChange={(e) => setRegion(e.target.value)} className={field}>
+                            <option value="" disabled>
+                              State
+                            </option>
+                            {US_STATES.map((o) => (
+                              <option key={o} value={o}>
+                                {o}
+                              </option>
+                            ))}
+                          </select>
+                        </label>
+                      ) : null}
+                      {country === "Canada" ? (
+                        <label className="text-xs font-semibold text-[var(--color-denim)]">
+                          Province / Territory*
+                          <select name="province" required value={region} onChange={(e) => setRegion(e.target.value)} className={field}>
+                            <option value="" disabled>
+                              Province or territory
+                            </option>
+                            {CA_PROVINCES.map((o) => (
+                              <option key={o} value={o}>
+                                {o}
+                              </option>
+                            ))}
+                          </select>
+                        </label>
+                      ) : null}
+                    </div>
+                  ) : null}
+
+                  {step === "specialist" ? (
+                    <label className="text-xs font-semibold text-[var(--color-denim)]">
+                      Regional specialist*
+                      <select
+                        name="regional_specialist"
+                        required
+                        value={specialist}
+                        onChange={(e) => {
+                          setSpecialistLocked(true);
+                          setSpecialist(e.target.value);
+                        }}
+                        className={field}
+                      >
+                        <option value="" disabled>
+                          Pick your specialist
+                        </option>
+                        {SPECIALISTS.map((o) => (
+                          <option key={o} value={o}>
+                            {o}
+                          </option>
+                        ))}
+                      </select>
+                      {regionHint ? (
+                        <span className="mt-1 block text-[11px] font-normal text-[var(--color-fg-subtle)]">
+                          {regionHint}
+                        </span>
+                      ) : null}
+                    </label>
+                  ) : null}
+
+                  {step === "use_case" ? (
+                    <label className="text-xs font-semibold text-[var(--color-denim)]">
+                      What is your use case?*
+                      <select name="use_case" required value={useCase} onChange={(e) => setUseCase(e.target.value)} className={field}>
+                        <option value="" disabled>
+                          Select a use case
+                        </option>
+                        {USE_CASES.map((o) => (
+                          <option key={o} value={o}>
+                            {o}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  ) : null}
+
+                  {step === "help" ? (
+                    <label className="text-xs font-semibold text-[var(--color-denim)]">
+                      How can we help?*
+                      <textarea
+                        name="message"
+                        required
+                        rows={5}
+                        value={help}
+                        onChange={(e) => setHelp(e.target.value)}
+                        placeholder="Tell us about the mission, environment, and what you need."
+                        className={`${field} h-auto py-2.5`}
+                      />
+                    </label>
+                  ) : null}
+
+                  {step === "context" ? (
+                    <div className="space-y-5">
+                      <p className="text-sm font-semibold text-[var(--color-denim)]">
+                        A few details so we route you to the right team
+                      </p>
+                      {CONTEXT_QUESTIONS.map((q) => (
+                        <fieldset key={q.key}>
+                          <legend className="text-sm text-[var(--color-fg)]">{q.label}</legend>
+                          <YesNo
+                            value={context[q.key] || ""}
+                            onChange={(v) => setContext((prev) => ({ ...prev, [q.key]: v }))}
+                          />
+                        </fieldset>
+                      ))}
+                    </div>
+                  ) : null}
+
+                  {step === "email" ? (
+                    <label className="text-xs font-semibold text-[var(--color-denim)]">
+                      Business email*
+                      <input
+                        name="email"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="name@organization.com"
+                        className={field}
+                      />
+                    </label>
+                  ) : null}
+
+                  {step === "company" ? (
+                    <label className="text-xs font-semibold text-[var(--color-denim)]">
+                      Company name*
+                      <input
+                        name="company"
+                        required
+                        value={company}
+                        onChange={(e) => setCompany(e.target.value)}
+                        placeholder="Organization"
+                        className={field}
+                      />
+                    </label>
+                  ) : null}
+
+                  {step === "size" ? (
+                    <div>
+                      <label className="text-xs font-semibold text-[var(--color-denim)]">
+                        Company size*
+                        <select name="company_size" required value={size} onChange={(e) => setSize(e.target.value)} className={field}>
+                          <option value="" disabled>
+                            Select company size
+                          </option>
+                          {COMPANY_SIZES.map((o) => (
+                            <option key={o} value={o}>
+                              {o}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      {size === "1-250" ? (
+                        <p className="mt-3 rounded-md bg-[var(--color-bg-elevated)] px-3 py-2 text-xs leading-relaxed text-[var(--color-fg-muted)]">
+                          Based on the size of your company, we encourage you to explore our{" "}
+                          <a href={OPEN_SOURCE} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)]">
+                            open source solution
+                          </a>
+                          .
+                        </p>
+                      ) : null}
+                    </div>
+                  ) : null}
+
+                  {step === "phone" ? (
+                    <label className="text-xs font-semibold text-[var(--color-denim)]">
+                      Phone number
+                      <input
+                        name="phone"
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder="Optional"
+                        className={field}
+                      />
+                    </label>
+                  ) : null}
+
+                  {step === "terms" ? (
+                    <label className="flex items-start gap-2 text-sm text-[var(--color-fg-muted)]">
+                      <input
+                        type="checkbox"
+                        name="consent"
+                        required
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        className="mt-1"
+                      />
+                      <span>
+                        I have read and agree to the{" "}
+                        <a href={LICENSE} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)]">
+                          Mattermost Software and Services License Agreement
+                        </a>{" "}
+                        and{" "}
+                        <a href={PRIVACY} target="_blank" rel="noreferrer" className="font-semibold text-[var(--color-denim)]">
+                          Privacy Policy
+                        </a>
+                        .*
+                      </span>
+                    </label>
+                  ) : null}
+
+                  <div className="mt-6 flex items-center justify-between gap-3">
+                    {stepIndex > 0 ? (
+                      <button
+                        type="button"
+                        onClick={back}
+                        className="text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
+                      >
+                        Back
+                      </button>
+                    ) : (
+                      <span />
+                    )}
+                    <button
+                      type="submit"
+                      disabled={!canContinue()}
+                      className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[var(--color-marigold)] px-5 text-sm font-semibold text-[var(--color-black)] transition hover:bg-[var(--color-marigold-hover)] disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {continueLabel}
+                      <ArrowRight className="size-4" />
+                    </button>
+                  </div>
                 </form>
               </>
             )}
