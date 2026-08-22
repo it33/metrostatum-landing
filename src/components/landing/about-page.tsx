@@ -9,12 +9,12 @@ import {
   OPS,
   OFFICES,
   RESOURCE_CARDS,
-  BADGES,
 } from "./leadership-data";
 import {
   PrinciplesMarquee,
   LeaderGroup,
 } from "./leadership-ui";
+import { AwardsMarquee } from "./awards-marquee";
 
 const CONTACT = "#/contact-sales";
 const base = import.meta.env.BASE_URL;
@@ -45,28 +45,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="border-b border-[var(--color-border)] bg-white py-10">
-        <div className="container-page">
-          <p className="text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
-            Awards and recognition
-          </p>
-          <ul className="mt-6 flex flex-wrap items-start justify-center gap-x-8 gap-y-8">
-            {BADGES.map((b) => (
-              <li key={b.src} className="flex w-[7.5rem] flex-col items-center text-center sm:w-32">
-                <img
-                  src={b.src.startsWith("http") ? b.src : `${base}${b.src}`}
-                  alt={b.alt}
-                  className="h-[4.5rem] w-auto object-contain sm:h-20"
-                />
-                <span className="mt-2 text-[11px] font-semibold leading-snug text-[var(--color-denim)]">
-                  {b.label}
-                </span>
-                <span className="text-[10px] text-[var(--color-fg-subtle)]">{b.year}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <AwardsMarquee />
 
       <section className="py-16 md:py-24">
         <div className="container-page">

@@ -273,7 +273,7 @@ export const BADGES = [
     year: "2024",
   },
   {
-    src: "images/awards/capterra-shortlist-2024.png",
+    src: "images/awards/capterra-shortlist-2024.webp",
     alt: "Capterra Shortlist 2024 — Team Communication",
     label: "Capterra Shortlist",
     year: "2024",

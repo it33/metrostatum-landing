@@ -224,6 +224,77 @@
     to { transform: translateX(-50%); }
   }
 
+  .awards-marquee {
+    position: relative;
+    width: 100%;
+    height: 168px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .awards-marquee__viewport {
+    display: flex;
+    width: max-content;
+    height: 168px;
+    align-items: center;
+    animation: awards-marquee-scroll var(--awards-duration, 200s) linear infinite;
+  }
+  .awards-marquee:hover .awards-marquee__viewport { animation-play-state: paused; }
+  .awards-marquee__track {
+    display: flex;
+    height: 168px;
+    align-items: center;
+    gap: 2.25rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    list-style: none;
+  }
+  .awards-marquee__item {
+    display: flex;
+    width: 9.5rem;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .awards-marquee__img {
+    display: block;
+    height: 88px;
+    width: auto;
+    max-width: 108px;
+    object-fit: contain;
+  }
+  .awards-marquee__label {
+    margin-top: 0.45rem;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-denim);
+  }
+  .awards-marquee__year {
+    font-size: 10px;
+    color: var(--color-fg-subtle);
+  }
+  .awards-marquee__fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: min(5rem, 12vw);
+    pointer-events: none;
+  }
+  .awards-marquee__fade--left {
+    left: 0;
+    background: linear-gradient(90deg, #ffffff, transparent);
+  }
+  .awards-marquee__fade--right {
+    right: 0;
+    background: linear-gradient(270deg, #ffffff, transparent);
+  }
+  @keyframes awards-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
   .staging-banner {
     height: 26px;
     overflow: hidden;
@@ -590,6 +661,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .logo-marquee__viewport,
+    .awards-marquee__viewport,
     .product-marquee__track,
     .byom-marquee__viewport,
     .principles-marquee__track,
