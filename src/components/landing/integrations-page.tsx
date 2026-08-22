@@ -1,11 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { SiteFooter } from "./site-footer";
-import { SiteHeader } from "./site-header";
-import { cn } from "@/lib/utils";
 import {
   MARKETPLACE,
   MARKETPLACE_CATEGORIES,
+  isFirstParty,
   lastUpdatedLabel,
   versionLabel,
   type MarketplaceItem,
@@ -19,15 +15,30 @@ export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean 
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
-  const filtered = useMemo(() => {
-    return MARKETPLACE.filter((i) => {
-      if (category === "All") return true;
-      if (category === "Supported") return i.supported || i.categories.includes("Mattermost Supported");
-      return i.categories.includes(category);
-    });
-  }, [category]);
+  const inCategory = (i: MarketplaceItem) => {
+    if (category === "All" || category === "Mattermost, Inc.") return true;
+    if (category === "Supported") return i.supported || i.categories.includes("Mattermost Supported");
+    return i.categories.includes(category);
+  };
 
-  const filters = ["All", "Supported", ...MARKETPLACE_CATEGORIES.filter((c) => c !== "Mattermost Supported")];
+  const firstParty = useMemo(
+    () => MARKETPLACE.filter((i) => isFirstParty(i) && inCategory(i)),
+    [category],
+  );
+  const community = useMemo(
+    () =>
+      MARKETPLACE.filter((i) => !isFirstParty(i) && inCategory(i) && category !== "Mattermost, Inc."),
+    [category],
+  );
+
+  const filters = [
+    "All",
+    "Mattermost, Inc.",
+    "Supported",
+    ...MARKETPLACE_CATEGORIES.filter((c) => c !== "Mattermost Supported"),
+  ];
+
+  const showing = category === "Mattermost, Inc." ? firstParty.length : firstParty.length + community.length;
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
@@ -57,7 +68,7 @@ export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean 
               AI — without giving up data control. Catalog sourced from the Mattermost Marketplace.
             </p>
             <p className="mt-4 text-sm font-semibold text-white/70">
-              {MARKETPLACE.length} listings · filter by category
+              {MARKETPLACE.length} listings · {MARKETPLACE.filter(isFirstParty).length} first-party
             </p>
           </div>
         </div>
@@ -91,35 +102,76 @@ export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean 
             })}
           </div>
           <p className="mt-3 text-sm text-[var(--color-fg-muted)]">
-            Showing {filtered.length} of {MARKETPLACE.length}
+            Showing {showing} of {MARKETPLACE.length}
           </p>
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
-        <div className="container-page">
-          {filtered.length === 0 ? (
-            <p className="text-center text-[var(--color-fg-muted)]">No integrations in this category.</p>
-          ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((item) => (
+      {firstParty.length > 0 ? (
+        <section className="border-b border-[var(--color-border)] bg-white py-12 md:py-16">
+          <div className="container-page">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-marigold)]">
+              Built by Mattermost
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">Mattermost, Inc.</h2>
+            <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
+              First-party integrations published by Mattermost, Inc. — maintained alongside the
+              platform for sovereign, air-gapped, and private-cloud deployments.
+            </p>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {firstParty.map((item) => (
+                <IntegrationCard key={item.slug} item={item} href={hrefFor(item.slug)} featured />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {community.length > 0 ? (
+        <section className="py-12 md:py-16">
+          <div className="container-page">
+            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Community & partner</h2>
+            <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
+              Third-party and community listings from the Mattermost Marketplace.
+            </p>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {community.map((item) => (
                 <IntegrationCard key={item.slug} item={item} href={hrefFor(item.slug)} />
               ))}
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      ) : firstParty.length === 0 ? (
+        <section className="py-12 md:py-16">
+          <p className="container-page text-center text-[var(--color-fg-muted)]">
+            No integrations in this category.
+          </p>
+        </section>
+      ) : null}
 
       <SiteFooter />
     </div>
   );
 }
 
-function IntegrationCard({ item, href }: { item: MarketplaceItem; href: string }) {
+function IntegrationCard({
+  item,
+  href,
+  featured,
+}: {
+  item: MarketplaceItem;
+  href: string;
+  featured?: boolean;
+}) {
   return (
     <a
       href={href}
-      className="group flex flex-col overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-white shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-[var(--color-denim)]/30 hover:shadow-lg"
+      className={cn(
+        "group flex flex-col overflow-hidden rounded-[var(--radius-xl)] border bg-white shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-lg",
+        featured
+          ? "border-[var(--color-denim)]/25 hover:border-[var(--color-denim)]/50"
+          : "border-[var(--color-border)] hover:border-[var(--color-denim)]/30",
+      )}
     >
       <div className="flex items-start gap-3 p-5">
         <div className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
@@ -135,12 +187,19 @@ function IntegrationCard({ item, href }: { item: MarketplaceItem; href: string }
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
-            <h2 className="text-base font-semibold text-[var(--color-denim)]">{item.name}</h2>
-            {item.supported || item.categories.includes("Mattermost Supported") ? (
-              <span className="shrink-0 rounded-full bg-[var(--color-marigold)]/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[var(--color-denim)]">
-                Supported
-              </span>
-            ) : null}
+            <h3 className="text-base font-semibold text-[var(--color-denim)]">{item.name}</h3>
+            <span className="flex shrink-0 flex-wrap justify-end gap-1">
+              {featured || isFirstParty(item) ? (
+                <span className="rounded-full bg-[var(--color-denim)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                  1st party
+                </span>
+              ) : null}
+              {item.supported || item.categories.includes("Mattermost Supported") ? (
+                <span className="rounded-full bg-[var(--color-marigold)]/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[var(--color-denim)]">
+                  Supported
+                </span>
+              ) : null}
+            </span>
           </div>
           <p className="mt-0.5 text-xs text-[var(--color-fg-muted)]">by {item.author}</p>
         </div>
