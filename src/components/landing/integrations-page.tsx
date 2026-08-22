@@ -1,3 +1,8 @@
+import { useEffect, useMemo, useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { SiteFooter } from "./site-footer";
+import { SiteHeader } from "./site-header";
+import { cn } from "@/lib/utils";
 import {
   MARKETPLACE,
   MARKETPLACE_CATEGORIES,

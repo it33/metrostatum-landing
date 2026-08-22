@@ -76,6 +76,8 @@ export function listingLinks(item: MarketplaceItem): MarketplaceLink[] {
 export function isFirstParty(item: MarketplaceItem): boolean {
   return item.author.trim().toLowerCase() === "mattermost";
 }
+
+export function relatedIntegrations(item: MarketplaceItem, limit = 6): MarketplaceItem[] {
   const cats = new Set(item.categories);
   return MARKETPLACE.filter(
     (i) => i.slug !== item.slug && i.categories.some((c) => cats.has(c)),
