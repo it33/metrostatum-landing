@@ -25,7 +25,7 @@ export const PRINCIPLES = [
     title: "High impact",
     body: "We align our work to our shared vision and stay focused on top priorities.",
     variant: "outline" as const,
-    image: "images/principles/high-impact.jpg",
+    image: "images/principles/high-impact-v2.jpg",
   },
   {
     title: "Earn trust",
