@@ -1,5 +1,20 @@
 [
   {
+    "slug": "github-plugin",
+    "name": "GitHub Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/GitHub-2.webp"
+  },
+  {
+    "slug": "mattermost-demo-plugin",
+    "name": "Mattermost Demo Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Demo-Plugin.webp"
+  },
+  {
+    "slug": "feature-lifecycle-playbook",
+    "name": "Feature Lifecycle Playbook",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/06/Playbooks_Marketplace_Icon_300x300.webp"
+  },
+  {
     "slug": "channel-export",
     "name": "Channel Export",
     "icon": "https://mattermost.com/wp-content/uploads/2023/06/ChannelExport.webp"
@@ -10,24 +25,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2026/05/dataminr-1.webp"
   },
   {
-    "slug": "feature-lifecycle-playbook",
-    "name": "Feature Lifecycle Playbook",
-    "icon": "https://mattermost.com/wp-content/uploads/2022/06/Playbooks_Marketplace_Icon_300x300.webp"
-  },
-  {
-    "slug": "github-plugin",
-    "name": "GitHub Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/GitHub-2.webp"
+    "slug": "google-drive-app",
+    "name": "Google Drive",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Google-Drive.webp"
   },
   {
     "slug": "gitlab-plugin",
     "name": "GitLab Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/GitLab-2.webp"
-  },
-  {
-    "slug": "google-drive-app",
-    "name": "Google Drive",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Google-Drive.webp"
   },
   {
     "slug": "jira-plugin",
@@ -45,14 +50,24 @@
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Mattermost-AI-Assistant.webp"
   },
   {
-    "slug": "mattermost-demo-plugin",
-    "name": "Mattermost Demo Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Demo-Plugin.webp"
+    "slug": "api-v4-client-for-java",
+    "name": "API v4 Client for Java",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/jW4dnFtA.webp"
   },
   {
     "slug": "microsoft-calendar-o365",
     "name": "Microsoft Calendar (O365)",
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Microsoft-Calendar.webp"
+  },
+  {
+    "slug": "api-v4-client-for-php",
+    "name": "API v4 Client for PHP",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/PHP-4.webp"
+  },
+  {
+    "slug": "all-quiet",
+    "name": "All Quiet",
+    "icon": "https://mattermost.com/wp-content/uploads/2026/03/all-quiet.webp"
   },
   {
     "slug": "microsoft-teams-meetings",
@@ -65,14 +80,9 @@
     "icon": "https://mattermost.com/wp-content/uploads/2023/01/ServiceNow.webp"
   },
   {
-    "slug": "api-v4-client-for-java",
-    "name": "API v4 Client for Java",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/jW4dnFtA.webp"
-  },
-  {
-    "slug": "api-v4-client-for-php",
-    "name": "API v4 Client for PHP",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/PHP-4.webp"
+    "slug": "agenda-plugin",
+    "name": "Agenda Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/agenda.webp"
   },
   {
     "slug": "api-v4-client-for-ruby",
@@ -80,24 +90,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/2000px-Ruby_logo.svg_-2.webp"
   },
   {
-    "slug": "agenda-plugin",
-    "name": "Agenda Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/agenda.webp"
-  },
-  {
-    "slug": "all-quiet",
-    "name": "All Quiet",
-    "icon": "https://mattermost.com/wp-content/uploads/2026/03/all-quiet.webp"
+    "slug": "analytics-plugin",
+    "name": "Analytics Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_open-source@2x-4.webp"
   },
   {
     "slug": "aws-sns-plugin",
     "name": "Amazon AWS SNS Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/aws.webp"
-  },
-  {
-    "slug": "analytics-plugin",
-    "name": "Analytics Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_open-source@2x-4.webp"
   },
   {
     "slug": "ansible-playbook-installer",
@@ -110,11 +110,6 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/New_ClamAV_Logo.webp"
   },
   {
-    "slug": "jitsi",
-    "name": "Appear.in",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/1200px-Logo_Jitsi.svg_-2.webp"
-  },
-  {
     "slug": "autotranslate-plugin",
     "name": "Autotranslation Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Shape@2x.webp"
@@ -123,6 +118,11 @@
     "slug": "azure-devops",
     "name": "Azure DevOps",
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Azure-Devops.webp"
+  },
+  {
+    "slug": "jitsi",
+    "name": "Appear.in",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/1200px-Logo_Jitsi.svg_-2.webp"
   },
   {
     "slug": "badges",
@@ -155,19 +155,19 @@
     "icon": "https://mattermost.com/wp-content/uploads/2019/04/botkube-2.webp"
   },
   {
-    "slug": "broomer",
-    "name": "Broomer",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Broomer.webp"
-  },
-  {
     "slug": "buttoncommander",
     "name": "ButtonCommander (Powershell)",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Powershell.webp"
   },
   {
-    "slug": "channel-recommender",
-    "name": "Channel Recommender",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Channel-Recommender.webp"
+    "slug": "broomer",
+    "name": "Broomer",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Broomer.webp"
+  },
+  {
+    "slug": "chess-plugin",
+    "name": "Chess Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-18.webp"
   },
   {
     "slug": "chef-cookbook-installer",
@@ -175,9 +175,9 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/2000px-Chef_logo.svg_.webp"
   },
   {
-    "slug": "chess-plugin",
-    "name": "Chess Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Knowledge@2x-18.webp"
+    "slug": "channel-recommender",
+    "name": "Channel Recommender",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Channel-Recommender.webp"
   },
   {
     "slug": "chocolatey",
@@ -200,6 +200,11 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo-full.webp"
   },
   {
+    "slug": "cloudron-installer",
+    "name": "Cloudron Installer",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo-1-1.webp"
+  },
+  {
     "slug": "cloud-foundry",
     "name": "Cloud Foundry Installer",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Cloud-Foundry.webp"
@@ -208,11 +213,6 @@
     "slug": "cloudapp",
     "name": "CloudApp Capture",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/IZ25Z0O7VP6T-180x180-1.webp"
-  },
-  {
-    "slug": "cloudron-installer",
-    "name": "Cloudron Installer",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo-1-1.webp"
   },
   {
     "slug": "coffeebot",
@@ -250,14 +250,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Digital-Ocean.webp"
   },
   {
-    "slug": "discourse-chat-integration-plugin",
-    "name": "Discourse",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/oIC5fRth_400x400.webp"
-  },
-  {
     "slug": "draw-plugin",
     "name": "Draw Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-3-1.webp"
+  },
+  {
+    "slug": "discourse-chat-integration-plugin",
+    "name": "Discourse",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/oIC5fRth_400x400.webp"
   },
   {
     "slug": "eclipse",
@@ -275,19 +275,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Fedora.webp"
   },
   {
-    "slug": "focalboard",
-    "name": "Focalboard",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/09/fblogo.svg"
+    "slug": "gender-inclusive-language",
+    "name": "Gender Inclusive Language",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/plugin-gender-inclusive-language.webp"
   },
   {
     "slug": "giphy-plugin",
     "name": "GIF Commands",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Giphy.webp"
-  },
-  {
-    "slug": "gender-inclusive-language",
-    "name": "Gender Inclusive Language",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/plugin-gender-inclusive-language.webp"
   },
   {
     "slug": "golang-bot-sample",
@@ -300,29 +295,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Gyazo_logo.webp"
   },
   {
-    "slug": "haskell-library",
-    "name": "Haskell Library",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Haskell.webp"
-  },
-  {
-    "slug": "heroku",
-    "name": "Heroku Deployment",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Heroku.webp"
-  },
-  {
     "slug": "hide-spoilers",
     "name": "Hide Spoilers",
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Spoiler.webp"
   },
   {
-    "slug": "homebrew-cask",
-    "name": "Homebrew Cask",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Homebrew-Cask.webp"
-  },
-  {
-    "slug": "hybrid-chat",
-    "name": "Hybrid Chat",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-May-06-14-53-00.webp"
+    "slug": "haskell-library",
+    "name": "Haskell Library",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Haskell.webp"
   },
   {
     "slug": "icebreaker",
@@ -330,9 +310,24 @@
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Ice-Breaker.webp"
   },
   {
-    "slug": "image-cropper",
-    "name": "Image Cropper",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Image-Cropper.webp"
+    "slug": "heroku",
+    "name": "Heroku Deployment",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Heroku.webp"
+  },
+  {
+    "slug": "homebrew-cask",
+    "name": "Homebrew Cask",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Homebrew-Cask.webp"
+  },
+  {
+    "slug": "jenkins-plugin-2",
+    "name": "Jenkins Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Mar-15-12-51-10-2.webp"
+  },
+  {
+    "slug": "hybrid-chat",
+    "name": "Hybrid Chat",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-May-06-14-53-00.webp"
   },
   {
     "slug": "unsplash",
@@ -340,9 +335,9 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Unsplash.webp"
   },
   {
-    "slug": "jenkins-plugin-2",
-    "name": "Jenkins Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Mar-15-12-51-10-2.webp"
+    "slug": "image-cropper",
+    "name": "Image Cropper",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Image-Cropper.webp"
   },
   {
     "slug": "kanboard",
@@ -355,19 +350,19 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Kopano.webp"
   },
   {
-    "slug": "kopano-web-meetings-plugin",
-    "name": "Kopano Web Meetings Plugin",
-    "icon": "https://mattermost.com/wp-content/themes/mattermost-2021/frontend/dist/img/default-icon.svg"
-  },
-  {
-    "slug": "laravel-logger",
-    "name": "Laravel Logger",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Laravel.webp"
+    "slug": "matterbridge",
+    "name": "Matterbridge",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Innovation@2x.webp"
   },
   {
     "slug": "link-list",
     "name": "Link List",
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Link-List.webp"
+  },
+  {
+    "slug": "laravel-logger",
+    "name": "Laravel Logger",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Laravel.webp"
   },
   {
     "slug": "ms-exchange-calendar-on-prem",
@@ -380,29 +375,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_secure_sso@2x-4.webp"
   },
   {
-    "slug": "matterbridge",
-    "name": "Matterbridge",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Innovation@2x.webp"
-  },
-  {
-    "slug": "matterhorn",
-    "name": "Matterhorn",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo.webp"
-  },
-  {
     "slug": "mattermost-client-for-hubot-adapter",
     "name": "Mattermost Client for Hubot Adapter",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/hubot-2.webp"
   },
   {
-    "slug": "mattermost-matrix-connector",
-    "name": "Mattermost Matrix Connector",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Matrix_Plugin@2x.webp"
-  },
-  {
-    "slug": "matterpoll",
-    "name": "Matterpoll Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo_dark.webp"
+    "slug": "matterhorn",
+    "name": "Matterhorn",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/logo.webp"
   },
   {
     "slug": "outlook",
@@ -420,9 +400,9 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-9.webp"
   },
   {
-    "slug": "nextbus-plugin",
-    "name": "NextBus Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_87.webp"
+    "slug": "onelogin-notification-plugin",
+    "name": "OneLogin Notification Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_85.webp"
   },
   {
     "slug": "nextcloud-app",
@@ -430,19 +410,19 @@
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/NextCloud.webp"
   },
   {
-    "slug": "onelogin-notification-plugin",
-    "name": "OneLogin Notification Plugin",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_85.webp"
-  },
-  {
-    "slug": "onlyoffice",
-    "name": "OnlyOffice",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/OnlyOffice.webp"
+    "slug": "nextbus-plugin",
+    "name": "NextBus Plugin",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_87.webp"
   },
   {
     "slug": "opsgenie",
     "name": "Opsgenie",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/drviLrV_400x400.webp"
+  },
+  {
+    "slug": "onlyoffice",
+    "name": "OnlyOffice",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/OnlyOffice.webp"
   },
   {
     "slug": "outlook-presence",
@@ -455,24 +435,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/I0OxyNb-_400x400.webp"
   },
   {
-    "slug": "papercups-io",
-    "name": "Papercups.io",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/papercups-v2.svg"
-  },
-  {
-    "slug": "parabol",
-    "name": "Parabol",
-    "icon": "https://mattermost.com/wp-content/uploads/2022/03/mamz9omzdgyhdtzcwgba.webp"
-  },
-  {
     "slug": "patter",
     "name": "Patter \u2013 Terminal Output",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/download-2.webp"
   },
   {
-    "slug": "pexip-video-connect",
-    "name": "Pexip",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Pexip-Logo-Black-RGB.webp"
+    "slug": "parabol",
+    "name": "Parabol",
+    "icon": "https://mattermost.com/wp-content/uploads/2022/03/mamz9omzdgyhdtzcwgba.webp"
   },
   {
     "slug": "pingboard",
@@ -485,6 +455,11 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-5.webp"
   },
   {
+    "slug": "python-apiv4-driver",
+    "name": "Python Driver for Mattermost API v4",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Python.webp"
+  },
+  {
     "slug": "alertmanager-plugin",
     "name": "Prometheus AlertManager Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Apr-05-11-12-03.webp"
@@ -493,11 +468,6 @@
     "slug": "puppet-module",
     "name": "Puppet Module",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Puppet.webp"
-  },
-  {
-    "slug": "python-apiv4-driver",
-    "name": "Python Driver for Mattermost API v4",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Python.webp"
   },
   {
     "slug": "random-on-fire",
@@ -510,24 +480,24 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/download.webp"
   },
   {
-    "slug": "redash",
-    "name": "Redash Dashboards",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/10746780.webp"
-  },
-  {
     "slug": "redmine",
     "name": "Redmine",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/redmine.webp"
   },
   {
-    "slug": "redmine-2",
-    "name": "Redmine",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/redmine-2.webp"
+    "slug": "redash",
+    "name": "Redash Dashboards",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/10746780.webp"
   },
   {
     "slug": "reply-in-channel",
     "name": "Reply In Channel",
     "icon": "https://mattermost.com/wp-content/uploads/2026/03/ChatGPT-Image-Mar-16-2026-10_15_30-AM.webp"
+  },
+  {
+    "slug": "redmine-2",
+    "name": "Redmine",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/redmine-2.webp"
   },
   {
     "slug": "rollbar-plugin",
@@ -540,9 +510,9 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_84.webp"
   },
   {
-    "slug": "sameroom",
-    "name": "Sameroom",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_94.webp"
+    "slug": "sentry",
+    "name": "Sentry",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/download-3.webp"
   },
   {
     "slug": "scheduled-messages-community-version",
@@ -550,9 +520,9 @@
     "icon": "https://mattermost.com/wp-content/uploads/2025/04/profile.webp"
   },
   {
-    "slug": "sentry",
-    "name": "Sentry",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/download-3.webp"
+    "slug": "sameroom",
+    "name": "Sameroom",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_94.webp"
   },
   {
     "slug": "servicenow-virtual-agent",
@@ -560,14 +530,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2023/01/servicenow_icon_dark@2x.webp"
   },
   {
+    "slug": "splunk-ingestion-script",
+    "name": "Splunk Ingestion Script",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-May-01-14-30-31.webp"
+  },
+  {
     "slug": "skype4business-plugin",
     "name": "Skype for Business Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot_92.webp"
-  },
-  {
-    "slug": "social-previews",
-    "name": "Social Previews",
-    "icon": "https://mattermost.com/wp-content/uploads/2026/03/ChatGPT-Image-Mar-16-2026-10_07_09-AM.webp"
   },
   {
     "slug": "splunk-2",
@@ -575,14 +545,19 @@
     "icon": "https://mattermost.com/wp-content/uploads/2022/03/splunklogo.webp"
   },
   {
-    "slug": "splunk-ingestion-script",
-    "name": "Splunk Ingestion Script",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-May-01-14-30-31.webp"
-  },
-  {
     "slug": "standup-raven",
     "name": "Standup Raven Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screenshot-at-Apr-29-09-17-10.webp"
+  },
+  {
+    "slug": "social-previews",
+    "name": "Social Previews",
+    "icon": "https://mattermost.com/wp-content/uploads/2026/03/ChatGPT-Image-Mar-16-2026-10_07_09-AM.webp"
+  },
+  {
+    "slug": "teleport",
+    "name": "Teleport",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/teleport.webp"
   },
   {
     "slug": "status-page-plugin",
@@ -590,19 +565,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/QoqF8Db1_400x400.webp"
   },
   {
-    "slug": "symfony-publication-bundle",
-    "name": "Symfony Publication Bundle",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screen-Shot-2020-08-31-at-9.07.59-AM.webp"
-  },
-  {
     "slug": "teamplify",
     "name": "Teamplify",
     "icon": "https://mattermost.com/wp-content/uploads/2025/07/teamplify.webp"
   },
   {
-    "slug": "teleport",
-    "name": "Teleport",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/teleport.webp"
+    "slug": "symfony-publication-bundle",
+    "name": "Symfony Publication Bundle",
+    "icon": "https://mattermost.com/wp-content/uploads/2021/03/Screen-Shot-2020-08-31-at-9.07.59-AM.webp"
   },
   {
     "slug": "todo",
@@ -620,14 +590,14 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/components_icons_misc_ui_circular_platform-development@2x.webp"
   },
   {
-    "slug": "webex-cloud",
-    "name": "Webex (Cloud)",
-    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Webex.webp"
-  },
-  {
     "slug": "webhook-proxy-server",
     "name": "Webhook Proxy Server",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/icon@2x-2.webp"
+  },
+  {
+    "slug": "webex-cloud",
+    "name": "Webex (Cloud)",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Webex.webp"
   },
   {
     "slug": "welcomebot-plugin",
@@ -645,13 +615,18 @@
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/zabbix.webp"
   },
   {
-    "slug": "zendesk-app",
-    "name": "Zendesk App",
-    "icon": "https://mattermost.com/wp-content/uploads/2021/05/5cac60e3f8d44d025118d7fa_medium.svg"
-  },
-  {
     "slug": "zoom-plugin",
     "name": "Zoom Plugin",
     "icon": "https://mattermost.com/wp-content/uploads/2021/08/Zoom.webp"
+  },
+  {
+    "slug": "pexip-video-connect",
+    "name": "Pexip",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Pexip-Logo-Black-RGB.webp"
+  },
+  {
+    "slug": "mattermost-matrix-connector",
+    "name": "Mattermost Matrix Connector",
+    "icon": "https://mattermost.com/wp-content/uploads/2023/05/Matrix_Plugin@2x.webp"
   }
 ]

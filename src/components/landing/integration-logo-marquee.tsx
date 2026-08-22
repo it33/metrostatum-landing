@@ -38,7 +38,7 @@ function Track({
 
 /** Infinite logo carousel of unique marketplace integration icons. */
 export function IntegrationLogoMarquee({ hrefFor }: { hrefFor: (slug: string) => string }) {
-  const duration = Math.max(90, ICONS.length * 1.2);
+  const duration = Math.max(360, ICONS.length * 4.2);
   return (
     <div className="intg-marquee" role="region" aria-label="Integration logos">
       <div className="intg-marquee__fade intg-marquee__fade--left" aria-hidden />
