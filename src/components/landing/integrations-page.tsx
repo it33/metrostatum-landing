@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { IntegrationLogoMarquee } from "./integration-logo-marquee";
@@ -15,26 +15,45 @@ import {
 
 export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean }) {
   const [category, setCategory] = useState("All");
+  const [query, setQuery] = useState("");
   const hrefFor = (slug: string) => (hashRoutes ? `#/integrations/${slug}` : `/integrations/${slug}`);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
-  const inCategory = (i: MarketplaceItem) => {
-    if (category === "All" || category === "Mattermost, Inc.") return true;
-    if (category === "Supported") return i.supported || i.categories.includes("Mattermost Supported");
-    return i.categories.includes(category);
+  const matches = (i: MarketplaceItem) => {
+    if (category !== "All" && category !== "Mattermost, Inc.") {
+      if (category === "Supported") {
+        if (!(i.supported || i.categories.includes("Mattermost Supported"))) return false;
+      } else if (!i.categories.includes(category)) {
+        return false;
+      }
+    }
+    const q = query.trim().toLowerCase();
+    if (!q) return true;
+    const hay = [
+      i.name,
+      i.description,
+      i.tagline,
+      i.author,
+      i.version,
+      ...i.categories,
+      ...(i.badges || []),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+    return hay.includes(q);
   };
 
   const firstParty = useMemo(
-    () => MARKETPLACE.filter((i) => isFirstParty(i) && inCategory(i)),
-    [category],
+    () => MARKETPLACE.filter((i) => isFirstParty(i) && matches(i)),
+    [category, query],
   );
   const community = useMemo(
-    () =>
-      MARKETPLACE.filter((i) => !isFirstParty(i) && inCategory(i) && category !== "Mattermost, Inc."),
-    [category],
+    () => MARKETPLACE.filter((i) => !isFirstParty(i) && matches(i) && category !== "Mattermost, Inc."),
+    [category, query],
   );
 
   const filters = [
@@ -84,7 +103,18 @@ export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean 
 
       <section className="border-b border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-6">
         <div className="container-page">
-          <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
+          <label className="relative block">
+            <span className="sr-only">Filter by keyword</span>
+            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[var(--color-fg-subtle)]" />
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Filter by keyword — name, author, or description"
+              className="h-11 w-full rounded-md border border-[var(--color-border-strong)] bg-white pl-10 pr-3 text-sm text-[var(--color-fg)] outline-none transition placeholder:text-[var(--color-fg-subtle)] focus:border-[var(--color-denim)] focus:ring-2 focus:ring-[var(--color-denim)]/15"
+            />
+          </label>
+          <p className="mb-2 mt-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
             Category
           </p>
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="Category filter">
@@ -111,6 +141,7 @@ export function IntegrationsPage({ hashRoutes = false }: { hashRoutes?: boolean 
           </div>
           <p className="mt-3 text-sm text-[var(--color-fg-muted)]">
             Showing {showing} of {MARKETPLACE.length}
+            {query.trim() ? ` matching “${query.trim()}”` : ""}
           </p>
         </div>
       </section>
