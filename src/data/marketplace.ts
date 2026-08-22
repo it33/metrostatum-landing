@@ -1,5 +1,8 @@
 import catalog from "./marketplace-integrations.json";
 
+export type MarketplaceLink = { label: string; href: string };
+export type MarketplaceSection = { heading: string; paragraphs: string[] };
+
 export type MarketplaceItem = {
   slug: string;
   name: string;
@@ -15,6 +18,10 @@ export type MarketplaceItem = {
   lastUpdatedSource?: string | null;
   version?: string | null;
   releaseNotes?: string;
+  tagline?: string;
+  disclaimer?: string | null;
+  links?: MarketplaceLink[];
+  sections?: MarketplaceSection[];
 };
 
 export const MARKETPLACE: MarketplaceItem[] = catalog as MarketplaceItem[];
@@ -37,10 +44,33 @@ export function lastUpdatedLabel(item: MarketplaceItem): string {
     year: "numeric",
     timeZone: "UTC",
   });
-  if (item.lastUpdatedSource === "listing") {
-    return `Last updated ${formatted}`;
-  }
   return `Last updated ${formatted}`;
+}
+
+export function versionLabel(item: MarketplaceItem): string {
+  return item.version ? item.version : "Version unknown";
+}
+
+const SKIP_LINK = /privacy|terms of use|\[email|mailto:|^here$/i;
+
+export function listingLinks(item: MarketplaceItem): MarketplaceLink[] {
+  const out: MarketplaceLink[] = [];
+  const seen = new Set<string>();
+  const add = (label: string, href?: string | null) => {
+    if (!href) return;
+    const key = href.replace(/\/$/, "");
+    if (seen.has(key)) return;
+    if (SKIP_LINK.test(label) || SKIP_LINK.test(href)) return;
+    seen.add(key);
+    const pretty =
+      /^https?:\/\//i.test(label) ? "Website" : label.trim() || "Link";
+    out.push({ label: pretty, href });
+  };
+  for (const l of item.links || []) add(l.label, l.href);
+  add("Source on GitHub", item.github);
+  add("Release notes", item.releaseNotes);
+  add("Legacy Integrations Listing", item.href);
+  return out;
 }
 
 export function relatedIntegrations(item: MarketplaceItem, limit = 6): MarketplaceItem[] {

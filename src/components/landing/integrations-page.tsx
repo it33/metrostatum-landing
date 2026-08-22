@@ -8,6 +8,7 @@ import {
   MARKETPLACE,
   MARKETPLACE_CATEGORIES,
   lastUpdatedLabel,
+  versionLabel,
   type MarketplaceItem,
 } from "@/data/marketplace";
 
@@ -154,7 +155,9 @@ function IntegrationCard({ item, href }: { item: MarketplaceItem; href: string }
         ))}
       </div>
       <div className="mt-3 flex items-center justify-between border-t border-[var(--color-border)] px-5 py-3 text-xs">
-        <span className="font-medium text-[var(--color-fg-muted)]">{lastUpdatedLabel(item)}</span>
+        <span className="font-medium text-[var(--color-fg-muted)]">
+          {versionLabel(item)} · {lastUpdatedLabel(item)}
+        </span>
         <span className="inline-flex items-center gap-1 font-semibold text-[var(--color-denim)] group-hover:text-[var(--color-marigold)]">
           Details
           <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />

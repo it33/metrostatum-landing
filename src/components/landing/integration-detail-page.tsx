@@ -2,7 +2,13 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { CONTACT_SALES } from "@/nav-config";
-import { getIntegration, lastUpdatedLabel, relatedIntegrations } from "@/data/marketplace";
+import {
+  getIntegration,
+  lastUpdatedLabel,
+  listingLinks,
+  relatedIntegrations,
+  versionLabel,
+} from "@/data/marketplace";
 
 export function IntegrationDetailPage({
   slug,
@@ -32,6 +38,11 @@ export function IntegrationDetailPage({
   }
 
   const related = relatedIntegrations(item);
+  const links = listingLinks(item);
+  const primary = links.find((l) => /get started|source|download|github/i.test(l.label)) || links[0];
+  const rest = links.filter(
+    (l) => l !== primary && l.href.replace(/\/$/, "") !== item.href.replace(/\/$/, ""),
+  );
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)]">
@@ -63,11 +74,9 @@ export function IntegrationDetailPage({
                   {c}
                 </span>
               ))}
-              {item.version ? (
-                <span className="rounded-full bg-[var(--color-marigold)] px-2.5 py-0.5 font-bold text-[var(--color-denim)]">
-                  {item.version}
-                </span>
-              ) : null}
+              <span className="rounded-full bg-[var(--color-marigold)] px-2.5 py-0.5 font-bold text-[var(--color-denim)]">
+                {versionLabel(item)}
+              </span>
               <span className="font-medium text-white/80">{lastUpdatedLabel(item)}</span>
             </div>
           </div>
@@ -77,18 +86,45 @@ export function IntegrationDetailPage({
       <article className="container-page grid gap-10 py-12 md:grid-cols-[minmax(0,1fr)_18rem] md:py-16">
         <div>
           <h2 className="text-xl font-bold text-[var(--color-denim)]">Overview</h2>
-          <p className="mt-4 text-[15px] leading-relaxed text-[var(--color-fg-muted)]">{item.description}</p>
+          <p className="mt-4 text-[15px] leading-relaxed text-[var(--color-fg-muted)]">
+            {item.tagline || item.description}
+          </p>
+          {item.tagline && item.description && item.tagline !== item.description ? (
+            <p className="mt-3 text-[15px] leading-relaxed text-[var(--color-fg-muted)]">{item.description}</p>
+          ) : null}
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            {item.github ? (
+          {(item.sections || []).map((sec) => (
+            <section key={sec.heading} className="mt-8">
+              <h3 className="text-lg font-bold text-[var(--color-denim)]">{sec.heading}</h3>
+              {sec.paragraphs.map((p) =>
+                p.includes("\n• ") || p.startsWith("• ") ? (
+                  <ul key={p.slice(0, 40)} className="mt-3 space-y-1.5">
+                    {p.split("\n").map((line) => (
+                      <li key={line} className="flex gap-2 text-[15px] leading-relaxed text-[var(--color-fg-muted)]">
+                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-[var(--color-marigold)]" />
+                        <span>{line.replace(/^•\s*/, "")}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p key={p.slice(0, 40)} className="mt-3 text-[15px] leading-relaxed text-[var(--color-fg-muted)]">
+                    {p}
+                  </p>
+                ),
+              )}
+            </section>
+          ))}
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {primary ? (
               <a
-                href={item.github}
+                href={primary.href}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[var(--color-denim)] px-5 text-sm font-semibold text-white hover:bg-[var(--color-denim-mid)]"
               >
-                <Github className="size-4" />
-                Source on GitHub
+                {/github/i.test(primary.href) ? <Github className="size-4" /> : <ExternalLink className="size-4" />}
+                {primary.label}
               </a>
             ) : null}
             <a
@@ -97,10 +133,40 @@ export function IntegrationDetailPage({
               rel="noreferrer"
               className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[var(--color-border)] px-5 text-sm font-semibold text-[var(--color-denim)] hover:bg-[var(--color-bg-elevated)]"
             >
-              Marketplace listing
+              Legacy Integrations Listing
               <ExternalLink className="size-3.5" />
             </a>
           </div>
+
+          {rest.length > 0 ? (
+            <div className="mt-8">
+              <h3 className="text-lg font-bold text-[var(--color-denim)]">Links</h3>
+              <ul className="mt-3 space-y-2">
+                {rest.map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
+                    >
+                      {l.label}
+                      <ExternalLink className="size-3.5" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {item.disclaimer ? (
+            <aside className="mt-10 rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-denim)]">
+                Disclaimer
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--color-fg-muted)]">{item.disclaimer}</p>
+            </aside>
+          ) : null}
 
           {related.length > 0 ? (
             <div className="mt-14">
@@ -127,35 +193,31 @@ export function IntegrationDetailPage({
             </h3>
             <dl className="mt-3 space-y-2 text-sm text-[var(--color-fg-muted)]">
               <div>
-                <dt className="font-semibold text-[var(--color-fg)]">Publisher</dt>
+                <dt className="font-semibold text-[var(--color-fg)]">Author</dt>
                 <dd>{item.author}</dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-[var(--color-fg)]">Version</dt>
+                <dd>{versionLabel(item)}</dd>
               </div>
               <div>
                 <dt className="font-semibold text-[var(--color-fg)]">Last update</dt>
                 <dd>{lastUpdatedLabel(item)}</dd>
               </div>
-              {item.version ? (
-                <div>
-                  <dt className="font-semibold text-[var(--color-fg)]">Version</dt>
-                  <dd>{item.version}</dd>
-                </div>
-              ) : null}
               <div>
                 <dt className="font-semibold text-[var(--color-fg)]">Categories</dt>
                 <dd>{item.categories.join(", ")}</dd>
               </div>
             </dl>
-            {item.releaseNotes ? (
-              <a
-                href={item.releaseNotes}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-denim)]"
-              >
-                Release notes
-                <ExternalLink className="size-3.5" />
-              </a>
-            ) : null}
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-denim)]"
+            >
+              Legacy Integrations Listing
+              <ExternalLink className="size-3.5" />
+            </a>
           </div>
           <a
             href={CONTACT_SALES}

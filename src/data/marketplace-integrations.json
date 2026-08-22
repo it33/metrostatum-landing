@@ -14,7 +14,27 @@
     "github": "https://github.com/zabbix/zabbix",
     "lastUpdated": "2026-08-21",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": "5.12",
+    "tagline": "Push Zabbix open-source monitoring notifications to Mattermost Channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/zabbix/zabbix/blob/master/templates/media/mattermost/media_mattermost.yaml"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://blog.zabbix.com/mattermost-integration-with-zabbix/9549/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Version",
+        "paragraphs": [
+          "5.12"
+        ]
+      }
+    ]
   },
   {
     "slug": "mattermost-agents",
@@ -31,7 +51,30 @@
     "github": "https://github.com/mattermost/mattermost-plugin-agents",
     "lastUpdated": "2026-08-19",
     "lastUpdatedSource": "github-release",
-    "version": "v2.4.3"
+    "version": "v2.4.3",
+    "tagline": "Use the Mattermost Agents plugin to integrate AI capabilities directly into your Mattermost workspace, where you control your data and deployment. Run any local LLM on your infrastructure or connect to cloud providers.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-agents"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/configure/agents-admin-guide.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Details",
+        "paragraphs": [
+          "Mattermost Agents brings LLM capabilities into Mattermost to streamline communication and overcome information overload.",
+          "Featuring:",
+          "\u2022 Multiple AI Assistants : Configure different agents with specialized personalities and capabilities\n\u2022 Thread & Channel Summarization : Get concise summaries of long discussions with a single click\n\u2022 Action Item Extraction : Automatically identify and extract action items from threads\n\u2022 Meeting Transcription : Transcribe and summarize meeting recordings\n\u2022 Semantic Search : Find relevant content across your Mattermost instance using natural language\n\u2022 Smart Reactions : Let AI suggest contextually appropriate emoji reactions\n\u2022 Direct Conversations : Chat directly with AI assistants in dedicated channels\n\u2022 Flexible LLM Support : Use local models (Ollama, vLLM, etc.), cloud providers (OpenAI, Anthropic, Azure), or any OpenAI-compatible API",
+          "\u2022 Details"
+        ]
+      }
+    ]
   },
   {
     "slug": "scheduled-messages-community-version",
@@ -48,7 +91,20 @@
     "github": "https://github.com/apartmentlines/mattermost-plugin-poor-mans-scheduled-messages",
     "lastUpdated": "2026-08-19",
     "lastUpdatedSource": "github-release",
-    "version": "v1.3.1"
+    "version": "v1.3.1",
+    "tagline": "/schedule slash command that allows you to schedule text-only messages to be posted at a future time to any channel or direct message.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/apartmentlines/mattermost-plugin-poor-mans-scheduled-messages"
+      },
+      {
+        "label": "Readme",
+        "href": "https://github.com/apartmentlines/mattermost-plugin-poor-mans-scheduled-messages/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "haskell-library",
@@ -65,7 +121,20 @@
     "github": "https://github.com/matterhorn-chat/mattermost-api",
     "lastUpdated": "2026-08-18",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Client side API for communicating with a Mattermost server in Haskell",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/matterhorn-chat/mattermost-api"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/matterhorn-chat/mattermost-api/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "python-apiv4-driver",
@@ -82,7 +151,20 @@
     "github": "https://github.com/embl-bio-it/python-mattermost-autodriver",
     "lastUpdated": "2026-08-10",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Python driver to interact with Mattermost API v4",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/embl-bio-it/python-mattermost-autodriver"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/embl-bio-it/python-mattermost-autodriver/blob/main/README.rst"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "trello",
@@ -102,7 +184,28 @@
     "github": "https://github.com/Lujeni/matterllo",
     "lastUpdated": "2026-08-09",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Send Trello notifications to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/Lujeni/matterllo"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Lujeni/matterllo/blob/master/README.md"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Trello is the easy, free, flexible, and visual way to manage your projects and organize anything, trusted by millions of people from all over the world.",
+          "This is a simple integration between Trello and Mattermost that sends Trello activity notifications to Mattermost channels."
+        ]
+      }
+    ]
   },
   {
     "slug": "jira-plugin",
@@ -124,7 +227,38 @@
     "lastUpdated": "2026-08-06",
     "lastUpdatedSource": "marketplace-api",
     "version": "4.8.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-jira/releases/tag/v4.8.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-jira/releases/tag/v4.8.0",
+    "tagline": "Create Jira tickets from messages in Mattermost, get notified of important updates in Jira",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/mattermost/mattermost-plugin-jira"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/jira.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Jira is a project management tool used for issues and bugs tracking system. It is widely used as an issue-tracking tool for all types of development teams for planning, development and testing of a product\u2019s features. Mattermost is a collaboration solution that makes it easy for software development teams to rapidly create and ship software, as a team.",
+          "The Jira Plugin for Mattermost brings the most common functions from Jira to your fingertips in Mattermost with Slash commands and easy ways to create new tickets.",
+          "With Jira for Mattermost your team can:",
+          "\u2022 Create Jira tickets directly from within Mattermost\n\u2022 Transition tickets to different states\n\u2022 Assign Jira issues to others\n\u2022 Subscribe to Jira ticket changes and get notified in channels\n\u2022 JirBot to notify users of mentions and assignments\n\u2022 Attach Mattermost messages to existing Jira issues",
+          "Each user in Mattermost is connected with their own personal Jira account and notifications for issues where someone is mentioned or assigned an issue is mentioned in your own personal Jira notification bot to help everyone stay on top of their assigned issues.",
+          "To get Started: login to Mattermost, go to the Marketplace and click \u201cInstall\u201d next to the Jira listing and follow the instructions."
+        ]
+      },
+      {
+        "heading": "Components",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 Components"
+        ]
+      }
+    ]
   },
   {
     "slug": "github-plugin",
@@ -144,7 +278,20 @@
     "lastUpdated": "2026-08-04",
     "lastUpdatedSource": "marketplace-api",
     "version": "2.8.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-github/releases/tag/v2.8.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-github/releases/tag/v2.8.0",
+    "tagline": "Subscribe to repositories, stay up-to-date with reviews, assignments and more",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-github"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/github.html"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "microsoft-calendar-o365",
@@ -162,7 +309,29 @@
     "lastUpdated": "2026-07-20",
     "lastUpdatedSource": "marketplace-api",
     "version": "1.7.0",
-    "releaseNotes": "https://mattermost.com/pl/mattermost-plugin-mscalendar/releases/tag/v1.7.0"
+    "releaseNotes": "https://mattermost.com/pl/mattermost-plugin-mscalendar/releases/tag/v1.7.0",
+    "tagline": "A two-way integration between Mattermost and Microsoft Outlook Calendar",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-mscalendar"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/microsoft-calendar.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "With this plugin, users will be able to:",
+          "\u2022 Receive a daily summary of calendar events.\n\u2022 Automatically synchronize their status into Mattermost.\n\u2022 Accept or decline calendar event invites from Mattermost.",
+          "\u2022 Overview"
+        ]
+      }
+    ]
   },
   {
     "slug": "outlook-presence",
@@ -170,7 +339,7 @@
     "description": "Automatically set your Mattermost status based on your Outlook presence",
     "href": "https://mattermost.com/marketplace/outlook-presence/",
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Microsoft-Outlook-Presence.webp",
-    "author": "Third-party",
+    "author": "Third Party",
     "categories": [
       "Office Productivity"
     ],
@@ -180,7 +349,20 @@
     "lastUpdated": "2026-07-20",
     "lastUpdatedSource": "marketplace-api",
     "version": "1.7.0",
-    "releaseNotes": "https://mattermost.com/pl/mattermost-plugin-mscalendar/releases/tag/v1.7.0"
+    "releaseNotes": "https://mattermost.com/pl/mattermost-plugin-mscalendar/releases/tag/v1.7.0",
+    "tagline": "Automatically set your Mattermost status based on your Outlook presence",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-mscalendar"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost-community/mattermost-plugin-outlook-presence#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "webex-cloud",
@@ -197,7 +379,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-webex",
     "lastUpdated": "2026-07-16",
     "lastUpdatedSource": "github-release",
-    "version": "v1.3.3"
+    "version": "v1.3.3",
+    "tagline": "Start and join voice calls, video calls and use screen sharing with your team members via Cisco Webex Meetings",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-webex"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-webex#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "cron-monitoring",
@@ -214,7 +409,20 @@
     "github": "https://github.com/healthchecks/healthchecks",
     "lastUpdated": "2026-07-14",
     "lastUpdatedSource": "github-release",
-    "version": "v4.3"
+    "version": "v4.3",
+    "tagline": "Receive alerts from Healthchecks cron job monitoring service to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/healthchecks/healthchecks"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/healthchecks/healthchecks/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "confluence",
@@ -237,7 +445,37 @@
     "lastUpdated": "2026-07-06",
     "lastUpdatedSource": "marketplace-api",
     "version": "2.0.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-confluence/releases/tag/v2.0.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-confluence/releases/tag/v2.0.0",
+    "tagline": "Notify users in Mattermost of updates and new pages in Confluence",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/mattermost/mattermost-plugin-confluence"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-confluence#readme"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "This plugin, which works in environments with multiple Confluence servers, enables you to subscribe to a variety of events in Confluence and specify which channels the associated notifications will appear in.",
+          "\u2022 In a Mattermost channel, setup subscriptions to get updates from Confluence and manage your notification subscriptions directly within Mattermost\n\u2022 Notify a channel whenever something occurs on a Confluence object: Confluence Spaces Created, Updated, Deleted, Restored Comments added Confluence Pages Created, Updated, Deleted, Restored Comments added, deleted or updated",
+          "\u2022 Confluence Spaces Created, Updated, Deleted, Restored Comments added\n\u2022 Confluence Pages Created, Updated, Deleted, Restored Comments added, deleted or updated",
+          "\u2022 Created, Updated, Deleted, Restored\n\u2022 Comments added",
+          "\u2022 Created, Updated, Deleted, Restored\n\u2022 Comments added, deleted or updated"
+        ]
+      },
+      {
+        "heading": "Version",
+        "paragraphs": [
+          "5.18"
+        ]
+      }
+    ]
   },
   {
     "slug": "api-v4-client-for-php",
@@ -254,7 +492,20 @@
     "github": "https://github.com/thePanz/MattermostClient",
     "lastUpdated": "2026-06-19",
     "lastUpdatedSource": "github-release",
-    "version": "v2.0.0-RC1"
+    "version": "v2.0.0-RC1",
+    "tagline": "A PHP library providing a client for the RESTful API v4 of Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/thePanz/MattermostClient"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/thePanz/MattermostClient/blob/master/readme.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "gitlab-plugin",
@@ -277,7 +528,42 @@
     "lastUpdated": "2026-06-19",
     "lastUpdatedSource": "marketplace-api",
     "version": "1.13.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-gitlab/releases/tag/v1.13.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-gitlab/releases/tag/v1.13.0",
+    "tagline": "This plugin supports a two-way integration between Mattermost and GitLab. Subscribe to repositories, use GitLab events as Mattermost action triggers, and more",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-gitlab"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/gitlab.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "GitLab is a source code management and DevOps platform.",
+          "Once the GitLab plugin has been added to Mattermost by an admin, each user can connect using their own account. You can then subscribe as a channel or as an individual to notifications based on various events, including pipeline notifications and issues and PR updates.",
+          "When used in conjunction with Mattermost Playbooks for a software release process , this plugin can help to:",
+          "\u2022 Make the release process transparent and accessible\n\u2022 Centralize all communications based on existing user groups\n\u2022 Reduce developer toil and effort through enabling standard GitLab actions directly from a playbook",
+          "Tasks in a configured playbook can be automatically completed based on GitLab pipeline triggers, or conversely, pipeline steps can be triggered with a single click or slash command directly in a Mattermost channel.",
+          "To get started, follow the steps in the documentation to install and configure the plugin and your GitLab instance."
+        ]
+      },
+      {
+        "heading": "FAQ",
+        "paragraphs": [
+          "Yes, you will need a GitLab Administrator account to complete the setup of this integration.",
+          "Yes, any Mattermost user with a GitLab account can connect using this plugin once installed.",
+          "Mattermost server version 7.7 and up is supported",
+          "\u2022 Note: Update the GitLab Plugin to 1.6.0 for the latest deep integration features with pipeline actions.",
+          "\u2022 Overview\n\u2022 FAQ"
+        ]
+      }
+    ]
   },
   {
     "slug": "logback-appender-for-mattermost",
@@ -294,7 +580,20 @@
     "github": "https://github.com/elexis/elexis-server",
     "lastUpdated": "2026-06-17",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Fragment that connects logback/slf4j to Mattermost.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/elexis/elexis-server/tree/master/bundles/at.medevit.logback.mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/elexis/elexis-server/tree/master/bundles/at.medevit.logback.mattermost#configuration"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "onlyoffice",
@@ -311,7 +610,20 @@
     "github": "https://github.com/ONLYOFFICE/onlyoffice-mattermost",
     "lastUpdated": "2026-06-04",
     "lastUpdatedSource": "github-release",
-    "version": "v2.3.0"
+    "version": "v2.3.0",
+    "tagline": "Edit office documents from Mattermost using ONLYOFFICE Document Server",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/ONLYOFFICE/onlyoffice-mattermost/tree/main"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/ONLYOFFICE/onlyoffice-mattermost/tree/main#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "reply-in-channel",
@@ -328,7 +640,20 @@
     "github": "https://github.com/bed42/mattermost-reply-in-channel-plugin",
     "lastUpdated": "2026-05-29",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.1"
+    "version": "v1.0.1",
+    "tagline": "Adds a /ric slash command to Mattermost that lets you reply to a thread inline in the channel \u2014 similar to Slack's \"Also send to channel\" feature.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/bed42/mattermost-reply-in-channel-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/bed42/mattermost-reply-in-channel-plugin/blob/main/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "social-previews",
@@ -345,7 +670,20 @@
     "github": "https://github.com/bed42/mattermost-social-previews-plugin",
     "lastUpdated": "2026-05-26",
     "lastUpdatedSource": "github-release",
-    "version": "v1.2.0"
+    "version": "v1.2.0",
+    "tagline": "Displays rich previews for social media URLs. Supports Mastodon, Bluesky, Twitter/X, Threads, TikTok, and Instagram.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/bed42/mattermost-social-previews-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/bed42/mattermost-social-previews-plugin/blob/main/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "redmine",
@@ -363,7 +701,20 @@
     "github": "https://github.com/altsol/redmine_mattermost",
     "lastUpdated": "2026-05-22",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Post Redmine notifications to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/altsol/redmine_mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/altsol/redmine_mattermost/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "dataminr-plugin",
@@ -384,7 +735,35 @@
     "lastUpdated": "2026-05-19",
     "lastUpdatedSource": "marketplace-api",
     "version": "1.0.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-dataminr/releases/tag/v1.0.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-dataminr/releases/tag/v1.0.0",
+    "tagline": "Bring real-time Dataminr notifications into Mattermost with rich, color-coded severity formatting",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-dataminr"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-dataminr/blob/main/README.md"
+      },
+      {
+        "label": "Dataminr First Alert API",
+        "href": "https://www.dataminr.com/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Real-time alerting system that integrates the Dataminr First Alert API with Mattermost. The plugin continuously polls configured Dataminr backends for new events and posts rich, color-coded alerts directly into designated Mattermost channels.",
+          "This integration features:",
+          "\u2022 Rich Alert Formatting \u2014 Alerts are posted as color-coded Slack-style attachments with embedded media, location data, source text, and deep links back to Dataminr.\n\u2022 Alert Priority Levels \u2014 Visual indicators by severity: \ud83d\udd34 Flash (red) \u2014 Breaking news \ud83d\udfe0 Urgent (orange) \u2014 High priority \ud83d\udfe1 Alert (yellow) \u2014 Normal priority\n\u2022 Searchable Hashtags \u2014 Each alert is tagged with hashtags for alert level, country, and topics (e.g., #Flash , #Fire ) so teams can search and filter alerts in Mattermost.\n\u2022 Multi-Backend Support \u2014 Configure multiple independent Dataminr backends, each with its own credentials, polling schedule, and target channel.",
+          "\u2022 \ud83d\udd34 Flash (red) \u2014 Breaking news\n\u2022 \ud83d\udfe0 Urgent (orange) \u2014 High priority\n\u2022 \ud83d\udfe1 Alert (yellow) \u2014 Normal priority",
+          "\u2022 Overview"
+        ]
+      }
+    ]
   },
   {
     "slug": "welcomebot-plugin",
@@ -405,7 +784,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-welcomebot",
     "lastUpdated": "2026-04-24",
     "lastUpdatedSource": "github-release",
-    "version": "v1.4.1"
+    "version": "v1.4.1",
+    "tagline": "A bot that posts welcome messages to new users and invites them into channels based on their responses",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-welcomebot"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-welcomebot/blob/master/README.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "mattermost-demo-plugin",
@@ -422,7 +814,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-demo",
     "lastUpdated": "2026-04-23",
     "lastUpdatedSource": "github-release",
-    "version": "v0.11.1"
+    "version": "v0.11.1",
+    "tagline": "Demonstrates the capabilities of a Mattermost plugin.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-demo"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-demo#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "coffeebot",
@@ -439,7 +844,20 @@
     "github": "https://github.com/pcjl/mattermost-coffeebot",
     "lastUpdated": "2026-04-21",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Pair coworkers together randomly for them to meet each other in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/pcjl/mattermost-coffeebot"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/pcjl/mattermost-coffeebot/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "zoom-plugin",
@@ -460,7 +878,27 @@
     "lastUpdated": "2026-04-09",
     "lastUpdatedSource": "marketplace-api",
     "version": "1.13.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-zoom/releases/tag/v1.13.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-zoom/releases/tag/v1.13.0",
+    "tagline": "Start Zoom audio and video conferencing calls in Mattermost with a single click",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-zoom"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/zoom.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Version",
+        "paragraphs": [
+          "1.8.0"
+        ]
+      }
+    ]
   },
   {
     "slug": "giphy-plugin",
@@ -480,7 +918,20 @@
     "github": "https://github.com/moussetc/mattermost-plugin-giphy",
     "lastUpdated": "2026-03-24",
     "lastUpdatedSource": "github-release",
-    "version": "v5.0.0"
+    "version": "v5.0.0",
+    "tagline": "Post GIFs from Giphy or Gfycat via /gif and /gifs commands",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/moussetc/mattermost-plugin-giphy"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/moussetc/mattermost-plugin-giphy/blob/master/README.md#installation-and-configuration"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "all-quiet",
@@ -497,7 +948,29 @@
     "github": null,
     "lastUpdated": "2026-03-16",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Two-way integration to send incident alerts from All Quiet to Mattermost channels and create incidents directly from Mattermost. Receive incident updates and resolution messages in real time.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Set Up",
+        "href": "https://docs.allquiet.app/integrations/outbound/mattermost"
+      },
+      {
+        "label": "Get Support",
+        "href": "https://allquiet.app"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "On-call teams can follow incident activity, share context, and coordinate the response directly inside Mattermost.",
+          "Key capabilities include:",
+          "\u2022 Send incident alerts and updates from All Quiet to Mattermost channels using a bot account integration\n\u2022 Create All Quiet incidents from Mattermost with custom slash commands\n\u2022 Notify teams about incident creation, escalation, and resolution\n\u2022 Keep incident communication centralized in your chat workflow"
+        ]
+      }
+    ]
   },
   {
     "slug": "mattermost-ms-teams-plugin",
@@ -519,7 +992,39 @@
     "github": "https://github.com/mattermost/mattermost-plugin-msteams-sync",
     "lastUpdated": "2026-03-09",
     "lastUpdatedSource": "github-release",
-    "version": "v2.3.2"
+    "version": "v2.3.2",
+    "tagline": "The Microsoft Teams plugin enables you to break through siloes in a mixed Mattermost and Teams environment by forwarding real-time chat notifications from Teams to Mattermost. Enterprise subscription required for use.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-msteams-sync"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/microsoft-teams-sync.html"
+      },
+      {
+        "label": "MS Teams",
+        "href": "https://teams.microsoft.com/edustart"
+      },
+      {
+        "label": "how Mattermost and Microsoft work together",
+        "href": "https://mattermost.com/solutions/mattermost-for-microsoft-teams/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "MS Teams is a proprietary business communication tool developed by Microsoft as part of the Microsoft 365 platform.",
+          "This plugin helps to notify technical and operational teams to a central all-employee platform in MS Teams, allowing teams to stay focused without excessive context switching between applications.",
+          "To get started, follow the steps in the documentation .",
+          "Learn more about how Mattermost and Microsoft work together .",
+          "\u2022 Overview"
+        ]
+      }
+    ]
   },
   {
     "slug": "google-drive-app",
@@ -536,7 +1041,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-google-drive",
     "lastUpdated": "2026-03-05",
     "lastUpdatedSource": "github-release",
-    "version": "v1.1.0"
+    "version": "v1.1.0",
+    "tagline": "Share files from your Google Drive directly in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-google-drive"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-google-drive/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "hipmost",
@@ -553,7 +1071,20 @@
     "github": "https://github.com/orbitalimpact/hipmost",
     "lastUpdated": "2026-03-02",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "A tool to migrate your Hipchat history to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/orbitalimpact/hipmost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/orbitalimpact/hipmost/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "webhook-proxy-server",
@@ -570,7 +1101,33 @@
     "github": "https://github.com/adnanh/webhook",
     "lastUpdated": "2026-02-12",
     "lastUpdatedSource": "github-release",
-    "version": "2.8.3"
+    "version": "2.8.3",
+    "tagline": "Lightweight incoming webhook server to run shell commands in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/adnanh/webhook"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/adnanh/webhook/blob/master/README.md#installation"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "\u2018webhook\u2019 is a lightweight configurable tool written in Go, that allows you to easily create HTTP endpoints (hooks) on your server, which you can use to execute configured commands. You can also pass data from the HTTP request (such as headers, payload or query variables) to your commands. webhook also allows you to specify rules which have to be satisfied in order for the hook to be triggered.",
+          "In Mattermost, you can set up an \u201cOutgoing webhook integration\u201d or \u201cSlash command\u201d to run various commands on your server, which can then report back directly to you or your channels using the \u201cIncoming webhook integrations\u201d, or the appropriate response body.",
+          "webhook aims to do nothing more than it should do, and that is:",
+          "1. Receive the request,",
+          "2. Parse the headers, payload and query variables,",
+          "3. Check if the specified rules for the hook are satisfied,",
+          "4. And finally, pass the specified arguments to the specified command via command line arguments or via environment variables."
+        ]
+      }
+    ]
   },
   {
     "slug": "mail2most",
@@ -587,7 +1144,20 @@
     "github": "https://github.com/cseeger-epages/mail2most",
     "lastUpdated": "2025-11-11",
     "lastUpdatedSource": "github-release",
-    "version": "v1.12.0"
+    "version": "v1.12.0",
+    "tagline": "Send emails to Mattermost via IMAP inboxes",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cseeger-epages/mail2most"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cseeger-epages/mail2most/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "channel-export",
@@ -604,7 +1174,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-channel-export",
     "lastUpdated": "2025-10-28",
     "lastUpdatedSource": "github-release",
-    "version": "v1.3.0"
+    "version": "v1.3.0",
+    "tagline": "Exports channel messages into a .csv file format. Enterprise subscription required for use.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/mattermost/mattermost-plugin-channel-export"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/administration-guide/comply/export-mattermost-channel-data.html"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "servicenow",
@@ -627,7 +1210,40 @@
     "lastUpdated": "2025-10-17",
     "lastUpdatedSource": "marketplace-api",
     "version": "2.4.0",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-servicenow/releases/tag/v2.4.0"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-servicenow/releases/tag/v2.4.0",
+    "tagline": "This plugin integrates ServiceNow with Mattermost by allowing users to subscribe to record changes in ServiceNow and manage them through Mattermost.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-servicenow#installation"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/servicenow.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "ServiceNow is a platform commonly used for IT ticketing and customer or employee experience tracking. It is a powerful platform that is used across an entire organization to allow employees to approve workflows, file requests for customer support, and replace their keyboards via your IT team. ServiceNow is also commonly used to manage incident response for teams.",
+          "The ServiceNow Mattermost plugin connects your existing ServiceNow account with your Mattermost server, adding a layer of collaboration and communication as well as expanding ease of access to essential functionality from right within Mattermost.",
+          "Once connected, users have access to the following features:",
+          "\u2022 Send notifications to channels when changes occur in ServiceNow\n\u2022 Comment and update a ServiceNow record from within Mattermost\n\u2022 Search and share records from a Mattermost channel",
+          "To get started in your existing Mattermost workspace, login as an administrator, go to the Plugin Marketplace and click \u201cinstall\u201d on the \u201cServiceNow\u201d plugin listed. After a System Admin has configured the ServiceNow plugin, end users can click the ServiceNow icon in the Right Hand Sidebar or run /servicenow connect in a Mattermost channel to connect their own Mattermost and ServiceNow accounts to get started running the ServiceNow plugin."
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "Yes, you will need a ServiceNow Administrator account to complete the setup of this integration.",
+          "Yes, any Mattermost user with a ServiceNow account can connect using this plugin.",
+          "Mattermost version 5.37 and up is supported.",
+          "\u2022 Overview\n\u2022 FAQs"
+        ]
+      }
+    ]
   },
   {
     "slug": "profanity-filter-plugin",
@@ -645,7 +1261,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-profanity-filter",
     "lastUpdated": "2025-10-16",
     "lastUpdatedSource": "github-release",
-    "version": "v1.1.0-rc1"
+    "version": "v1.1.0-rc1",
+    "tagline": "Censor profanity on your Mattermost server",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-profanity-filter"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-profanity-filter/blob/master/README.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "matterhorn",
@@ -663,7 +1292,20 @@
     "github": "https://github.com/matterhorn-chat/matterhorn",
     "lastUpdated": "2025-10-08",
     "lastUpdatedSource": "github-release",
-    "version": "90000.1.1"
+    "version": "90000.1.1",
+    "tagline": "A terminal client for Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/matterhorn-chat/matterhorn"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/matterhorn-chat/matterhorn#quick-start"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "microsoft-teams-meetings",
@@ -680,7 +1322,75 @@
     "github": null,
     "lastUpdated": "2025-09-25",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Leverage MS teams Meeting's Video calling within Mattermost.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Documentation",
+        "href": "https://docs.mattermost.com/integrations-guide/microsoft-teams-meetings.html"
+      },
+      {
+        "label": "Help Center",
+        "href": "https://support.mattermost.com/hc/en-us/requests/new"
+      },
+      {
+        "label": "[email protected]",
+        "href": "javascript:void(0);"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "https://mattermost.com/privacy-policy/"
+      },
+      {
+        "label": "Terms of Use",
+        "href": "https://mattermost.com/terms-of-service/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Many organizations are using MS Teams Meetings as an alternative for Zoom or Webex for business collaboration. Mattermost connects with Microsoft Azure to allow Teams Users to easily start and share a link to a new meeting with a single click.",
+          "Previously, Mattermost users may not login to Teams regularly, but do need to use MS Teams to start/create meetings within Teams, then copy that link and share with colleagues within a Mattermost channel to get a meeting started. This workflow can cause users to context switch more than necessary.",
+          "The new Teams plugin connects with the MS Teams API to create new meetings on demand and then sharing that join link to the mattermost channel automatically for other colleagues to join the new Teams Meeting easily.",
+          "The Microsoft Teams Meetings plugin is available in the Plugin Marketplace within Mattermost and requires adding an Azure application to your Active Directory Portal. Instructions for Microsoft Administrators are available and require very limited permissions.",
+          "Get started by reading the documentation here, and ask your Microsoft Administrator to create the Azure Application it will use for authentication. Installing and setting up the plugin with the values from the Microsoft Admin is straightforward and users can get started by clicking the \u201cT\u201d button in a channel to start a meeting."
+        ]
+      },
+      {
+        "heading": "Plugin Framework",
+        "paragraphs": [
+          "This listing uses the plugin framework to integrate with Mattermost. Plugins have the power of extensive customizability and can tap into system functions. They reside on the Mattermost server itself, are written in Go and communicate with the server over an RPC based API."
+        ]
+      },
+      {
+        "heading": "Slash Commands",
+        "paragraphs": [
+          "Slash commands allow you to complete an action with an app simply by sending a message in Mattermost. Type a / forward slash in any conversation to view a list of available slash commands."
+        ]
+      },
+      {
+        "heading": "Permissions",
+        "paragraphs": [
+          "Plugin Level Access \u2013 This plugin when installed on a Mattermost server has very powerful permissions and can act as an administrator on your workspace. However, all plugins on the Marketplace have been reviewed by the Mattermost development team and our Security team before they are published. For many plugins, the source code is available for review, and we cryptographically sign the plugin code that we publish to the marketplace."
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "A user will need an MS teams account if they are using the plugin to start a meeting in a channel. When they first click the \u201cStart MS Teams Meeting\u201d buton, the system will prompt them to connect their MS Teams Account.",
+          "If someone is simply a member of a channel and clicks on the link to attend a meeting, they do not need to have an MS Teams account to attend.",
+          "No, the notification currently only goes out to members in the Mattermost channel when the \u201cStart Meeting\u201d button is clicked."
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 Components\n\u2022 FAQs\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "pexip-video-connect",
@@ -697,7 +1407,40 @@
     "github": null,
     "lastUpdated": "2025-09-23",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": "6.2.1",
+    "tagline": "Launch Pexip Secure Meetings from your Mattermost channels. Ensure mission-critical communication stays secure, flexible, and fully under your command.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://dl.pexip.com/mattermost-plugin/"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.pexip.com/admin/mattermost.htm"
+      },
+      {
+        "label": "https://www.pexip.com/technology-partners/mattermost",
+        "href": "https://www.pexip.com/technology-partners/mattermost"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Start a secure video meeting directly from any Mattermost channel, escalating into screensharing or a full video call, while maintaining access to chat before, during, and after the meeting.",
+          "When combined, Pexip and Mattermost offer a modern, responsive collaboration experience that meets the needs of defense, government, and other high-trust organizations.",
+          "For more information and to get all the possibilities, visit https://www.pexip.com/technology-partners/mattermost .",
+          "\u2022 Overview"
+        ]
+      },
+      {
+        "heading": "Version",
+        "paragraphs": [
+          "6.2.1"
+        ]
+      }
+    ]
   },
   {
     "slug": "chocolatey",
@@ -714,7 +1457,20 @@
     "github": "https://github.com/chocolatey/chocolatey-coreteampackages",
     "lastUpdated": "2025-09-18",
     "lastUpdatedSource": "github-release",
-    "version": "1password8-8.11.8"
+    "version": "1password8-8.11.8",
+    "tagline": "Chocolatey Installer to easily deploy the Windows Desktop App for Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mattermost-desktop"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://community.chocolatey.org/packages/mattermost-desktop"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "collabora-online",
@@ -731,7 +1487,20 @@
     "github": "https://github.com/CollaboraOnline/collabora-mattermost",
     "lastUpdated": "2025-08-11",
     "lastUpdatedSource": "github-release",
-    "version": "1.2.1"
+    "version": "1.2.1",
+    "tagline": "View or edit Collabora Online files directly in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/CollaboraOnline/collabora-mattermost/tree/master"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/CollaboraOnline/collabora-mattermost/tree/master#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "teamplify",
@@ -748,7 +1517,48 @@
     "github": null,
     "lastUpdated": "2025-07-24",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Run async standups, track time off, and manage team availability \u2013 all inside Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://teamplify.com/integrations/mattermost/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Teamplify helps engineering and cross-functional teams run smarter, more efficient operations inside Mattermost. It brings key team management workflows\u2014daily standups, time tracking, vacation planning, and team insights, right into your collaboration hub.",
+          "Once installed by an admin, Teamplify can be used by individual users and teams to streamline routine tasks and gain visibility into team dynamics without switching tools.",
+          "With Teamplify in Mattermost, you can:",
+          "\u2022 Automate async daily standups to keep everyone aligned\n\u2022 Track working hours without manual entry\n\u2022 Manage time off and avoid calendar conflicts\n\u2022 Get data-driven insights into team collaboration patterns\n\u2022 Stay on top of tasks with automated notifications",
+          "Whether you\u2019re managing remote teams or looking to reduce overhead, Teamplify brings the right balance of automation and transparency to your daily workflow."
+        ]
+      },
+      {
+        "heading": "Key Use Cases",
+        "paragraphs": [
+          "Keep distributed teams aligned with automated daily standups",
+          "\u2022 Make vacations and availability visible across the team\n\u2022 Track engagement and work time via Jira and Git integrations\n\u2022 Automate reminders to reduce missed updates or blockers"
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "Do I need to be a Mattermost admin to install this?",
+          "Yes, installation requires Mattermost admin privileges.",
+          "Can any Mattermost user access Teamplify once it\u2019s installed?",
+          "Yes, any user in the workspace can use Teamplify features once the plugin is installed.",
+          "Is this the same functionality as Teamplify for Slack?",
+          "Yes, the Mattermost integration offers the same feature set as the Slack integration.",
+          "What is the minimum supported Mattermost version?",
+          "Teamplify supports Mattermost Server version 7.7 and above.",
+          "\u2022 Overview\n\u2022 Key Use Cases\n\u2022 FAQs"
+        ]
+      }
+    ]
   },
   {
     "slug": "discourse-chat-integration-plugin",
@@ -766,7 +1576,28 @@
     "github": "https://github.com/discourse/discourse-chat-integration",
     "lastUpdated": "2025-07-14",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Send notifications about new Discourse posts to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/discourse/discourse-chat-integration"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/discourse/discourse-chat-integration/blob/main/README.md"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "This plugin allows sending notifications about new Discourse posts to channels in Mattermost.",
+          "Notifications can be triggered by: \u2022 New topics \u2022 New replies \u2022 Messages to a group \u2022 Mentions of a group"
+        ]
+      }
+    ]
   },
   {
     "slug": "redmine-2",
@@ -785,7 +1616,20 @@
     "github": "https://github.com/AlphaNodes/redmine_messenger",
     "lastUpdated": "2025-06-22",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Post Redmine notifications to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/AlphaNodes/redmine_messenger"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/AlphaNodes/redmine_messenger/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "spoiler-plugin",
@@ -802,7 +1646,20 @@
     "github": "https://github.com/moussetc/mattermost-plugin-spoiler",
     "lastUpdated": "2025-05-05",
     "lastUpdatedSource": "github-release",
-    "version": "v4.1.0"
+    "version": "v4.1.0",
+    "tagline": "Display spoiler messages via /spoiler command in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/moussetc/mattermost-plugin-spoiler"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/moussetc/mattermost-plugin-spoiler/blob/master/README.md#installation-and-configuration"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "dice-roller-plugin",
@@ -819,7 +1676,37 @@
     "github": "https://github.com/moussetc/mattermost-plugin-dice-roller",
     "lastUpdated": "2025-05-04",
     "lastUpdatedSource": "github-release",
-    "version": "v3.2.0"
+    "version": "v3.2.0",
+    "tagline": "A Mattermost plugin to add a slash command for in-chat dice rolling",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/moussetc/mattermost-plugin-dice-roller"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/moussetc/mattermost-plugin-dice-roller/blob/master/README.md#installation-and-configuration"
+      },
+      {
+        "label": "Log an Issue in Github",
+        "href": "https://github.com/moussetc/mattermost-plugin-dice-roller/issues"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Dice Roller plugin was released to the Marketplace and brings some randomness to your team\u2019s decision making toolset. When there\u2019s no clear answer, you can roll the dice with your colleagues in a channel."
+        ]
+      },
+      {
+        "heading": "Help",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 Commands\n\u2022 Help"
+        ]
+      }
+    ]
   },
   {
     "slug": "zendesk-app",
@@ -840,7 +1727,29 @@
     "github": null,
     "lastUpdated": "2025-04-22",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Create Zendesk tickets and receive ticket updates within Mattermost to reduce context switching (*not compatible with server versions >10.0)",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Zendesk can be used to track critical incidents that are discovered by customers and then lead to resolution and happy customer outcomes. This is an important part of the Devops workflow cycle that companies focus on because of the visibility to customers. Zendesk can help drive a great customer and employee experience by providing a solid foundation to respond to service cases.",
+          "The new Mattermost Zendesk App is one of the first apps created using the new App Framework. It runs in a serverless hosting environment and allows for the creation of tickets and notifying channels of new cases and updates.",
+          "Zendesk is great for keeping track of incidents and incoming requests for support agents. But not everyone has a Zendesk agent account, which makes communicating ticket status with the engineering team difficult.",
+          "The Zendesk app makes it easy to create new Tickets in Zendesk from within Mattermost. Support Agents can leverage a channel message from a customer or employee and transform it into an actionable ticket in Zendesk easily. The integration makes it easy to log these new tickets whether the support agents are in the field on their mobile phones, or logging IT tickets from their desktop. Mattermost\u2019s DevOps collaboration platform makes sure Zendesk cases get the attention they deserve and move to resolution quickly."
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "Any Mattermost users with a Zendesk account can connect using the App. Once they\u2019ve connected, they can create tickets and subscribe to updates from Zendesk. Currently, only \u201cagent\u201d users can create tickets. In the future, non-agents may be allowed to create tickets in Zendesk from Mattermost.",
+          "All Zendesk fields for a form are supported and displayed automatically when trying to create a ticket from within Mattermost. If you add any fields to your forms, no configuration is required.",
+          "\u2022 Overview\n\u2022 Components\n\u2022 FAQs"
+        ]
+      }
+    ]
   },
   {
     "slug": "autolink-plugin",
@@ -860,7 +1769,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-autolink",
     "lastUpdated": "2025-04-15",
     "lastUpdatedSource": "github-release",
-    "version": "v1.4.1"
+    "version": "v1.4.1",
+    "tagline": "Automatically rewrite text matching a regular expression into a Markdown link",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-autolink"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-autolink/blob/master/README.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "matterpoll",
@@ -881,7 +1803,20 @@
     "github": "https://github.com/matterpoll/matterpoll",
     "lastUpdated": "2025-04-14",
     "lastUpdatedSource": "github-release",
-    "version": "v1.8.0"
+    "version": "v1.8.0",
+    "tagline": "Quickly create polls via /poll slash command in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/matterpoll/matterpoll"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/matterpoll/matterpoll/blob/master/README.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "broomer",
@@ -898,7 +1833,20 @@
     "github": "https://github.com/nathanaelhoun/mattermost-plugin-broomer",
     "lastUpdated": "2025-02-27",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.3"
+    "version": "v1.0.3",
+    "tagline": "Quickly delete posts from a Mattermost channel with a simple /broom command",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/nathanaelhoun/mattermost-plugin-broomer"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/nathanaelhoun/mattermost-plugin-broomer#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "eclipse",
@@ -915,7 +1863,20 @@
     "github": "https://github.com/cbrun/jstuart",
     "lastUpdated": "2025-01-30",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Send Eclipse dev infrastructure notifications via RSS, Git, Jenkins and more",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cbrun/jstuart"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cbrun/jstuart/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "python-chatbot",
@@ -932,7 +1893,20 @@
     "github": "https://github.com/attzonko/mmpy_bot",
     "lastUpdated": "2025-01-18",
     "lastUpdatedSource": "github-release",
-    "version": "v2.2.1"
+    "version": "v2.2.1",
+    "tagline": "Python chatbot using Mattermost RESTful API",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/attzonko/mmpy_bot"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/attzonko/mmpy_bot/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "rasa-core",
@@ -949,7 +1923,20 @@
     "github": "https://github.com/RasaHQ/rasa",
     "lastUpdated": "2025-01-14",
     "lastUpdatedSource": "github-release",
-    "version": "3.6.21"
+    "version": "3.6.21",
+    "tagline": "Machine learning based dialogue AI engine connector for Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/RasaHQ/rasa"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/RasaHQ/rasa/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "botkube",
@@ -966,7 +1953,28 @@
     "github": "https://github.com/infracloudio/botkube",
     "lastUpdated": "2024-11-13",
     "lastUpdatedSource": "github-release",
-    "version": "v1.14.0"
+    "version": "v1.14.0",
+    "tagline": "Monitor & debug your Kubernetes cluster deployment, and receive best practices",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/infracloudio/botkube"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://www.botkube.io/installation/mattermost/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "An app that helps you monitor your Kubernetes cluster, debug critical deployments and gives recommendations for standard practices.",
+          "\u2022 Overview"
+        ]
+      }
+    ]
   },
   {
     "slug": "splunk-2",
@@ -974,7 +1982,7 @@
     "description": "Enable users to get logs and alerts from your Splunk server",
     "href": "https://mattermost.com/marketplace/splunk-2/",
     "icon": "https://mattermost.com/wp-content/uploads/2022/03/splunklogo.webp",
-    "author": "Third-party",
+    "author": "Third Party",
     "categories": [
       "Monitoring"
     ],
@@ -983,7 +1991,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-splunk",
     "lastUpdated": "2024-10-29",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Enable users to get logs and alerts from your Splunk server",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/mattermost/mattermost-plugin-splunk"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-splunk#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "focalboard",
@@ -991,7 +2012,7 @@
     "description": "Focalboard is an open source alternative to tools like Asana, Trello, and Notion. Check out more at www.focalboard.com.",
     "href": "https://mattermost.com/marketplace/focalboard/",
     "icon": "https://mattermost.com/wp-content/uploads/2023/09/fblogo.svg",
-    "author": "Third-party",
+    "author": "Third Party",
     "categories": [
       "Planning"
     ],
@@ -1000,7 +2021,20 @@
     "github": "https://github.com/mattermost/focalboard",
     "lastUpdated": "2024-06-13",
     "lastUpdatedSource": "github-release",
-    "version": "v8.0.0"
+    "version": "v8.0.0",
+    "tagline": "Focalboard is an open source alternative to tools like Asana, Trello, and Notion. Check out more at www.focalboard.com.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/mattermost/focalboard"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/focalboard/blob/main/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "teleport",
@@ -1017,7 +2051,16 @@
     "github": "https://github.com/gravitational/teleport-plugins",
     "lastUpdated": "2024-05-08",
     "lastUpdatedSource": "github-release",
-    "version": "v15.3.1"
+    "version": "v15.3.1",
+    "tagline": "Get notified about new access requests in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/gravitational/teleport-plugins/tree/master/access/mattermost#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "azure-devops",
@@ -1034,7 +2077,29 @@
     "github": "https://github.com/mattermost/mattermost-plugin-azure-devops",
     "lastUpdated": "2024-03-15",
     "lastUpdatedSource": "github-release",
-    "version": "v3.2.1"
+    "version": "v3.2.1",
+    "tagline": "View AzureDevOps projects, work items, boards, pipelines and repos (*not compatible with server versions >10.0)",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-azure-devops"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-azure-devops#readme"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "This plugin contains the following features:",
+          "\u2022 Right-hand sidebar (RHS) shows the list of linked projects and subscriptions created for each project with separate buttons to connect an account, link or unlink a project and add or delete a subscription.\n\u2022 Preview of the work item, pull request, release or build URL.\n\u2022 Add subscriptions for a linked project to get notifications in a selected channel for selected events on work items, pull requests and pipelines.\n\u2022 Approve pipeline requests from your channel\n\u2022 \u2026.and more!",
+          "\u2022 Overview"
+        ]
+      }
+    ]
   },
   {
     "slug": "symfony-publication-bundle",
@@ -1051,7 +2116,16 @@
     "github": "https://github.com/codebuds33/mattermost-publication-bundle",
     "lastUpdated": "2024-02-25",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Publish text from Symfony apps to your Mattermost server",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/codebuds33/mattermost-publication-bundle"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "aws-sns-plugin",
@@ -1068,7 +2142,20 @@
     "github": "https://github.com/cpanato/mattermost-plugin-aws-SNS",
     "lastUpdated": "2024-02-16",
     "lastUpdatedSource": "github-release",
-    "version": "v1.3.0"
+    "version": "v1.3.0",
+    "tagline": "Send SNS notifications from Alerts created by AWS CloudWatch to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cpanato/mattermost-plugin-aws-SNS"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cpanato/mattermost-plugin-aws-SNS/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "nextcloud-app",
@@ -1085,7 +2172,20 @@
     "github": "https://github.com/mattermost/mattermost-app-nextcloud",
     "lastUpdated": "2024-01-24",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Share links and upload new Nextcloud files and check your Nextcloud calendar directly in Mattermost (*not compatible with server versions >10.0)",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-app-nextcloud"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-app-nextcloud#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "github",
@@ -1102,7 +2202,20 @@
     "github": "https://github.com/softdevteam/mattermost-github-integration",
     "lastUpdated": "2023-11-08",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Python script listens for incoming GitHub events and posts them to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/softdevteam/mattermost-github-integration"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/softdevteam/mattermost-github-integration/blob/master/README.md#requirements"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "feature-lifecycle-playbook",
@@ -1123,7 +2236,45 @@
     "github": "https://github.com/mattermost/mattermost-product-templates",
     "lastUpdated": "2023-11-01",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Create transparent workflows across development teams to ensure your feature development process is seamless.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-product-templates/blob/master/Playbooks/feature_lifecycle_template_playbook.json"
+      },
+      {
+        "label": "import a playbook",
+        "href": "https://docs.mattermost.com/playbooks/reusing-and-sharing-playbooks.html"
+      },
+      {
+        "label": "Playbooks and templates",
+        "href": "https://docs.mattermost.com/guides/playbooks.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Use this template in Mattermost Playbooks to reflect your own feature lifecycle process.",
+          "\u2022 Customize a summary template to fill in with links to documentation for every playbook run\n\u2022 Schedule a reminder to post a status update\n\u2022 Organize checklist sections to correspond to project milestones\n\u2022 Assign tasks and roles ahead of time or on the fly\n\u2022 Set due dates for tasks\n\u2022 Configure key project metrics to analyze over time, such as velocity for feature delivery\n\u2022 Create a custom template for team retrospective\n\u2022 Activate playbook automations to include a specific team for every run, assign a project owner, or trigger webhooks"
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "To add the template to Mattermost, follow the steps to import a playbook .",
+          "Read more about Playbooks and templates here."
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 FAQs\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "incident-resolution-playbook",
@@ -1144,7 +2295,45 @@
     "github": "https://github.com/mattermost/mattermost-product-templates",
     "lastUpdated": "2023-11-01",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Resolving incidents requires speed and accuracy. Streamline your processes for rapid response and resolution",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-product-templates/blob/master/Playbooks/incident_resolution_template_playbook.json"
+      },
+      {
+        "label": "import a playbook",
+        "href": "https://docs.mattermost.com/playbooks/reusing-and-sharing-playbooks.html"
+      },
+      {
+        "label": "Playbooks and templates",
+        "href": "https://docs.mattermost.com/guides/playbooks.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Use this template in Mattermost Playbooks to reflect your own incident resolution process.",
+          "\u2022 Customize a summary template to fill in with links to documentation for every playbook run\n\u2022 Schedule a reminder to post a status update\n\u2022 Organize checklist sections to correspond to project milestones\n\u2022 Assign tasks and roles ahead of time or on the fly\n\u2022 Set due dates for tasks\n\u2022 Configure key project metrics to analyze over time, such as velocity for feature delivery\n\u2022 Create a custom template for team retrospective\n\u2022 Activate playbook automations to include a specific team for every run, assign a project owner, or trigger webhooks"
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "To add the template to Mattermost, follow the steps to import a playbook .",
+          "Read more about Playbooks and templates here."
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 FAQs\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "okr-management-playbook",
@@ -1165,7 +2354,49 @@
     "github": "https://github.com/mattermost/mattermost-product-templates",
     "lastUpdated": "2023-11-01",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Achieve goals and hit milestones with transparent planning and check-ins on high-level initiatives.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-product-templates/blob/master/Playbooks/okr_management_template_playbook.json"
+      },
+      {
+        "label": "OKR Management process.",
+        "href": "https://mattermost.com/use-case-datasheet-okr-management/"
+      },
+      {
+        "label": "import a playbook",
+        "href": "https://docs.mattermost.com/playbooks/reusing-and-sharing-playbooks.html"
+      },
+      {
+        "label": "Playbooks and templates",
+        "href": "https://docs.mattermost.com/guides/playbooks.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Use this template in Mattermost Playbooks to reflect your own OKR Management process.",
+          "\u2022 Customize a summary template to fill in with links to documentation for every playbook run\n\u2022 Schedule a reminder to post a status update\n\u2022 Organize checklist sections to correspond to project milestones\n\u2022 Assign tasks and roles ahead of time or on the fly\n\u2022 Set due dates for tasks\n\u2022 Configure key project metrics to analyze over time, such as velocity for feature delivery\n\u2022 Create a custom template for team retrospective\n\u2022 Activate playbook automations to include a specific team for every run, assign a project owner, or trigger webhooks"
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "To add the template to Mattermost, follow the steps to import a playbook .",
+          "Read more about Playbooks and templates here."
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 FAQs\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "release-management-playbook",
@@ -1185,7 +2416,45 @@
     "github": "https://github.com/mattermost/mattermost-product-templates",
     "lastUpdated": "2023-11-01",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Perfect your release process from ideation to production.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-product-templates/blob/master/Playbooks/release_management_template_playbook.json"
+      },
+      {
+        "label": "import a playbook",
+        "href": "https://docs.mattermost.com/playbooks/reusing-and-sharing-playbooks.html"
+      },
+      {
+        "label": "Playbooks and templates",
+        "href": "https://docs.mattermost.com/guides/playbooks.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Use this template in Mattermost Playbooks to reflect your own release management process.",
+          "\u2022 Customize a summary template to fill in with links to documentation for every playbook run\n\u2022 Schedule a reminder to post a status update\n\u2022 Organize checklist sections to correspond to project milestones\n\u2022 Assign tasks and roles ahead of time or on the fly\n\u2022 Set due dates for tasks\n\u2022 Configure key project metrics to analyze over time, such as velocity for feature delivery\n\u2022 Create a custom template for team retrospective\n\u2022 Activate playbook automations to include a specific team for every run, assign a project owner, or trigger webhooks"
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "To add the template to Mattermost, follow the steps to import a playbook .",
+          "Read more about Playbooks and templates here."
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 FAQs\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "todo",
@@ -1204,7 +2473,20 @@
     "github": "https://github.com/mattermost-community/mattermost-plugin-todo",
     "lastUpdated": "2023-10-12",
     "lastUpdatedSource": "github-release",
-    "version": "v0.7.1"
+    "version": "v0.7.1",
+    "tagline": "Track posts as To do items as a list and get daily reminders in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost-community/mattermost-plugin-todo"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost-community/mattermost-plugin-todo/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "standup-raven",
@@ -1225,7 +2507,20 @@
     "github": "https://github.com/standup-raven/standup-raven",
     "lastUpdated": "2023-08-02",
     "lastUpdatedSource": "github-release",
-    "version": "v3.3.2"
+    "version": "v3.3.2",
+    "tagline": "A Mattermost plugin for communicating daily standups across teams",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/standup-raven/standup-raven"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/standup-raven/standup-raven/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "mattermost-matrix-connector",
@@ -1233,7 +2528,7 @@
     "description": "Federate your secure Mattermost server with Matrix. The Mattermost Matrix Connector allows sharing of channels and chats between the two systems.",
     "href": "https://mattermost.com/marketplace/mattermost-matrix-connector/",
     "icon": "https://mattermost.com/wp-content/uploads/2023/05/Matrix_Plugin@2x.webp",
-    "author": "Third-party",
+    "author": "by",
     "categories": [
       "Bridging Services",
       "Collaboration"
@@ -1245,7 +2540,51 @@
     "github": "https://github.com/mattermost/matrix-as-mm",
     "lastUpdated": "2023-07-28",
     "lastUpdatedSource": "github-release",
-    "version": "TGZ"
+    "version": "TGZ",
+    "tagline": "Federate your secure Mattermost server with Matrix. The Mattermost Matrix Connector allows sharing of channels and chats between the two systems.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/matrix-as-mm"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/matrix-as-mm#detailed-documentation"
+      },
+      {
+        "label": "Matrix protocol",
+        "href": "https://matrix.org/faq/"
+      },
+      {
+        "label": "here",
+        "href": "https://github.com/mattermost/matrix-as-mm/blob/master/documentation/USE-CASES.md"
+      },
+      {
+        "label": "the ecosystem of Matrix services",
+        "href": "https://matrix.org/docs/projects/try-matrix-now/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "With the Mattermost Connector for Matrix, IT organizations can empower technical and operational teams to confidently collaborate between Mattermost and other platforms using the Matrix protocol . We outline several example use cases here for use of distributed channels.",
+          "This bridge helps to connect Mattermost to the ecosystem of Matrix services . The basics include cross-platform messaging:",
+          "\u2022 Distributed channels are created by an administrator in Mattermost.\n\u2022 Private channels can be created by all users in Mattermost.\n\u2022 Direct message chats can be created on both platforms.\n\u2022 Messaging supports bidirectional: markdown, attachments, edits, replies and more.\n\u2022 Read about all the features here .",
+          "To get started, follow the steps in the documentation to install and configure."
+        ]
+      },
+      {
+        "heading": "FAQ",
+        "paragraphs": [
+          "\u2022 Yes, you will need a Matrix server supporting the Application Services API is needed to complete the setup of this integration\n\u2022 You will also need Node 12.22.9 or above",
+          "\u2022 Any Mattermost user can create a DM, GM, or private channel with Matrix accounts by adding the @matrix.bridge account and the Matrix user you wish to chat with\n\u2022 Only admins can create public channels.\n\u2022 Learn more about use cases in the documentation .",
+          "\u2022 Mattermost 7.5.1 and above",
+          "\u2022 Overview\n\u2022 FAQ"
+        ]
+      }
+    ]
   },
   {
     "slug": "ms-exchange-calendar-on-prem",
@@ -1262,7 +2601,20 @@
     "github": "https://github.com/Brightscout/mattermost-plugin-exchange-calendar",
     "lastUpdated": "2023-07-07",
     "lastUpdatedSource": "github-release",
-    "version": "v2.3.2"
+    "version": "v2.3.2",
+    "tagline": "Two-way integration between Mattermost and a on-premise Microsoft Exchange Server 2016+",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/Brightscout/mattermost-plugin-exchange-calendar"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Brightscout/mattermost-plugin-exchange-calendar#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "golang-bot-sample",
@@ -1279,7 +2631,20 @@
     "github": "https://github.com/mattermost/mattermost-bot-sample-golang",
     "lastUpdated": "2023-06-05",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Golang bot that listens to events and responds to messages in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-bot-sample-golang"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-bot-sample-golang/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "bitbucket",
@@ -1298,7 +2663,20 @@
     "github": "https://github.com/cvitter/mattermost-bitbucket-bridge",
     "lastUpdated": "2023-05-23",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Flask application that serves as a bridge between Bitbucket and Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cvitter/mattermost-bitbucket-bridge"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cvitter/mattermost-bitbucket-bridge/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "channel-recommender",
@@ -1315,7 +2693,27 @@
     "github": "https://github.com/mattermost/mattermost-plugin-recommend",
     "lastUpdated": "2023-05-22",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": "5.16",
+    "tagline": "Find new channels based on your memberships and the most popular channels in a team",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-recommend"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-recommend#readme"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Version",
+        "paragraphs": [
+          "5.16"
+        ]
+      }
+    ]
   },
   {
     "slug": "jenkins-plugin",
@@ -1335,7 +2733,20 @@
     "lastUpdated": "2026-04-23",
     "lastUpdatedSource": "marketplace-api",
     "version": "v1.11.5",
-    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-calls/releases/tag/v1.11.5"
+    "releaseNotes": "https://github.com/mattermost/mattermost-plugin-calls/releases/tag/v1.11.5",
+    "tagline": "Send notifications from Jenkins to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/jenkinsci/mattermost-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/jenkinsci/mattermost-plugin/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "skype4business-plugin",
@@ -1354,7 +2765,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-skype4business",
     "lastUpdated": "2023-05-09",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "tagline": "Start and join voice calls, video calls and use screen sharing with your team",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-skype4business"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-skype4business/blob/master/README.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "antivirus-plugin",
@@ -1372,7 +2796,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-antivirus",
     "lastUpdated": "2023-03-28",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "tagline": "ClamAV antivirus plugin for scanning files uploaded to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-antivirus"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-antivirus#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "remind-plugin",
@@ -1392,7 +2829,20 @@
     "github": "https://github.com/scottleedavis/mattermost-plugin-remind",
     "lastUpdated": "2023-03-26",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "tagline": "Mattermost plugin that schedules reminders for users and channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/scottleedavis/mattermost-plugin-remind"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/scottleedavis/mattermost-plugin-remind/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "rollbar-plugin",
@@ -1410,7 +2860,20 @@
     "github": "https://github.com/Affirm/matterbar",
     "lastUpdated": "2023-03-20",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Send webhook notifications from Rollbar to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/Affirm/matterbar"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Affirm/matterbar/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "badges",
@@ -1427,7 +2890,20 @@
     "github": "https://github.com/larkox/mattermost-plugin-badges",
     "lastUpdated": "2023-03-17",
     "lastUpdatedSource": "github-release",
-    "version": "v0.2.1"
+    "version": "v0.2.1",
+    "tagline": "Grant badges to your colleagues to show appreciation",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/larkox/mattermost-plugin-badges"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/larkox/mattermost-plugin-badges#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "voice-messaging",
@@ -1444,7 +2920,28 @@
     "github": "https://github.com/streamer45/mattermost-plugin-voice",
     "lastUpdated": "2023-03-14",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Record and send voice messages via Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/streamer45/mattermost-plugin-voice"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/streamer45/mattermost-plugin-voice/blob/master/README.md"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "To start sending a voice message you can either use the /voice slash command or the existing file attachment functionality.",
+          "Limitation: This plugin only works on web client and desktop app. Mobile native apps are not supported."
+        ]
+      }
+    ]
   },
   {
     "slug": "default-theme-plugin",
@@ -1462,7 +2959,20 @@
     "github": "https://github.com/mickmister/mattermost-plugin-default-theme",
     "lastUpdated": "2023-03-07",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Set the default color theme for all your users' to make it easy to start with your organization's color swatches when they first login to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mickmister/mattermost-plugin-default-theme/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mickmister/mattermost-plugin-default-theme/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "autotranslate-plugin",
@@ -1481,7 +2991,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-autotranslate",
     "lastUpdated": "2023-02-03",
     "lastUpdatedSource": "github-release",
-    "version": "v0.4.0"
+    "version": "v0.4.0",
+    "tagline": "Automatically translate messages, powered by Amazon Translate",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-autotranslate"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-autotranslate/blob/master/README.md#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "matterbridge",
@@ -1498,7 +3021,20 @@
     "github": "https://github.com/42wim/matterbridge",
     "lastUpdated": "2023-01-29",
     "lastUpdatedSource": "github-release",
-    "version": "v1.26.0"
+    "version": "v1.26.0",
+    "tagline": "Bridge between Mattermost, IRC, Gitter, XMPP, Slack, Discord and other tools",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/42wim/matterbridge"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/42wim/matterbridge/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "alertmanager-plugin",
@@ -1515,7 +3051,20 @@
     "github": "https://github.com/cpanato/mattermost-plugin-alertmanager",
     "lastUpdated": "2023-01-02",
     "lastUpdatedSource": "github-release",
-    "version": "v0.4.0"
+    "version": "v0.4.0",
+    "tagline": "Send notifications from Prometheus AlertManager to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cpanato/mattermost-plugin-alertmanager"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cpanato/mattermost-plugin-alertmanager/blob/main/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "servicenow-virtual-agent",
@@ -1536,7 +3085,38 @@
     "github": "https://github.com/mattermost/mattermost-plugin-servicenow-virtual-agent",
     "lastUpdated": "2022-12-23",
     "lastUpdatedSource": "github-release",
-    "version": "v2.1.2"
+    "version": "v2.1.2",
+    "tagline": "This plugin integrates the ServiceNow Virtual Agent in Mattermost.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-servicenow-virtual-agent#installation"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-servicenow-virtual-agent#setup"
+      },
+      {
+        "label": "here",
+        "href": "https://www.loom.com/share/36f60299c6c349729160d6d8bce75c3c?t=434"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "The Mattermost ServiceNow Virtual Agent Integration makes it easy for employees and customers to resolve issues fast and get what they need, when they need it, with ServiceNow\u2019s AI-powered conversational chatbot running right inside Mattermost.",
+          "Once configured, the plugin supports sending the following fields to the Virtual Agent service via Mattermost:",
+          "\u2022 Text messages\n\u2022 File attachments\n\u2022 Date and time",
+          "And can respond with the following outputs:",
+          "\u2022 OutputText\n\u2022 OutputImage\n\u2022 OutputLink\n\u2022 OutputCard\n\u2022 Picker/Dropdown",
+          "After configuring the plugin both on ServiceNow and in the Mattermost system console, send a direct message to @servicenow-virtual-agent to connect an individual user account.",
+          "Watch a demo of the bot interaction here .",
+          "\u2022 Overview"
+        ]
+      }
+    ]
   },
   {
     "slug": "bigbluebutton-plugin",
@@ -1553,7 +3133,20 @@
     "github": "https://github.com/blindsidenetworks/mattermost-plugin-bigbluebutton",
     "lastUpdated": "2022-11-21",
     "lastUpdatedSource": "github-release",
-    "version": "v4.5.0"
+    "version": "v4.5.0",
+    "tagline": "Start BigBlueButton video conference calls with screenshare in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/blindsidenetworks/mattermost-plugin-bigbluebutton"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/blindsidenetworks/mattermost-plugin-bigbluebutton/blob/master/README.md#installation-and-setup"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "dependencytrack",
@@ -1570,7 +3163,20 @@
     "github": "https://github.com/srkgupta/mattermost-plugin-dependency-track",
     "lastUpdated": "2022-11-18",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0"
+    "version": "v1.0",
+    "tagline": "Get notifications from DependencyTrack tool in Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/srkgupta/mattermost-plugin-dependency-track"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/srkgupta/mattermost-plugin-dependency-track#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "digital-ocean",
@@ -1587,7 +3193,20 @@
     "github": "https://github.com/phillipahereza/mattermost-plugin-digitalocean",
     "lastUpdated": "2022-11-08",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "A Mattermost plugin to interact with DigitalOcean",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/phillipahereza/mattermost-plugin-digitalocean"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/phillipahereza/mattermost-plugin-digitalocean#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "custom-attributes-plugin",
@@ -1608,7 +3227,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-custom-attributes",
     "lastUpdated": "2022-11-05",
     "lastUpdatedSource": "github-release",
-    "version": "v1.3.1"
+    "version": "v1.3.1",
+    "tagline": "Plugin that allows you to add custom attributes to users in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-custom-attributes"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-custom-attributes/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "agenda-plugin",
@@ -1627,7 +3259,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-agenda",
     "lastUpdated": "2022-10-31",
     "lastUpdatedSource": "github-release",
-    "version": "v0.2.3"
+    "version": "v0.2.3",
+    "tagline": "Queue and list items in a channel's meeting agenda. The agenda is identified by a hashtag based on the meeting date.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/mattermost/mattermost-plugin-agenda"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-agenda#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "api-v4-client-for-java",
@@ -1644,7 +3289,20 @@
     "github": "https://github.com/maruTA-bis5/mattermost4j",
     "lastUpdated": "2022-09-21",
     "lastUpdatedSource": "github-release",
-    "version": "v0.25.0"
+    "version": "v0.25.0",
+    "tagline": "Mattermost API v4 client for Java",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/maruTA-bis5/mattermost4j"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/maruTA-bis5/mattermost4j/blob/master/README.md#install"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "gender-inclusive-language",
@@ -1661,7 +3319,20 @@
     "github": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language",
     "lastUpdated": "2022-06-24",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "tagline": "Actively listens (and prohibits) for language with racist, ableist, sexist, or other exclusionary histories",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language/releases/tag/v1.0.0"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/ftonato/mattermost-plugin-gender-inclusive-language/tree/v1.0.0#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "chess-plugin",
@@ -1678,7 +3349,20 @@
     "github": "https://github.com/MatthewDorner/mattermost-plugin-chess",
     "lastUpdated": "2022-05-30",
     "lastUpdatedSource": "github-release",
-    "version": "v1.2.1"
+    "version": "v1.2.1",
+    "tagline": "Challenge a fellow Mattermost user to a game of Chess",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/MatthewDorner/mattermost-plugin-chess/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/MatthewDorner/mattermost-plugin-chess/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "pingboard",
@@ -1695,7 +3379,20 @@
     "github": "https://github.com/imc-trading/mattermost-plugin-pingboard",
     "lastUpdated": "2022-05-03",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "tagline": "Access the Pingboard profile from the user profile popover card",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/imc-trading/mattermost-plugin-pingboard/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/imc-trading/mattermost-plugin-pingboard/tree/master#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "parabol",
@@ -1716,7 +3413,46 @@
     "github": null,
     "lastUpdated": "2022-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Estimation That Sets Remote Teams Up for Success - Sync issues from your backlog management tool and collaborate on estimation with a fun digital deck",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://www.parabol.co/integrations/mattermost/"
+      },
+      {
+        "label": "How-To",
+        "href": "https://www.parabol.co/support/how-to-set-up-a-parabol-mattermost-integration/"
+      },
+      {
+        "label": "Parabol Website",
+        "href": "https://www.parabol.co/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Keep everyone in the loop via Mattermost and Parabol. Engage your team and stakeholders in your agile ceremonies, with meeting reminders and summaries right on Mattermost.",
+          "\u2022 Automatically alert your team when you start a meeting\n\u2022 Run meetings asynchronously\n\u2022 Share a meeting summary with your team",
+          "Mattermost helps you align your team, tools, and processes across each stage of the development lifecycle. With Parabol, you can raise the bar on the quality of your development meetings."
+        ]
+      },
+      {
+        "heading": "Screenshots",
+        "paragraphs": [
+          "No, you\u2019ll just need to follow some instructions to setup a webhook for the integration to work.",
+          "There is a free plan, as well as paid plans depending on the number of teams you are registering to use. See pricing here: https://www.parabol.co/pricing/"
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 FAQs\n\u2022 Screenshots\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "sameroom",
@@ -1733,7 +3469,29 @@
     "github": null,
     "lastUpdated": "2022-03-29",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Connect channels between Mattermost, Slack, Cisco Webex Teams, Skype, IRC & more",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://sameroom.io/"
+      },
+      {
+        "label": "About",
+        "href": "https://mattermost.com/blog/sameroom-connects-mattermost-to-21-messengers-including-slack-skype-hipchat/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Sameroom makes it easy to create real-time, 2-way bridges (we call them \u201ctubes\u201d) between chatrooms belonging to different environments.",
+          "A tube connects two rooms or channels into a virtual \u201csame room\u201d. Tubes can be arranged in an arbitrary topology. Each room retains its own copy of chat history, making chat-based cross-company communication compliant.",
+          "Sameroom can connect Mattermost with other communication platforms like Slack, Microsoft Teams, IRC and others."
+        ]
+      }
+    ]
   },
   {
     "slug": "bitbucket-2",
@@ -1752,7 +3510,53 @@
     "github": "https://github.com/mattermost/mattermost-plugin-bitbucket",
     "lastUpdated": "2022-03-22",
     "lastUpdatedSource": "github-release",
-    "version": "v1.1.1"
+    "version": "v1.1.1",
+    "tagline": "Bitbucket is a code repository for development teams made by Atlassian",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-bitbucket#readme"
+      },
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-bitbucket/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://mattermost.gitbook.io/bitbucket-plugin/"
+      },
+      {
+        "label": "Repository",
+        "href": "https://github.com/mattermost/mattermost-plugin-bitbucket"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Code repositories play an important role in the development process and DevOps teams rely on them to collaborate effectively across timezones, and ensure it\u2019s clear what each team member is responsible for. With code check-ins, reviews, comments and mentions \u2013 it can get overwhelming to deal with notifications and focusing on the required work at hand. Mattermost\u2019s Bitbucket plugin helps to bring key aspects of the development process into the conversation that happens in all development teams."
+        ]
+      },
+      {
+        "heading": "Features",
+        "paragraphs": [
+          "\u2022 Daily reminders: The first time you log in to Mattermost each day, get a post letting you know what issues and pull requests need your attention.\n\u2022 Notifications: Get a direct message in Mattermost when someone mentions you, requests your review, comments on, or modifies one of your pull requests/issues, or assigns you on Bitbucket.\n\u2022 Message actions: Create a Bitbucket issue from a post or attach a post message to an issue.\n\u2022 Sidebar buttons: Stay up-to-date with how many reviews, assignments, and open pull requests you have with buttons in the Mattermost sidebar.\n\u2022 Slash commands: Interact with the Bitbucket plugin using the /bitbucket slash command."
+        ]
+      },
+      {
+        "heading": "FAQ",
+        "paragraphs": [
+          "No, this plugin only works with Bitbucket Cloud edition."
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 Screenshots\n\u2022 Features\n\u2022 FAQ\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "mattermost-client-for-hubot-adapter",
@@ -1769,7 +3573,20 @@
     "github": "https://github.com/loafoe/mattermost-client",
     "lastUpdated": "2022-02-24",
     "lastUpdatedSource": "github-release",
-    "version": "v6.5.0"
+    "version": "v6.5.0",
+    "tagline": "Client for Hubot adapter using Mattermost RESTful API and WebSockets",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/loafoe/mattermost-client"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/loafoe/mattermost-client/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "jitsi",
@@ -1777,7 +3594,7 @@
     "description": "Create Appear.in meeting rooms via Mattermost slash commands",
     "href": "https://mattermost.com/marketplace/jitsi/",
     "icon": "https://mattermost.com/wp-content/uploads/2021/03/1200px-Logo_Jitsi.svg_-2.webp",
-    "author": "Third-party",
+    "author": "Aaron Rothschild",
     "categories": [
       "Video"
     ],
@@ -1786,7 +3603,19 @@
     "github": null,
     "lastUpdated": "2022-01-13",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Jitsi Meet video conferencing platform",
+        "href": "https://meet.jit.si"
+      },
+      {
+        "label": "set up your own",
+        "href": "https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-quickstart"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "status-page-plugin",
@@ -1805,7 +3634,20 @@
     "github": "https://github.com/cpanato/mattermost-plugin-statuspage",
     "lastUpdated": "2021-11-23",
     "lastUpdatedSource": "github-release",
-    "version": "v0.1.0"
+    "version": "v0.1.0",
+    "tagline": "Send Statuspage notifications to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cpanato/mattermost-plugin-statuspage"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cpanato/mattermost-plugin-statuspage/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "papercups-io",
@@ -1825,7 +3667,64 @@
     "github": "https://github.com/papercups-io/chat-widget",
     "lastUpdated": "2021-11-03",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Papercups is a simple way to connect and chat with customers from your website. Chat directly with your customers from your workspace with the Mattermost integration. It's open source, self-hostable and privacy-conscious.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://app.papercups.io/register?redirect=/integrations&utm_src=mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://docs.papercups.io/reply-from-mattermost?utm_src=mattermost"
+      },
+      {
+        "label": "simple page",
+        "href": "https://app.papercups.io/demo"
+      },
+      {
+        "label": "Help Center",
+        "href": "https://papercups.io"
+      },
+      {
+        "label": "[email protected]",
+        "href": "javascript:void(0);"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "https://papercups.io/privacy"
+      },
+      {
+        "label": "Terms of Use",
+        "href": "https://github.com/papercups-io/papercups/blob/master/LICENSE"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "\u2022 Custom chat widget \u2013 a customizable chat widget you can embed on your website to talk to your customers\n\u2022 React support \u2013 embed the chat widget as a React component, or a simple HTML snippet\n\u2022 React Native support \u2013 embed the chat widget in your React Native app\n\u2022 Markdown and emoji support \u2013 use markdown and emoji to add character to your messages!\n\u2022 Invite your team \u2013 send invite links to your teammates to join your account\n\u2022 Conversation management \u2013 close, assign, and prioritize conversations\n\u2022 Analytics dashboard \u2013 track and analyze customer communication\n\u2022 Screen sharing \u2013 observe and interact with your users in real-time with Storytime\n\u2022 Built on Elixir \u2013 optimized for responsiveness, fault-tolerance, and support for realtime updates"
+        ]
+      },
+      {
+        "heading": "FAQ",
+        "paragraphs": [
+          "Yes, you will need to install the Papercups.io chat widget on your webpage so visitors will see the chat window. You can find the instructions to install the chat widget here",
+          "Yes! We offer both a hosted version, as well as a self-hosted version that you can deploy on your own.",
+          "There is a simple page that demonstrates how Papercups works.",
+          "Try sending a message to see what the chat experience is like!",
+          "You can find our pricing information at https://papercups.io/pricing .",
+          "We\u2019re currently offering deals for startups, so don\u2019t hesitate to reach out!"
+        ]
+      },
+      {
+        "heading": "Links",
+        "paragraphs": [
+          "\u2022 Overview\n\u2022 FAQ\n\u2022 Links"
+        ]
+      }
+    ]
   },
   {
     "slug": "image-cropper",
@@ -1842,7 +3741,20 @@
     "github": "https://github.com/lapaz17/mattermost-image-cropper-plugin",
     "lastUpdated": "2021-08-10",
     "lastUpdatedSource": "github-release",
-    "version": "v0.1.0"
+    "version": "v0.1.0",
+    "tagline": "Crop images and screenshots while uploading them to a Mattermost message",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/lapaz17/mattermost-image-cropper-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/lapaz17/mattermost-image-cropper-plugin#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "pagerduty",
@@ -1862,7 +3774,16 @@
     "github": null,
     "lastUpdated": "2021-05-04",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Send events from PagerDuty to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://www.pagerduty.com/docs/guides/mattermost-integration-guide/"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "cloudron-installer",
@@ -1879,7 +3800,20 @@
     "github": null,
     "lastUpdated": "2021-04-29",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Install Mattermost in a few minutes on your server with Cloudron",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://www.cloudron.io/store/org.mattermost.cloudronapp.html"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://www.cloudron.io/button/org.mattermost.cloudronapp.html"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "hybrid-chat",
@@ -1897,7 +3831,20 @@
     "github": null,
     "lastUpdated": "2021-04-29",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Chat directly from Mattermost via any website, Facebook page or SMS",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://hybrid.chat/live-chat-for-mattermost/"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://hybrid.chat/docs/"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "opsgenie",
@@ -1916,7 +3863,20 @@
     "github": null,
     "lastUpdated": "2021-04-29",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Two-way integration to send updates, and acknowledge, close or assign issues",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://support.atlassian.com/opsgenie/docs/integrate-opsgenie-with-mattermost/"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://support.atlassian.com/opsgenie/docs/integrate-opsgenie-with-mattermost/#section-configuring-mattermost-integration"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "puppet-module",
@@ -1933,7 +3893,20 @@
     "github": null,
     "lastUpdated": "2021-04-29",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Install and configure Mattermost seamlessly with a Puppet module",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://gitlab.com/harbottle/puppet-mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://forge.puppet.com/modules/liger1978/mattermost/readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "bitbucket-amplifier",
@@ -1951,7 +3924,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Configurable, bidirectional app to integrate Mattermost and Bitbucket",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://marketplace.atlassian.com/apps/1220418/amplifier-for-mattermost-bitbucket?hosting=server&tab=overview"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://marketplace.atlassian.com/apps/1220418/amplifier-for-mattermost-bitbucket?hosting=server&tab=installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "cloudapp",
@@ -1970,7 +3956,16 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Record a screen, generate a GIF or create a screenshot, and share in Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://www.getcloudapp.com/integrations/mattermost"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "confluence-slack-draft",
@@ -1987,7 +3982,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Send and configure notifications from Confluence. Compatible with Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://marketplace.atlassian.com/apps/1215055/slack-for-confluence"
+      },
+      {
+        "label": "Download",
+        "href": "https://marketplace.atlassian.com/apps/1215055/slack-for-confluence?hosting=server&tab=installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "dice-roller",
@@ -2004,7 +4012,20 @@
     "github": "https://github.com/Taffer/ca.taffer.mm-rolly",
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Dice rolling plugin for Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/Taffer/ca.taffer.mm-rolly"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Taffer/ca.taffer.mm-rolly/blob/develop/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "unsplash",
@@ -2021,7 +4042,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Download a random image from Unsplash, adds a quote on top and posts to a Mattermost channel",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://gitlab.com/m-busche/image_quote_to_mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://gitlab.com/m-busche/image_quote_to_mattermost/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "jira-amplifier",
@@ -2039,7 +4073,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Configurable, bidirectional app to integrate Mattermost and Jira via the Atlassian Marketplace",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Learn More",
+        "href": "https://marketplace.atlassian.com/apps/1220414/amplifier-for-mattermost-jira?hosting=server&tab=overview"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://marketplace.atlassian.com/apps/1220414/amplifier-for-mattermost-jira?hosting=server&tab=installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "kopano",
@@ -2056,7 +4103,29 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Install and update Mattermost via Kopano packages",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://download.kopano.io/community/mattermost:/"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://documentation.kopano.io/kopano_mattermost_manual/installation.html"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Mattermost is the number one open source Slack alternative, and the integration in Kopano marks another major step in Kopano\u2019s mission to deliver a seamless communication and sharing experience across all devices from one unified, self-hosted platform under your control.",
+          "The Kopano Mattermost packages allow for easy installation and update of Mattermost without having to handle Docker containers or Go binaries yourself. Packages are provided in two flavours to provide the Mattermost Team edition and Enterprise edition, with the ability to easily switch between these packages.",
+          "The packages can be installed regardless if Kopano is already used or installed in the environment. Additional integration packages will later be made available to integrate Mattermost into Kopano."
+        ]
+      }
+    ]
   },
   {
     "slug": "kopano-web-meetings",
@@ -2073,7 +4142,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Start voice and video calls embedded in Mattermost, based on the WebRTC protocol",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://stash.kopano.io/projects/KM/repos/mattermost-plugin-kopanowebmeetings/browse"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://stash.kopano.io/projects/KM/repos/mattermost-plugin-kopanowebmeetings/browse/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "laravel-logger",
@@ -2090,7 +4172,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "A driver that allows you to send your logs to Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://gitlab.com/thibauddauce/laravel-mattermost-logger"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://gitlab.com/thibauddauce/laravel-mattermost-logger#installation"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "new-channel-notify-plugin",
@@ -2108,7 +4203,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "A plugin for Mattermost to notify all users about newly created channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://gitlab.com/thepill/mattermost-plugin-newchannelnotify/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://gitlab.com/thepill/mattermost-plugin-newchannelnotify/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "splunk-ingestion-script",
@@ -2125,7 +4233,20 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "A guide to integrate Splunk for Mattermost to analyze machine-generated big data",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://www.splunk.com/"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://datatomix.com/?p=433"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "zmm-mainframe-mattermost-integration",
@@ -2144,7 +4265,27 @@
     "github": null,
     "lastUpdated": "2021-04-01",
     "lastUpdatedSource": "listing",
-    "version": null
+    "version": null,
+    "tagline": "Configurable app to send Mainframe z/OS SYSLOG data to any Mattermost channel",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Learn More",
+        "href": "https://shop.zdevops.com/zmm/"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://shop.zdevops.com/zmm-product-documentation/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "ZMM can send any message you specify from your hardcopy SYSLOG to any Mattermost channel. It will enable you to integrate your Mainframe environment into your Mattermost setup. Imagine having all your ICH408I\u2019s immediately send out to a Mattermost channel that\u2019s monitored by your Security Operations Center to minimize issue resolution time."
+        ]
+      }
+    ]
   },
   {
     "slug": "ansible-playbook-installer",
@@ -2161,7 +4302,20 @@
     "github": "https://github.com/tjtoml/mattermost-ansible",
     "lastUpdated": "2021-03-31",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "This is an Ansible Playbook that installs a standalone version of Mattermost, which is an open-source Slack alternative. This playbook installs Mattermost version 4.3.2 (Team Edition) by default.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/tjtoml/mattermost-ansible#mattermost-ansible"
+      },
+      {
+        "label": "Download",
+        "href": "https://github.com/tjtoml/mattermost-ansible/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "circleci",
@@ -2183,7 +4337,39 @@
     "github": "https://github.com/mattermost-community/mattermost-plugin-circleci",
     "lastUpdated": "2021-03-27",
     "lastUpdatedSource": "github-release",
-    "version": "v1.2.0"
+    "version": "v1.2.0",
+    "tagline": "CircleCI is a modern continuous integration and continuous delivery (CI/CD) platform.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Get Started",
+        "href": "https://github.com/mattermost-community/mattermost-plugin-circleci/blob/main/docs/admin-guide.md"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost-community/mattermost-plugin-circleci/blob/main/README.md"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "The CircleCI Enterprise solution is installable inside a private cloud or data center and this integration makes it easier for developers to manage their pipelines in CircleCI without leaving Mattermost.",
+          "CircleCI users often need to context switch between systems to advance a step or check on the status of a build via email notifications which can get lost, leading to delays in testing and release dates. Developers may need to forward or remind team members of a new build that is waiting to be tested or released to production in time-sensitive environments where delays can be costly when trying to fix a production system issue.",
+          "At an organization with established development teams, the build pipeline is a critical resource for the whole team and can impact the efficiency of multiple members. Automating the build and following tasks like QA for testing and DevOps who release the code can lead to faster deployment of features and better co-ordination between teams by using Mattermost to discuss CircleCi build issues. Also, developers can be notified when there is a build failure or approve build requests directly from within Mattermost, saving time and reducing context switching.",
+          "Once connected, users have access to the following features:",
+          "\u2022 Pipeline and workflow management \u2013 Developers can retrieve information about pipelines or workflows or easily trigger new ones.\n\u2022 Workflows notification \u2013 Receive workflow notifications directly in your Mattermost channel, including their status. A developer can receive additional notifications for held workflows and approve them directly from the Mattermost channel.\n\u2022 Slash commands \u2013 Interact with the CircleCI plugin using the /circleci slash command. Set CircleCI environment variables directly from Mattermost.",
+          "To get started in your existing Mattermost workspace, login as an administrator, go to the Plugin Marketplace and click \u201cinstall\u201d on the \u201cCircleCI\u201d plugin listed. After a System Admin has configured the CircleCI plugin, run /circleci account connect in a Mattermost channel to connect your own Mattermost and CircleCI accounts so you can start builds from the chatline."
+        ]
+      },
+      {
+        "heading": "FAQs",
+        "paragraphs": [
+          "CircleCI user tokens are AES encrypted with an At Rest Encryption Key configured in the plugin\u2019s settings page. Once encrypted, the tokens are saved in the PluginKeyValueStore table in your Mattermost database.",
+          "\u2022 Overview\n\u2022 Components\n\u2022 FAQs"
+        ]
+      }
+    ]
   },
   {
     "slug": "hide-spoilers",
@@ -2200,7 +4386,20 @@
     "github": "https://github.com/svelle/mattermost-spoiler-plugin",
     "lastUpdated": "2021-03-26",
     "lastUpdatedSource": "github-release",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "tagline": "Hide spoilers in messages with the option to reveal it with a hover or explicit button action.",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/svelle/mattermost-spoiler-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/svelle/mattermost-spoiler-plugin#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "php-driver-for-incoming-webhooks",
@@ -2217,7 +4416,20 @@
     "github": "https://github.com/ThibaudDauce/mattermost-php",
     "lastUpdated": "2020-11-26",
     "lastUpdatedSource": "github-release",
-    "version": "1.3.0"
+    "version": "1.3.0",
+    "tagline": "PHP driver to easily send incoming webhooks to Mattermost channels",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/ThibaudDauce/mattermost-php"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/ThibaudDauce/mattermost-php/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "icebreaker",
@@ -2234,7 +4446,20 @@
     "github": "https://github.com/monsdar/mattermost-icebreaker-plugin",
     "lastUpdated": "2020-11-21",
     "lastUpdatedSource": "github-release",
-    "version": "v2.2.2"
+    "version": "v2.2.2",
+    "tagline": "Ask random icebreaker questions in a channel to get to know your colleagues better",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Source Code",
+        "href": "https://github.com/monsdar/mattermost-icebreaker-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/monsdar/mattermost-icebreaker-plugin#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "link-list",
@@ -2251,7 +4476,20 @@
     "github": "https://github.com/jwillmer/mattermost-plugin-link-list",
     "lastUpdated": "2020-11-18",
     "lastUpdatedSource": "github-release",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "tagline": "Display up to 5 URL links in the main menu of Mattermost",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/jwillmer/mattermost-plugin-link-list/tree/master"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/jwillmer/mattermost-plugin-link-list/tree/master#readme"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "walltime-plugin",
@@ -2269,7 +4507,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-walltime",
     "lastUpdated": "2020-11-12",
     "lastUpdatedSource": "github-release",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "tagline": "Convert timestamps to the user's timezone",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-walltime"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-walltime/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "jenkins-plugin-2",
@@ -2289,7 +4540,20 @@
     "github": "https://github.com/mattermost/mattermost-plugin-jenkins",
     "lastUpdated": "2020-06-19",
     "lastUpdatedSource": "github-release",
-    "version": "v1.1.0"
+    "version": "v1.1.0",
+    "tagline": "A Jenkins plugin to interact with jobs and builds with slash commands",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mattermost/mattermost-plugin-jenkins/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mattermost/mattermost-plugin-jenkins/blob/master/README.md"
+      }
+    ],
+    "sections": []
   },
   {
     "slug": "mattercheck",
@@ -2306,7 +4570,32 @@
     "github": "https://github.com/accxiagmbh/mattercheck",
     "lastUpdated": "2020-05-05",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "tagline": "Script to post a Check_MK/OMD message to your Mattermost channel",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/accxiagmbh/mattercheck"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/accxiagmbh/mattercheck/blob/master/README.md"
+      },
+      {
+        "label": "Check_MK",
+        "href": "https://checkmk.com/"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Check_MK is a comprehensive Solution for IT Monitoring of applications, servers, and networks. Checkmk is available as a Raw Edition, which is 100% open-source, and as an Enterprise Edition. OMD or Open Monitoring Distribution is a bundle that includes Nagios & all the required plugins needed for monitoring.",
+          "There is a Check_MK Python Script to post Check_MK/OMD status messages to a specifed Mattermost channel via an incoming webhook."
+        ]
+      }
+    ]
   },
   {
     "slug": "email-reply-plugin",
@@ -2324,7 +4613,20 @@
     "github": "https://github.com/DSchalla/mailermost-plugin",
     "lastUpdated": "2020-04-07",
     "lastUpdatedSource": "github-release",
-    "version": "v0.1.0"
+    "version": "v0.1.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/DSchalla/mailermost-plugin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/DSchalla/mailermost-plugin/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Reply directly to a Mattermost email notification from your inbox"
   },
   {
     "slug": "fedora",
@@ -2341,7 +4643,20 @@
     "github": "https://github.com/AgostonSzepessy/mattermost-desktop-rpm",
     "lastUpdated": "2020-01-20",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/AgostonSzepessy/mattermost-desktop-rpm"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://copr.fedorainfracloud.org/coprs/agoston/mattermost/"
+      }
+    ],
+    "sections": [],
+    "tagline": "RPM package for Fedora for easy install of the Mattermost Desktop App"
   },
   {
     "slug": "facebook",
@@ -2358,7 +4673,20 @@
     "github": "https://github.com/ldziedziul/matterbook",
     "lastUpdated": "2020-01-12",
     "lastUpdatedSource": "github-release",
-    "version": "v1.5"
+    "version": "v1.5",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/ldziedziul/matterbook"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/ldziedziul/matterbook/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Send Facebook notifications to Mattermost channels"
   },
   {
     "slug": "migratemost",
@@ -2375,7 +4703,20 @@
     "github": "https://github.com/ergon/migratemost",
     "lastUpdated": "2020-01-10",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/ergon/migratemost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/ergon/migratemost/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "A set of Python scripts to migrate your Hipchat data to Mattermost"
   },
   {
     "slug": "saltstack-formula",
@@ -2393,7 +4734,20 @@
     "github": "https://github.com/kjkeane/mattermost-formula",
     "lastUpdated": "2020-01-04",
     "lastUpdatedSource": "github-release",
-    "version": "5.18.0"
+    "version": "5.18.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/kjkeane/mattermost-formula"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/kjkeane/mattermost-formula/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Saltstack formula that installs and configures Mattermost on most Linux systems"
   },
   {
     "slug": "kopano-web-meetings-plugin",
@@ -2410,7 +4764,20 @@
     "github": "https://github.com/Kopano-dev/mattermost-plugin-kopanowebmeetings",
     "lastUpdated": "2019-11-27",
     "lastUpdatedSource": "github-release",
-    "version": "v0.3.1"
+    "version": "v0.3.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/Kopano-dev/mattermost-plugin-kopanowebmeetings"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Kopano-dev/mattermost-plugin-kopanowebmeetings/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "WebRTC functionality to Mattermost with the help of Kopano Web Meetings"
   },
   {
     "slug": "cloud-foundry",
@@ -2427,7 +4794,20 @@
     "github": "https://github.com/cloudfoundry-community/mattermost-cf-integrator",
     "lastUpdated": "2019-10-12",
     "lastUpdatedSource": "github-release",
-    "version": "v5.15.1"
+    "version": "v5.15.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cloudfoundry-community/mattermost-cf-integrator"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cloudfoundry-community/mattermost-cf-integrator/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Integrate Mattermost into Cloud Foundry"
   },
   {
     "slug": "watermark-plugin",
@@ -2444,7 +4824,20 @@
     "github": "https://github.com/scottleedavis/mattermost-plugin-watermark",
     "lastUpdated": "2019-09-08",
     "lastUpdatedSource": "github-release",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/scottleedavis/mattermost-plugin-watermark/releases"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/scottleedavis/mattermost-plugin-watermark/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "A plugin that adds a hidden custom watermark to uploaded images in Mattermost"
   },
   {
     "slug": "matterhook",
@@ -2461,7 +4854,20 @@
     "github": "https://github.com/nafisfaysal/matterhook",
     "lastUpdated": "2019-07-26",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/nafisfaysal/matterhook"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/nafisfaysal/matterhook/blob/master/README.md#installation"
+      }
+    ],
+    "sections": [],
+    "tagline": "Go client for Mattermost webhooks"
   },
   {
     "slug": "replace-plugin",
@@ -2478,7 +4884,20 @@
     "github": "https://github.com/carmo-evan/mattermost-plugin-replace",
     "lastUpdated": "2019-06-01",
     "lastUpdatedSource": "github-release",
-    "version": "v0.2.1"
+    "version": "v0.2.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/carmo-evan/mattermost-plugin-replace"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/carmo-evan/mattermost-plugin-replace/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Sed-style replacement command to find and replace a string in a user's last post"
   },
   {
     "slug": "bosh",
@@ -2495,7 +4914,20 @@
     "github": "https://github.com/cloudfoundry-community/mattermost-boshrelease",
     "lastUpdated": "2019-05-16",
     "lastUpdatedSource": "github-release",
-    "version": "v8.0.1"
+    "version": "v8.0.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cloudfoundry-community/mattermost-boshrelease"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cloudfoundry-community/mattermost-boshrelease#deploy-mattermost-to-bosh"
+      }
+    ],
+    "sections": [],
+    "tagline": "Run Mattermost on BOSH in AWS, vSphere, GCE, Azure, OpenStack and more"
   },
   {
     "slug": "onelogin-notification-plugin",
@@ -2512,7 +4944,20 @@
     "github": "https://github.com/cpanato/mattermost-plugin-onelogin",
     "lastUpdated": "2019-05-10",
     "lastUpdatedSource": "github-release",
-    "version": "v0.0.6"
+    "version": "v0.0.6",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cpanato/mattermost-plugin-onelogin"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cpanato/mattermost-plugin-onelogin/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Plugin that receives and posts notifications via OneLogin webhook to Mattermost"
   },
   {
     "slug": "gyazo",
@@ -2531,7 +4976,20 @@
     "github": "https://github.com/seansackowitz/mattermost-plugin-gyazo",
     "lastUpdated": "2019-05-06",
     "lastUpdatedSource": "github-release",
-    "version": "v1.1.0"
+    "version": "v1.1.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/seansackowitz/mattermost-plugin-gyazo"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/seansackowitz/mattermost-plugin-gyazo/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Take screenshots, screen GIFs, take full page captures, and share in Mattermost"
   },
   {
     "slug": "draw-plugin",
@@ -2550,7 +5008,20 @@
     "github": "https://github.com/jespino/mattermost-plugin-draw",
     "lastUpdated": "2019-05-02",
     "lastUpdatedSource": "github-release",
-    "version": "v0.0.4"
+    "version": "v0.0.4",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/jespino/mattermost-plugin-draw"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/jespino/mattermost-plugin-draw/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Plugin to include drawings directly in Mattermost"
   },
   {
     "slug": "analytics-plugin",
@@ -2567,7 +5038,20 @@
     "github": "https://github.com/manland/mattermost-plugin-analytics",
     "lastUpdated": "2019-04-24",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/manland/mattermost-plugin-analytics"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/manland/mattermost-plugin-analytics/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "A plugin that displays usage metrics and basic analytics for your Mattermost instance"
   },
   {
     "slug": "nextbus-plugin",
@@ -2584,7 +5068,20 @@
     "github": "https://github.com/cpanato/mattermost-plugin-nextbus",
     "lastUpdated": "2019-04-04",
     "lastUpdatedSource": "github-release",
-    "version": "v0.0.1"
+    "version": "v0.0.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/cpanato/mattermost-plugin-nextbus"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/cpanato/mattermost-plugin-nextbus/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Plugin that helps you to check when the next bus is available using nextbus API"
   },
   {
     "slug": "hipchat-import",
@@ -2601,7 +5098,20 @@
     "github": "https://github.com/swood/varna",
     "lastUpdated": "2019-03-09",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/swood/varna"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/swood/varna/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Migrate Hipchat history to Mattermost"
   },
   {
     "slug": "disable-dm-plugin",
@@ -2618,7 +5128,20 @@
     "github": "https://github.com/Brightscout/mattermost-plugin-disable-dm",
     "lastUpdated": "2019-03-04",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.0"
+    "version": "v1.0.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/Brightscout/mattermost-plugin-disable-dm"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Brightscout/mattermost-plugin-disable-dm/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "A Mattermost plugin to disable 1-1 direct messages and 1-to-many group messages"
   },
   {
     "slug": "api-v4-client-for-ruby",
@@ -2635,7 +5158,20 @@
     "github": "https://github.com/maruTA-bis5/mattermost-api4-ruby",
     "lastUpdated": "2019-01-26",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/maruTA-bis5/mattermost-api4-ruby"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/maruTA-bis5/mattermost-api4-ruby/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Mattermost APIv4 Client for Ruby"
   },
   {
     "slug": "chef-cookbook-installer",
@@ -2652,7 +5188,20 @@
     "github": "https://github.com/ist-dsi/mattermost-cookbook",
     "lastUpdated": "2018-09-24",
     "lastUpdatedSource": "github-release",
-    "version": "v4.0.0"
+    "version": "v4.0.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/ist-dsi/mattermost-cookbook"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://supermarket.chef.io/cookbooks/mattermost-cookbook#readme"
+      }
+    ],
+    "sections": [],
+    "tagline": "Chef Cookbook that installs and configures Mattermost"
   },
   {
     "slug": "buttoncommander",
@@ -2669,7 +5218,20 @@
     "github": "https://github.com/iUkka/ButtonCommander",
     "lastUpdated": "2018-08-07",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/iUkka/ButtonCommander"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/iUkka/ButtonCommander/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Run various powershell scripts via custom slash commands in Mattermost"
   },
   {
     "slug": "patter",
@@ -2688,7 +5250,20 @@
     "github": "https://github.com/brodan/patter",
     "lastUpdated": "2018-07-29",
     "lastUpdatedSource": "github-release",
-    "version": "v0.2.1"
+    "version": "v0.2.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/brodan/patter"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/brodan/patter/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "CLI tool that allows you to pipe any terminal output directly to Mattermost"
   },
   {
     "slug": "kanboard",
@@ -2706,7 +5281,20 @@
     "github": "https://github.com/kanboard/plugin-mattermost",
     "lastUpdated": "2018-07-04",
     "lastUpdatedSource": "github-release",
-    "version": "v1.0.5"
+    "version": "v1.0.5",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/kanboard/plugin-mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/kanboard/plugin-mattermost/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Post Kanboard notifications to Mattermost channels"
   },
   {
     "slug": "video-preview-thumbnail-integration-with-ruby",
@@ -2723,7 +5311,20 @@
     "github": "https://github.com/icelander/mattermost-video-preview",
     "lastUpdated": "2018-02-15",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/icelander/mattermost-video-preview"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/icelander/mattermost-video-preview/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Generates preview images containing frames of a video file"
   },
   {
     "slug": "redash",
@@ -2741,7 +5342,20 @@
     "github": "https://github.com/kaakaa/matter-redash",
     "lastUpdated": "2018-02-02",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/kaakaa/matter-redash"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/kaakaa/matter-redash/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Connect and query your data sources to visualize data and share in Mattermost"
   },
   {
     "slug": "random-on-fire",
@@ -2758,7 +5372,20 @@
     "github": "https://github.com/McFoggy/RandomOnFire",
     "lastUpdated": "2018-01-30",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/McFoggy/RandomOnFire"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/McFoggy/RandomOnFire/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Randomize choices between different proposals with Firebase Realtime Database"
   },
   {
     "slug": "outlook",
@@ -2777,7 +5404,20 @@
     "github": "https://github.com/makmu/outlook-matters",
     "lastUpdated": "2017-12-30",
     "lastUpdatedSource": "github-release",
-    "version": "v2.0.0"
+    "version": "v2.0.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/makmu/outlook-matters"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/makmu/outlook-matters/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Forward emails from Microsoft Outlook to Mattermost"
   },
   {
     "slug": "the-bug-genie",
@@ -2797,7 +5437,20 @@
     "github": "https://github.com/shoreless-ltd/tbg-mattermost",
     "lastUpdated": "2017-06-22",
     "lastUpdatedSource": "github",
-    "version": null
+    "version": null,
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/shoreless-ltd/tbg-mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/shoreless-ltd/tbg-mattermost/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Post updates from The Bug Genie issue tracker to Mattermost channels"
   },
   {
     "slug": "php-driver-for-web-service-api",
@@ -2814,7 +5467,20 @@
     "github": "https://github.com/gnello/php-mattermost-driver",
     "lastUpdated": "2017-04-25",
     "lastUpdatedSource": "github-release",
-    "version": "v1.3.0"
+    "version": "v1.3.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/gnello/php-mattermost-driver"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/gnello/php-mattermost-driver/blob/master/README.md#installation"
+      }
+    ],
+    "sections": [],
+    "tagline": "PHP driver to interact with the Mattermost Web Service API"
   },
   {
     "slug": "heroku",
@@ -2833,7 +5499,20 @@
     "github": "https://github.com/mozilla/mattermost-heroku",
     "lastUpdated": "2017-04-23",
     "lastUpdatedSource": "github-release",
-    "version": "v2.0.1"
+    "version": "v2.0.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/mozilla/mattermost-heroku"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/mozilla/mattermost-heroku/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Run mattermost on Heroku with an Nginx reverse proxy"
   },
   {
     "slug": "cisco-syslog",
@@ -2850,7 +5529,20 @@
     "github": "https://github.com/42wim/csm",
     "lastUpdated": "2016-08-15",
     "lastUpdatedSource": "github-release",
-    "version": "v0.1.0"
+    "version": "v0.1.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/42wim/csm"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/42wim/csm/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Send Cisco config changes to Mattermost channels in real-time"
   },
   {
     "slug": "nagios",
@@ -2867,7 +5559,20 @@
     "github": "https://github.com/NDrive/nagios-mattermost",
     "lastUpdated": "2016-05-31",
     "lastUpdatedSource": "github-release",
-    "version": "0.2.0"
+    "version": "0.2.0",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/NDrive/nagios-mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/NDrive/nagios-mattermost/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Send Nagios notifications to Mattermost channels"
   },
   {
     "slug": "homebrew-cask",
@@ -2884,7 +5589,20 @@
     "github": "https://github.com/Homebrew/homebrew-cask",
     "lastUpdated": "2016-01-11",
     "lastUpdatedSource": "github-release",
-    "version": "v0.60.1"
+    "version": "v0.60.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/Homebrew/homebrew-cask"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/Homebrew/homebrew-cask/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "A CLI workflow to administer Mattermost MacOS Desktop App"
   },
   {
     "slug": "sentry",
@@ -2902,6 +5620,19 @@
     "github": "https://github.com/NDrive/sentry-mattermost",
     "lastUpdated": "2015-12-11",
     "lastUpdatedSource": "github-release",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "disclaimer": "Mattermost disclaims any and all liability for integrations, including Third Party Integrations and Mattermost Integrations. All integrations are provided \"AS IS\", and may be used at your own risk. Integrations may be modified or discontinued at any time.",
+    "links": [
+      {
+        "label": "Download",
+        "href": "https://github.com/NDrive/sentry-mattermost"
+      },
+      {
+        "label": "Documentation",
+        "href": "https://github.com/NDrive/sentry-mattermost/blob/master/README.md"
+      }
+    ],
+    "sections": [],
+    "tagline": "Send Sentry notifications to Mattermost channels"
   }
 ]
