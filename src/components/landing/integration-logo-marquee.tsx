@@ -1,18 +1,6 @@
-import { MARKETPLACE, isFirstParty } from "@/data/marketplace";
+import uniqueIcons from "@/data/marketplace-unique-icons.json";
 
-const ICONS = (() => {
-  const seen = new Set<string>();
-  const out: { name: string; icon: string; slug: string }[] = [];
-  const ordered = [...MARKETPLACE].sort(
-    (a, b) => Number(isFirstParty(b)) - Number(isFirstParty(a)) || a.name.localeCompare(b.name),
-  );
-  for (const i of ordered) {
-    if (!i.icon || seen.has(i.icon)) continue;
-    seen.add(i.icon);
-    out.push({ name: i.name, icon: i.icon, slug: i.slug });
-  }
-  return out;
-})();
+const ICONS = uniqueIcons as { name: string; icon: string; slug: string }[];
 
 function Track({
   hrefFor,
@@ -48,7 +36,7 @@ function Track({
   );
 }
 
-/** Infinite logo carousel of marketplace integration icons. */
+/** Infinite logo carousel of unique marketplace integration icons. */
 export function IntegrationLogoMarquee({ hrefFor }: { hrefFor: (slug: string) => string }) {
   const duration = Math.max(90, ICONS.length * 1.2);
   return (
