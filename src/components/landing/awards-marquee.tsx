@@ -5,20 +5,42 @@ const base = import.meta.env.BASE_URL;
 function Track({ ariaHidden }: { ariaHidden?: boolean }) {
   return (
     <ul className="awards-marquee__track" aria-hidden={ariaHidden || undefined}>
-      {BADGES.map((b) => (
-        <li
-          key={`${ariaHidden ? "b" : "a"}-${b.src}-${b.year}`}
-          className={`awards-marquee__item${"wide" in b && b.wide ? " awards-marquee__item--wide" : ""}`}
-        >
+      {BADGES.map((b) => {
+        const img = (
           <img
             src={`${base}${b.src}`}
             alt={ariaHidden ? "" : b.alt}
             className="awards-marquee__img"
           />
-          <span className="awards-marquee__label">{b.label}</span>
-          <span className="awards-marquee__year">{b.year}</span>
-        </li>
-      ))}
+        );
+        const body = (
+          <>
+            {"href" in b && b.href && !ariaHidden ? (
+              <a
+                href={b.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="awards-marquee__link"
+                title={b.alt}
+              >
+                {img}
+              </a>
+            ) : (
+              img
+            )}
+            <span className="awards-marquee__label">{b.label}</span>
+            <span className="awards-marquee__year">{b.year}</span>
+          </>
+        );
+        return (
+          <li
+            key={`${ariaHidden ? "b" : "a"}-${b.src}-${b.year}`}
+            className={`awards-marquee__item${"wide" in b && b.wide ? " awards-marquee__item--wide" : ""}`}
+          >
+            {body}
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -26,10 +48,7 @@ function Track({ ariaHidden }: { ariaHidden?: boolean }) {
 export function AwardsMarquee() {
   const duration = Math.max(180, BADGES.length * 14);
   return (
-    <section className="border-b border-[var(--color-border)] bg-white py-8" aria-label="Awards and recognition">
-      <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
-        Awards and recognition
-      </p>
+    <section className="border-b border-[var(--color-border)] bg-white py-6" aria-label="Awards and recognition">
       <div className="awards-marquee">
         <div className="awards-marquee__fade awards-marquee__fade--left" aria-hidden />
         <div className="awards-marquee__fade awards-marquee__fade--right" aria-hidden />

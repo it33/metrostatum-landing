@@ -1,17 +1,17 @@
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   EXECUTIVE,
   PRODUCT_ENG,
   GTM,
   OPS,
-  OFFICES,
-  RESOURCE_CARDS,
+    RESOURCE_CARDS,
 } from "./leadership-data";
 import {
   PrinciplesMarquee,
+  OfficesMarquee,
   LeaderGroup,
 } from "./leadership-ui";
 import { AwardsMarquee } from "./awards-marquee";
@@ -100,7 +100,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
+            <section className="border-t border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-16 md:py-24">
         <div className="container-page">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Our Global Footprint</h2>
           <p className="mt-3 max-w-2xl text-[var(--color-fg-muted)]">
@@ -108,41 +108,9 @@ export function AboutPage() {
             cleared personnel, and partner networks in key jurisdictions to meet data residency,
             security clearance, and regulatory requirements where our customers operate.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {OFFICES.map((o) => (
-              <article
-                key={o.region}
-                className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-surface)]"
-              >
-                <a
-                  href={o.maps}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group relative block aspect-[16/10] overflow-hidden bg-[var(--color-bg-elevated)]"
-                >
-                  <img
-                    src={`${import.meta.env.BASE_URL}${o.image}`}
-                    alt={o.alt}
-                    className="h-full w-full object-cover object-center"
-                  />
-                  <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3 py-2 text-[11px] font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
-                    Open in Maps
-                  </span>
-                </a>
-                <div className="p-5">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="size-4 text-[var(--color-marigold)]" strokeWidth={1.75} />
-                    <h3 className="text-sm font-semibold">{o.region}</h3>
-                  </div>
-                  <div className="mt-3 space-y-0.5 text-sm text-[var(--color-fg-muted)]">
-                    {o.lines.map((line) => (
-                      <p key={line}>{line}</p>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+        </div>
+        <div className="mt-12">
+          <OfficesMarquee />
         </div>
       </section>
 

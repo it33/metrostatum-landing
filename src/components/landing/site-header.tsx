@@ -13,6 +13,7 @@ import { currentRoute, matchNav, type Crumb, type NavItemLike } from "@/lib/nav-
 import { attachContactFromParam, rememberSourcePage } from "@/lib/contact-intent";
 import { CUSTOMER_STORIES } from "@/data/customer-stories";
 import { getIntegration } from "@/data/marketplace";
+import { getPartner } from "@/data/partners";
 import { StagingBanner } from "./staging-banner";
 
 const base = import.meta.env.BASE_URL;
@@ -82,6 +83,19 @@ function useActiveNav() {
     if (intSlug) {
       const item = getIntegration(intSlug);
       if (item) matched.crumbs.push({ label: item.name, href: `#/integrations/${intSlug}` });
+    }
+  }
+  if (intPath === "partners" || intPath.startsWith("partners/")) {
+    matched.activeLabel = "Ecosystem";
+    matched.crumbs = [
+      { label: "Home", href: HOME },
+      { label: "Ecosystem", href: "#/ecosystem" },
+      { label: "Regional Partners", href: "#/partners" },
+    ];
+    const pSlug = intPath.match(/^partners\/([^/?#]+)/)?.[1];
+    if (pSlug) {
+      const item = getPartner(pSlug);
+      if (item) matched.crumbs.push({ label: item.name, href: `#/partners/${pSlug}` });
     }
   }
   return matched;
@@ -387,6 +401,9 @@ function SimpleDropdown({ links, currentHref }: { links: NavLink[]; currentHref?
 }
 
 function MegaMenu({ columns, currentHref }: { columns: NavGroup[]; currentHref?: string }) {
+  if (columns.every((g) => g.blurb)) {
+    return <GroupsMenu groups={columns} currentHref={currentHref} />;
+  }
   return (
     <div className="w-max min-w-[32rem] max-w-[min(48rem,calc(100vw-2rem))] rounded-xl border border-[color-mix(in_oklab,#1e325c_12%,transparent)] bg-white p-5 shadow-[0_12px_40px_rgba(30,50,92,0.12)]">
       <div className="grid grid-cols-3 gap-8">

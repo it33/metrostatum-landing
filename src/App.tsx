@@ -13,6 +13,8 @@ import { IntegrationsPage } from "@/components/landing/integrations-page";
 import { IntegrationDetailPage } from "@/components/landing/integration-detail-page";
 import { ContactSalesPage } from "@/components/landing/contact-sales-page";
 import { NationalSecurityPage } from "@/components/landing/national-security-page";
+import { PartnersPage } from "@/components/landing/partners-page";
+import { PartnerDetailPage } from "@/components/landing/partner-detail-page";
 import { rememberSourcePage } from "@/lib/contact-intent";
 
 /**
@@ -75,6 +77,8 @@ export function App() {
   if (root === "industries") return <IndustriesPage rest={rest} />;
   if (root === "integrations" && rest) return <IntegrationDetailPage slug={rest} hashRoutes />;
   if (root === "integrations") return <IntegrationsPage hashRoutes />;
+  if (root === "partners" && rest) return <PartnerDetailPage slug={rest} />;
+  if (root === "partners") return <PartnersPage />;
   if (root === "contact-sales" || root === "contact") return <ContactSalesPage />;
 
   return <LandingPage />;

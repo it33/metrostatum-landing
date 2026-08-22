@@ -8,9 +8,9 @@ const CONTENT: SectionPageContent = {
     "Mattermost deploys on sovereign cloud you control, federates with partner networks, and connects DevSecOps and video tools without sending mission data to a public collaboration tenant.",
   sections: [
     {
-      id: "strategic-partners",
-      navLabel: "Strategic Partners",
-      eyebrow: "Strategic Partners",
+      id: "strategic-alliances",
+      navLabel: "Strategic Alliances",
+      eyebrow: "Strategic Alliances",
       title: "Microsoft and Oracle joint capabilities",
       lead: "Dedicated landing pages for Mattermost’s strategic cloud partners — joint products, classified and sovereign deployments, and the public announcements that document them.",
       cards: [
@@ -39,6 +39,26 @@ const CONTENT: SectionPageContent = {
           image: "/images/logos/oracle.png",
           imageAlt: "Oracle logo",
           link: { label: "Oracle joint capabilities", href: "/ecosystem/partners/oracle" },
+        },
+      ],
+    },
+    {
+      id: "regional-partners",
+      navLabel: "Regional Partners",
+      eyebrow: "Regional Partners",
+      title: "Resellers, integrators, and deployment partners",
+      lead: "Find an approved partner by region and type — sourced from the Mattermost partner directory.",
+      cards: [
+        {
+          id: "find-a-partner",
+          title: "Browse the partner directory",
+          body: "Filter system integrators, resellers, and deployment partners across the Americas, EMEA, APAC, and global programs. Each listing has a dedicated page with the original directory copy.",
+          bullets: [
+            "Filter by region and partner type",
+            "System integrators, resellers, and deployment partners",
+            "Country location and partner website on every profile",
+          ],
+          link: { label: "Find a regional partner", href: "#/partners" },
         },
       ],
     },

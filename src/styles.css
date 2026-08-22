@@ -667,12 +667,131 @@
     animation: image-pan-y-fade 18s linear infinite;
   }
 
+    .offices-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-block: 0.25rem 0.5rem;
+  }
+  .offices-marquee__track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    padding-inline: 1.25rem;
+    align-items: stretch;
+    animation: offices-marquee-scroll 72s linear infinite;
+  }
+  .offices-marquee:hover .offices-marquee__track {
+    animation-play-state: paused;
+  }
+  @keyframes offices-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .offices-marquee__fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: min(3.5rem, 8vw);
+    pointer-events: none;
+  }
+  .offices-marquee__fade--left {
+    left: 0;
+    background: linear-gradient(90deg, var(--color-bg-elevated), transparent);
+  }
+  .offices-marquee__fade--right {
+    right: 0;
+    background: linear-gradient(270deg, var(--color-bg-elevated), transparent);
+  }
+  .offices-marquee__card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: min(300px, 78vw);
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+  }
+  .offices-marquee__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--color-denim);
+  }
+  .offices-marquee__img {
+    display: block;
+    width: 118%;
+    height: 118%;
+    max-width: none;
+    object-fit: cover;
+    transform-origin: center center;
+    will-change: transform;
+  }
+  .offices-marquee__img--0 {
+    animation: offices-pan-a 22s ease-in-out infinite alternate;
+  }
+  .offices-marquee__img--1 {
+    animation: offices-pan-b 26s ease-in-out infinite alternate;
+  }
+  .offices-marquee__img--2 {
+    animation: offices-pan-c 20s ease-in-out infinite alternate;
+  }
+  .offices-marquee__img--3 {
+    animation: offices-pan-d 24s ease-in-out infinite alternate;
+  }
+  @keyframes offices-pan-a {
+    from { transform: translate(-2%, -2%) scale(1.04); }
+    to { transform: translate(-12%, -10%) scale(1.12); }
+  }
+  @keyframes offices-pan-b {
+    from { transform: translate(-14%, -2%) scale(1.05); }
+    to { transform: translate(-2%, -12%) scale(1.14); }
+  }
+  @keyframes offices-pan-c {
+    from { transform: translate(-4%, -12%) scale(1.06); }
+    to { transform: translate(-14%, -2%) scale(1.12); }
+  }
+  @keyframes offices-pan-d {
+    from { transform: translate(-12%, -10%) scale(1.04); }
+    to { transform: translate(-2%, -2%) scale(1.14); }
+  }
+  .offices-marquee__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 1.05rem 1.15rem 1.15rem;
+  }
+  .offices-marquee__region {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .offices-marquee__region h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 650;
+    color: var(--color-fg);
+  }
+  .offices-marquee__addr {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--color-fg-muted);
+  }
+  .offices-marquee__addr p {
+    margin: 0;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .logo-marquee__viewport,
     .awards-marquee__viewport,
     .product-marquee__track,
     .byom-marquee__viewport,
     .principles-marquee__track,
+    .offices-marquee__track,
+    .offices-marquee__img,
     .staging-banner__track,
     .image-pan-y,
     .image-pan-y-fade,

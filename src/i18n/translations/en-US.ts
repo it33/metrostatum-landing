@@ -6,7 +6,7 @@ import type { TranslationDict } from "../types";
  */
 export const enUS: TranslationDict = {
   meta: {
-    title: "Mattermost | Operational Sovereignty for Mission-Critical Work",
+    title: "Mattermost | Sovereign Human-Machine Teaming",
     description:
       "Zero-Trust collaboration, automation and AI for private cloud, air-gapped and on-prem environments. Trusted by governments, enterprises and allied militaries.",
   },
@@ -43,7 +43,7 @@ export const enUS: TranslationDict = {
     closeMenu: "Close menu",
   },
   hero: {
-    title: "Operational Sovereignty for National Security and Critical Infrastructure",
+    title: "Sovereign Human-Machine Teaming for Critical Infrastructure and National Security",
     subtitle:
       "Zero-Trust collaboration, automation and AI for private cloud, air-gapped and on-prem environments. Trusted by governments, enterprises and allied militaries.",
     tagline: "Deploy anywhere. Control everything.",

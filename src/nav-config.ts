@@ -37,12 +37,20 @@ export const PLATFORM_LINKS: NavLink[] = [
 /** Ecosystem dropdown — four groups */
 export const ECOSYSTEM_GROUPS: NavGroup[] = [
   {
-    title: "Strategic Partners",
+    title: "Strategic Alliances",
     href: "#/ecosystem/strategic-partners",
     blurb: "Microsoft and Oracle joint capabilities for sovereign collaboration and classified cloud.",
     links: [
       { label: "Microsoft", href: "#/ecosystem/partners/microsoft" },
       { label: "Oracle", href: "#/ecosystem/partners/oracle" },
+    ],
+  },
+  {
+    title: "Regional Partners",
+    href: "#/partners",
+    blurb: "Approved resellers, system integrators, and deployment partners — filter by region and type.",
+    links: [
+      { label: "Find a partner", href: "#/partners" },
     ],
   },
   {
@@ -101,6 +109,8 @@ export const ECOSYSTEM_GROUPS: NavGroup[] = [
 export const SOLUTIONS_COLUMNS: NavGroup[] = [
   {
     title: "National Security",
+    href: "#/solutions/national-security",
+    blurb: "Intelligence, mission operations, and cyber communications for allied and government missions.",
     links: [
       { label: "Overview", href: "#/solutions/national-security" },
       { label: "Intelligence", href: "#/solutions/national-security/intelligence" },
@@ -110,6 +120,8 @@ export const SOLUTIONS_COLUMNS: NavGroup[] = [
   },
   {
     title: "Cyber",
+    href: "#/solutions/cyber",
+    blurb: "Out-of-band incident response, SOC operations, and agentic defense on a plane you control.",
     links: [
       { label: "Overview", href: "#/solutions/cyber" },
       { label: "Out-of-band IR", href: "#/solutions/cyber/out-of-band-ir" },
@@ -119,6 +131,8 @@ export const SOLUTIONS_COLUMNS: NavGroup[] = [
   },
   {
     title: "DevSecOps",
+    href: "#/solutions/devsecops",
+    blurb: "Shared command line, pipeline integration, and agile workflows without a public tenant.",
     links: [
       { label: "Overview", href: "#/solutions/devsecops" },
       { label: "Shared command line", href: "#/solutions/devsecops/shared-command-line" },
@@ -171,6 +185,7 @@ export const FOOTER_COLUMNS: NavGroup[] = [
       { label: "Oracle", href: "#/ecosystem/partners/oracle" },
       { label: "Google", href: "#/ecosystem/cloud/google" },
       { label: "MS Teams", href: "#/ecosystem/federation/teams" },
+      { label: "Regional Partners", href: "#/partners" },
       { label: "Marketplace", href: "#/integrations" },
       { label: "Pexip", href: "#/ecosystem/video/pexip" },
     ],

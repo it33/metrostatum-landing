@@ -1,6 +1,7 @@
 import type { Leader } from "./leadership-types";
-import { PRINCIPLES } from "./leadership-data";
+import { PRINCIPLES, OFFICES } from "./leadership-data";
 import { LeaderCard } from "./leader-card";
+import { MapPin } from "lucide-react";
 
 const base = import.meta.env.BASE_URL;
 
@@ -66,6 +67,56 @@ export function PrinciplesMarquee() {
       <div className="principles-marquee__fade principles-marquee__fade--left" aria-hidden />
       <div className="principles-marquee__fade principles-marquee__fade--right" aria-hidden />
       <div className="principles-marquee__track">
+        {cards}
+        {clones}
+      </div>
+    </div>
+  );
+}
+
+function OfficeCard({
+  office,
+  index,
+  hidden,
+}: {
+  office: (typeof OFFICES)[number];
+  index: number;
+  hidden?: boolean;
+}) {
+  return (
+    <article className="offices-marquee__card" aria-hidden={hidden || undefined}>
+      <div className="offices-marquee__media">
+        <img
+          src={`${base}${office.image}`}
+          alt={hidden ? "" : office.alt}
+          className={`offices-marquee__img offices-marquee__img--${index % 4}`}
+        />
+      </div>
+      <div className="offices-marquee__copy">
+        <div className="offices-marquee__region">
+          <MapPin className="size-4 shrink-0 text-[var(--color-marigold)]" strokeWidth={1.75} aria-hidden />
+          <h3>{office.region}</h3>
+        </div>
+        <div className="offices-marquee__addr">
+          {office.lines.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export function OfficesMarquee() {
+  const cards = OFFICES.map((o, i) => <OfficeCard key={o.region} office={o} index={i} />);
+  const clones = OFFICES.map((o, i) => (
+    <OfficeCard key={`clone-${o.region}`} office={o} index={i} hidden />
+  ));
+  return (
+    <div className="offices-marquee" role="region" aria-label="Global offices">
+      <div className="offices-marquee__fade offices-marquee__fade--left" aria-hidden />
+      <div className="offices-marquee__fade offices-marquee__fade--right" aria-hidden />
+      <div className="offices-marquee__track">
         {cards}
         {clones}
       </div>

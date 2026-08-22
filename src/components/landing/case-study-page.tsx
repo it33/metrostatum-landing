@@ -16,8 +16,6 @@ export function CaseStudyPage({
   const meta = CUSTOMER_STORIES.find((s) => s.slug === slug);
   const copy = getCaseStudyCopy(slug);
   const customersHref = hashRoutes ? "#/customers" : "/customers";
-  const hero = copy?.hero || meta?.image;
-
 
   if (!meta) {
     return (
@@ -51,35 +49,38 @@ export function CaseStudyPage({
           }}
           aria-hidden
         />
-        <div className="container-page relative py-14 md:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
-            Customer story
-          </p>
-          <h1 className="mt-4 max-w-4xl text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-[2.6rem] md:leading-[1.12]">
-            {title}
-          </h1>
-          <div className="mt-6 h-px w-24 bg-[var(--color-marigold)]" />
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-white/85">
-            <span className="font-semibold">{meta.name}</span>
-            <span className="inline-flex items-center gap-1.5">
-              <CountryFlag country={meta.country} />
-              {meta.country.name}
-            </span>
-            <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide">
-              {meta.industry}
-            </span>
-            {meta.metric ? <span className="font-semibold text-[var(--color-marigold)]">{meta.metric}</span> : null}
+        <div className="container-page relative grid items-center gap-8 py-12 md:grid-cols-[minmax(0,1.15fr)_minmax(16rem,22rem)] md:gap-12 md:py-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-marigold)]">
+              Customer story
+            </p>
+            <h1 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-[2.35rem] md:leading-[1.12]">
+              {title}
+            </h1>
+            <div className="mt-6 h-px w-24 bg-[var(--color-marigold)]" />
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-white/85">
+              <span className="font-semibold">{meta.name}</span>
+              <span className="inline-flex items-center gap-1.5">
+                <CountryFlag country={meta.country} />
+                {meta.country.name}
+              </span>
+              <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide">
+                {meta.industry}
+              </span>
+              {meta.metric ? <span className="font-semibold text-[var(--color-marigold)]">{meta.metric}</span> : null}
+            </div>
           </div>
+          {meta.image ? (
+            <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-white/15 bg-white/5 shadow-[0_16px_40px_rgba(0,0,0,0.28)]">
+              <img
+                src={meta.image}
+                alt=""
+                className="aspect-[16/10] w-full object-cover object-center"
+              />
+            </figure>
+          ) : null}
         </div>
       </section>
-
-      {hero ? (
-        <div className="container-page -mt-2 md:-mt-4">
-          <figure className="overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[var(--shadow-card)]">
-            <img src={hero} alt="" className="aspect-[16/9] w-full object-cover object-center" />
-          </figure>
-        </div>
-      ) : null}
 
       <article className="container-page grid gap-10 py-12 md:grid-cols-[minmax(0,1fr)_18rem] md:py-16 lg:gap-14">
         <div className="min-w-0">
