@@ -181,6 +181,7 @@ const DEEP_SECTIONS = [
         body: "Bind automations to repeatable processes so response stays consistent under pressure.",
       },
     ],
+    cta: { label: "Explore the marketplace", href: "#/integrations" },
   },
   {
     id: "sovereign-ai",
@@ -511,15 +512,26 @@ export function PlatformPage({ rest }: { rest?: string }) {
                     {sec.title}
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-[var(--color-fg-muted)]">{sec.lead}</p>
-                  <a
-                    href={CONTACT}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
-                  >
-                    Discuss this capability
-                    <ArrowRight className="size-4" />
-                  </a>
+                  <div className="mt-6 flex flex-col items-start gap-3">
+                    {"cta" in sec && sec.cta ? (
+                      <a
+                        href={sec.cta.href}
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
+                      >
+                        {sec.cta.label}
+                        <ArrowRight className="size-4" />
+                      </a>
+                    ) : null}
+                    <a
+                      href={CONTACT}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
+                    >
+                      Discuss this capability
+                      <ArrowRight className="size-4" />
+                    </a>
+                  </div>
                 </div>
                 <div className={cn("grid gap-4 sm:grid-cols-2", reverse && "lg:order-1")}>
                   {sec.points.map((p) => (
