@@ -81,7 +81,173 @@ const CA_PROVINCES = [
   "Saskatchewan","Yukon",
 ];
 
-const base = import.meta.env.BASE_URL;
+const NATO_EUROPE = new Set([
+  "France",
+  "Belgium",
+  "Netherlands",
+  "Italy",
+  "Spain",
+  "Portugal",
+  "Czechia",
+  "Denmark",
+  "Estonia",
+  "Finland",
+  "Norway",
+  "Poland",
+  "Sweden",
+  "Austria",
+]);
+
+const ISO_TO_COUNTRY: Record<string, string> = {
+  US: "United States",
+  CA: "Canada",
+  DE: "Germany",
+  IN: "India",
+  JP: "Japan",
+  CN: "China",
+  FR: "France",
+  GB: "United Kingdom",
+  UK: "United Kingdom",
+  CH: "Switzerland",
+  AU: "Australia",
+  AT: "Austria",
+  BE: "Belgium",
+  BR: "Brazil",
+  CZ: "Czechia",
+  DK: "Denmark",
+  EE: "Estonia",
+  FI: "Finland",
+  IL: "Israel",
+  IT: "Italy",
+  NL: "Netherlands",
+  NZ: "New Zealand",
+  NO: "Norway",
+  PL: "Poland",
+  PT: "Portugal",
+  SG: "Singapore",
+  KR: "South Korea",
+  ES: "Spain",
+  SE: "Sweden",
+  TW: "Taiwan",
+  AE: "United Arab Emirates",
+};
+
+const CA_TIMEZONES = new Set([
+  "America/Toronto",
+  "America/Vancouver",
+  "America/Edmonton",
+  "America/Winnipeg",
+  "America/Halifax",
+  "America/St_Johns",
+  "America/Whitehorse",
+  "America/Yellowknife",
+  "America/Iqaluit",
+  "America/Moncton",
+  "America/Glace_Bay",
+  "America/Goose_Bay",
+  "America/Blanc-Sablon",
+  "America/Rainy_River",
+  "America/Regina",
+  "America/Swift_Current",
+  "America/Dawson",
+  "America/Dawson_Creek",
+  "America/Fort_Nelson",
+  "America/Creston",
+  "America/Cambridge_Bay",
+  "America/Inuvik",
+  "America/Rankin_Inlet",
+  "America/Resolute",
+  "America/Pangnirtung",
+  "America/Atikokan",
+  "America/Coral_Harbour",
+  "America/Nipigon",
+  "America/Thunder_Bay",
+]);
+
+function countryFromTimezone(tz: string): string | "" {
+  if (CA_TIMEZONES.has(tz)) return "Canada";
+  if (tz.startsWith("America/")) {
+    if (tz.includes("Sao_Paulo") || tz.includes("Fortaleza") || tz.includes("Recife") || tz.includes("Manaus") || tz.includes("Belem")) {
+      return "Brazil";
+    }
+    if (tz.includes("Mexico") || tz.includes("Tijuana") || tz.includes("Cancun") || tz.includes("Merida") || tz.includes("Monterrey") || tz.includes("Chihuahua") || tz.includes("Hermosillo") || tz.includes("Mazatlan") || tz.includes("Matamoros") || tz.includes("Bahia_Banderas") || tz.includes("Ciudad_Juarez")) {
+      return "Other";
+    }
+    return "United States";
+  }
+  if (tz === "Pacific/Honolulu" || tz === "Pacific/Guam" || tz === "Pacific/Pago_Pago") return "United States";
+  if (tz === "Europe/Berlin" || tz === "Europe/Busingen") return "Germany";
+  if (tz === "Europe/London") return "United Kingdom";
+  if (tz === "Europe/Paris") return "France";
+  if (tz === "Asia/Tokyo") return "Japan";
+  if (tz.startsWith("Australia/")) return "Australia";
+  if (tz === "Pacific/Auckland") return "New Zealand";
+  if (tz === "Asia/Seoul") return "South Korea";
+  if (tz === "Asia/Singapore") return "Singapore";
+  if (tz === "Asia/Taipei") return "Taiwan";
+  if (tz === "Europe/Zurich") return "Switzerland";
+  if (tz === "Europe/Rome") return "Italy";
+  if (tz === "Europe/Madrid") return "Spain";
+  if (tz === "Europe/Amsterdam") return "Netherlands";
+  if (tz === "Europe/Brussels") return "Belgium";
+  if (tz === "Europe/Stockholm") return "Sweden";
+  if (tz === "Europe/Oslo") return "Norway";
+  if (tz === "Europe/Copenhagen") return "Denmark";
+  if (tz === "Europe/Helsinki") return "Finland";
+  if (tz === "Europe/Warsaw") return "Poland";
+  if (tz === "Europe/Prague") return "Czechia";
+  if (tz === "Europe/Vienna") return "Austria";
+  if (tz === "Europe/Lisbon") return "Portugal";
+  if (tz === "Europe/Tallinn") return "Estonia";
+  if (tz === "Asia/Dubai") return "United Arab Emirates";
+  if (tz === "Asia/Jerusalem") return "Israel";
+  if (tz === "Asia/Kolkata" || tz === "Asia/Calcutta") return "India";
+  if (tz === "Asia/Shanghai" || tz === "Asia/Hong_Kong") return "China";
+  return "";
+}
+
+function specialistForCountry(country: string): string {
+  if (country === "United States") return "U.S. Defense & National Security";
+  if (country === "Canada") return "Canadian Government & Defence specialist";
+  if (country === "Japan") return "日本の防衛・セキュリティ専門家に相談";
+  if (country === "Germany") return "Bundeswehr & NATO";
+  if (country === "United Kingdom" || country === "Australia" || country === "New Zealand") return "Five Eyes";
+  if (NATO_EUROPE.has(country)) return "NATO & Défense européenne";
+  if (
+    country === "South Korea" ||
+    country === "Israel" ||
+    country === "Taiwan" ||
+    country === "Singapore" ||
+    country === "United Arab Emirates"
+  ) {
+    return "(Other) Allied Government specialist";
+  }
+  return "Global Enterprise & Commercial";
+}
+
+async function detectCountry(): Promise<string> {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    const fromTz = countryFromTimezone(tz);
+    const ctrl = new AbortController();
+    const t = window.setTimeout(() => ctrl.abort(), 2500);
+    const res = await fetch("https://get.geojs.io/v1/ip/geo.json", { signal: ctrl.signal });
+    window.clearTimeout(t);
+    if (res.ok) {
+      const data = (await res.json()) as { country_code?: string; country?: string };
+      const iso = (data.country_code || "").toUpperCase();
+      if (iso && ISO_TO_COUNTRY[iso]) return ISO_TO_COUNTRY[iso];
+      if (data.country && COUNTRIES.includes(data.country)) return data.country;
+    }
+    return fromTz;
+  } catch {
+    try {
+      return countryFromTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+    } catch {
+      return "";
+    }
+  }
+}
 
 const LOGOS = [
   { name: "U.S. Air Force", src: `${base}images/logos/usaf.svg` },
@@ -119,10 +285,32 @@ export function ContactSalesPage() {
   const [sent, setSent] = useState(false);
   const [country, setCountry] = useState("");
   const [size, setSize] = useState("");
+  const [specialist, setSpecialist] = useState("");
+  const [specialistLocked, setSpecialistLocked] = useState(false);
+  const [regionHint, setRegionHint] = useState("");
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [sent]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const tzCountry = countryFromTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+    if (tzCountry) {
+      setCountry((prev) => prev || tzCountry);
+      setSpecialist((prev) => prev || specialistForCountry(tzCountry));
+      setRegionHint(`Suggested from your time zone (${tzCountry}). Change if this isn’t the right team.`);
+    }
+    detectCountry().then((found) => {
+      if (cancelled || !found) return;
+      setCountry((prev) => prev || found);
+      setSpecialist((prev) => prev || specialistForCountry(found));
+      setRegionHint(`Suggested from your location (${found}). Change if this isn’t the right team.`);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -197,9 +385,18 @@ export function ContactSalesPage() {
                 <form className="mt-6 grid gap-4 sm:grid-cols-2" onSubmit={onSubmit} noValidate>
                   <label className="sm:col-span-2 text-xs font-semibold text-[var(--color-denim)]">
                     Regional Specialist*
-                    <select name="regional_specialist" required defaultValue="" className={field}>
+                    <select
+                      name="regional_specialist"
+                      required
+                      value={specialist}
+                      onChange={(e) => {
+                        setSpecialistLocked(true);
+                        setSpecialist(e.target.value);
+                      }}
+                      className={field}
+                    >
                       <option value="" disabled>
-                        Pick your specialist
+                        Detecting your region…
                       </option>
                       {SPECIALISTS.map((o) => (
                         <option key={o} value={o}>
@@ -207,6 +404,11 @@ export function ContactSalesPage() {
                         </option>
                       ))}
                     </select>
+                    {regionHint ? (
+                      <span className="mt-1 block text-[11px] font-normal text-[var(--color-fg-subtle)]">
+                        {regionHint}
+                      </span>
+                    ) : null}
                   </label>
                   <label className="text-xs font-semibold text-[var(--color-denim)]">
                     First Name*
@@ -258,7 +460,11 @@ export function ContactSalesPage() {
                       name="country"
                       required
                       value={country}
-                      onChange={(e) => setCountry(e.target.value)}
+                      onChange={(e) => {
+                        const next = e.target.value;
+                        setCountry(next);
+                        if (!specialistLocked && next) setSpecialist(specialistForCountry(next));
+                      }}
                       className={field}
                     >
                       <option value="" disabled>
