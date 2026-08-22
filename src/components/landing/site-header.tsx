@@ -337,8 +337,10 @@ function DesktopNavItem({
 
 function itemClass(on: boolean) {
   return cn(
-    "block rounded-md px-2 py-1.5 text-[14px] font-medium hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-denim)]",
-    on ? "bg-[var(--color-bg-elevated)] font-semibold text-[var(--color-denim)]" : "text-[var(--color-black)]/90",
+    "block rounded-md px-2 py-1.5 text-[14px] font-medium transition-colors duration-150",
+    on
+      ? "bg-[var(--color-denim)] font-semibold text-white hover:bg-[var(--color-denim-mid)] hover:text-white"
+      : "text-[var(--color-black)]/90 hover:bg-[color-mix(in_oklab,var(--color-marigold)_55%,white)] hover:text-[var(--color-denim)]",
   );
 }
 
@@ -485,12 +487,7 @@ function MobileNavItem({
                   href={c.href}
                   {...LinkAttrs(c.href)}
                   aria-current={currentHref === c.href ? "page" : undefined}
-                  className={cn(
-                    "block py-2 text-sm",
-                    currentHref === c.href
-                      ? "font-semibold text-[var(--color-denim)]"
-                      : "text-[var(--color-fg-muted)]",
-                  )}
+                  className={cn(itemClass(currentHref === c.href), "px-2 py-2")}
                   onClick={onNavigate}
                 >
                   {c.label}
