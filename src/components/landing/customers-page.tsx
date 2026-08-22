@@ -220,18 +220,6 @@ export function CustomersPage() {
               })}
             </div>
           )}
-
-          <div className="mt-12 text-center">
-            <a
-              href="https://mattermost.com/customers/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-denim)] hover:text-[var(--color-marigold)]"
-            >
-              View all customer stories on mattermost.com
-              <ArrowRight className="size-4" />
-            </a>
-          </div>
         </div>
       </section>
 
